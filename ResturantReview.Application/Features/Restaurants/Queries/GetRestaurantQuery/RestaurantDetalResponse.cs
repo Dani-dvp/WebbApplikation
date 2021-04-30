@@ -1,7 +1,7 @@
-﻿using ResturantReview.Domain.Models;
+﻿using RestaurantReview.Domain.Models;
 using System.Collections.Generic;
 
-namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
+namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
 {
     public class RestaurantDetalResponse
     {
@@ -9,7 +9,7 @@ namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurant
 
         public string RestaurantName { get; set; }
         public string Category { get; set; }
-        public string ResturantLink { get; set; }
+        public string RestaurantLink { get; set; }
 
         public string GoogleMapsPhoto { get; set; }
 

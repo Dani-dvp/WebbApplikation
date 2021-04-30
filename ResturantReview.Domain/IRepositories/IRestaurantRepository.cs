@@ -1,14 +1,11 @@
-﻿using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RestaurantReview.Domain.Models;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Domain.IRepositories
+namespace RestaurantReview.Domain.IRepositories
 {
-    public interface IRestaurantRepository : IAsyncRepository<Resturant>
+    public interface IRestaurantRepository : IAsyncRepository<Restaurant>
     {
-        Task<Resturant> GetResturantByName(string Name);
+        Task<Restaurant> GetRestaurantByName(string Name);
 
 
     }

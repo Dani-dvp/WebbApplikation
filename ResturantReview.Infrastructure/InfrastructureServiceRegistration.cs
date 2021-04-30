@@ -1,19 +1,15 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ResturantReview.Infrastructure
+namespace RestaurantReview.Infrastructure
 {
     public static class InfrastructureServiceRegistration
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<MyDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("ResturantReviewConnectionString")));
+                options.UseSqlServer(configuration.GetConnectionString("RestaurantReviewConnectionString")));
 
             return services;
         }

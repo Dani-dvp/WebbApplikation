@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
-using ResturantReview.Domain.IRepositories;
-using ResturantReview.Domain.Models;
+using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Domain.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Application.Features.Restaurants.Commands.CreateRestaurant
+namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant
 {
     public class CreateRestaurantHandler : ICreateRestaurantService
     {
@@ -16,29 +14,29 @@ namespace ResturantReview.Application.Features.Restaurants.Commands.CreateRestau
         private readonly IMapper _mapper;
         private readonly IRestaurantRepository _restaurantRepository;
 
-       
-        public CreateRestaurantHandler(IMapper mapper , IRestaurantRepository restaurantRepository)
+
+        public CreateRestaurantHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<CreateRestaurantResponse>  CreateRestaurant(CreateRestaurantCommand createResturantCommand )
+        public async Task<CreateRestaurantResponse> CreateRestaurant(CreateRestaurantCommand createRestaurantCommand)
         {
-            var resturant = new Resturant()
+            var Restaurant = new Restaurant()
             {
-                ResturantName = createResturantCommand.RestaurantName,
-                Category = createResturantCommand.Category,
-                StreetPhoto = createResturantCommand.StreetPhoto,
-                ResturantID = new Guid()
+                RestaurantName = createRestaurantCommand.RestaurantName,
+                Category = createRestaurantCommand.Category,
+                StreetPhoto = createRestaurantCommand.StreetPhoto,
+                RestaurantID = new Guid()
 
             };
 
-            resturant = await _restaurantRepository.AddAsync(resturant);
+            Restaurant = await _restaurantRepository.AddAsync(Restaurant);
 
-            var resturantRespone = _mapper.Map<CreateRestaurantResponse>(resturant);
+            var RestaurantRespone = _mapper.Map<CreateRestaurantResponse>(Restaurant);
 
-            return resturantRespone;
+            return RestaurantRespone;
         }
 
     }

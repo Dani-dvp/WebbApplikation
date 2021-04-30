@@ -1,12 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Infrastructure.Configuration
+namespace RestaurantReview.Infrastructure.Configuration
 {
     public class ReviewConfiguration : IEntityTypeConfiguration<Review>
     {
@@ -17,9 +13,9 @@ namespace ResturantReview.Infrastructure.Configuration
 
 
             modelBuilder
-                .HasOne(review => review.Resturant)
-                .WithMany(resturant => resturant.Reviews)
-                .HasForeignKey(review => review.ResturantID);
+                .HasOne(review => review.Restaurant)
+                .WithMany(Restaurant => Restaurant.Reviews)
+                .HasForeignKey(review => review.RestaurantID);
 
         }
     }

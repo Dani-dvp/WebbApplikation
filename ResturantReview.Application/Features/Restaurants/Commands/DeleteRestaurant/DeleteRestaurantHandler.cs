@@ -1,11 +1,8 @@
 ﻿
-using ResturantReview.Domain.IRepositories;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using RestaurantReview.Domain.IRepositories;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Application.Features.Restaurants.Commands.DeleteRestaurant
+namespace RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant
 {
     public class DeleteRestaurantHandler
     {
@@ -17,13 +14,13 @@ namespace ResturantReview.Application.Features.Restaurants.Commands.DeleteRestau
         }
 
 
-        public async Task<string> DeleteResturant(DeleteRestaurantCommand deleteResturantCommand)
+        public async Task<string> DeleteRestaurant(DeleteRestaurantCommand deleteRestaurantCommand)
         {
 
-            var resturantToBeDeleted = await _restaurantRepository.GetResturantByName(deleteResturantCommand.RestaurantName);
-          await  _restaurantRepository.DeleteAsync(resturantToBeDeleted);
+            var RestaurantToBeDeleted = await _restaurantRepository.GetRestaurantByName(deleteRestaurantCommand.RestaurantName);
+            await _restaurantRepository.DeleteAsync(RestaurantToBeDeleted);
 
-            return resturantToBeDeleted.ResturantName;
+            return RestaurantToBeDeleted.RestaurantName;
         }
 
     }

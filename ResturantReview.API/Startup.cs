@@ -1,18 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using ResturantReview.Application;
+using RestaurantReview.Application;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ResturantReview.API
+namespace RestaurantReview.API
 {
     public class Startup
     {
@@ -32,8 +26,8 @@ namespace ResturantReview.API
 
 
             //Gör att vi kan använda services mellan projekt // lagt till
-            services.AddApplicationServices(Configuration); // använder ResturantReview.application
-           
+            services.AddApplicationServices(Configuration); // använder RestaurantReview.application
+
 
 
         }
@@ -46,7 +40,7 @@ namespace ResturantReview.API
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "ResturantReview API",
+                    Title = "RestaurantReview API",
 
                 });
 
@@ -72,7 +66,7 @@ namespace ResturantReview.API
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "REsturantReview API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestaurantReview API");
 
             });
 

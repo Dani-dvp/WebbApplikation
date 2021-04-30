@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using ResturantReview.Domain.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using RestaurantReview.Domain.IRepositories;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
+namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
 {
     public class RestaurantDetailQueryHandler
     {
@@ -14,24 +10,24 @@ namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurant
 
         //Får inte returnera en vanlig "Model" Måste Returner en ResponsTyp med innehållet man vill visa.
         private readonly IMapper _mapper;
-       
+
         private readonly IRestaurantRepository _restaurantRepository;
 
 
-        public RestaurantDetailQueryHandler(IMapper mapper , IRestaurantRepository restaurantRepository)
+        public RestaurantDetailQueryHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _restaurantRepository = restaurantRepository;
 
         }
 
-        public async Task<RestaurantDetalResponse> GetResturantByID(RestaurantDetailCommand getResturantCommand)
+        public async Task<RestaurantDetalResponse> GetRestaurantByID(RestaurantDetailCommand getRestaurantCommand)
         {
-         var resturant = await _restaurantRepository.GetByIdAsync(getResturantCommand.RestaurantID);
+            var Restaurant = await _restaurantRepository.GetByIdAsync(getRestaurantCommand.RestaurantID);
 
-         var resturantResponse = _mapper.Map<RestaurantDetalResponse>(resturant);
+            var RestaurantResponse = _mapper.Map<RestaurantDetalResponse>(Restaurant);
 
-            return resturantResponse;
+            return RestaurantResponse;
 
 
         }

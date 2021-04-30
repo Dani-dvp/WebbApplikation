@@ -1,16 +1,12 @@
 ﻿
-using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
+using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Domain.Models;
 using System.Threading.Tasks;
 
-using Microsoft.EntityFrameworkCore;
-using ResturantReview.Domain.IRepositories;
-
-namespace ResturantReview.Infrastructure.Repositories
+namespace RestaurantReview.Infrastructure.Repositories
 {
-    public class RestaurantRepository : BaseRepository<Resturant>, IRestaurantRepository
+    public class RestaurantRepository : BaseRepository<Restaurant>, IRestaurantRepository
     {
         protected new readonly MyDbContext _myDbContext;
 
@@ -20,10 +16,10 @@ namespace ResturantReview.Infrastructure.Repositories
             _myDbContext = myDbContext;
         }
 
-        public async Task<Resturant> GetResturantByName(string Name)
+        public async Task<Restaurant> GetRestaurantByName(string Name)
         {
-           var Resturant =  await _myDbContext.Set<Resturant>().FirstOrDefaultAsync(resturant => resturant.ResturantName == Name);
-            return Resturant;
+            var Restaurant = await _myDbContext.Set<Restaurant>().FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
+            return Restaurant;
         }
     }
 }

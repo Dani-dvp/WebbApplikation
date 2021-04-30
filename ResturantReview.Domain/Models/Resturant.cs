@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace ResturantReview.Domain.Models
+namespace RestaurantReview.Domain.Models
 {
-    public class Resturant
+    public class Restaurant
     {
-        public Guid ResturantID { get; set; }
-        public string ResturantName { get; set; }
+        public Guid RestaurantID { get; set; }
+        public string RestaurantName { get; set; }
         public string Category { get; set; }
-        public string ResturantLink { get; set; }
+        public string RestaurantLink { get; set; }
 
         public string GoogleMapsPhoto { get; set; }
 
