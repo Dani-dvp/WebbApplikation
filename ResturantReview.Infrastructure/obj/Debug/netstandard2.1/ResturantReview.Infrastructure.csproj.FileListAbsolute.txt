@@ -10,3 +10,15 @@ C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\D
 C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.csproj.CopyComplete
 C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.dll
 C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.pdb
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\bin\Debug\netstandard2.1\ResturantReview.Infrastructure.deps.json
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\bin\Debug\netstandard2.1\ResturantReview.Infrastructure.dll
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\bin\Debug\netstandard2.1\ResturantReview.Infrastructure.pdb
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\bin\Debug\netstandard2.1\ResturantReview.Domain.dll
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\bin\Debug\netstandard2.1\ResturantReview.Domain.pdb
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.csproj.CopyComplete
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.dll
+C:\Users\Robin\source\repos\WebbApplikation\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\ResturantReview.Infrastructure.pdb

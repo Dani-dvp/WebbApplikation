@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using ResturantReview.Application.Features.ModelName.Commands.CreateModel;
-using ResturantReview.Application.Features.Resturants.Commands.CreateResturant;
-using ResturantReview.Application.Features.Resturants.Commands.UpdateResturant;
+using ResturantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+using ResturantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
+using ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
 using ResturantReview.Application.Features.Resturants.Queries.GetResturantListQuery;
-using ResturantReview.Application.Features.Resturants.Queries.GetResturantQuery;
 using ResturantReview.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -24,20 +23,20 @@ namespace ResturantReview.Application.Profiles
             // Från Model, till CreateModelResponse
             
             //from model to CreateModelResponse
-            CreateMap<Resturant, CreateResturantResponse>();
+            CreateMap<Resturant, CreateRestaurantResponse>();
           
             
             // From model to UpdateModelResponse
-            CreateMap<Resturant, UpdateResturantRespone>();
+            CreateMap<Resturant, UpdateRestaurantRespone>();
            
             
 
             // from model to ModelDetailResponse
-            CreateMap<Resturant, ResturantDetalResponse>();
+            CreateMap<Resturant, RestaurantDetalResponse>();
 
             // from modelList to modelListResponse
 
-            CreateMap<Resturant, ResturantListQueryResponse>();
+            CreateMap<Resturant, RestaurantListQueryResponse>();
 
         }
 

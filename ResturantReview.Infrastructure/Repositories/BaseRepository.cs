@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ResturantReview.Domain.Infreastructure;
+using ResturantReview.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
