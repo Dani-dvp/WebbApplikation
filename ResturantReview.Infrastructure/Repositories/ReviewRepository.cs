@@ -1,8 +1,6 @@
-﻿using ResturantReview.Domain.Infreastructure;
+﻿
+using ResturantReview.Domain.IRepositories;
 using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ResturantReview.Infrastructure.Repositories
 {

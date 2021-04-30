@@ -14,9 +14,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResturantReview.Domain", "ResturantReview.Domain\ResturantReview.Domain.csproj", "{C793AAFB-D4F5-4919-895F-8568080A209A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3FDF74FF-C1CD-4C1C-AF5F-C80D17574195}"
-	ProjectSection(SolutionItems) = preProject
-		ResturantReview.Domain\Infreastructure\IReviewRepository.cs = ResturantReview.Domain\Infreastructure\IReviewRepository.cs
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResturantReview.Infrastructure", "ResturantReview.Infrastructure\ResturantReview.Infrastructure.csproj", "{3493390E-04F5-442A-A54B-38A30DE94787}"
 EndProject

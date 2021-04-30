@@ -27,10 +27,4 @@
     <ProjectReference Include="..\ResturantReview.Infrastructure\ResturantReview.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\ModelName\Commands\DeleteModel\" />
-    <Folder Include="Features\ModelName\Commands\UpdateModel\" />
-    <Folder Include="Features\ModelName\Queries\GetModelListQuery\" />
-  </ItemGroup>
-
 </Project>
