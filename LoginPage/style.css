@@ -1,0 +1,179 @@
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/001/959/920/large_2x/blurred-busy-restaurant-background-free-photo.JPG');
+    background-repeat: no-repeat;
+    height:cover;
+    margin-bottom:30px;
+    text-align: center;
+    color:white;
+    background-size: cover;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {   /*FORGOT PASSWORD TEXT HUR DE SER UT*/
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  display:inline-block;
+  margin: 40px 8px 10px 8px;
+  color: #cccccc;
+}
+
+
+
+.wrapper {  /*Vart saker skall placeras*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+
+}
+ /*hashtag är för ids    . är för klasser*/
+#LoginForm {   /*Denna är för själva loginregistret, designen för den */
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #fff;
+  border-color: #ccc;
+}
+
+#ForgotForm { /*För forgot password*/
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+/*Login & Register*/
+h2.inactive {
+  color: #B7B7B7;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #000;
+}
+
+/*login knappen*/
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 5px 10px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 20px 20px 10px 20px;
+  border: 1px solid #fff;
+  border-color: #48ABDD;
+
+}
+
+/*login MED GOOGLE knappen*/
+input[type=button], input[type=button], input[type=reset]  {
+  background-color: #C90000;
+  color: white;
+  padding: 15px 22px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(201,0,0,0.4);
+  box-shadow: 0 5px 10px 0 rgba(201,0,0,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #fff;
+  border-color: #AB0000;
+  margin: 6px 20px 40px 20px;
+
+}
+
+/*Login knappen blir mörkare blå when hovering*/
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+/*Google knappen blir mörkare röd when hovering*/
+input[type=button]:hover, input[type=button]:hover, input[type=reset]:hover  {
+  background-color: #A50101;
+}
+
+
+input[type=text] {  /*login & password rutorna (texten)*/
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  width: 85%;
+  border: 1px solid #ccc;
+
+  -webkit-border-radius: 1px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+
+}
+
+input[type=text]:focus {  /*Layout för när du klickar på login och password*/
+  background-color: #fff;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+/* underline på "register" när man hovrar*/
+.underlineHover:after {
+  display: block;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  content: "";
+  transition: 0.25s;
+}
+
+.underlineHover:hover {
+  color: #000;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+*:focus { /*när man har fokus på ngt så tar den bort outline på den andra*/
+    outline: none;
+}
+
+
+* {
+  box-sizing: border-box;
+}
