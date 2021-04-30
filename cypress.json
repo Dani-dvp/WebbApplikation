@@ -1,8 +1,0 @@
-{
-    "fixturesFolder": "RestaurantReview.Tests/cypress/fixtures",
-    "integrationFolder": "RestaurantReview.Tests/cypress/integration",
-    "pluginsFile": "RestaurantReview.Tests/cypress/plugins/index.js",
-    "screenshotsFolder": "RestaurantReview.Tests/cypress/screenshots",
-    "videosFolder": "RestaurantReview.Tests/cypress/videos",
-    "supportFile": "RestaurantReview.Tests/cypress/support/index.js"
-  }
