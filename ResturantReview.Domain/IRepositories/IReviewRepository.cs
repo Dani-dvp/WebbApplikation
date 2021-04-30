@@ -1,9 +1,6 @@
-﻿using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Domain.IRepositories
+namespace RestaurantReview.Domain.IRepositories
 {
     public interface IReviewRepository : IAsyncRepository<Review>
     {

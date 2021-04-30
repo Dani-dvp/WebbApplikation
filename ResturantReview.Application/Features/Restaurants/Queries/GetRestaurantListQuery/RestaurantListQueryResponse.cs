@@ -1,8 +1,8 @@
-﻿namespace ResturantReview.Application.Features.Resturants.Queries.GetResturantListQuery
+﻿namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
     public class RestaurantListQueryResponse
     {
-        public string ResturantName { get; set; }
+        public string RestaurantName { get; set; }
         public string Category { get; set; }
     }
 }

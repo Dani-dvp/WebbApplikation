@@ -1,16 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ResturantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
-using ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
-using ResturantReview.Domain.IRepositories;
-using ResturantReview.Infrastructure;
-using ResturantReview.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
+using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Infrastructure;
+using RestaurantReview.Infrastructure.Repositories;
 using System.Reflection;
-using System.Text;
 
-namespace ResturantReview.Application
+namespace RestaurantReview.Application
 {
     public static class ApplicationServiceRegistration
     {
@@ -19,7 +15,7 @@ namespace ResturantReview.Application
 
 
             //For IRepositories to Repositories
-            services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>)); 
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
 

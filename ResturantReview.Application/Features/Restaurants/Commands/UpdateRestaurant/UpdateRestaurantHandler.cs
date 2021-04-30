@@ -1,14 +1,10 @@
 ﻿using AutoMapper;
-using ResturantReview.Domain.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using RestaurantReview.Domain.IRepositories;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Application.Features.Restaurants.Commands.UpdateRestaurant
+namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant
 {
-   public class UpdateRestaurantHandler
+    public class UpdateRestaurantHandler
     {
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;
@@ -18,22 +14,22 @@ namespace ResturantReview.Application.Features.Restaurants.Commands.UpdateRestau
             _mapper = mapper;
         }
 
-        public async Task<UpdateRestaurantRespone> UpdateResturant(UpdateRestaurantCommand updateResturantCommand)
+        public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
-           var resturantToBeUpdated = await _restaurantRepository.GetResturantByName(updateResturantCommand.RestaurantName);
+            var RestaurantToBeUpdated = await _restaurantRepository.GetRestaurantByName(updateRestaurantCommand.RestaurantName);
 
-            
-            resturantToBeUpdated.ResturantName = updateResturantCommand.RestaurantName;
-            resturantToBeUpdated.Category = updateResturantCommand.Category;
-            resturantToBeUpdated.ResturantLink = updateResturantCommand.ResturantLink;
-            resturantToBeUpdated.GoogleMapsPhoto = updateResturantCommand.GoogleMapsPhoto;
-            resturantToBeUpdated.StreetPhoto = updateResturantCommand.StreetPhoto;
 
-          await  _restaurantRepository.UpdateAsync(resturantToBeUpdated);
+            RestaurantToBeUpdated.RestaurantName = updateRestaurantCommand.RestaurantName;
+            RestaurantToBeUpdated.Category = updateRestaurantCommand.Category;
+            RestaurantToBeUpdated.RestaurantLink = updateRestaurantCommand.RestaurantLink;
+            RestaurantToBeUpdated.GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto;
+            RestaurantToBeUpdated.StreetPhoto = updateRestaurantCommand.StreetPhoto;
 
-            var updateResturantResponse = _mapper.Map<UpdateRestaurantRespone>(resturantToBeUpdated);
+            await _restaurantRepository.UpdateAsync(RestaurantToBeUpdated);
 
-            return updateResturantResponse;
+            var updateRestaurantResponse = _mapper.Map<UpdateRestaurantRespone>(RestaurantToBeUpdated);
+
+            return updateRestaurantResponse;
 
 
         }

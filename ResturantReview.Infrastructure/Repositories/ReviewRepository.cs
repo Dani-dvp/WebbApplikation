@@ -1,8 +1,8 @@
 ﻿
-using ResturantReview.Domain.IRepositories;
-using ResturantReview.Domain.Models;
+using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Infrastructure.Repositories
+namespace RestaurantReview.Infrastructure.Repositories
 {
     public class ReviewRepository : BaseRepository<Review>, IReviewRepository
     {

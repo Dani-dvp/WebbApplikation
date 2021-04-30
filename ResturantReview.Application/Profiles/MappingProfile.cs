@@ -1,15 +1,11 @@
 ﻿using AutoMapper;
-using ResturantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
-using ResturantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
-using ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
-using ResturantReview.Application.Features.Resturants.Queries.GetResturantListQuery;
-using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Application.Profiles
+namespace RestaurantReview.Application.Profiles
 {
     public class MappingProfile : Profile // profile från automapper
     {
@@ -21,22 +17,22 @@ namespace ResturantReview.Application.Profiles
         public MappingProfile()
         {
             // Från Model, till CreateModelResponse
-            
+
             //from model to CreateModelResponse
-            CreateMap<Resturant, CreateRestaurantResponse>();
-          
-            
+            CreateMap<Restaurant, CreateRestaurantResponse>();
+
+
             // From model to UpdateModelResponse
-            CreateMap<Resturant, UpdateRestaurantRespone>();
-           
-            
+            CreateMap<Restaurant, UpdateRestaurantRespone>();
+
+
 
             // from model to ModelDetailResponse
-            CreateMap<Resturant, RestaurantDetalResponse>();
+            CreateMap<Restaurant, RestaurantDetalResponse>();
 
             // from modelList to modelListResponse
 
-            CreateMap<Resturant, RestaurantListQueryResponse>();
+            CreateMap<Restaurant, RestaurantListQueryResponse>();
 
         }
 

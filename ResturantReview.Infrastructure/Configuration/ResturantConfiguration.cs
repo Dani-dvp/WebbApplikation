@@ -1,23 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Infrastructure.Configuration
+namespace RestaurantReview.Infrastructure.Configuration
 {
-    public class ResturantConfiguration : IEntityTypeConfiguration<Resturant>
+    public class RestaurantConfiguration : IEntityTypeConfiguration<Restaurant>
     {
-        public void Configure(EntityTypeBuilder<Resturant> modelBuilder)
+        public void Configure(EntityTypeBuilder<Restaurant> modelBuilder)
         {
             modelBuilder
-                   .HasKey(resturant => resturant.ResturantID);
+                   .HasKey(Restaurant => Restaurant.RestaurantID);
 
             modelBuilder
-                .HasMany(resturant => resturant.Reviews)
-                .WithOne(review => review.Resturant)
-                .HasForeignKey(review => review.ResturantID);
+                .HasMany(Restaurant => Restaurant.Reviews)
+                .WithOne(review => review.Restaurant)
+                .HasForeignKey(review => review.RestaurantID);
 
 
         }

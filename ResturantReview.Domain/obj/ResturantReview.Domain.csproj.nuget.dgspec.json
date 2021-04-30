@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj": {}
+    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj": {
+    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj",
         "projectName": "ResturantReview.Domain",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj",
+        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\ResturantReview.Domain\\ResturantReview.Domain.csproj",
         "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\WebbApplikation\\ResturantReview.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\ResturantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",

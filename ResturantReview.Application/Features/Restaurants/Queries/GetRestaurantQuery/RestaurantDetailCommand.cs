@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
+namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
 {
     public class RestaurantDetailCommand
     {

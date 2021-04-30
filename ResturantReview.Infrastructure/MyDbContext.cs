@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ResturantReview.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using RestaurantReview.Domain.Models;
 
-namespace ResturantReview.Infrastructure
+namespace RestaurantReview.Infrastructure
 {
     public class MyDbContext : DbContext
     {
@@ -17,7 +13,7 @@ namespace ResturantReview.Infrastructure
 
 
 
-        public DbSet<Resturant> Resturants { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
 

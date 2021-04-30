@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ResturantReview.Domain.IRepositories;
+using RestaurantReview.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Infrastructure.Repositories
+namespace RestaurantReview.Infrastructure.Repositories
 {
     public class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
@@ -62,7 +61,7 @@ namespace ResturantReview.Infrastructure.Repositories
 
         }
 
-       
+
     }
 }
 

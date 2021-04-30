@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ResturantReview.Domain.Models
+namespace RestaurantReview.Domain.Models
 {
     public class Review
     {
@@ -15,9 +13,9 @@ namespace ResturantReview.Domain.Models
 
         public int Rating { get; set; }
 
-        public Guid ResturantID { get; set; }
+        public Guid RestaurantID { get; set; }
 
-        public Resturant Resturant { get; set; }
+        public Restaurant Restaurant { get; set; }
 
     }
 }

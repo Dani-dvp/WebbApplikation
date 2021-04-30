@@ -1,26 +1,26 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
-namespace ResturantReview.Infrastructure.Migrations
+namespace RestaurantReview.Infrastructure.Migrations
 {
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Resturants",
+                name: "Restaurants",
                 columns: table => new
                 {
-                    ResturantID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ResturantName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RestaurantID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RestaurantName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ResturantLink = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RestaurantLink = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GoogleMapsPhoto = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StreetPhoto = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Resturants", x => x.ResturantID);
+                    table.PrimaryKey("PK_Restaurants", x => x.RestaurantID);
                 });
 
             migrationBuilder.CreateTable(
@@ -32,23 +32,23 @@ namespace ResturantReview.Infrastructure.Migrations
                     Summary = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ReviewTest = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Rating = table.Column<int>(type: "int", nullable: false),
-                    ResturantID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    RestaurantID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reviews", x => x.ReviewID);
                     table.ForeignKey(
-                        name: "FK_Reviews_Resturants_ResturantID",
-                        column: x => x.ResturantID,
-                        principalTable: "Resturants",
-                        principalColumn: "ResturantID",
+                        name: "FK_Reviews_Restaurants_RestaurantID",
+                        column: x => x.RestaurantID,
+                        principalTable: "Restaurants",
+                        principalColumn: "RestaurantID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_ResturantID",
+                name: "IX_Reviews_RestaurantID",
                 table: "Reviews",
-                column: "ResturantID");
+                column: "RestaurantID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -57,7 +57,7 @@ namespace ResturantReview.Infrastructure.Migrations
                 name: "Reviews");
 
             migrationBuilder.DropTable(
-                name: "Resturants");
+                name: "Restaurants");
         }
     }
 }

@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
-using ResturantReview.Application.Features.Resturants.Queries.GetResturantListQuery;
-using ResturantReview.Domain.IRepositories;
-using System;
+using RestaurantReview.Domain.IRepositories;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
+namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
     public class RestaurantListQueryHandler
     {
@@ -21,13 +17,13 @@ namespace ResturantReview.Application.Features.Restaurants.Queries.GetRestaurant
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<List <RestaurantListQueryResponse>> GetResturantList()
+        public async Task<List<RestaurantListQueryResponse>> GetRestaurantList()
         {
-          var listOfResturant = await _restaurantRepository.ListAllAsync();
+            var listOfRestaurant = await _restaurantRepository.ListAllAsync();
 
-         var listOfResturantResponse = _mapper.Map <List <RestaurantListQueryResponse>>(listOfResturant);
+            var listOfRestaurantResponse = _mapper.Map<List<RestaurantListQueryResponse>>(listOfRestaurant);
 
-            return listOfResturantResponse;
+            return listOfRestaurantResponse;
         }
 
     }

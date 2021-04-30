@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ResturantReview.Infrastructure;
+using RestaurantReview.Infrastructure;
 
-namespace ResturantReview.Infrastructure.Migrations
+namespace RestaurantReview.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
     partial class MyDbContextModelSnapshot : ModelSnapshot
@@ -19,9 +19,9 @@ namespace ResturantReview.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ResturantReview.Domain.Models.Resturant", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Restaurant", b =>
                 {
-                    b.Property<Guid>("ResturantID")
+                    b.Property<Guid>("RestaurantID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -31,21 +31,21 @@ namespace ResturantReview.Infrastructure.Migrations
                     b.Property<string>("GoogleMapsPhoto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResturantLink")
+                    b.Property<string>("RestaurantLink")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResturantName")
+                    b.Property<string>("RestaurantName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StreetPhoto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ResturantID");
+                    b.HasKey("RestaurantID");
 
-                    b.ToTable("Resturants");
+                    b.ToTable("Restaurants");
                 });
 
-            modelBuilder.Entity("ResturantReview.Domain.Models.Review", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Review", b =>
                 {
                     b.Property<Guid>("ReviewID")
                         .ValueGeneratedOnAdd()
@@ -54,7 +54,7 @@ namespace ResturantReview.Infrastructure.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("ResturantID")
+                    b.Property<Guid>("RestaurantID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ReviewTest")
@@ -68,23 +68,23 @@ namespace ResturantReview.Infrastructure.Migrations
 
                     b.HasKey("ReviewID");
 
-                    b.HasIndex("ResturantID");
+                    b.HasIndex("RestaurantID");
 
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("ResturantReview.Domain.Models.Review", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Review", b =>
                 {
-                    b.HasOne("ResturantReview.Domain.Models.Resturant", "Resturant")
+                    b.HasOne("RestaurantReview.Domain.Models.Restaurant", "Restaurant")
                         .WithMany("Reviews")
-                        .HasForeignKey("ResturantID")
+                        .HasForeignKey("RestaurantID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Resturant");
+                    b.Navigation("Restaurant");
                 });
 
-            modelBuilder.Entity("ResturantReview.Domain.Models.Resturant", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Restaurant", b =>
                 {
                     b.Navigation("Reviews");
                 });
