@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace RestaurantReview.Domain.Models
+namespace RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQuery
 {
-    public class Review
+    public class ReviewListQueryResponse
     {
         public Guid ReviewID { get; set; }
 
@@ -15,7 +15,6 @@ namespace RestaurantReview.Domain.Models
 
         public Guid RestaurantID { get; set; }
 
-        public Restaurant Restaurant { get; set; }
 
     }
 }

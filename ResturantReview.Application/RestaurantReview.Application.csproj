@@ -14,4 +14,8 @@
     <ProjectReference Include="..\ResturantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Reviews\Queries\GetReviewQuery\" />
+  </ItemGroup>
+
 </Project>

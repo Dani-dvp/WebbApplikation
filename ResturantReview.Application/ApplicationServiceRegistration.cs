@@ -1,9 +1,17 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
+using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
+using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
+using RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQuery;
+using RestaurantReview.Application.Features.Reviews.Queries.GetReviewsListQuery;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Infrastructure;
 using RestaurantReview.Infrastructure.Repositories;
+using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
+using ResturantReview.Application.Features.Resturants.Commands.DeleteResturant;
+using ResturantReview.Application.Features.Resturants.Commands.UpdateResturant;
 using System.Reflection;
 
 namespace RestaurantReview.Application
@@ -22,7 +30,10 @@ namespace RestaurantReview.Application
 
             //For IServices to handler
             services.AddScoped<ICreateRestaurantService, CreateRestaurantHandler>();
-
+            services.AddScoped<ICreateReviewService, CreateReviewHandler>();
+            services.AddScoped<IDeleteReviewService, DeleteReviewHandler>();
+            services.AddScoped<IUpdateReviewService, UpdateReviewHandler>();
+            services.AddScoped<IReviewListQueryService, ReviewsListQueryHandler>();
 
 
             //Aktiverar automapper i Core
