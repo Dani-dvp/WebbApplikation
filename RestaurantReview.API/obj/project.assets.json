@@ -5936,18 +5936,18 @@
     },
     "RestaurantReview.Application/1.0.0": {
       "type": "project",
-      "path": "../ResturantReview.Application/RestaurantReview.Application.csproj",
-      "msbuildProject": "../ResturantReview.Application/RestaurantReview.Application.csproj"
+      "path": "../RestaurantReview.Application/RestaurantReview.Application.csproj",
+      "msbuildProject": "../RestaurantReview.Application/RestaurantReview.Application.csproj"
     },
     "RestaurantReview.Domain/1.0.0": {
       "type": "project",
-      "path": "../ResturantReview.Domain/RestaurantReview.Domain.csproj",
-      "msbuildProject": "../ResturantReview.Domain/RestaurantReview.Domain.csproj"
+      "path": "../RestaurantReview.Domain/RestaurantReview.Domain.csproj",
+      "msbuildProject": "../RestaurantReview.Domain/RestaurantReview.Domain.csproj"
     },
     "RestaurantReview.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../ResturantReview.Infrastructure/RestaurantReview.Infrastructure.csproj",
-      "msbuildProject": "../ResturantReview.Infrastructure/RestaurantReview.Infrastructure.csproj"
+      "path": "../RestaurantReview.Infrastructure/RestaurantReview.Infrastructure.csproj",
+      "msbuildProject": "../RestaurantReview.Infrastructure/RestaurantReview.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5960,19 +5960,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kevin\\.nuget\\packages\\": {}
+    "C:\\Users\\Robin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\ResturantReview.API\\RestaurantReview.API.csproj",
+      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
       "projectName": "RestaurantReview.API",
-      "projectPath": "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\ResturantReview.API\\RestaurantReview.API.csproj",
-      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\ResturantReview.API\\obj\\",
+      "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5986,8 +5986,8 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
-            "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\ResturantReview.Application\\RestaurantReview.Application.csproj": {
-              "projectPath": "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\ResturantReview.Application\\RestaurantReview.Application.csproj"
+            "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+              "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
             }
           }
         }

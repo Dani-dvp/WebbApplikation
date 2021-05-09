@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ResturantReview.Domain\RestaurantReview.Domain.csproj" />
-    <ProjectReference Include="..\ResturantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
