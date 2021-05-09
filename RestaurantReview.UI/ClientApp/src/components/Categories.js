@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Categories</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-        <nav id="navbar">
-            <div>
-                <ul>
-                    <li class="navlink"><a href="index.html">Home</a></li>
-                    <li class="navlink"><a href="review.html">Write a review</a></li>
-                    <li class="navlink"><a href="categories.html">Categories</a></li>
-                    <li class="logreg"><a href="login.html">Login</a></li>
-                    <li class="logreg"><a href="register.html">Register</a></li>
-                </ul>
-            </div>
-        </nav>
+import React, { Component } from 'react';
+import '../Css/Categories.css';
 
-        <section id="showcase">
+export class Categories extends Component {
+    render() {
+        return (
             <div>
+                
                 <p id="cat">Categories</p>
-            </div>
+               
 
             <div id="Category">
                 <ul>
                     <li id="tagC">Cuisine</li>
-                    <br>
+                    <br />
                     <li class="Cuisine">African</li>
                     <li class="Cuisine">American</li>
                     <li class="Cuisine">British</li>
@@ -36,7 +23,7 @@
                 </ul>
                 <ul>
                     <li id="tagV">Variants</li>
-                    <br>
+                    <br />
                     <li class="Variants">Burger</li>
                     <li class="Variants">Pizza</li>
                     <li class="Variants">Fish</li>
@@ -45,8 +32,12 @@
                     <li class="Variants">Pasta</li>
                     <li class="Variants">Sallad</li>
                 </ul>
+            
             </div>
-
-        </section>
-    </body>
-</html>
+            <form>
+                <button class="allButton"type="button"><a href="../categories/categories.html">View all restaurants</a></button>
+            </form>
+            </div>      
+            );
+    }
+}

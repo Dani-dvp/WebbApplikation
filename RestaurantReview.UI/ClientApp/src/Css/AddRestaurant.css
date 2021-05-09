@@ -1,0 +1,50 @@
+.Header{
+    padding-top:40px;
+}
+#locationForm{
+    color:black;
+    font-size:36px;
+    width:360px;
+    height:48px;
+    background-color: rgb(190, 190, 190);
+    margin-bottom:64px;
+    border-radius:50px;
+    text-align: center;
+}
+#firstAdd{
+    color:white;
+    font-size:36px;
+    width:360px;
+    height:48px;
+    background-color: rgb(190, 190, 190);
+    margin-bottom:64px;
+    text-align: center;
+}
+.submit{
+    width:250px;
+    height:70px;
+    background-color: green;
+    color:white;
+    font-size:24px;
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom:200px;
+    margin-top:20px;
+}
+#secondForm{
+    background-color: rgb(190, 190, 190);
+    font-size:18px;
+    width:580px;
+    height:300px;
+    margin-bottom:64px;
+    
+}
+#firstForm{
+    color:black;
+    font-size:36px;
+    width:360px;
+    height:48px;
+    background-color: rgb(190, 190, 190);
+    margin-bottom:64px;
+    border-radius:50px;
+    text-align: center;
+}
