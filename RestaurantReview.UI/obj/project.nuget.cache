@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "mCAN/q5W0POZbeM5xPg9GqpJzqSyP1jnIe5dSkRInV3B/atmRav94ZCwitwg/oxcg8X3XTPVxXpQbpc/lW3O4A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\Desktop\\Webbapplikation KRSVK\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\5.0.5\\microsoft.aspnetcore.spaservices.extensions.5.0.5.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
