@@ -1,0 +1,60 @@
+#reviewForm img{
+    width:50px;
+    height:50px;
+    padding:0;
+}
+.reviewList li{
+    list-style-type: none;
+    font-size:36px;
+    padding-bottom:50px;
+    padding-left:25%;
+}
+.reviewList img{
+    width:50px;
+    height:50px;
+    padding:0;
+    margin-left:500px;
+}
+#reviewButton a{
+    text-decoration: none;
+    color:black;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+.submit{
+    width:250px;
+    height:70px;
+    background-color: green;
+    color:white;
+    font-size:24px;
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom:200px;
+}
+.submit{
+    width:250px;
+    height:70px;
+    background-color: green;
+    color:white;
+    font-size:24px;
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom:200px;
+}
+#secondForm{
+    background-color: rgb(190, 190, 190);
+    font-size:18px;
+    width:580px;
+    height:300px;
+    margin-bottom:64px;
+    
+}
+#firstForm{
+    color:black;
+    font-size:36px;
+    width:360px;
+    height:48px;
+    background-color: rgb(190, 190, 190);
+    margin-bottom:64px;
+    border-radius:50px;
+    text-align: center;
+}
