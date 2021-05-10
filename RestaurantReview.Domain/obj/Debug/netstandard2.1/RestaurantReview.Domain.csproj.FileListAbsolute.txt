@@ -9,7 +9,6 @@ C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Domain\obj\Debug\net
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netstandard2.1\RestaurantReview.Domain.deps.json
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netstandard2.1\RestaurantReview.Domain.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netstandard2.1\RestaurantReview.Domain.pdb
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netstandard2.1\RestaurantReview.Domain.csprojAssemblyReference.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netstandard2.1\RestaurantReview.Domain.AssemblyInfoInputs.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netstandard2.1\RestaurantReview.Domain.AssemblyInfo.cs
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netstandard2.1\RestaurantReview.Domain.csproj.CoreCompileInputs.cache

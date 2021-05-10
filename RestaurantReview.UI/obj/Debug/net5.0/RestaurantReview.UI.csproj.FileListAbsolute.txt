@@ -46,7 +46,6 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.pdb
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfoInputs.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfo.cs
@@ -70,3 +69,4 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache

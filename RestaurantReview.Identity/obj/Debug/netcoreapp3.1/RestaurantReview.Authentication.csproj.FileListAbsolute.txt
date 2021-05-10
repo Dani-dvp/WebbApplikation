@@ -1,0 +1,15 @@
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.csprojAssemblyReference.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.AssemblyInfoInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.AssemblyInfo.cs
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.csproj.CoreCompileInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Authentication.deps.json
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Authentication.runtimeconfig.json
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Authentication.runtimeconfig.dev.json
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Authentication.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Authentication.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Domain.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\bin\Debug\netcoreapp3.1\RestaurantReview.Domain.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.csproj.CopyComplete
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\netcoreapp3.1\RestaurantReview.Authentication.genruntimeconfig.cache

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\RestaurantReview.Domain",
+    "\\RestaurantReview.Identity",
+    "\\RestaurantReview.Infrastructure",
+    "\\RestaurantReview.UI"
   ],
-  "SelectedNode": "\\Script1.js",
   "PreviewInSolutionExplorer": false
 }

@@ -11,7 +11,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Identity\RestaurantReview.Authentication.csproj" />
     <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Authentication\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
+using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
@@ -16,7 +18,7 @@ namespace RestaurantReview.Application.Profiles
 
         public MappingProfile()
         {
-            // Från Model, till CreateModelResponse
+            
 
             //from model to CreateModelResponse
             CreateMap<Restaurant, CreateRestaurantResponse>();
@@ -33,6 +35,12 @@ namespace RestaurantReview.Application.Profiles
             // from modelList to modelListResponse
 
             CreateMap<Restaurant, RestaurantListQueryResponse>();
+
+            //From model to ModelResponse
+            CreateMap<AuthenticationModel, AuthenticationResponse>();
+            CreateMap<RegistrationModel, RegistrationResponse>();
+
+
 
         }
 
