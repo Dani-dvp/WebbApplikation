@@ -2,7 +2,6 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\ne
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\ref\RestaurantReview.Domain.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.csprojAssemblyReference.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.AssemblyInfoInputs.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\ne
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Domain.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.csprojAssemblyReference.cache

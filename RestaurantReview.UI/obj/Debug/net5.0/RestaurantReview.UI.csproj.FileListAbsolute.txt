@@ -34,6 +34,41 @@ C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI
 C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.exe
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.deps.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.runtimeconfig.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.runtimeconfig.dev.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\ref\RestaurantReview.UI.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfoInputs.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfo.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csproj.CoreCompileInputs.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorAssemblyInfo.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorAssemblyInfo.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\staticwebassets\RestaurantReview.UI.StaticWebAssets.Manifest.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\staticwebassets\RestaurantReview.UI.StaticWebAssets.xml
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\scopedcss\bundle\RestaurantReview.UI.styles.css
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.TagHelpers.input.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.TagHelpers.output.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorCoreGenerate.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorTargetAssemblyInfo.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorTargetAssemblyInfo.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.Views.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csproj.CopyComplete
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.json
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.exe

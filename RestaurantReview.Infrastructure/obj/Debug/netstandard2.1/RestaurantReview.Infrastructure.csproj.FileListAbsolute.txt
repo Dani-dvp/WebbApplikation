@@ -10,3 +10,30 @@ C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\D
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+<<<<<<< HEAD
+=======
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.deps.json
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.pdb
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.deps.json
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.pdb
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+>>>>>>> main

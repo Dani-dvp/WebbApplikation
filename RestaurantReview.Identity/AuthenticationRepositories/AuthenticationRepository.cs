@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RestaurantReview.Application.Features.Authentication;
-using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
 using System.Collections.Generic;

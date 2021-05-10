@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using RestaurantReview.API.Utilities;
-using RestaurantReview.Application;
 using System.Collections.Generic;
 
 namespace RestaurantReview.API
