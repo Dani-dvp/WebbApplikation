@@ -4,6 +4,8 @@ using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestauran
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
 using RestaurantReview.Domain.Models;
+using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
+using ResturantReview.Application.Features.Reviews.Commands.UpdateReview;
 
 namespace RestaurantReview.Application.Profiles
 {
@@ -20,16 +22,16 @@ namespace RestaurantReview.Application.Profiles
 
             //from model to CreateModelResponse
             CreateMap<Restaurant, CreateRestaurantResponse>();
-
+            CreateMap<Review, CreateReviewResponse>();
 
             // From model to UpdateModelResponse
             CreateMap<Restaurant, UpdateRestaurantRespone>();
-
+            CreateMap<Review, UpdateReviewResponse>();
 
 
             // from model to ModelDetailResponse
             CreateMap<Restaurant, RestaurantDetalResponse>();
-
+            
             // from modelList to modelListResponse
 
             CreateMap<Restaurant, RestaurantListQueryResponse>();
