@@ -28,10 +28,5 @@ namespace RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQue
 
     }
 
-<<<<<<< HEAD
-
-}
-=======
     
     }
->>>>>>> main

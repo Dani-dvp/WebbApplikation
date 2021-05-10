@@ -4,16 +4,13 @@ using RestaurantReview.Application.Features.Authentication;
 using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
-<<<<<<< HEAD
-using RestaurantReview.Authentication;
-using RestaurantReview.Authentication.AuthenticationRepositories;
-=======
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQuery;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewsListQuery;
->>>>>>> main
+using RestaurantReview.Authentication;
+using RestaurantReview.Authentication.AuthenticationRepositories;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Infrastructure;
 using RestaurantReview.Infrastructure.Repositories;
@@ -39,18 +36,15 @@ namespace RestaurantReview.Application
 
             //For IServices to handler
             services.AddScoped<ICreateRestaurantService, CreateRestaurantHandler>();
-<<<<<<< HEAD
+            services.AddScoped<ICreateReviewService, CreateReviewHandler>();
+            services.AddScoped<IDeleteReviewService, DeleteReviewHandler>();
+            services.AddScoped<IUpdateReviewService, UpdateReviewHandler>();
+            services.AddScoped<IReviewListQueryService, ReviewsListQueryHandler>();
 
             //Authentication to handler
             services.AddScoped<IAuthenticationService, AuthenticationHandler>();
             services.AddScoped<IRegistrationService, RegistrationHandler>();
 
-=======
-            services.AddScoped<ICreateReviewService, CreateReviewHandler>();
-            services.AddScoped<IDeleteReviewService, DeleteReviewHandler>();
-            services.AddScoped<IUpdateReviewService, UpdateReviewHandler>();
-            services.AddScoped<IReviewListQueryService, ReviewsListQueryHandler>();
->>>>>>> main
 
 
             //Aktiverar automapper i Core

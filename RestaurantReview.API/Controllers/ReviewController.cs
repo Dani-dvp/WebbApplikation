@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-=======
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
@@ -10,7 +8,6 @@ using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
 using ResturantReview.Application.Features.Reviews.Commands.CreateReview;
 using ResturantReview.Application.Features.Reviews.Commands.DeleteReview;
 using ResturantReview.Application.Features.Reviews.Commands.UpdateReview;
->>>>>>> main
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -59,15 +56,6 @@ namespace RestaurantReview.API.Controllers
 
 
         [HttpPut("UpdateReview")]
-<<<<<<< HEAD
-
-        public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
-        {
-
-            return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
-
-        }
-=======
     
     public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
     {
@@ -75,7 +63,6 @@ namespace RestaurantReview.API.Controllers
         return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
 
     }
->>>>>>> main
         [HttpGet("ReviewList")]
         public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQueryController()
         {

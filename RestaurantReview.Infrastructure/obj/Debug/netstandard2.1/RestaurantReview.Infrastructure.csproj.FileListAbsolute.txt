@@ -10,11 +10,6 @@ C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\D
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.deps.json
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
