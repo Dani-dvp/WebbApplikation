@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {}
+    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {
+    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+        "projectUniqueName": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
         "projectName": "RestaurantReview.UI",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\obj\\",
+        "projectPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+        "packagesPath": "C:\\Users\\JonathanKareemIssela\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JonathanKareemIssela\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
