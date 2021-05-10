@@ -25,13 +25,17 @@ namespace RestaurantReview.API.Controllers
         private readonly IUpdateReviewService _updateReviewService;
         private readonly IReviewListQueryService _reviewListQueryService;
 
-        public ReviewController(ICreateReviewService createReviewService, IDeleteReviewService deleteReviewService, IReviewListQueryService reviewListQueryService)
+        public ReviewController(
+            ICreateReviewService createReviewService,
+            IDeleteReviewService deleteReviewService,
+            IReviewListQueryService reviewListQueryService,
+            IUpdateReviewService updateReviewService)
+
         {
             _createReviewService = createReviewService;
             _deleteReviewService = deleteReviewService;
             _reviewListQueryService = reviewListQueryService;
-
-
+            _updateReviewService = updateReviewService;
         }
 
         [HttpPost("CreateReview")]
@@ -40,7 +44,6 @@ namespace RestaurantReview.API.Controllers
         {
 
             return Ok(await _createReviewService.CreateReview(createReviewCommand));
-
 
         }
 
@@ -54,15 +57,6 @@ namespace RestaurantReview.API.Controllers
 
         }
 
-
-        [HttpPut("UpdateReview")]
-    
-    public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
-    {
-
-        return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
-
-    }
         [HttpGet("ReviewList")]
         public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQueryController()
         {
@@ -70,5 +64,16 @@ namespace RestaurantReview.API.Controllers
             return Ok(await _reviewListQueryService.GetReviewList());
 
         }
+
+        [HttpPut("UpdateReview")]
+
+        public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
+        {
+
+            return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
+
+        }
+
+
     }
 }

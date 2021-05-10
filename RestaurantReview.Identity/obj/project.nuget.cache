@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "mcLHXSe1cqwFr62O5wPMjuw0B0/zydb7tJleGHFcx9ebsosI9gOudXt+7KtmXkxj3cauLOFkfUotuPaDROIhIw==",
-=======
-  "dgSpecHash": "jTiX/G/afFhWnjXEolE/O0tp4VqtO1iiLpw5U6zyrfEjzbhBGNJkGFzQ0c5hYlx04WwtyqQNfPrNMXoiHzkbxQ==",
->>>>>>> main
+  "dgSpecHash": "k1jZFOOs9Vz8O7cqGJZgoaCFkmZ1jpxB+SCHqhn+wJxsQ/+MfQDblgpzbdSGVKSoHUf1UfiwP4EI4a3ne+latA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
+  "projectFilePath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
