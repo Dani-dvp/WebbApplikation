@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant
 {
-    public class UpdateRestaurantHandler
+    public class UpdateRestaurantHandler : IUpdateRestaurantService
     {
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;

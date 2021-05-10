@@ -1,6 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Infrastructure;
 using RestaurantReview.Infrastructure.Repositories;
@@ -22,6 +26,10 @@ namespace RestaurantReview.Application
 
             //For IServices to handler
             services.AddScoped<ICreateRestaurantService, CreateRestaurantHandler>();
+            services.AddScoped<IDeleteRestaurantService, DeleteRestaurantHandler>();
+            services.AddScoped<IUpdateRestaurantService, UpdateRestaurantHandler>();
+            services.AddScoped<IRestaurantListQueryService, RestaurantListQueryHandler>();
+            services.AddScoped<IRestaurantDetailService, RestaurantDetailQueryHandler>();
 
 
 

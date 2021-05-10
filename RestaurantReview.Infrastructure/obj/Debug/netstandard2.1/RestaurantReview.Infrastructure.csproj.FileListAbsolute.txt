@@ -22,3 +22,27 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.deps.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.deps.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\bin\Debug\netstandard2.1\RestaurantReview.Domain.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.csproj.CopyComplete
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Infrastructure\obj\Debug\netstandard2.1\RestaurantReview.Infrastructure.pdb

@@ -1,0 +1,17 @@
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Application.deps.json
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Application.runtimeconfig.json
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Application.runtimeconfig.dev.json
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Application.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Application.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Domain.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Infrastructure.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Domain.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\bin\Debug\netcoreapp3.1\ResturantReview.Infrastructure.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.csprojAssemblyReference.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.AssemblyInfoInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.AssemblyInfo.cs
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.csproj.CoreCompileInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.csproj.CopyComplete
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Application\obj\Debug\netcoreapp3.1\ResturantReview.Application.genruntimeconfig.cache

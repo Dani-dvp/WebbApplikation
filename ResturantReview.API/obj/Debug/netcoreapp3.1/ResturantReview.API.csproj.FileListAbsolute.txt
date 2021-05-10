@@ -1,0 +1,6 @@
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.csprojAssemblyReference.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.AssemblyInfoInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.AssemblyInfo.cs
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.csproj.CoreCompileInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.API\obj\Debug\netcoreapp3.1\ResturantReview.API.MvcApplicationPartsAssemblyInfo.cache

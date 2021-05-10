@@ -1,0 +1,8 @@
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\bin\Debug\netstandard2.0\ResturantReview.Domain.deps.json
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\bin\Debug\netstandard2.0\ResturantReview.Domain.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\bin\Debug\netstandard2.0\ResturantReview.Domain.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\obj\Debug\netstandard2.0\ResturantReview.Domain.AssemblyInfoInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\obj\Debug\netstandard2.0\ResturantReview.Domain.AssemblyInfo.cs
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\obj\Debug\netstandard2.0\ResturantReview.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\obj\Debug\netstandard2.0\ResturantReview.Domain.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Domain\obj\Debug\netstandard2.0\ResturantReview.Domain.pdb

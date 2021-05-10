@@ -1,0 +1,12 @@
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\bin\Debug\netstandard2.0\ResturantReview.Infrastructure.deps.json
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\bin\Debug\netstandard2.0\ResturantReview.Infrastructure.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\bin\Debug\netstandard2.0\ResturantReview.Infrastructure.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\bin\Debug\netstandard2.0\ResturantReview.Domain.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\bin\Debug\netstandard2.0\ResturantReview.Domain.pdb
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.csprojAssemblyReference.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.AssemblyInfo.cs
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.csproj.CopyComplete
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.dll
+C:\Users\sebas\source\repos\ResturantReview\ResturantReview.Infrastructure\obj\Debug\netstandard2.0\ResturantReview.Infrastructure.pdb

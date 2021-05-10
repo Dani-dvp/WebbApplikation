@@ -32,7 +32,7 @@ namespace RestaurantReview.Application.Profiles
 
             // from modelList to modelListResponse
 
-            CreateMap<Restaurant, RestaurantListQueryResponse>();
+            CreateMap<Restaurant, ResturantListQueryResponse>();
 
         }
 
