@@ -18,15 +18,24 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
+<<<<<<< HEAD
           "net5.0"
+=======
+          "netstandard2.1"
+>>>>>>> main
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
+<<<<<<< HEAD
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
+=======
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+>>>>>>> main
             "projectReferences": {}
           }
         },
@@ -37,8 +46,13 @@
         }
       },
       "frameworks": {
+<<<<<<< HEAD
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
+=======
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+>>>>>>> main
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -47,6 +61,7 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+<<<<<<< HEAD
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -59,6 +74,8 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.5, )"
+=======
+>>>>>>> main
             }
           },
           "imports": [
@@ -72,7 +89,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+<<<<<<< HEAD
             "Microsoft.NETCore.App": {
+=======
+            "NETStandard.Library": {
+>>>>>>> main
               "privateAssets": "all"
             }
           },

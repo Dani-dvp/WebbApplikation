@@ -16,12 +16,15 @@ C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Application\obj\Debu
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Application\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\Robin\source\repos\WebbApplikation\ResturantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.csprojAssemblyReference.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.AssemblyInfoInputs.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.AssemblyInfo.cs
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.csproj.CoreCompileInputs.cache
 =======
+=======
+>>>>>>> main
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.csprojAssemblyReference.cache
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.AssemblyInfoInputs.cache
@@ -39,6 +42,9 @@ C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\Restauran
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Infrastructure.pdb
 C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.csproj.CopyComplete
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.deps.json
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.dll

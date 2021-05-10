@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "mcLHXSe1cqwFr62O5wPMjuw0B0/zydb7tJleGHFcx9ebsosI9gOudXt+7KtmXkxj3cauLOFkfUotuPaDROIhIw==",
+=======
+  "dgSpecHash": "jTiX/G/afFhWnjXEolE/O0tp4VqtO1iiLpw5U6zyrfEjzbhBGNJkGFzQ0c5hYlx04WwtyqQNfPrNMXoiHzkbxQ==",
+>>>>>>> main
   "success": true,
   "projectFilePath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
   "expectedPackageFiles": [

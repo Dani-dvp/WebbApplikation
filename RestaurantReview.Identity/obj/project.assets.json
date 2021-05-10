@@ -1547,6 +1547,7 @@
       },
       "RestaurantReview.Domain/1.0.0": {
         "type": "project",
+<<<<<<< HEAD
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
@@ -1554,6 +1555,12 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.5",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.5",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.5"
+=======
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1"
+>>>>>>> main
         },
         "compile": {
           "bin/placeholder/RestaurantReview.Domain.dll": {}
