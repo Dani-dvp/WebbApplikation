@@ -1261,11 +1261,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
       "projectName": "RestaurantReview.Domain",
-      "projectPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+      "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
       "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",

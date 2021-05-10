@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zk5Qgu39hr/Q6OfgA+OT6Eas8F6uoSJif6W0OaGVR0NYkVzOhxVBFDkQsjDoZ+WjN/x3ekRO+/spsxB1B9//Kw==",
+  "dgSpecHash": "9F+/iDCuqL5keM1dFMJQpKU5Lw/GIpPfZ3HjsTIRgm/V3UT/lt0FywTT6hCOts89TJe/sZ33fLpLvroajzY3Tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+  "projectFilePath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\5.0.5\\microsoft.aspnetcore.spaservices.extensions.5.0.5.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",

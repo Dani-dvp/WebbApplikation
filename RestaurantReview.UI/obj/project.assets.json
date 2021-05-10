@@ -172,11 +172,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
       "projectName": "RestaurantReview.UI",
-      "projectPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+      "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
       "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.UI\\obj\\",
+      "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",

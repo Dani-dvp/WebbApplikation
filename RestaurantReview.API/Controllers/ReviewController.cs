@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
@@ -38,40 +39,36 @@ namespace RestaurantReview.API.Controllers
             _updateReviewService = updateReviewService;
         }
 
-        [HttpPost("CreateReview")]
 
+        [Authorize]
+        [HttpPost("CreateReview")]
         public async Task<ActionResult<CreateReviewResponse>> CreateReviewController([FromBody] CreateReviewCommand createReviewCommand)
         {
-
             return Ok(await _createReviewService.CreateReview(createReviewCommand));
-
         }
 
-        [HttpDelete("DeleteReview")]
 
+        [Authorize]
+        [HttpDelete("DeleteReview")]
         public async Task<ActionResult<Guid>> DeleteReviewController([FromBody] DeleteReviewCommand deleteReviewCommand)
         {
-
             return Ok(await _deleteReviewService.DeleteReview(deleteReviewCommand));
-
-
         }
 
+
+        [Authorize]
         [HttpGet("ReviewList")]
         public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQueryController()
         {
-
             return Ok(await _reviewListQueryService.GetReviewList());
-
         }
 
-        [HttpPut("UpdateReview")]
 
+        [Authorize]
+        [HttpPut("UpdateReview")]
         public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
         {
-
             return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
-
         }
 
 

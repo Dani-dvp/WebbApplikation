@@ -277,3 +277,10 @@ C:\Users\Robin\source\repos\Prollyneedtofix\WebbApplikation\RestaurantReview.API
 C:\Users\Robin\source\repos\Prollyneedtofix\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\ref\RestaurantReview.API.dll
 C:\Users\Robin\source\repos\Prollyneedtofix\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.pdb
 C:\Users\Robin\source\repos\Prollyneedtofix\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.genruntimeconfig.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.csprojAssemblyReference.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.AssemblyInfoInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.AssemblyInfo.cs
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.csproj.CoreCompileInputs.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.MvcApplicationPartsAssemblyInfo.cache

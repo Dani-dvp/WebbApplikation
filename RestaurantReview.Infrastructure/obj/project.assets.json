@@ -5558,11 +5558,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
       "projectName": "RestaurantReview.Infrastructure",
-      "projectPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5579,8 +5579,8 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
-            "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-              "projectPath": "C:\\Users\\Robin\\source\\repos\\Prollyneedtofix\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+            "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+              "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
             }
           }
         }
