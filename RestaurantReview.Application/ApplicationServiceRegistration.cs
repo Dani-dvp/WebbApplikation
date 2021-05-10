@@ -1,11 +1,16 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RestaurantReview.Application.Features.Authentication;
+using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
+using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQuery;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewsListQuery;
+using RestaurantReview.Authentication;
+using RestaurantReview.Authentication.AuthenticationRepositories;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Infrastructure;
 using RestaurantReview.Infrastructure.Repositories;
@@ -26,6 +31,7 @@ namespace RestaurantReview.Application
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
 
 
             //For IServices to handler
@@ -35,10 +41,16 @@ namespace RestaurantReview.Application
             services.AddScoped<IUpdateReviewService, UpdateReviewHandler>();
             services.AddScoped<IReviewListQueryService, ReviewsListQueryHandler>();
 
+            //Authentication to handler
+            services.AddScoped<IAuthenticationService, AuthenticationHandler>();
+            services.AddScoped<IRegistrationService, RegistrationHandler>();
+
+
 
             //Aktiverar automapper i Core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddInfrastructureServices(configuration);
+            services.AddAuthenticationServices(configuration);
 
             return services;
         }

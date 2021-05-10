@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
@@ -14,6 +14,7 @@ namespace RestaurantReview.API.Controllers
             _createRestaurantService = createRestaurantService;
         }
 
+        [Authorize]
         [HttpPost("CreateRestaurant")]
 
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)

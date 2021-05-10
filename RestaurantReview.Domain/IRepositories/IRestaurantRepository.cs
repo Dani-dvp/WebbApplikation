@@ -8,5 +8,6 @@ namespace RestaurantReview.Domain.IRepositories
         Task<Restaurant> GetRestaurantByName(string Name);
 
 
+
     }
 }
