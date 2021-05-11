@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RestaurantReview.Application.Features.Authentication;
-using RestaurantReview.Domain.Models;
+using RestaurantReview.Domain.AuthenticationModels;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

@@ -1,4 +1,4 @@
-﻿namespace RestaurantReview.Domain.Models
+﻿namespace RestaurantReview.Domain.AuthenticationModels
 {
     public class JwtSettings
     {

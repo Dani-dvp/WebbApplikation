@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mcLHXSe1cqwFr62O5wPMjuw0B0/zydb7tJleGHFcx9ebsosI9gOudXt+7KtmXkxj3cauLOFkfUotuPaDROIhIw==",
+  "dgSpecHash": "RMOMUmvL1+RkYFDAx0VeUEepSV32h7Su9K9LfftcBO9Qt4PZpT7iFXVqmCoDbYWN/52mKS2GlhdqOBRRTyXS6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\5.0.5\\microsoft.aspnetcore.authentication.google.5.0.5.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.5\\microsoft.aspnetcore.cryptography.keyderivation.5.0.5.nupkg.sha512",

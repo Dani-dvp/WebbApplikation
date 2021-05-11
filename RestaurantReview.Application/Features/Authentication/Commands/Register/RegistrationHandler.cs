@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-using RestaurantReview.Domain.Models;
+using RestaurantReview.Domain.AuthenticationModels;
 using System;
 using System.Threading.Tasks;
 

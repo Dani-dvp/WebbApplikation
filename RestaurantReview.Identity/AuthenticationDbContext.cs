@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RestaurantReview.Domain.Models;
+using RestaurantReview.Domain.AuthenticationModels;
 
 namespace RestaurantReview.Authentication
 {

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using RestaurantReview.Domain.Models;
+using RestaurantReview.Domain.AuthenticationModels;
 using System;
 using System.Text;
 
@@ -74,6 +74,8 @@ namespace RestaurantReview.Authentication
                         },
                     };
                 });
+
+
         }
     }
 }

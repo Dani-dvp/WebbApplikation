@@ -1,4 +1,4 @@
-﻿using RestaurantReview.Domain.Models;
+﻿using RestaurantReview.Domain.AuthenticationModels;
 using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 

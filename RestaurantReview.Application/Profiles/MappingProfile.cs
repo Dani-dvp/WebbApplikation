@@ -5,6 +5,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
 using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
 using ResturantReview.Application.Features.Reviews.Commands.UpdateReview;
