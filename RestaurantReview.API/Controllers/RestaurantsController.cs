@@ -16,12 +16,12 @@ namespace RestaurantReview.API.Controllers
         private readonly ICreateRestaurantService _createRestaurantService;
         private readonly IDeleteRestaurantService _deleteResturantService;
         private readonly IUpdateRestaurantService _updateResturantService;
-        private readonly IRestaurantListQueryService _resturantListQueryService;
+        private readonly ICategoryListQuery _resturantListQueryService;
         private readonly IRestaurantDetailService _restaurantDetailService;
 
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
-            , IUpdateRestaurantService updateResturantService, IRestaurantListQueryService resturantListQueryService
+            , IUpdateRestaurantService updateResturantService, ICategoryListQuery resturantListQueryService
             , IRestaurantDetailService restaurantDetailService)
         {
             _createRestaurantService = createRestaurantService;
@@ -38,7 +38,7 @@ namespace RestaurantReview.API.Controllers
         {
 
             return Ok(await _createRestaurantService.CreateRestaurant(createRestaurantCommand));
-
+            
 
         }
 

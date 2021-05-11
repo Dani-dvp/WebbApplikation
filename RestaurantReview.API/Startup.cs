@@ -23,7 +23,7 @@ namespace RestaurantReview.API
 
             AddSwagger(services);
             services.AddControllers();
-
+          
 
             //Gör att vi kan använda services mellan projekt // lagt till
             services.AddApplicationServices(Configuration); // använder RestaurantReview.application

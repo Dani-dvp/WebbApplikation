@@ -16,7 +16,7 @@ namespace RestaurantReview.Infrastructure.Configuration
                 .WithOne(review => review.Restaurant)
                 .HasForeignKey(review => review.RestaurantID);
 
-
+            
         }
     }
 }

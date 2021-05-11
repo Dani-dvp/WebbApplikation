@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
-  public  interface IRestaurantListQueryService
+  public  interface ICategoryListQuery
     {
         Task<List<ResturantListQueryResponse>> GetRestaurantList();
     }

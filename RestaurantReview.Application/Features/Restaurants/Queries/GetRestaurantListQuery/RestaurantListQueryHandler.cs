@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
-    public class RestaurantListQueryHandler : IRestaurantListQueryService
+    public class RestaurantListQueryHandler : ICategoryListQuery
     {
         private readonly IMapper _mapper;
 

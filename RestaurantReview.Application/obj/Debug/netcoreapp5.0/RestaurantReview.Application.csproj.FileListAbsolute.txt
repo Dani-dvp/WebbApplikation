@@ -50,6 +50,8 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\webbapplikation v2\Webbapplikation\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.deps.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.runtimeconfig.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.runtimeconfig.dev.json
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
@@ -66,3 +68,4 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.genruntimeconfig.cache
