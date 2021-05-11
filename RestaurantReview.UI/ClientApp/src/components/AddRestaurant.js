@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import RatingStars from './RatingStars';
+import '../Css/StarRating.css';
 import '../Css/AddRestaurant.css';
 
 export class AddRestaurant extends Component {
@@ -29,11 +31,7 @@ export class AddRestaurant extends Component {
                     <textarea id="secondForm" placeholder=" Write your review here..."></textarea>
                     <br />
                     <br />
-                    <button className="button"type="button">Star</button>
-                    <button className="button"type="button">Star</button>
-                    <button className="button"type="button">Star</button>
-                    <button className="button"type="button">Star</button>
-                    <button className="button"type="button">Star</button>
+                    <RatingStars></RatingStars>
                     <br />
                     <button className="submit"type="button">Submit</button>
                 </form>

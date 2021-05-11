@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {}
+    "C:\\Users\\kevin\\Documents\\WebbApp\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+    "C:\\Users\\kevin\\Documents\\WebbApp\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Documents\\WebbApp\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
         "projectName": "RestaurantReview.Domain",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Documents\\WebbApp\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Documents\\WebbApp\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

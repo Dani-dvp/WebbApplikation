@@ -15,7 +15,7 @@ export class Home extends Component {
               <input id="loc2" type="text" name="rest"
                 placeholder="Restaurant:" />
             </form>
-      </div>
+          </div>
         </section>
       </div>
     );

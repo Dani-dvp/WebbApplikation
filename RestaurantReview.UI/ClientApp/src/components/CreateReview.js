@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import '../Css/CreateReview.css';
 import { Link } from 'react-router-dom';
+import '../Images/Star.png';
+import RatingStars from './RatingStars';
+import '../Css/StarRating.css';
+import '../Css/CreateReview.css';
 
 export class CreateReview extends Component {
     render() {
@@ -16,11 +19,7 @@ export class CreateReview extends Component {
                     <br />
                     <textarea id="secondForm" placeholder=" Write your review here..."></textarea>
                     <br />
-                    <button className="button"type="button" /><img src="../Images/Star.png" alt="Here we go" />
-                    <button className="button"type="button" /><img src="../images/Star.png" alt="Here we go" />
-                    <button className="button"type="button" /><img src="../images/Star.png" alt="Here we go" />
-                    <button className="button"type="button" /><img src="../images/Star.png" alt="Here we go" />
-                    <button className="button"type="button" /><img src="../images/Star.png" alt="Here we go" />
+                    <RatingStars></RatingStars>
                     <br />
                     <button class="submit"type="button">Submit</button>
                 </form>
@@ -28,8 +27,8 @@ export class CreateReview extends Component {
 
             <div>
                 <p id="reviewText">Is your restaurant not here?</p>
-                <form>
-                    <button id="reviewButton"type="button" /><Link to="/addrestaurant">Add A Restaurant!</Link>
+                <form >
+                    <button><Link activeClassName="Active" to="/addrestaurant">Add A Restaurant!</Link></button>
                 </form>
             </div>
             </div>
