@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import '../Images/Star.png';
 import RatingStars from './RatingStars';
 import '../Css/StarRating.css';
 import '../Css/CreateReview.css';
@@ -21,7 +20,7 @@ export class CreateReview extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                    <button class="submit"type="button">Submit</button>
+                    <button class="submit">Submit</button>
                 </form>
             </div>
 

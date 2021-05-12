@@ -82,7 +82,6 @@ C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\n
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.dll
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.Views.pdb
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
-C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfoInputs.cache
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfo.cs
@@ -106,3 +105,11 @@ C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\n
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache

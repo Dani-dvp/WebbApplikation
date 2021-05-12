@@ -55,3 +55,6 @@ C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\ob
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.dll
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.runtimeconfig.json
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.runtimeconfig.dev.json
+C:\Users\kevin\Documents\WebbApp\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.genruntimeconfig.cache

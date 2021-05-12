@@ -33,7 +33,7 @@ export class AddRestaurant extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                    <button className="submit"type="button">Submit</button>
+                    <button className="submit">Submit</button>
                 </form>
             </div>
             </div>
