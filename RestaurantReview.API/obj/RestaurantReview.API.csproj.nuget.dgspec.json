@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {}
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
         "projectName": "RestaurantReview.API",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
               }
             }
           }
@@ -51,6 +51,16 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
@@ -79,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
         "projectName": "RestaurantReview.Application",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,14 +117,14 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               },
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj"
               },
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj"
               }
             }
           }
@@ -136,6 +146,16 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
             }
           },
           "imports": [
@@ -149,25 +169,28 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
         "projectName": "RestaurantReview.Domain",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -212,6 +235,16 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
             }
           },
           "imports": [
@@ -225,25 +258,28 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj": {
       "version": "1.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
         "projectName": "RestaurantReview.Authentication",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Identity\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -257,8 +293,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               }
             }
           }
@@ -327,25 +363,28 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
         "projectName": "RestaurantReview.Infrastructure",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -359,8 +398,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               }
             }
           }
@@ -390,6 +429,12 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
             }
           },
           "imports": [
@@ -403,11 +448,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

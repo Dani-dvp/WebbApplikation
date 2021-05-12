@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
 {
-    public class RestaurantDetailQueryHandler
+    public class RestaurantDetailQueryHandler : IRestaurantDetailService
     {
         //Innehåller kod för metoder, Hittar detta genom att kalla på databasen genom Repository
 
@@ -21,9 +21,9 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         }
 
-        public async Task<RestaurantDetalResponse> GetRestaurantByID(RestaurantDetailCommand getRestaurantCommand)
+        public async Task<RestaurantDetalResponse> GetRestaurantByID(RestaurantDetailCommand RestaurantDetailCommand)
         {
-            var Restaurant = await _restaurantRepository.GetByIdAsync(getRestaurantCommand.RestaurantID);
+            var Restaurant = await _restaurantRepository.GetByIdAsync(RestaurantDetailCommand.RestaurantID);
 
             var RestaurantResponse = _mapper.Map<RestaurantDetalResponse>(Restaurant);
 

@@ -16,6 +16,8 @@ namespace RestaurantReview.Domain.Models
 
         public List<Review> Reviews { get; set; }
 
+        public List<Category> Categories { get; set; }
+
 
 
     }

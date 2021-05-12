@@ -8,6 +8,19 @@ namespace RestaurantReview.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Category",
+                columns: table => new
+                {
+                    CategoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RestaurantID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    RestaurantCategory = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Category", x => x.CategoryID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Restaurants",
                 columns: table => new
                 {
@@ -21,6 +34,30 @@ namespace RestaurantReview.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Restaurants", x => x.RestaurantID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CategoryRestaurant",
+                columns: table => new
+                {
+                    CategoriesCategoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RestaurantsRestaurantID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryRestaurant", x => new { x.CategoriesCategoryID, x.RestaurantsRestaurantID });
+                    table.ForeignKey(
+                        name: "FK_CategoryRestaurant_Category_CategoriesCategoryID",
+                        column: x => x.CategoriesCategoryID,
+                        principalTable: "Category",
+                        principalColumn: "CategoryID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CategoryRestaurant_Restaurants_RestaurantsRestaurantID",
+                        column: x => x.RestaurantsRestaurantID,
+                        principalTable: "Restaurants",
+                        principalColumn: "RestaurantID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,6 +83,11 @@ namespace RestaurantReview.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_CategoryRestaurant_RestaurantsRestaurantID",
+                table: "CategoryRestaurant",
+                column: "RestaurantsRestaurantID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Reviews_RestaurantID",
                 table: "Reviews",
                 column: "RestaurantID");
@@ -54,7 +96,13 @@ namespace RestaurantReview.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "CategoryRestaurant");
+
+            migrationBuilder.DropTable(
                 name: "Reviews");
+
+            migrationBuilder.DropTable(
+                name: "Category");
 
             migrationBuilder.DropTable(
                 name: "Restaurants");

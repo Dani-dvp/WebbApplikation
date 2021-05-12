@@ -10,7 +10,7 @@ using RestaurantReview.Infrastructure;
 namespace RestaurantReview.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20210430065444_InitialCreate")]
+    [Migration("20210511094622_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,38 @@ namespace RestaurantReview.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("CategoryRestaurant", b =>
+                {
+                    b.Property<Guid>("CategoriesCategoryID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RestaurantsRestaurantID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("CategoriesCategoryID", "RestaurantsRestaurantID");
+
+                    b.HasIndex("RestaurantsRestaurantID");
+
+                    b.ToTable("CategoryRestaurant");
+                });
+
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Category", b =>
+                {
+                    b.Property<Guid>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("RestaurantCategory")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("RestaurantID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Category");
+                });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Restaurant", b =>
                 {
@@ -73,6 +105,21 @@ namespace RestaurantReview.Infrastructure.Migrations
                     b.HasIndex("RestaurantID");
 
                     b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("CategoryRestaurant", b =>
+                {
+                    b.HasOne("RestaurantReview.Domain.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesCategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RestaurantReview.Domain.Models.Restaurant", null)
+                        .WithMany()
+                        .HasForeignKey("RestaurantsRestaurantID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Review", b =>
