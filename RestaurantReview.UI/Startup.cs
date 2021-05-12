@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -50,22 +49,22 @@ namespace RestaurantReview.UI
 
             app.UseRouting();
 
-              app.UseEndpoints(endpoints =>
-              {
-                  endpoints.MapControllerRoute(
-                      name: "default",
-                      pattern: "{controller}/{action=Index}/{id?}");
-              }); 
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
+            });
 
-              app.UseSpa(spa =>
-              {
-                  spa.Options.SourcePath = "ClientApp";
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
 
-                  if (env.IsDevelopment())
-                  {
-                      spa.UseReactDevelopmentServer(npmScript: "start");
-                  }
-              });
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+            });
         }
     }
 }

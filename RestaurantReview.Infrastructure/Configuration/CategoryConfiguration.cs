@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RestaurantReview.Domain.Models;
 
@@ -15,23 +12,23 @@ namespace RestaurantReview.Infrastructure.Configuration
             modelBuilder
                 .HasKey(configure => configure.CategoryID);
 
-         
+
 
 
             modelBuilder
                 .HasMany(category => category.Restaurants)
-             
+
                 .WithMany(resturant => resturant.Categories);
-                
-             
-               
-
-         
-                
-                
 
 
-       
+
+
+
+
+
+
+
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace RestaurantReview.API.Controllers
         {
 
             return Ok(await _createRestaurantService.CreateRestaurant(createRestaurantCommand));
-            
+
 
         }
 
@@ -73,7 +73,7 @@ namespace RestaurantReview.API.Controllers
 
         public async Task<RestaurantDetalResponse> GetRestaurantByID([FromQuery] RestaurantDetailCommand restaurantDetailCommand)
         {
-          return await  _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
+            return await _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
         }
 
     }

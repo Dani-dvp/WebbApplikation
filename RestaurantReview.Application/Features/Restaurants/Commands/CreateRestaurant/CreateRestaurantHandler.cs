@@ -38,7 +38,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
             return RestaurantRespone;
 
-            
+
         }
 
     }

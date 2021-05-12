@@ -2,7 +2,7 @@
 {
     public class CreateCategoryCommand
     {
-       public string  RestaurantCategory { get; set; }
+        public string RestaurantCategory { get; set; }
 
 
     }

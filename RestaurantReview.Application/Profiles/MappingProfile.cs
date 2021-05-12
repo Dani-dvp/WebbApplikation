@@ -1,13 +1,22 @@
 ﻿using AutoMapper;
+using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
+using RestaurantReview.Application.Features.Authentication.Commands.Register;
+
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
+
+
+
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
+using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
+using ResturantReview.Application.Features.Reviews.Commands.UpdateReview;
 
 namespace RestaurantReview.Application.Profiles
 {
@@ -20,10 +29,11 @@ namespace RestaurantReview.Application.Profiles
 
         public MappingProfile()
         {
-            // Från Model, till CreateModelResponse
+
 
             //from model to CreateModelResponse
             CreateMap<Restaurant, CreateRestaurantResponse>();
+
             CreateMap<Category, CreateCategoryResponse>();
 
 
@@ -31,6 +41,13 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Restaurant, UpdateRestaurantRespone>();
             CreateMap<Category, UpdateCategoryResponse>();
 
+
+
+            CreateMap<Review, CreateReviewResponse>();
+
+            // From model to UpdateModelResponse
+            CreateMap<Restaurant, UpdateRestaurantRespone>();
+            CreateMap<Review, UpdateReviewResponse>();
 
 
 
@@ -42,8 +59,14 @@ namespace RestaurantReview.Application.Profiles
             // from modelList to modelListResponse
 
             CreateMap<Restaurant, ResturantListQueryResponse>();
-           
+
             CreateMap<Category, CategoryListQueryResponse>();
+
+            //From model to ModelResponse
+            CreateMap<AuthenticationModel, AuthenticationResponse>();
+            CreateMap<RegistrationModel, RegistrationResponse>();
+
+
 
         }
 

@@ -4,10 +4,7 @@ using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
-using RestaurantReview.Domain.IRepositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
