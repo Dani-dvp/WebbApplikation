@@ -21,8 +21,8 @@ export default class Register extends Component {
         Email: email,
         Password: password,
         UserName: userName,
-        FirstName: "Kalle",
-        LastName: "Arnold"
+        FirstName: "",
+        LastName: ""
       },
 
     }).then(res => { console.log(res) });
