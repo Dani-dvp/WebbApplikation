@@ -23,9 +23,9 @@ namespace RestaurantReview.Infrastructure.Repositories
             var Restaurant = await _myDbContext.Set<Restaurant>().FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
             return Restaurant;
         }
-        public async Task<int> RestaurantReviewCount(Guid  id)
+        public async Task<int> RestaurantReviewCount(string  name)
         {
-            var countReview = await _myDbContext.Set<Restaurant>().CountAsync(restaurant => restaurant.RestaurantID == id);
+            var countReview = await _myDbContext.Set<Restaurant>().CountAsync(restaurant => restaurant.RestaurantName == name);
            
             return countReview;
 

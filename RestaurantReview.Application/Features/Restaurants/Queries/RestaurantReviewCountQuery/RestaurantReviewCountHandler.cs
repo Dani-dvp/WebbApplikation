@@ -17,16 +17,16 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantRe
             _mapper = mapper;
         }
 
-        public async Task<RestaurantReviewCountResponse> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand)
+        public async Task <int> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand)
         {
             var getResturant = await _restaurantRepository.GetRestaurantByName(restaurantReviewCommand.RestaurantName);
 
 
-            var countReviewsInRestaurant = await _restaurantRepository.RestaurantReviewCount(getResturant.RestaurantID);
+            var countReviewsInRestaurant = await _restaurantRepository.RestaurantReviewCount(restaurantReviewCommand.RestaurantName);
 
-            var countReviewsInRestaurantResponse = _mapper.Map<RestaurantReviewCountResponse>(countReviewsInRestaurant);
+           
 
-            return countReviewsInRestaurantResponse;
+            return countReviewsInRestaurant;
         }
 
     }

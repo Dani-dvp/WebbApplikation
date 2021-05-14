@@ -81,7 +81,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [HttpGet("ReviewCount")]
-        public async Task<RestaurantReviewCountResponse> RestaurantReviewCount([FromQuery]RestaurantReviewCountCommand restaurantReviewCountCommand)
+        public async Task<int> RestaurantReviewCount([FromQuery]RestaurantReviewCountCommand restaurantReviewCountCommand)
         {
             return await _restaurantReviewCountService.RestaurantReviewsCount(restaurantReviewCountCommand);
         }

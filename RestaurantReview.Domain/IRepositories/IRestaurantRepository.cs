@@ -8,7 +8,7 @@ namespace RestaurantReview.Domain.IRepositories
     {
         Task<Restaurant> GetRestaurantByName(string Name);
 
-        Task<int> RestaurantReviewCount(Guid id);
+        Task<int> RestaurantReviewCount(string name);
 
 
 

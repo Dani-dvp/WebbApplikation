@@ -2,7 +2,7 @@
 {
     public class RestaurantReviewCountResponse
     {
-       
+        public string RestaurantName { get; set; }
 
 
     }

@@ -8,6 +8,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantRe
 {
    public interface IRestaurantReviewCountService
     {
-        Task<RestaurantReviewCountResponse> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand);
+        Task<int> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand);
+    
     }
 }
