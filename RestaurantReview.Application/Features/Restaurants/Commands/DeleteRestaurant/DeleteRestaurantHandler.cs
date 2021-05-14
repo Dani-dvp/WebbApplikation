@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant
 {
-    public class DeleteRestaurantHandler
+    public class DeleteRestaurantHandler : IDeleteRestaurantService
     {
         private readonly IRestaurantRepository _restaurantRepository;
 

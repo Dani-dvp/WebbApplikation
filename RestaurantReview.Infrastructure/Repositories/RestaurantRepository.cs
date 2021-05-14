@@ -11,6 +11,7 @@ namespace RestaurantReview.Infrastructure.Repositories
         protected new readonly MyDbContext _myDbContext;
 
 
+
         public RestaurantRepository(MyDbContext myDbContext) : base(myDbContext)
         {
             _myDbContext = myDbContext;

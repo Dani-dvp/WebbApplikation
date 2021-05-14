@@ -9,15 +9,7 @@
       "DEBUG",
       "NET",
       "NET5_0",
-      "NETCOREAPP",
-      "NET5_0_OR_GREATER",
-      "NETCOREAPP1_0_OR_GREATER",
-      "NETCOREAPP1_1_OR_GREATER",
-      "NETCOREAPP2_0_OR_GREATER",
-      "NETCOREAPP2_1_OR_GREATER",
-      "NETCOREAPP2_2_OR_GREATER",
-      "NETCOREAPP3_0_OR_GREATER",
-      "NETCOREAPP3_1_OR_GREATER"
+      "NETCOREAPP"
     ],
     "languageVersion": "9.0",
     "platform": "",
@@ -34,8 +26,11 @@
       "RestaurantReview.UI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.SpaServices.Extensions": "5.0.5",
+<<<<<<< HEAD
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
           "Microsoft.EntityFrameworkCore.Tools": "5.0.5",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -129,6 +124,10 @@
           "Microsoft.Extensions.Configuration.UserSecrets": "5.0.0.0",
           "Microsoft.Extensions.Configuration.Xml": "5.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions.Reference": "5.0.0.0",
+<<<<<<< HEAD
+=======
+          "Microsoft.Extensions.DependencyInjection.Reference": "5.0.0.0",
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "5.0.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions.Reference": "5.0.0.0",
@@ -186,6 +185,10 @@
           "System.Data": "4.0.0.0",
           "System.Diagnostics.Contracts": "5.0.0.0",
           "System.Diagnostics.Debug": "5.0.0.0",
+<<<<<<< HEAD
+=======
+          "System.Diagnostics.DiagnosticSource.Reference": "5.0.0.0",
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
           "System.Diagnostics.EventLog": "5.0.0.0",
           "System.Diagnostics.FileVersionInfo": "5.0.0.0",
           "System.Diagnostics.Process": "5.0.0.0",
@@ -365,9 +368,12 @@
             "assemblyVersion": "5.0.5.0",
             "fileVersion": "5.0.521.16102"
           }
+<<<<<<< HEAD
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll": {}
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
         }
       },
       "Microsoft.EntityFrameworkCore.Abstractions/5.0.5": {
@@ -376,9 +382,12 @@
             "assemblyVersion": "5.0.5.0",
             "fileVersion": "5.0.521.16102"
           }
+<<<<<<< HEAD
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.5": {},
@@ -440,9 +449,12 @@
             "assemblyVersion": "5.0.0.1",
             "fileVersion": "5.0.120.57516"
           }
+<<<<<<< HEAD
         },
         "compile": {
           "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {},
@@ -475,6 +487,7 @@
         }
       },
       "Microsoft.Extensions.Primitives/5.0.0": {},
+<<<<<<< HEAD
       "System.Collections.Immutable/5.0.0": {
         "compile": {
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
@@ -485,15 +498,22 @@
           "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         }
       },
+=======
+      "System.Collections.Immutable/5.0.0": {},
+      "System.ComponentModel.Annotations/5.0.0": {},
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
       "System.Diagnostics.DiagnosticSource/5.0.1": {
         "runtime": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.220.61120"
           }
+<<<<<<< HEAD
         },
         "compile": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -1048,6 +1068,15 @@
         },
         "compileOnly": true
       },
+<<<<<<< HEAD
+=======
+      "Microsoft.Extensions.DependencyInjection.Reference/5.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "compileOnly": true
+      },
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
       "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {}
@@ -1390,6 +1419,15 @@
         },
         "compileOnly": true
       },
+<<<<<<< HEAD
+=======
+      "System.Diagnostics.DiagnosticSource.Reference/5.0.0.0": {
+        "compile": {
+          "System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "compileOnly": true
+      },
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
       "System.Diagnostics.EventLog/5.0.0.0": {
         "compile": {
           "System.Diagnostics.EventLog.dll": {}
@@ -2814,6 +2852,14 @@
       "sha512": ""
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions.Reference/5.0.0.0": {
+<<<<<<< HEAD
+=======
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyInjection.Reference/5.0.0.0": {
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3103,6 +3149,14 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
+=======
+    "System.Diagnostics.DiagnosticSource.Reference/5.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
     "System.Diagnostics.EventLog/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,

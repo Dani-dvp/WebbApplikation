@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
-    public class RestaurantListQueryHandler
+    public class RestaurantListQueryHandler : ICategoryListQuery
     {
         private readonly IMapper _mapper;
 
@@ -17,11 +17,11 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<List<RestaurantListQueryResponse>> GetRestaurantList()
+        public async Task<List<ResturantListQueryResponse>> GetRestaurantList()
         {
             var listOfRestaurant = await _restaurantRepository.ListAllAsync();
 
-            var listOfRestaurantResponse = _mapper.Map<List<RestaurantListQueryResponse>>(listOfRestaurant);
+            var listOfRestaurantResponse = _mapper.Map<List<ResturantListQueryResponse>>(listOfRestaurant);
 
             return listOfRestaurantResponse;
         }

@@ -14,7 +14,10 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.5",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
+<<<<<<< HEAD
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
+=======
+>>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
           "Microsoft.EntityFrameworkCore.Tools": "5.0.5"
         },
         "runtime": {
