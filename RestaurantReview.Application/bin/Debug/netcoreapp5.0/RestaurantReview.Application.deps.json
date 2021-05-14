@@ -10,12 +10,9 @@
         "dependencies": {
           "AutoMapper": "10.1.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-<<<<<<< HEAD
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
-=======
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
->>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
           "Microsoft.EntityFrameworkCore.Tools": "5.0.5",
           "RestaurantReview.Authentication": "1.1.0",
           "RestaurantReview.Domain": "1.0.0",
@@ -58,8 +55,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -74,7 +69,6 @@
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0"
         }
       },
->>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
       "Microsoft.AspNetCore.Authentication.Google/5.0.5": {
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {
@@ -1308,8 +1302,6 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -1324,7 +1316,6 @@
       "path": "microsoft.aspnetcore.authentication.core/2.2.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512"
     },
->>>>>>> 46cfd9b92b4945e3c35d1483fd0e5d7ffb090721
     "Microsoft.AspNetCore.Authentication.Google/5.0.5": {
       "type": "package",
       "serviceable": true,
