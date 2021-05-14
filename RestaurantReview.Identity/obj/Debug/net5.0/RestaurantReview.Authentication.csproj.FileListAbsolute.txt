@@ -1,5 +1,0 @@
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\net5.0\RestaurantReview.Authentication.csprojAssemblyReference.cache
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\net5.0\RestaurantReview.Authentication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\net5.0\RestaurantReview.Authentication.AssemblyInfoInputs.cache
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\net5.0\RestaurantReview.Authentication.AssemblyInfo.cs
-C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.Identity\obj\Debug\net5.0\RestaurantReview.Authentication.csproj.CoreCompileInputs.cache
