@@ -4,6 +4,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,17 +19,19 @@ namespace RestaurantReview.API.Controllers
         private readonly IUpdateRestaurantService _updateResturantService;
         private readonly ICategoryListQuery _resturantListQueryService;
         private readonly IRestaurantDetailService _restaurantDetailService;
+        private readonly IRestaurantReviewCountService _restaurantReviewCountService;
 
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
             , IUpdateRestaurantService updateResturantService, ICategoryListQuery resturantListQueryService
-            , IRestaurantDetailService restaurantDetailService)
+            , IRestaurantDetailService restaurantDetailService , IRestaurantReviewCountService restaurantReviewCountService)
         {
             _createRestaurantService = createRestaurantService;
             _deleteResturantService = deleteResturantService;
             _updateResturantService = updateResturantService;
             _resturantListQueryService = resturantListQueryService;
             _restaurantDetailService = restaurantDetailService;
+            _restaurantReviewCountService = restaurantReviewCountService;
 
         }
 
@@ -76,5 +79,11 @@ namespace RestaurantReview.API.Controllers
             return await _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
         }
 
+
+        [HttpGet("ReviewCount")]
+        public async Task<RestaurantReviewCountResponse> RestaurantReviewCount([FromQuery]RestaurantReviewCountCommand restaurantReviewCountCommand)
+        {
+            return await _restaurantReviewCountService.RestaurantReviewsCount(restaurantReviewCountCommand);
+        }
     }
 }

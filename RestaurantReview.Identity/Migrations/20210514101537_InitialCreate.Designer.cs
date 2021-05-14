@@ -10,8 +10,8 @@ using RestaurantReview.Authentication;
 namespace RestaurantReview.Authentication.Migrations
 {
     [DbContext(typeof(AuthenticationDbContext))]
-    [Migration("20210510162343_InitialAuthCreate")]
-    partial class InitialAuthCreate
+    [Migration("20210514101537_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -152,7 +152,7 @@ namespace RestaurantReview.Authentication.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("RestaurantReview.Domain.Models.ApplicationUser", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -234,7 +234,7 @@ namespace RestaurantReview.Authentication.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("RestaurantReview.Domain.Models.ApplicationUser", null)
+                    b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -243,7 +243,7 @@ namespace RestaurantReview.Authentication.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("RestaurantReview.Domain.Models.ApplicationUser", null)
+                    b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -258,7 +258,7 @@ namespace RestaurantReview.Authentication.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RestaurantReview.Domain.Models.ApplicationUser", null)
+                    b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -267,7 +267,7 @@ namespace RestaurantReview.Authentication.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("RestaurantReview.Domain.Models.ApplicationUser", null)
+                    b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

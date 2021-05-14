@@ -218,4 +218,3 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
-C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache

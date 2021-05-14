@@ -14,6 +14,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
@@ -56,6 +57,8 @@ namespace RestaurantReview.Application
             services.AddScoped<IUpdateRestaurantService, UpdateRestaurantHandler>();
             services.AddScoped<ICategoryListQuery, RestaurantListQueryHandler>();
             services.AddScoped<IRestaurantDetailService, RestaurantDetailQueryHandler>();
+
+            services.AddScoped<IRestaurantReviewCountService, RestaurantReviewCountHandler>();
 
             //categories
             services.AddScoped<ICreateCategoryService, CreateCategoryHandler>();

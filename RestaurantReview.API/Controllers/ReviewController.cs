@@ -41,7 +41,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [Authorize]
-        [HttpPost("CreateReview")]
+        [HttpPost]
         public async Task<ActionResult<CreateReviewResponse>> CreateReviewController([FromBody] CreateReviewCommand createReviewCommand)
         {
             return Ok(await _createReviewService.CreateReview(createReviewCommand));
@@ -49,7 +49,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [Authorize]
-        [HttpDelete("DeleteReview")]
+        [HttpDelete]
         public async Task<ActionResult<Guid>> DeleteReviewController([FromBody] DeleteReviewCommand deleteReviewCommand)
         {
             return Ok(await _deleteReviewService.DeleteReview(deleteReviewCommand));
@@ -57,7 +57,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [Authorize]
-        [HttpGet("ReviewList")]
+        [HttpGet]
         public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQueryController()
         {
             return Ok(await _reviewListQueryService.GetReviewList());
@@ -65,7 +65,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [Authorize]
-        [HttpPut("UpdateReview")]
+        [HttpPut]
         public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
         {
             return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
