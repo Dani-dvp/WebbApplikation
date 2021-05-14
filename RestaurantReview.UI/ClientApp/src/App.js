@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { Login } from './components/Login';
-import { Categories } from './components/Categories';
-import { CreateReview } from './components/CreateReview';
-import { AddRestaurant } from './components/AddRestaurant';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Login from './components/Login';
+import Categories from './components/Categories';
+import CreateReview from './components/CreateReview';
+import AddRestaurant from './components/AddRestaurant';
 
 import './custom.css'
 

@@ -3,7 +3,7 @@ import RatingStars from './RatingStars';
 import '../Css/StarRating.css';
 import '../Css/AddRestaurant.css';
 
-export class AddRestaurant extends Component {
+export default class AddRestaurant extends Component {
     render() {
         return (
             <div>

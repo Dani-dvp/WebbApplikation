@@ -4,7 +4,7 @@ import RatingStars from './RatingStars';
 import '../Css/StarRating.css';
 import '../Css/CreateReview.css';
 
-export class CreateReview extends Component {
+export default class CreateReview extends Component {
     render() {
         return (
             <div>

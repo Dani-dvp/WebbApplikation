@@ -2,7 +2,7 @@
 import Axios from "axios";
 import "../Css/Login.css";
 
-export class Login extends Component {
+export default class Login extends Component {
   sendLoginRequest = (event) => {
     console.log(event);
     event.preventDefault();
@@ -15,9 +15,12 @@ export class Login extends Component {
         Email: email,
         Password: password,
       },
+      
     });
     console.log(res);
+    
   }
+  
 
   render() {
     return (
