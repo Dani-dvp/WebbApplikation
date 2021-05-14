@@ -23,13 +23,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
-    <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
-    <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
+    <Folder Include="Features\Reviews\Queries\GetReviewQuery\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Reviews\Queries\GetReviewQuery\" />
+    <ProjectReference Include="..\..\..\WebbApp\WebbApplikation\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

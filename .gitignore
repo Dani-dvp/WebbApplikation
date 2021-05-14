@@ -1,3 +1,5 @@
 **/node_modules
 **/cypress/integration/examples
 **/obj
+**/.vs
+**/.vscode
