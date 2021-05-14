@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Css/Home.css';
 
-export class Home extends Component {
+export default class Home extends Component {
   static displayName = Home.name;
 
   render () {
@@ -15,7 +15,7 @@ export class Home extends Component {
               <input id="loc2" type="text" name="rest"
                 placeholder="Restaurant:" />
             </form>
-      </div>
+          </div>
         </section>
       </div>
     );

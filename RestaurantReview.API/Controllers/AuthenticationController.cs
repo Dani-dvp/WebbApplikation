@@ -16,7 +16,7 @@ namespace RestaurantReview.API.Controllers
             _authenticationService = authenticationService;
             _registrationService = registrationService;
         }
-
+        
         [HttpPost("authenticate")]
         public async Task<ActionResult<AuthenticationResponse>> AuthenticateAsync(AuthenticationCommand request)
         {

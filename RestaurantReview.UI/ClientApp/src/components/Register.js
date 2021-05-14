@@ -1,15 +1,81 @@
-var password = document.getElementById("password_input")
-  , confirm_password = document.getElementById("passwordConfirm_input");
+import React, { Component } from "react";
+import "../Css/Register.css";
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords does not match");
-  } else {
-    confirm_password.setCustomValidity('');
+
+export default class Register extends Component {
+
+  sendRegisterRequest = event => {
+    event.preventDefault()
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let userName = document.getElementById("userName").value;
+    //let confirm = document.getElementById("passwordConfirm_input");
+
+    axios({
+      method: 'POST',
+      url: "/api/Authentication/register",
+      data: {
+        Email: email,
+        Password: password,
+        UserName: userName,
+        FirstName: "",
+        LastName: ""
+      },
+
+    }).then(res => { console.log(res) });
+
   }
-  confirm_password.reportValidity();
-}
+
+//  validatePassword = () => {
+//  if (password.value != confirm.value) {
+//    confirm.setCustomValidity("Passwords does not match");
+//  } else {
+//    confirm.setCustomValidity('');
+//  }
+//  confirm.reportValidity();
+//}
 
 
-password.addEventListener("change", validatePassword);
-confirm_password.addEventListener("change", validatePassword);
+
+
+  render() {
+    return (
+      <div className="wrapper">
+        <div id="RegisterForm">
+       
+          <Link to="/login" className="inactive underlineHover"><h2>Login</h2></Link>
+          <h2 className="active">Register </h2>
+
+         
+        <form action="/action_page.php" method="post">
+            
+            <input type="text" name="userName" id="userName" placeholder="Username" required />
+            
+            <input type="email" name="email" id="email" placeholder="Email" required />
+
+           
+            <input type="password" name="password" id="password" placeholder="Password" required />
+
+            
+            {/*<input type="password" name="passwordConfirm_input" id="passwordConfirm_input" placeholder="Confirm Password" required />*/}
+
+
+
+            <div>
+              <p>By clicking on register you agree on our <a href="#">terms and conditions</a>.</p>
+            </div>
+            <button className="btn btn-primary" onClick={this.sendRegisterRequest}>Log in</button>
+
+        </form>
+      </div>
+        </div>
+      )
+  }
+  }
+
+
+
+

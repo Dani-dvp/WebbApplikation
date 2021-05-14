@@ -12,6 +12,7 @@ namespace RestaurantReview.API
 {
     public class Startup
     {
+        readonly string MyPolicy = "MyPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +27,17 @@ namespace RestaurantReview.API
             AddSwagger(services);
             services.AddControllers();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyPolicy,
+                    builder =>
+                    {
+                        builder.WithOrigins(
+                            "https://localhost:44301",
+                            "https://localhost:44364")
+                        .WithMethods("PUT", "DELETE", "GET", "POST").AllowAnyHeader();
+                    });
+            });
 
             //Gör att vi kan använda services mellan projekt // lagt till
             services.AddApplicationServices(Configuration); // använder RestaurantReview.application
@@ -86,6 +98,7 @@ namespace RestaurantReview.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors(MyPolicy);
             }
             else
             {
@@ -109,7 +122,7 @@ namespace RestaurantReview.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestaurantReview API");
 
             });
-            app.UseCors("Open");
+            
 
             app.UseAuthorization();
 
@@ -118,7 +131,7 @@ namespace RestaurantReview.API
             {
                 endpoints.MapControllers();
             });
-
+            
 
 
         }

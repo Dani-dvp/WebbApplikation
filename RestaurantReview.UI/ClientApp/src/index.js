@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import axios from 'axios';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+axios.defaults.baseURL = 'https://localhost:44301/';
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
