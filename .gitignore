@@ -1,3 +1,8 @@
 **/node_modules
 **/cypress/integration/examples
-**/obj/**
+**/RestaurantReview.UI/obj
+**/RestaurantReview.API/obj
+**/RestaurantReview.Application/obj
+**/RestaurantReview.Authentication/obj
+**/RestaurantReview.Domain/obj
+**/RestaurantReview.Infrastructure/obj

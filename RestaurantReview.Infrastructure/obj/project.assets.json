@@ -5649,19 +5649,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Robin\\.nuget\\packages\\": {}
+    "C:\\Users\\kevin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\Documents\\WebbAppLoginMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
       "projectName": "RestaurantReview.Infrastructure",
-      "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\kevin\\Documents\\WebbAppLoginMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kevin\\Documents\\WebbAppLoginMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5675,8 +5675,8 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
-            "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-              "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+            "C:\\Users\\kevin\\Documents\\WebbAppLoginMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+              "projectPath": "C:\\Users\\kevin\\Documents\\WebbAppLoginMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
             }
           }
         }
