@@ -1,23 +1,28 @@
 ﻿import React, { Component } from "react";
 import Axios from "axios";
+import { Link } from 'react-router-dom';
 import "../Css/Login.css";
 
 export default class Login extends Component {
-  sendLoginRequest = (event) => {
-    console.log(event);
+  sendLoginRequest = event => {
+
+    
     event.preventDefault();
+
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    const res = Axios({
+
+    Axios({
       method: 'POST',
-      url: "https://localhost:44301/api/Authentication/authenticate",
+      url: "/api/Authentication/login",
       data: {
         Email: email,
         Password: password,
       },
       
-    });
-    console.log(res);
+    }).then(res => { localStorage.setItem('token', res.data.token) });
+    console.log(localStorage.getItem('token'));
+    
     
   }
   
@@ -27,7 +32,7 @@ export default class Login extends Component {
       <div className="wrapper">
         <div id="LoginForm">
           <h2 className="active"> Login </h2>
-          <h2 className="inactive underlineHover" >Register </h2>
+          <Link to="/register" className="inactive underlineHover"><h2>Register</h2></Link>
 
           <form >
             <input type="text" id="email" name="login" placeholder="Email" />

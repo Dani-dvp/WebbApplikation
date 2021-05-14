@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Categories from './components/Categories';
 import CreateReview from './components/CreateReview';
 import AddRestaurant from './components/AddRestaurant';
+import Register from './components/Register';
 
 import './custom.css'
 
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path='/categories' component={Categories} />
         <Route path='/createreview' component={CreateReview} />
         <Route path='/addrestaurant' component={AddRestaurant} />
+        <Route path='/register' component={Register} />
       </Layout>
     );
   }
