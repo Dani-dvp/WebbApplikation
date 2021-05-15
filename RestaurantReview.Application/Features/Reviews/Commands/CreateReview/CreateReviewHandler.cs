@@ -43,10 +43,12 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
                 Rating = createReviewCommand.Rating,
                 ReviewText = createReviewCommand.ReviewText,
                 ReviewID = new Guid()
+                
+                
             };
 
+            
 
-         
             review = await _reviewRepository.AddAsync(review);
 
             var reviewRespone = _mapper.Map<CreateReviewResponse>(review);

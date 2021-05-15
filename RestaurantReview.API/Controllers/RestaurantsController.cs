@@ -4,6 +4,8 @@ using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,11 +22,11 @@ namespace RestaurantReview.API.Controllers
         private readonly ICategoryListQuery _resturantListQueryService;
         private readonly IRestaurantDetailService _restaurantDetailService;
         private readonly IRestaurantReviewCountService _restaurantReviewCountService;
-
+        private readonly IRestaurantAvgRatingService _restaurantAvgRatingService;
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
             , IUpdateRestaurantService updateResturantService, ICategoryListQuery resturantListQueryService
-            , IRestaurantDetailService restaurantDetailService , IRestaurantReviewCountService restaurantReviewCountService)
+            , IRestaurantDetailService restaurantDetailService, IRestaurantReviewCountService restaurantReviewCountService, IRestaurantAvgRatingService restaurantAvgRatingService)
         {
             _createRestaurantService = createRestaurantService;
             _deleteResturantService = deleteResturantService;
@@ -32,7 +34,7 @@ namespace RestaurantReview.API.Controllers
             _resturantListQueryService = resturantListQueryService;
             _restaurantDetailService = restaurantDetailService;
             _restaurantReviewCountService = restaurantReviewCountService;
-
+            _restaurantAvgRatingService = restaurantAvgRatingService;
         }
 
         [HttpPost]
@@ -85,5 +87,14 @@ namespace RestaurantReview.API.Controllers
         {
             return await _restaurantReviewCountService.RestaurantReviewsCount(restaurantReviewCountCommand);
         }
+
+        [HttpGet("AvgReviewRating")]
+
+        public async Task<double> RestaurantAvgRatingController([FromQuery] RestaurantAvgRatingCommand restaurantAvgRatingCommand)
+        {
+            return await _restaurantAvgRatingService.RestaurantAvgRating(restaurantAvgRatingCommand);
+        }
+
+
     }
 }

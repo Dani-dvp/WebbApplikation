@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
@@ -26,6 +27,8 @@ namespace RestaurantReview.API.Controllers
         private readonly IUpdateReviewService _updateReviewService;
         private readonly IReviewListQueryService _reviewListQueryService;
 
+       
+
         public ReviewController(
             ICreateReviewService createReviewService,
             IDeleteReviewService deleteReviewService,
@@ -37,6 +40,7 @@ namespace RestaurantReview.API.Controllers
             _deleteReviewService = deleteReviewService;
             _reviewListQueryService = reviewListQueryService;
             _updateReviewService = updateReviewService;
+           
         }
 
 
@@ -70,6 +74,9 @@ namespace RestaurantReview.API.Controllers
         {
             return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
         }
+
+
+    
 
 
     }

@@ -10,7 +10,7 @@ namespace RestaurantReview.Domain.IRepositories
 
         Task<int> RestaurantReviewCount(string name);
 
-
+  
 
     }
 }

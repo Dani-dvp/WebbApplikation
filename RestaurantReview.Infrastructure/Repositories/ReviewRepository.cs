@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Infrastructure.Repositories
@@ -15,7 +16,13 @@ namespace RestaurantReview.Infrastructure.Repositories
             _myDbContext = myDbContext;
         }
 
+        public Task<double> RestaurantAvgRating(Guid  id)
+        {
+            var avgReview = _myDbContext.Set<Review>().Where(review => review.RestaurantID == id).AverageAsync(review => review.Rating); //AverageAsync(review => review.Rating)
+
+            return avgReview;
 
 
+        }
     }
 }

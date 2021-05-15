@@ -6,6 +6,6 @@ namespace RestaurantReview.Domain.IRepositories
 {
     public interface IReviewRepository : IAsyncRepository<Review>
     {
-       
+        Task<double> RestaurantAvgRating(Guid id);
     }
 }
