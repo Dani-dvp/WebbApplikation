@@ -27,7 +27,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<Restaurant> GetRestaurantByName(string Name)
         {
-            var Restaurant = await _myDbContext.Set<Restaurant>().FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
+            var Restaurant = await _myDbContext.Restaurants.FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
             return Restaurant;
         }
 
@@ -41,10 +41,20 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         }
 
-      
+
+        public async Task<Restaurant> RestaurantAndReviews(string Name)
+        {
 
 
-      
+          // var RestaurantAndReviews = await _myDbContext.Restaurants.Include(rest => rest.Reviews).Where(rest => rest.RestaurantName == name) //FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
+            return null;
+
+        }
+
+
+
+
+
     }
 
 

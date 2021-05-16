@@ -13,6 +13,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
@@ -62,6 +63,9 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Restaurant, ResturantListQueryResponse>();
 
             CreateMap<Category, CategoryListQueryResponse>();
+            CreateMap<Restaurant, RestaurantReviewsResponse>();
+
+
 
             //From model to ModelResponse
             CreateMap<AuthenticationModel, AuthenticationResponse>();
@@ -70,6 +74,10 @@ namespace RestaurantReview.Application.Profiles
 
 
 
+            // from model to dto
+
+            CreateMap<Restaurant, RestaurantDtoResponse>();
+            CreateMap<Review, ReviewDtoResponse>();
         }
 
 

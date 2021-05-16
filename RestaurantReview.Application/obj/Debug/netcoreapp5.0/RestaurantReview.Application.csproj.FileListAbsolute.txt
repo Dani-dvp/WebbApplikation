@@ -59,9 +59,11 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Authentication.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Infrastructure.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Authentication.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Infrastructure.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.csprojAssemblyReference.cache
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.GeneratedMSBuildEditorConfig.editorconfig
@@ -73,5 +75,3 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Application.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\obj\Debug\netcoreapp5.0\RestaurantReview.Application.genruntimeconfig.cache
-C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Authentication.dll
-C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Application\bin\Debug\netcoreapp5.0\RestaurantReview.Authentication.pdb

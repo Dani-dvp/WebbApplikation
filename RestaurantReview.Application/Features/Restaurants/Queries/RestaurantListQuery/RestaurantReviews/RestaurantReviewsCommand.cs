@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantsOrderByReview
+namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews
 {
-  public  class RestaurantsOrderByReviewCommand
+  public  class RestaurantReviewsCommand
     {
         public string RestaurantName { get; set; }
     }
