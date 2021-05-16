@@ -20,7 +20,7 @@ export default class CreateReview extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                    <button class="submit">Submit</button>
+                    <button className="submit">Submit</button>
                 </form>
             </div>
 

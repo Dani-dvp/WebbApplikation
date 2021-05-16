@@ -13,29 +13,29 @@ export default class Categories extends Component {
                 <ul>
                     <li id="tagC">Cuisine</li>
                     <br />
-                    <li class="Cuisine">African</li>
-                    <li class="Cuisine">American</li>
-                    <li class="Cuisine">British</li>
-                    <li class="Cuisine">Chinese</li>
-                    <li class="Cuisine">Italian</li>
-                    <li class="Cuisine">Thai</li>
-                    <li class="Cuisine">Indian</li>
+                    <li className="Cuisine">African</li>
+                    <li className="Cuisine">American</li>
+                    <li className="Cuisine">British</li>
+                    <li className="Cuisine">Chinese</li>
+                    <li className="Cuisine">Italian</li>
+                    <li className="Cuisine">Thai</li>
+                    <li className="Cuisine">Indian</li>
                 </ul>
                 <ul>
                     <li id="tagV">Variants</li>
                     <br />
-                    <li class="Variants">Burger</li>
-                    <li class="Variants">Pizza</li>
-                    <li class="Variants">Fish</li>
-                    <li class="Variants">Vegetarian</li>
-                    <li class="Variants">Sushi</li>
-                    <li class="Variants">Pasta</li>
-                    <li class="Variants">Sallad</li>
+                    <li className="Variants">Burger</li>
+                    <li className="Variants">Pizza</li>
+                    <li className="Variants">Fish</li>
+                    <li className="Variants">Vegetarian</li>
+                    <li className="Variants">Sushi</li>
+                    <li className="Variants">Pasta</li>
+                    <li className="Variants">Sallad</li>
                 </ul>
             
             </div>
             <form>
-                <button class="allButton"type="button"><a href="../categories/categories.html">View all restaurants</a></button>
+                <button className="allButton"type="button"><a href="../categories/categories.html">View all restaurants</a></button>
             </form>
             </div>      
             );

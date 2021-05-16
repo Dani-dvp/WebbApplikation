@@ -2,8 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantReview.Application.Features.Authentication;
-using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
+using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
+using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
@@ -76,7 +77,7 @@ namespace RestaurantReview.Application
             services.AddScoped<IRegistrationService, RegistrationHandler>();
 
 
-
+            services.AddScoped<IGetUserByEmailService, GetUserByEmailHandler>();
 
             //Aktiverar automapper i Core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());

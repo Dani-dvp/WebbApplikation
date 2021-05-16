@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using RestaurantReview.Application.Features.Authentication.Commands.Authenticate;
+using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
-
+using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
@@ -65,7 +65,7 @@ namespace RestaurantReview.Application.Profiles
             //From model to ModelResponse
             CreateMap<AuthenticationModel, AuthenticationResponse>();
             CreateMap<RegistrationModel, RegistrationResponse>();
-
+            CreateMap<ApplicationUser, GetUserByEmailResponse>();
 
 
         }

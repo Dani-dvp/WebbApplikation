@@ -2,8 +2,29 @@ import React, { Component } from 'react'
 import RatingStars from './RatingStars';
 import '../Css/StarRating.css';
 import '../Css/AddRestaurant.css';
+import axios from 'axios';
 
 export default class AddRestaurant extends Component {
+  addRestaurantRequest = event => {
+
+
+    event.preventDefault();
+
+    let restaurantName = document.getElementById("firstForm").value;
+
+    axios({
+      method: 'POST',
+      url: "/api/Restaurants",
+      data: {
+        RestaurantName: restaurantName
+      },
+
+    }).then(res => { console.log(res) });
+    console.log(localStorage.getItem('token'));
+
+
+  }
+
     render() {
         return (
             <div>
@@ -33,7 +54,7 @@ export default class AddRestaurant extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                    <button className="submit">Submit</button>
+                <button className="submit" onClick={this.addRestaurantRequest}>Submit</button>
                 </form>
             </div>
             </div>

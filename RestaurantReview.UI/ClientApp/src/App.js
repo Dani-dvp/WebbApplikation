@@ -7,11 +7,25 @@ import Categories from './components/Categories';
 import CreateReview from './components/CreateReview';
 import AddRestaurant from './components/AddRestaurant';
 import Register from './components/Register';
+import axios from 'axios';
 
 import './custom.css'
 
 export default class App extends Component {
   static displayName = App.name;
+
+  componentDidMount = () => {
+    axios.get('/api/authentication/user').then(
+      res => {
+        console.log(res);
+        this.setState({
+          user: res.data
+        });
+      },
+      err => {
+        console.log(err)
+      });
+  }
 
   render() {
     return (

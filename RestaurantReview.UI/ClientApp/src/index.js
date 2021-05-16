@@ -7,7 +7,9 @@ import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-axios.defaults.baseURL = 'https://localhost:44301/';
+axios.defaults.baseURL = 'https://localhost:44301';
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(

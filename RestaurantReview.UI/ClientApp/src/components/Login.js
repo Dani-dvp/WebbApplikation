@@ -19,13 +19,20 @@ export default class Login extends Component {
         Email: email,
         Password: password,
       },
-      
+
     }).then(res => { localStorage.setItem('token', res.data.token) });
     console.log(localStorage.getItem('token'));
     
     
   }
-  
+
+  logOutRequest = event => {
+    event.preventDefault();
+    console.log(localStorage.getItem('token'));
+    localStorage.clear();
+    delete Axios.defaults.headers.common['Authorization'];
+    console.log(localStorage.getItem('token'));
+  }
 
   render() {
     return (
@@ -42,7 +49,9 @@ export default class Login extends Component {
               name="password"
               placeholder="Password"
               />
-            <button className="btn btn-primary" onClick={ this.sendLoginRequest }>Log in</button>
+            <button className="btn btn-primary" onClick={this.sendLoginRequest}>Log in</button>
+            <br />
+            <button className="btn btn-primary" onClick={this.logOutRequest}>Log out</button>
           </form>
 
           <form />

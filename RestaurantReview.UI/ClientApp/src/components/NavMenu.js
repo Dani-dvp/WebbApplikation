@@ -21,7 +21,8 @@ export default class NavMenu extends Component {
     });
   }
 
-  render () {
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
     return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 fixed-top bg-white" light>
@@ -37,7 +38,7 @@ export default class NavMenu extends Component {
                   <NavLink tag={Link} className="text-dark" to="/createreview">Create A Review</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/login">Login</NavLink>
+                    <NavLink tag={Link} className="text-dark" to="/login">Login</NavLink>
                 </NavItem>
               </ul>
             </Collapse>

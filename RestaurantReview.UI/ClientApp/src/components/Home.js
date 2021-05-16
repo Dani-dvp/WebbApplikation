@@ -4,6 +4,8 @@ import '../Css/Home.css';
 export default class Home extends Component {
   static displayName = Home.name;
 
+
+  
   render () {
     return (
       <div>
