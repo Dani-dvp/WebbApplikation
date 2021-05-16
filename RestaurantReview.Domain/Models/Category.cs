@@ -10,7 +10,6 @@ namespace RestaurantReview.Domain.Models
         public Guid CategoryID { get; set; }
 
 
-
         public Guid? RestaurantID { get; set; }
         public string RestaurantCategory { get; set; }
 

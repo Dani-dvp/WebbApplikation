@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantReview.Application.Features.Restaurants.Commands.RestaurantModel
+namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantsOrderByReview
 {
-   public interface test
+   public interface IRestaurantsOrderByService
     {
-     
+       
     }
 }

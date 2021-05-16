@@ -18,7 +18,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public Task<double> RestaurantAvgRating(Guid  id)
         {
-            var avgReview = _myDbContext.Set<Review>().Where(review => review.RestaurantID == id).AverageAsync(review => review.Rating); //AverageAsync(review => review.Rating)
+            var avgReview = _myDbContext.Reviews.Where(review => review.RestaurantID == id).AverageAsync(review => review.Rating); //AverageAsync(review => review.Rating)
 
             return avgReview;
 

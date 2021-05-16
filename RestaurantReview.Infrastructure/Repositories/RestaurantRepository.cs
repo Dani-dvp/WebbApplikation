@@ -1,9 +1,13 @@
 ﻿
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace RestaurantReview.Infrastructure.Repositories
 {
@@ -11,11 +15,14 @@ namespace RestaurantReview.Infrastructure.Repositories
     {
         protected new readonly MyDbContext _myDbContext;
 
+        protected readonly IMapper _mapper;
 
 
-        public RestaurantRepository(MyDbContext myDbContext) : base(myDbContext)
+
+        public RestaurantRepository(MyDbContext myDbContext, IMapper mapper) : base(myDbContext)
         {
             _myDbContext = myDbContext;
+            _mapper = mapper;
         }
 
         public async Task<Restaurant> GetRestaurantByName(string Name)
@@ -34,8 +41,10 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         }
 
-       
+      
 
+
+      
     }
 
 

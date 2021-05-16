@@ -29,13 +29,15 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
             {
 
                 RestaurantName = createRestaurantCommand.RestaurantName,
-                Category = createRestaurantCommand.Category,
+               
                 StreetPhoto = createRestaurantCommand.StreetPhoto,
                 RestaurantID = new Guid()
 
             };
 
             Restaurant = await _restaurantRepository.AddAsync(Restaurant);
+
+           
 
             var RestaurantRespone = _mapper.Map<CreateRestaurantResponse>(Restaurant);
 

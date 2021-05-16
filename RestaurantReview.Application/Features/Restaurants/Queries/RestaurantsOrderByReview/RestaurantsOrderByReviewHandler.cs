@@ -2,28 +2,26 @@
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace RestaurantReview.Application.Features.Restaurants.Commands.RestaurantModel
+namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantsOrderByReview
 {
-    public class RestaurantReviewHandler 
+    public class RestaurantsOrderByReviewHandler
     {
 
         private readonly IMapper _mapper;
         private readonly IRestaurantRepository _restaurantRepository;
 
 
-        public RestaurantReviewHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
+        public RestaurantsOrderByReviewHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<Action> Restaurant()
-        {
-            return null;
-        }
+       
     }
 
 }
