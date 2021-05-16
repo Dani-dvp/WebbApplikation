@@ -5,9 +5,11 @@ using RestaurantReview.Application.Features.Authentication;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
+using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
+using RestaurantReview.Application.Features.Categories.Queries.GetAllRestaurantsFromCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
@@ -64,6 +66,8 @@ namespace RestaurantReview.Application
             services.AddScoped<IUpdateCategoryService, UpdateCategoryHandler>();
             services.AddScoped<ICategoryDetailQueryService, CategoryDetailQueryHandler>();
             services.AddScoped<ICategoryListQueryService, CategoryListQueryHandler>();
+            services.AddScoped<IAddRestaurantToCategoryService, AddRestaurantToCategoryHandler>();
+            services.AddScoped<IGetAllRestaurantsFromCategoryByNameService, GetAllRestaurantsFromCategoryByNameHandler>();
 
 
             //review 

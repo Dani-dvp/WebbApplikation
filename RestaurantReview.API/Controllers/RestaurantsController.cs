@@ -66,7 +66,7 @@ namespace RestaurantReview.API.Controllers
 
 
         [HttpGet("{ResturantID}")]
-        public async Task<RestaurantDetalResponse> GetRestaurantByID([FromQuery] RestaurantDetailCommand restaurantDetailCommand)
+        public async Task<RestaurantDetailResponse> GetRestaurantByID([FromQuery] RestaurantDetailCommand restaurantDetailCommand)
         {
             return await _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
         }

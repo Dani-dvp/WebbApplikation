@@ -2,6 +2,7 @@
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Categories.Commands.CreateCategory
@@ -24,6 +25,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
             {
                 RestaurantCategory = createCategoryCommand.RestaurantCategory,
                 CategoryID = new Guid(),
+                Restaurants = new List<Restaurant>()
 
             };
 

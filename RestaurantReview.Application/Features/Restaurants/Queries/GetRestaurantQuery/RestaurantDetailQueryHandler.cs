@@ -21,11 +21,11 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         }
 
-        public async Task<RestaurantDetalResponse> GetRestaurantByID(RestaurantDetailCommand RestaurantDetailCommand)
+        public async Task<RestaurantDetailResponse> GetRestaurantByID(RestaurantDetailCommand RestaurantDetailCommand)
         {
             var Restaurant = await _restaurantRepository.GetByIdAsync(RestaurantDetailCommand.RestaurantID);
 
-            var RestaurantResponse = _mapper.Map<RestaurantDetalResponse>(Restaurant);
+            var RestaurantResponse = _mapper.Map<RestaurantDetailResponse>(Restaurant);
 
             return RestaurantResponse;
 

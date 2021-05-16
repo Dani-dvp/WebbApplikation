@@ -14,9 +14,9 @@ namespace RestaurantReview.Domain.Models
 
         public string StreetPhoto { get; set; }
 
-        public List<Review> Reviews { get; set; }
+        public ICollection<Review> Reviews { get; set; }
 
-        public List<Category> Categories { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
 
 

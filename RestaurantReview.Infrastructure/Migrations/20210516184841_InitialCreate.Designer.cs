@@ -10,8 +10,8 @@ using RestaurantReview.Infrastructure;
 namespace RestaurantReview.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20210516152019_Initalcreate")]
-    partial class Initalcreate
+    [Migration("20210516184841_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
