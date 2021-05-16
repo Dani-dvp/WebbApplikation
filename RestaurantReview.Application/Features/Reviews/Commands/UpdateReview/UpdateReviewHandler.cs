@@ -20,9 +20,6 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
         {
             var reviewToBeUpdated = await _reviewRepository.GetByIdAsync(updateReviewCommand.ReviewID);
 
-
-            reviewToBeUpdated.Title = updateReviewCommand.Title;
-            reviewToBeUpdated.Summary = updateReviewCommand.Summary;
             reviewToBeUpdated.ReviewText = updateReviewCommand.ReviewText;
             reviewToBeUpdated.Rating = updateReviewCommand.Rating;
 

@@ -42,7 +42,6 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Category, UpdateCategoryResponse>();
 
 
-
             CreateMap<Review, CreateReviewResponse>();
 
             // From model to UpdateModelResponse
@@ -57,9 +56,7 @@ namespace RestaurantReview.Application.Profiles
 
 
             // from modelList to modelListResponse
-
             CreateMap<Restaurant, ResturantListQueryResponse>();
-
             CreateMap<Category, CategoryListQueryResponse>();
 
             //From model to ModelResponse

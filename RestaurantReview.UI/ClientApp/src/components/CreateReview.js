@@ -1,10 +1,32 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import RatingStars from './RatingStars';
+import axios from 'axios';
 import '../Css/StarRating.css';
 import '../Css/CreateReview.css';
 
 export default class CreateReview extends Component {
+  AddReviewRequest = event => {
+    event.preventDefault();
+
+    let restaurantName = document.getElementById("firstForm").value;
+    let reviewText = document.getElementById("secondForm").value;
+
+    axios({
+      method: 'POST',
+      url: "/api/review",
+      data: {
+        RestaurantName: restaurantName,
+        ReviewText: reviewText,
+        Authorization: 'Bearer ' + localStorage.getItem('token')
+      },
+
+    }).then(res => { console.log(res) });
+  }
+
+
+
+
     render() {
         return (
             <div>
@@ -20,14 +42,14 @@ export default class CreateReview extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                    <button className="submit">Submit</button>
+                <button className="submit" onClick={this.AddReviewRequest}>Submit</button>
                 </form>
             </div>
 
             <div>
                 <p id="reviewText">Is your restaurant not here?</p>
                 <form >
-                    <button><Link activeClassName="Active" to="/addrestaurant">Add A Restaurant!</Link></button>
+                    <button><Link className="Active" to="/addrestaurant">Add A Restaurant!</Link></button>
                 </form>
             </div>
             </div>

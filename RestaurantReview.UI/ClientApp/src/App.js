@@ -7,25 +7,14 @@ import Categories from './components/Categories';
 import CreateReview from './components/CreateReview';
 import AddRestaurant from './components/AddRestaurant';
 import Register from './components/Register';
+import ShowAllRestaurants from './components/ShowAllRestaurants';
 import axios from 'axios';
-
 import './custom.css'
 
 export default class App extends Component {
   static displayName = App.name;
 
-  componentDidMount = () => {
-    axios.get('/api/authentication/user').then(
-      res => {
-        console.log(res);
-        this.setState({
-          user: res.data
-        });
-      },
-      err => {
-        console.log(err)
-      });
-  }
+  
 
   render() {
     return (
@@ -36,6 +25,7 @@ export default class App extends Component {
         <Route path='/createreview' component={CreateReview} />
         <Route path='/addrestaurant' component={AddRestaurant} />
         <Route path='/register' component={Register} />
+        <Route path='/allrestaurants' component={ShowAllRestaurants} />
       </Layout>
     );
   }

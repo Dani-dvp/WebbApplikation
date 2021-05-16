@@ -41,16 +41,16 @@ namespace RestaurantReview.API.Controllers
 
 
         [Authorize]
-        [HttpPost("CreateReview")]
-        public async Task<ActionResult<CreateReviewResponse>> CreateReviewController([FromBody] CreateReviewCommand createReviewCommand)
+        [HttpPost]
+        public async Task<ActionResult<CreateReviewResponse>> CreateReview([FromBody] CreateReviewCommand createReviewCommand)
         {
             return Ok(await _createReviewService.CreateReview(createReviewCommand));
         }
 
 
         [Authorize]
-        [HttpDelete("DeleteReview")]
-        public async Task<ActionResult<Guid>> DeleteReviewController([FromBody] DeleteReviewCommand deleteReviewCommand)
+        [HttpDelete]
+        public async Task<ActionResult<Guid>> DeleteReview([FromBody] DeleteReviewCommand deleteReviewCommand)
         {
             return Ok(await _deleteReviewService.DeleteReview(deleteReviewCommand));
         }
@@ -58,15 +58,15 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpGet("ReviewList")]
-        public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQueryController()
+        public async Task<ActionResult<List<ReviewListQueryResponse>>> GetReviewListQuery()
         {
             return Ok(await _reviewListQueryService.GetReviewList());
         }
 
 
         [Authorize]
-        [HttpPut("UpdateReview")]
-        public async Task<ActionResult<UpdateReviewResponse>> UpdateReviewController([FromBody] UpdateReviewCommand updateReviewCommand)
+        [HttpPut]
+        public async Task<ActionResult<UpdateReviewResponse>> UpdateReview([FromBody] UpdateReviewCommand updateReviewCommand)
         {
             return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
         }

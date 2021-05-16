@@ -16,7 +16,8 @@ export default class AddRestaurant extends Component {
       method: 'POST',
       url: "/api/Restaurants",
       data: {
-        RestaurantName: restaurantName
+        RestaurantName: restaurantName,
+        Authorization: 'Bearer ' + localStorage.getItem('token')
       },
 
     }).then(res => { console.log(res) });

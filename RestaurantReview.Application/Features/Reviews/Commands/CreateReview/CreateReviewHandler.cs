@@ -15,24 +15,29 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
         //Får inte returnera en vanlig "Model" Måste Returner en ResponsTyp med innehållet man vill visa.
         private readonly IMapper _mapper;
         private readonly IReviewRepository _reviewRepository;
+        private readonly IRestaurantRepository _restaurantRepository;
 
 
-        public CreateReviewHandler(IMapper mapper, IReviewRepository reviewRepository)
+        public CreateReviewHandler(IMapper mapper, IReviewRepository reviewRepository, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _reviewRepository = reviewRepository;
+            _restaurantRepository = restaurantRepository;
         }
 
-        //Kolla eventuellt här för fel!!! Fick felmeddelanden men fixde det med att välja alt. från pot. fix
         public async Task<CreateReviewResponse> CreateReview(CreateReviewCommand createReviewCommand)
 
         {
-            var review = new Review()
+            var restaurant = await _restaurantRepository.GetRestaurantByName(createReviewCommand.RestaurantName);
 
+            if (restaurant == null)
             {
+                throw new Exception($"Restaurant with {createReviewCommand.RestaurantName} not found.");
+            }
 
-                Title = createReviewCommand.Title,
-                Summary = createReviewCommand.Summary,
+            var review = new Review()
+            {
+                RestaurantID = restaurant.RestaurantID,
                 Rating = createReviewCommand.Rating,
                 ReviewText = createReviewCommand.ReviewText,
                 ReviewID = new Guid()

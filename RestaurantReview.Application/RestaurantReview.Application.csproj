@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\WebbApp\WebbApplikation\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
     <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
     <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
   </ItemGroup>
