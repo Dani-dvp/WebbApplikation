@@ -1,6 +1,8 @@
-﻿namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant
+﻿using RestaurantReview.Application.ValidationResponse;
+
+namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant
 {
-    public class CreateRestaurantResponse
+    public class CreateRestaurantResponse : BaseResponse
     {
 
         //En kopia av Modellen som ska skickas tillbaka, ska bara innehålla den informationen som är relevant till denna metoden

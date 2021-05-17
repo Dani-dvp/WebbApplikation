@@ -3,6 +3,7 @@ using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace RestaurantReview.Application.Features.Categories.Commands.CreateCategory
 {
@@ -20,22 +21,35 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
 
         public async Task<CreateCategoryResponse> CreateCategory(CreateCategoryCommand createCategoryCommand)
         {
-            var category = new Category
+            var categoryResponse = new CreateCategoryResponse();
+            var validator = new CreateCategoryCommandValidator();
+            var validationResult = await validator.ValidateAsync(createCategoryCommand);
+
+            if (validationResult.Errors.Count > 0)
             {
-                RestaurantCategory = createCategoryCommand.RestaurantCategory,
-                CategoryID = new Guid(),
+                categoryResponse.Success = false;
+                categoryResponse.ValidationErrors = new List<string>();
+                foreach (var error in validationResult.Errors)
+                {
+                    categoryResponse.ValidationErrors.Add(error.ErrorMessage);
+                }
+            }
 
-            };
+            if (categoryResponse.Success)
+            { 
+                var category = new Category()
+                {
+                    RestaurantCategory = createCategoryCommand.RestaurantCategory,
+                    CategoryID = new Guid(),
 
+                };
+                  
+                 await _categoryRepository.AddAsync(category);
+                categoryResponse = _mapper.Map<CreateCategoryResponse>(category);
 
-            category = await _categoryRepository.AddAsync(category);
-
-            var categoryResponse = _mapper.Map<CreateCategoryResponse>(category);
-
+            }
+            
             return categoryResponse;
-
-
-
 
         }
 

@@ -1,6 +1,8 @@
-﻿namespace RestaurantReview.Application.Features.Categories.Commands.CreateCategory
+﻿using RestaurantReview.Application.ValidationResponse;
+
+namespace RestaurantReview.Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryResponse
+    public class CreateCategoryResponse : BaseResponse
     {
         public string RestaurantCategory { get; set; }
 

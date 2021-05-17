@@ -1,6 +1,8 @@
-﻿namespace ResturantReview.Application.Features.Reviews.Commands.UpdateReview
+﻿using RestaurantReview.Application.ValidationResponse;
+
+namespace ResturantReview.Application.Features.Reviews.Commands.UpdateReview
 {
-    public class UpdateReviewResponse
+    public class UpdateReviewResponse : BaseResponse
     {
         public string Title { get; set; }
         public string Summary { get; set; }

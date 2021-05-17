@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
+using FluentValidation.Results;
+using RestaurantReview.Application.Exceptions;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using ResturantReview.Application.Features.Reviews.Commands.CreateReview;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
@@ -22,27 +25,46 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
             _mapper = mapper;
             _reviewRepository = reviewRepository;
         }
+       
 
         //Kolla eventuellt här för fel!!! Fick felmeddelanden men fixde det med att välja alt. från pot. fix
+        
         public async Task<CreateReviewResponse> CreateReview(CreateReviewCommand createReviewCommand)
 
         {
-            var review = new Review()
+            var createReviewResponse = new CreateReviewResponse();
+            var validator = new CreateReviewCommandValidator();
+            var validationResult = await validator.ValidateAsync(createReviewCommand);
 
+            if (validationResult.Errors.Count > 0)
             {
+                createReviewResponse.Success = false;
+                createReviewResponse.ValidationErrors = new List<string>();
+                foreach (var error in validationResult.Errors)
+                {
+                    createReviewResponse.ValidationErrors.Add(error.ErrorMessage);
+                }
+            }
 
-                Title = createReviewCommand.Title,
-                Summary = createReviewCommand.Summary,
-                Rating = createReviewCommand.Rating,
-                ReviewText = createReviewCommand.ReviewText,
-                ReviewID = new Guid()
-            };
+            if (createReviewResponse.Success)
+            {
+                var review = new ReviewToBeUpdated()
 
-            review = await _reviewRepository.AddAsync(review);
+                {
+                    Title = createReviewCommand.Title,
+                    Summary = createReviewCommand.Summary,
+                    Rating = createReviewCommand.Rating,
+                    ReviewText = createReviewCommand.ReviewText,
+                    ReviewID = new Guid()
+                };
 
-            var reviewRespone = _mapper.Map<CreateReviewResponse>(review);
+                 await _reviewRepository.AddAsync(review);
 
-            return reviewRespone;
+                 createReviewResponse = _mapper.Map<CreateReviewResponse>(review);
+            }
+
+         
+            return createReviewResponse;
         }
 
     }

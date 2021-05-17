@@ -2,7 +2,7 @@
 
 namespace RestaurantReview.Domain.Models
 {
-    public class Review
+    public class ReviewToBeUpdated
     {
         public Guid ReviewID { get; set; }
 

@@ -4,9 +4,9 @@ using RestaurantReview.Domain.Models;
 
 namespace RestaurantReview.Infrastructure.Configuration
 {
-    public class ReviewConfiguration : IEntityTypeConfiguration<Review>
+    public class ReviewConfiguration : IEntityTypeConfiguration<ReviewToBeUpdated>
     {
-        public void Configure(EntityTypeBuilder<Review> modelBuilder)
+        public void Configure(EntityTypeBuilder<ReviewToBeUpdated> modelBuilder)
         {
             modelBuilder
                  .HasKey(review => review.ReviewID);

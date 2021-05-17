@@ -2,7 +2,7 @@
 
 namespace RestaurantReview.Domain.IRepositories
 {
-    public interface IReviewRepository : IAsyncRepository<Review>
+    public interface IReviewRepository : IAsyncRepository<ReviewToBeUpdated>
     {
     }
 }

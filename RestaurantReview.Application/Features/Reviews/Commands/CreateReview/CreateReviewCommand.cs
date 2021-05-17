@@ -1,6 +1,8 @@
-﻿namespace ResturantReview.Application.Features.Reviews.Commands.CreateReview
+﻿using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
+
+namespace ResturantReview.Application.Features.Reviews.Commands.CreateReview
 {
-    public class CreateReviewCommand
+    public class CreateReviewCommand 
     {
 
         public string Title { get; set; }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Domain.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant
@@ -17,21 +19,38 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
         public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
             var RestaurantToBeUpdated = await _restaurantRepository.GetRestaurantByName(updateRestaurantCommand.RestaurantName);
+            var validator = new UpdateRestaurantValidator();
+            var validationResult = await validator.ValidateAsync(updateRestaurantCommand);
+            var updateResponse = new UpdateRestaurantRespone();
 
+            if (validationResult.Errors.Count > 0)
+            {
+                updateResponse.Success = false;
+                updateResponse.ValidationErrors = new List<string>();
+                foreach (var error in validationResult.Errors)
+                {
+                    updateResponse.ValidationErrors.Add(error.ErrorMessage);
+                }
 
-            RestaurantToBeUpdated.RestaurantName = updateRestaurantCommand.RestaurantName;
-            RestaurantToBeUpdated.Category = updateRestaurantCommand.Category;
-            RestaurantToBeUpdated.RestaurantLink = updateRestaurantCommand.RestaurantLink;
-            RestaurantToBeUpdated.GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto;
-            RestaurantToBeUpdated.StreetPhoto = updateRestaurantCommand.StreetPhoto;
+            }
 
-            await _restaurantRepository.UpdateAsync(RestaurantToBeUpdated);
+            if (updateResponse.Success)
+            {
+                var restaurant = new Restaurant()
 
-            var updateRestaurantResponse = _mapper.Map<UpdateRestaurantRespone>(RestaurantToBeUpdated);
+                {
+                    RestaurantName = updateRestaurantCommand.RestaurantName,
+                    Category = updateRestaurantCommand.Category,
+                    RestaurantLink = updateRestaurantCommand.RestaurantLink,
+                    GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto,
+                    StreetPhoto = updateRestaurantCommand.StreetPhoto,
+                };
+                await _restaurantRepository.UpdateAsync(restaurant);
 
-            return updateRestaurantResponse;
+                updateResponse = _mapper.Map<UpdateRestaurantRespone>(RestaurantToBeUpdated);
+            }
 
-
+            return updateResponse;
         }
 
     }

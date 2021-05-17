@@ -10,8 +10,8 @@ using RestaurantReview.Infrastructure;
 namespace RestaurantReview.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20210511094622_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210513115728_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -91,7 +91,7 @@ namespace RestaurantReview.Infrastructure.Migrations
                     b.Property<Guid>("RestaurantID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ReviewTest")
+                    b.Property<string>("ReviewText")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Summary")

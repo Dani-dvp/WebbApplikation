@@ -43,11 +43,11 @@ namespace RestaurantReview.Application.Profiles
 
 
 
-            CreateMap<Review, CreateReviewResponse>();
+            CreateMap<ReviewToBeUpdated, CreateReviewResponse>();
 
             // From model to UpdateModelResponse
             CreateMap<Restaurant, UpdateRestaurantRespone>();
-            CreateMap<Review, UpdateReviewResponse>();
+            CreateMap<ReviewToBeUpdated, UpdateReviewResponse>();
 
 
 

@@ -219,3 +219,11 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\JonathanKareemIssela\Desktop\WebbAplikationV2\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
