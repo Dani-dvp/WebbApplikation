@@ -41,17 +41,17 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantLi
 
             var listOfReviews = await _reviewRepository.GetReviewsByRestaurantId(restaurant.RestaurantID);
 
-            var listOfReviewsDtoResponse =  new List<ReviewDtoResponse>();
-
-            foreach (var review in listOfReviews)
-            {
-               var reviewDto =  _mapper.Map<ReviewDtoResponse>(review);
-
-                 listOfReviewsDtoResponse.Add(reviewDto);
-            }
+           
 
 
-            restaurantResponse.ReviewsDtoResponses = listOfReviewsDtoResponse;
+            restaurantResponse.ReviewsDtoResponses = _mapper.Map<List<ReviewDtoResponse>>(listOfReviews);
+
+         
+
+         
+
+
+ 
 
 
             return restaurantResponse;
