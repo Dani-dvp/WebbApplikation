@@ -28,7 +28,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
         {
             var validator = new CreateRestaurantCommandValidator();
             var validationResult = await validator.ValidateAsync(createRestaurantCommand);
-           // var Restaurant = new Restaurant();
+           
             var createRestaurantResponse = new CreateRestaurantResponse();
 
             if (validationResult.Errors.Count > 0)
@@ -42,24 +42,26 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
             }
 
-            if (createRestaurantResponse.Success)
-            {
-                var restaurant = new Restaurant()
+                if (createRestaurantResponse.Success)
                 {
-                    RestaurantName = createRestaurantCommand.RestaurantName,
-                    Category = createRestaurantCommand.Category,
-                    StreetPhoto = createRestaurantCommand.StreetPhoto,
-                    RestaurantID = new Guid(),
-              
-                };
+                    var restaurant = new Restaurant()
+                    {
+                        RestaurantName = createRestaurantCommand.RestaurantName,
+                        StreetPhoto = createRestaurantCommand.StreetPhoto,
+                        RestaurantID = new Guid(),
 
-                 restaurant = await _restaurantRepository.AddAsync(restaurant);
+                    };
 
-                 createRestaurantResponse = _mapper.Map<CreateRestaurantResponse>(restaurant);
-         
-            }
+                    restaurant = await _restaurantRepository.AddAsync(restaurant);
 
-            return createRestaurantResponse;
+
+                    createRestaurantResponse = _mapper.Map<CreateRestaurantResponse>(restaurant);
+
+                }
+
+                return createRestaurantResponse;
+
+            
 
 
         }

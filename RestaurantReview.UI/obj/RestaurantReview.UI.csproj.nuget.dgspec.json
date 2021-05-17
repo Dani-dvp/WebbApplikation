@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {}
+    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {
+    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
         "projectName": "RestaurantReview.UI",
-        "projectPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
-        "packagesPath": "C:\\Users\\JonathanKareemIssela\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbAplikationV2\\WebbApplikation\\RestaurantReview.UI\\obj\\",
+        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.UI\\RestaurantReview.UI.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JonathanKareemIssela\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,15 +40,32 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
             "Microsoft.AspNetCore.SpaServices.Extensions": {
               "target": "Package",
               "version": "[5.0.5, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -69,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

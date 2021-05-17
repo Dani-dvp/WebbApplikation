@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\RestaurantReview.Domain",
-    "\\RestaurantReview.Identity",
-    "\\RestaurantReview.Infrastructure",
-    "\\RestaurantReview.UI"
+    ""
   ],
+  "SelectedNode": "\\RestaurantReview.sln",
   "PreviewInSolutionExplorer": false
 }

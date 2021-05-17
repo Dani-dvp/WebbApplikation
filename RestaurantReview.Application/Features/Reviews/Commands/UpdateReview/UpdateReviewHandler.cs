@@ -26,10 +26,12 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
 
         public async Task<UpdateReviewResponse> UpdateReview(UpdateReviewCommand updateReviewCommand)
         {
-            var reviewToBeUpdated = await _reviewRepository.GetByIdAsync(updateReviewCommand.ReviewID);
+            var updateReviewResponse = new UpdateReviewResponse();
+
+
             var validator = new UpdateReviewCommandValidator();
             var validationResult = await validator.ValidateAsync(updateReviewCommand);
-            var updateReviewResponse = new UpdateReviewResponse();
+            
 
 
             if (validationResult.Errors.Count > 0)
@@ -46,7 +48,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
 
             if (updateReviewResponse.Success)
             {
-               var review = new ReviewToBeUpdated()
+               var review = new Review()
 
                 {
                     Title = updateReviewCommand.Title,
@@ -57,7 +59,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
 
               await _reviewRepository.UpdateAsync(review);
 
-                updateReviewResponse = _mapper.Map<UpdateReviewResponse>(reviewToBeUpdated);
+                updateReviewResponse = _mapper.Map<UpdateReviewResponse>(review);
 
             }
 

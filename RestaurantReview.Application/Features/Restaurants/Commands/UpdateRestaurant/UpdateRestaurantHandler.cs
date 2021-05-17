@@ -18,10 +18,12 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
 
         public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
-            var RestaurantToBeUpdated = await _restaurantRepository.GetRestaurantByName(updateRestaurantCommand.RestaurantName);
+            var updateResponse = new UpdateRestaurantRespone();
+
+
             var validator = new UpdateRestaurantValidator();
             var validationResult = await validator.ValidateAsync(updateRestaurantCommand);
-            var updateResponse = new UpdateRestaurantRespone();
+            
 
             if (validationResult.Errors.Count > 0)
             {
@@ -40,17 +42,17 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
 
                 {
                     RestaurantName = updateRestaurantCommand.RestaurantName,
-                    Category = updateRestaurantCommand.Category,
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
                     GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto,
                     StreetPhoto = updateRestaurantCommand.StreetPhoto,
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);
 
-                updateResponse = _mapper.Map<UpdateRestaurantRespone>(RestaurantToBeUpdated);
+                updateResponse = _mapper.Map<UpdateRestaurantRespone>(restaurant);
             }
 
             return updateResponse;
+
         }
 
     }

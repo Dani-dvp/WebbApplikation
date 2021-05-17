@@ -13,6 +13,8 @@ using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
 using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
@@ -33,7 +35,7 @@ namespace RestaurantReview.Application.Profiles
 
             //from model to CreateModelResponse
             CreateMap<Restaurant, CreateRestaurantResponse>();
-
+            CreateMap<Review, CreateReviewResponse>();
             CreateMap<Category, CreateCategoryResponse>();
 
 
@@ -42,12 +44,9 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Category, UpdateCategoryResponse>();
 
 
-
-            CreateMap<ReviewToBeUpdated, CreateReviewResponse>();
-
             // From model to UpdateModelResponse
             CreateMap<Restaurant, UpdateRestaurantRespone>();
-            CreateMap<ReviewToBeUpdated, UpdateReviewResponse>();
+            CreateMap<Review, UpdateReviewResponse>();
 
 
 
@@ -56,17 +55,23 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Category, CategoryDetailQueryResponse>();
 
 
-            // from modelList to modelListResponse
-
+            // from model to modelListResponse
             CreateMap<Restaurant, ResturantListQueryResponse>();
-
             CreateMap<Category, CategoryListQueryResponse>();
+            CreateMap<Restaurant, RestaurantReviewsResponse>();
+
+
 
             //From model to ModelResponse
             CreateMap<AuthenticationModel, AuthenticationResponse>();
             CreateMap<RegistrationModel, RegistrationResponse>();
+            CreateMap<Restaurant, RestaurantReviewCountResponse>();
 
 
+
+            // from model to dto
+            CreateMap<Restaurant, ReviewDtoResponse>();
+            CreateMap<Review, ReviewDtoResponse>();
 
         }
 

@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using FluentValidation.Results;
-using RestaurantReview.Application.Exceptions;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
@@ -24,20 +22,20 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
         {
             _mapper = mapper;
             _reviewRepository = reviewRepository;
+
         }
        
-
-        //Kolla eventuellt här för fel!!! Fick felmeddelanden men fixde det med att välja alt. från pot. fix
-        
         public async Task<CreateReviewResponse> CreateReview(CreateReviewCommand createReviewCommand)
 
         {
+
             var createReviewResponse = new CreateReviewResponse();
             var validator = new CreateReviewCommandValidator();
             var validationResult = await validator.ValidateAsync(createReviewCommand);
 
             if (validationResult.Errors.Count > 0)
             {
+
                 createReviewResponse.Success = false;
                 createReviewResponse.ValidationErrors = new List<string>();
                 foreach (var error in validationResult.Errors)
@@ -48,8 +46,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
 
             if (createReviewResponse.Success)
             {
-                var review = new ReviewToBeUpdated()
-
+                var review = new Review()
                 {
                     Title = createReviewCommand.Title,
                     Summary = createReviewCommand.Summary,
@@ -60,11 +57,17 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
 
                  await _reviewRepository.AddAsync(review);
 
-                 createReviewResponse = _mapper.Map<CreateReviewResponse>(review);
-            }
+                createReviewResponse = _mapper.Map<CreateReviewResponse>(review);
 
-         
+
+            };
+
+
             return createReviewResponse;
+
+
+
+
         }
 
     }

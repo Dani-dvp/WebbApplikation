@@ -15,6 +15,6 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public string StreetPhoto { get; set; }
 
-        public List<ReviewToBeUpdated> Reviews { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

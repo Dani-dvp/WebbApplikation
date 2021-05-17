@@ -20,11 +20,12 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
 
         public async Task<UpdateCategoryResponse> UpdateCategory(UpdateCategoryCommand updateCategoryCommand)
         {
-            var categoryToBeUpdated = await _categoryRepository.GetCategoryByName(updateCategoryCommand.RestaurantCategory);
+            var categoryResponse = new UpdateCategoryResponse();
+
+
             var validator = new UpdateCategoryCommandValidator();
             var validationResult = await validator.ValidateAsync(updateCategoryCommand);
-            var categoryResponse = new UpdateCategoryResponse();
-             categoryToBeUpdated.RestaurantCategory = updateCategoryCommand.RestaurantCategory;
+            
 
             if (validationResult.Errors.Count > 0)
             {
