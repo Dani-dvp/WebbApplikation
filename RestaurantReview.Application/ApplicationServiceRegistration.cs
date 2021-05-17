@@ -9,7 +9,6 @@ using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToC
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
-using RestaurantReview.Application.Features.Categories.Queries.GetAllRestaurantsFromCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
@@ -67,7 +66,6 @@ namespace RestaurantReview.Application
             services.AddScoped<ICategoryDetailQueryService, CategoryDetailQueryHandler>();
             services.AddScoped<ICategoryListQueryService, CategoryListQueryHandler>();
             services.AddScoped<IAddRestaurantToCategoryService, AddRestaurantToCategoryHandler>();
-            services.AddScoped<IGetAllRestaurantsFromCategoryByNameService, GetAllRestaurantsFromCategoryByNameHandler>();
 
 
             //review 

@@ -2,9 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace RestaurantReview.Infrastructure.Repositories
 {
@@ -25,6 +23,6 @@ namespace RestaurantReview.Infrastructure.Repositories
             return Restaurant;
         }
 
-        
+
     }
 }

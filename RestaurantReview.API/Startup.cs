@@ -122,7 +122,7 @@ namespace RestaurantReview.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestaurantReview API");
 
             });
-            
+
 
             app.UseAuthorization();
 
@@ -131,7 +131,7 @@ namespace RestaurantReview.API
             {
                 endpoints.MapControllers();
             });
-            
+
 
 
         }

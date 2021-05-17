@@ -42,7 +42,7 @@ namespace RestaurantReview.Infrastructure.Repositories
             return entity;
         }
 
-        
+
 
         public async Task DeleteAsync(T entity)
         {
