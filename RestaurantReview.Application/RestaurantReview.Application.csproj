@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp5.0</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,10 +17,13 @@
 
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
 
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.6" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\WebbApp\WebbApplikation\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
+    <ProjectReference Include="..\RestaurantReview.Authentication\RestaurantReview.Authentication.csproj" />
     <ProjectReference Include="..\RestaurantReview.Domain\RestaurantReview.Domain.csproj" />
     <ProjectReference Include="..\RestaurantReview.Infrastructure\RestaurantReview.Infrastructure.csproj" />
   </ItemGroup>

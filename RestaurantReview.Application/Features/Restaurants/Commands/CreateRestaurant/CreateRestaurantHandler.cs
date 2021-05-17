@@ -23,16 +23,21 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public async Task<CreateRestaurantResponse> CreateRestaurant(CreateRestaurantCommand createRestaurantCommand)
         {
+           
+          
             var Restaurant = new Restaurant()
             {
+
                 RestaurantName = createRestaurantCommand.RestaurantName,
-                Category = createRestaurantCommand.Category,
+               
                 StreetPhoto = createRestaurantCommand.StreetPhoto,
                 RestaurantID = new Guid()
 
             };
 
             Restaurant = await _restaurantRepository.AddAsync(Restaurant);
+
+           
 
             var RestaurantRespone = _mapper.Map<CreateRestaurantResponse>(Restaurant);
 
