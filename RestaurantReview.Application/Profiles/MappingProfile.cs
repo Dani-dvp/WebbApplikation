@@ -35,7 +35,7 @@ namespace RestaurantReview.Application.Profiles
 
             //from model to CreateModelResponse
             CreateMap<Restaurant, CreateRestaurantResponse>();
-
+            CreateMap<Review, CreateReviewResponse>();
             CreateMap<Category, CreateCategoryResponse>();
 
 
@@ -43,9 +43,6 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Restaurant, UpdateRestaurantRespone>();
             CreateMap<Category, UpdateCategoryResponse>();
 
-
-
-            CreateMap<Review, CreateReviewResponse>();
 
             // From model to UpdateModelResponse
             CreateMap<Restaurant, UpdateRestaurantRespone>();
@@ -58,10 +55,8 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Category, CategoryDetailQueryResponse>();
 
 
-            // from modelList to modelListResponse
-
+            // from model to modelListResponse
             CreateMap<Restaurant, ResturantListQueryResponse>();
-
             CreateMap<Category, CategoryListQueryResponse>();
             CreateMap<Restaurant, RestaurantReviewsResponse>();
 
@@ -75,8 +70,6 @@ namespace RestaurantReview.Application.Profiles
 
 
             // from model to dto
-
-           
             CreateMap<Restaurant, ReviewDtoResponse>();
             CreateMap<Review, ReviewDtoResponse>();
 

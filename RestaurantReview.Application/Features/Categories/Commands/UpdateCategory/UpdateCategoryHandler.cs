@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
+using RestaurantReview.Domain.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCategory
@@ -18,16 +20,40 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
 
         public async Task<UpdateCategoryResponse> UpdateCategory(UpdateCategoryCommand updateCategoryCommand)
         {
-            var categoryToBeUpdated = await _categoryRepository.GetCategoryByName(updateCategoryCommand.RestaurantCategory);
-
-            categoryToBeUpdated.RestaurantCategory = updateCategoryCommand.RestaurantCategory;
+            var categoryResponse = new UpdateCategoryResponse();
 
 
-            await _categoryRepository.UpdateAsync(categoryToBeUpdated);
+            var validator = new UpdateCategoryCommandValidator();
+            var validationResult = await validator.ValidateAsync(updateCategoryCommand);
+            
 
-            var updateCategoryResponse = _mapper.Map<UpdateCategoryResponse>(categoryToBeUpdated);
+            if (validationResult.Errors.Count > 0)
+            {
+                categoryResponse.Success = false;
+                categoryResponse.ValidationErrors = new List<string>();
+                foreach (var error in validationResult.Errors)
+                {
+                    categoryResponse.ValidationErrors.Add(error.ErrorMessage);
+                }
 
-            return updateCategoryResponse;
+            }
+
+            if (categoryResponse.Success)
+            {
+                var category = new Category()
+
+                {
+                    RestaurantCategory = updateCategoryCommand.RestaurantCategory,
+
+                };
+
+
+
+                await _categoryRepository.UpdateAsync(category);
+
+                 categoryResponse = _mapper.Map<UpdateCategoryResponse>(category);
+            }
+            return categoryResponse;
 
 
 

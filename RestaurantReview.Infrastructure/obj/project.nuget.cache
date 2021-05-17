@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hIE+ATA5tfLe/vUcDfz06LqWMVFaFhI4ZkHwAlfca/cbbru82LiuLHf+QjooWk8AEDAy06VL7eAPXsAC20UDpQ==",
+  "dgSpecHash": "alNnzjRH+yIIID/AC/RomCeyzsKVSBfpowSWEAN3L6A8WnwUnxEMZ3yo/WouADaJsuVfXRSPkdmpyuYzvWkUdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",

@@ -7,12 +7,7 @@ namespace RestaurantReview.Domain.IRepositories
     public interface IAsyncRepository<TEntity> where TEntity : class
     {
 
-        //Kopior av task ifrån vanliga repositories:
-        //exempel:
-        //Task<TEntity> GetByIdAsync(double ID);
         Task<TEntity> GetByIdAsync(Guid ID);
-
-
 
 
         Task<IReadOnlyList<TEntity>> ListAllAsync();
