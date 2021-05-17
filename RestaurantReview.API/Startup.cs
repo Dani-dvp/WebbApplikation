@@ -29,10 +29,15 @@ namespace RestaurantReview.API
 
             //Gör att vi kan använda services mellan projekt // lagt till
             services.AddApplicationServices(Configuration); // använder RestaurantReview.application
-
+           
+            services.AddControllers()
+            .AddNewtonsoftJson(x => x.SerializerSettings
+            .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
 
         }
+
+    
 
         // för att använda swagger funktion behövs swagger , swaggerUI , Swashbuckle nuggets
         private static void AddSwagger(IServiceCollection services)

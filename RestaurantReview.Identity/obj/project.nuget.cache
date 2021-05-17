@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P94YrJmMSkIl9k2Wohlauk0sv87mCH9kVdjyN211vYd1YqiU2ZPMhrRdZbr0tDFiB1lraBfB3y1UN9K7eC5wjQ==",
+  "dgSpecHash": "+2SdKcDWiz5j3gqiv5zefSCCyWNTnh/ltcZZw+K/ux9wfW8KSAtSgshQ4TpjNrzkt9KTsBI4J/uRdp77F8j4qA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Identity\\RestaurantReview.Authentication.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.5\\microsoft.aspnetcore.cryptography.keyderivation.5.0.5.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.5.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.5.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.6\\microsoft.aspnetcore.jsonpatch.5.0.6.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.6\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.6.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
@@ -47,6 +49,7 @@
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

@@ -35,7 +35,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<int> RestaurantReviewCount(string  name)
         {
-            var countReview = await _myDbContext.Set<Restaurant>().CountAsync(restaurant => restaurant.RestaurantName == name);
+            var countReview = await _myDbContext.Restaurants.CountAsync(restaurant => restaurant.RestaurantName == name);
            
             return countReview;
 
@@ -49,6 +49,13 @@ namespace RestaurantReview.Infrastructure.Repositories
           // var RestaurantAndReviews = await _myDbContext.Restaurants.Include(rest => rest.Reviews).Where(rest => rest.RestaurantName == name) //FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
             return null;
 
+        }
+
+        public async Task<List<Restaurant>> IncludeReviews(Guid id)
+        {
+         var resturantReviews = await _myDbContext.Restaurants.Include(restaurant => restaurant.Reviews).Where(rest => rest.RestaurantID == id).ToListAsync();
+
+            return resturantReviews;
         }
 
 

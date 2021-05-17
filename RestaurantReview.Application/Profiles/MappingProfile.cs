@@ -76,8 +76,10 @@ namespace RestaurantReview.Application.Profiles
 
             // from model to dto
 
-            CreateMap<Restaurant, RestaurantDtoResponse>();
+           
+            CreateMap<Restaurant, ReviewDtoResponse>();
             CreateMap<Review, ReviewDtoResponse>();
+
         }
 
 

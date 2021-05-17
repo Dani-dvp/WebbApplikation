@@ -13,5 +13,7 @@ namespace RestaurantReview.Domain.IRepositories
 
 
         Task<Restaurant> RestaurantAndReviews(string Name);
+
+        Task<List<Restaurant>> IncludeReviews(Guid id);
     }
 }

@@ -22,7 +22,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantRe
             var getResturant = await _restaurantRepository.GetRestaurantByName(restaurantReviewCommand.RestaurantName);
 
 
-            var countReviewsInRestaurant = await _restaurantRepository.RestaurantReviewCount(restaurantReviewCommand.RestaurantName);
+            var countReviewsInRestaurant = await _restaurantRepository.RestaurantReviewCount(getResturant.RestaurantName);
 
          
 

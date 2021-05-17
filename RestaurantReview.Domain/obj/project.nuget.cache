@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CRz91ZQXMgM8FdPFN5ZrzpqdnuRjCqm+CMqBVQrae1BVtPaBp3XIzvdgTq+KSOsK+jKvVT966Jc0qCgj8yXfVw==",
+  "dgSpecHash": "UDc/XvGo4H1rqA3qXYPlTcxhQX4gXZ3NjY0HE1kqQw3al3q4/4bYfrFkmNQpcJyhe8kkh/4xq+L2Y3icZXA4lQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.5\\microsoft.aspnetcore.cryptography.keyderivation.5.0.5.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.5.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.5.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.6\\microsoft.aspnetcore.jsonpatch.5.0.6.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.6\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.6.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.5\\microsoft.entityframeworkcore.5.0.5.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.5\\microsoft.entityframeworkcore.abstractions.5.0.5.nupkg.sha512",
@@ -35,6 +37,8 @@
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",

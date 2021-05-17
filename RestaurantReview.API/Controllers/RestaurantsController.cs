@@ -107,7 +107,7 @@ namespace RestaurantReview.API.Controllers
 
         [HttpGet("RestaurantReviews")]
 
-        public async Task<ActionResult <RestaurantReviewsResponse>> GetRestaurantReviewsController([FromQuery] RestaurantReviewsCommand restaurantReviewsCommand)
+        public async Task<ActionResult<RestaurantReviewsResponse>> GetRestaurantReviewsController([FromQuery] RestaurantReviewsCommand restaurantReviewsCommand)
         {
             return  Ok(await _restaurantReviewsService.GetRestaurantReviews(restaurantReviewsCommand));
         }

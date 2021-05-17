@@ -26,7 +26,6 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\ref\RestaurantReview.Domain.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\bin\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
-C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.csprojAssemblyReference.cache
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.AssemblyInfoInputs.cache
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.AssemblyInfo.cs
@@ -35,3 +34,4 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\ref\RestaurantReview.Domain.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.pdb
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.genruntimeconfig.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.Domain\obj\Debug\netcoreapp5.0\RestaurantReview.Domain.csprojAssemblyReference.cache

@@ -426,3 +426,13 @@ C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplik
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\ref\RestaurantReview.API.dll
 C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\RestaurantReview.API.deps.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\RestaurantReview.API.runtimeconfig.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\RestaurantReview.API.runtimeconfig.dev.json
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\RestaurantReview.API.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\ref\RestaurantReview.API.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\RestaurantReview.API.pdb
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\obj\Debug\netcoreapp5.0\RestaurantReview.API.genruntimeconfig.cache
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sebas\OneDrive\Documents\Programming\EntityFrameWork\projekt\WebbApplikation\RestaurantReview.API\bin\Debug\netcoreapp5.0\Newtonsoft.Json.Bson.dll

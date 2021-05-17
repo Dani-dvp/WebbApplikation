@@ -28,30 +28,33 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantLi
         public async Task<RestaurantReviewsResponse> GetRestaurantReviews(RestaurantReviewsCommand restaurantReviewsCommand)
         {
 
-            var restaurant= await _restaurantRepository.GetRestaurantByName(restaurantReviewsCommand.RestaurantName);
-         
+            var restaurantID= await _restaurantRepository.GetRestaurantByName(restaurantReviewsCommand.RestaurantName);
 
 
-            var review = _reviewRepository.GetReviewsByRestaurantId(restaurant.RestaurantID);
-
-             var restaurantReviewsResponse = new RestaurantReviewsResponse()
-              {
-                  RestaurantName = restaurant.RestaurantName,
-                  RestaurantDtoResponse = _mapper.Map<RestaurantDtoResponse>(restaurant),
-                 ReviewsDtoResponses = _mapper.Map<List<ReviewDtoResponse>>(review)
 
 
-        }; 
-         //   var restaurantReviewsResponse =new RestaurantReviewsResponse();
-              
 
-           //  restaurantReviewsResponse.RestaurantDtoResponse =  _mapper.Map<RestaurantDtoResponse>(restaurant);
+           var restaurant =await  _restaurantRepository.GetByIdAsync(restaurantID.RestaurantID);
 
-           // restaurantReviewsResponse.ReviewsDtoResponses =  _mapper.Map<List<ReviewDtoResponse>>(review);
+            var restaurantResponse = _mapper.Map<RestaurantReviewsResponse>(restaurant);
 
-           
 
-            return restaurantReviewsResponse;
+            var listOfReviews = await _reviewRepository.GetReviewsByRestaurantId(restaurant.RestaurantID);
+
+            var listOfReviewsDtoResponse =  new List<ReviewDtoResponse>();
+
+            foreach (var review in listOfReviews)
+            {
+               var reviewDto =  _mapper.Map<ReviewDtoResponse>(review);
+
+                 listOfReviewsDtoResponse.Add(reviewDto);
+            }
+
+
+            restaurantResponse.ReviewsDtoResponses = listOfReviewsDtoResponse;
+
+
+            return restaurantResponse;
 
         } 
 
