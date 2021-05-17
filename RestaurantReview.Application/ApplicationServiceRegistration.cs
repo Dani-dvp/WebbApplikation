@@ -14,6 +14,11 @@ using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestauran
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
+using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
+
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
 using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
@@ -57,13 +62,20 @@ namespace RestaurantReview.Application
             services.AddScoped<ICategoryListQuery, RestaurantListQueryHandler>();
             services.AddScoped<IRestaurantDetailService, RestaurantDetailQueryHandler>();
 
+            services.AddScoped<IRestaurantReviewCountService, RestaurantReviewCountHandler>();
+            services.AddScoped<IRestaurantAvgRatingService, RestaurantAvgRatingHandler>();
+            services.AddScoped<IRestaurantReviewsService, RestaurantReviewsHandler>();
+
+
+
+
             //categories
             services.AddScoped<ICreateCategoryService, CreateCategoryHandler>();
             services.AddScoped<IDeleteCategoryService, DeleteCategoryHandler>();
             services.AddScoped<IUpdateCategoryService, UpdateCategoryHandler>();
             services.AddScoped<ICategoryDetailQueryService, CategoryDetailQueryHandler>();
             services.AddScoped<ICategoryListQueryService, CategoryListQueryHandler>();
-
+       
 
             //review 
             services.AddScoped<ICreateReviewService, CreateReviewHandler>();

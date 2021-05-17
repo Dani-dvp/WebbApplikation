@@ -7,12 +7,14 @@ namespace RestaurantReview.Domain.Models
     {
         public Guid RestaurantID { get; set; }
         public string RestaurantName { get; set; }
-        public string Category { get; set; }
+        
         public string RestaurantLink { get; set; }
 
         public string GoogleMapsPhoto { get; set; }
 
         public string StreetPhoto { get; set; }
+
+     
 
         public List<Review> Reviews { get; set; }
 

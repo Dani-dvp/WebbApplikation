@@ -20,7 +20,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
 
 
             RestaurantToBeUpdated.RestaurantName = updateRestaurantCommand.RestaurantName;
-            RestaurantToBeUpdated.Category = updateRestaurantCommand.Category;
+            
             RestaurantToBeUpdated.RestaurantLink = updateRestaurantCommand.RestaurantLink;
             RestaurantToBeUpdated.GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto;
             RestaurantToBeUpdated.StreetPhoto = updateRestaurantCommand.StreetPhoto;
