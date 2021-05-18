@@ -6,7 +6,7 @@ export default class Categories extends Component {
         return (
             <div>
                 
-                <p id="cat">Categories</p>
+                <h1 id="cat">Categories</h1>
                
 
             <div id="Category">

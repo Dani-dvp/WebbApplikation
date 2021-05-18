@@ -1,0 +1,10 @@
+﻿.TooHigh {
+    padding-top: 250px;
+}
+
+AllRestaurantCard {
+    display:grid;
+    grid-column-end:span 8;
+    font-size: 38px;
+    color:blue;
+}

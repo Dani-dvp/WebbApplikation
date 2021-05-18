@@ -1,13 +1,15 @@
 ﻿import React, { Component } from 'react'
 import axios from 'axios';
+import { AllRestaurantCard } from './Cards/AllRestaurantCard';
+import '../Css/ShowAllRestaurants.css';
 
-export default class ShowAllRestaurants extends React.Component {
+export default class ShowAllRestaurants extends Component {
   state = {
     loading: true,
     restaurants: []
   };
 
-  async componentDidMount() {
+  getData() {
     axios({
       method: 'get',
       url: "/api/Restaurants",
@@ -16,30 +18,39 @@ export default class ShowAllRestaurants extends React.Component {
       },
 
     }).then(res => {
-      this.setState({ restaurants: res.data, loading: false });
+      var data = res.data
+      var forEachData = ''
+      data.forEach(d => forEachData += `<AllRestaurantCard>${d.restaurantName}</AllRestaurantCard>`)
+      this.setState({ loading: false });
       console.log(res.data)
+
+      this.setState({ restaurants: forEachData })
     })
   };
-
+  componentDidMount() {
+    this.getData();
+  }
 
   render() {
+    
+
     if (this.state.loading) {
       return <div>loading...</div>;
     }
 
     if (!this.state.restaurants.length) {
-      return <div>didn't get a restaurant</div>;
+      return <div>
+        <div><h1>didn't get a restaurant</h1></div>
+      </div>;
     }
 
    
-
+    const { restaurants } = this.state
     return (
       <div>
-        {this.state.restaurants.map(restaurant => (
-          <div key={restaurant.RestaurantName}>
-            <div>{restaurant.Category}</div>
-          </div>
-        ))}
+        <div>
+          <ul className="TooHigh" dangerouslySetInnerHTML={{ __html: restaurants }}></ul>
+        </div>
       </div>
     );
   }

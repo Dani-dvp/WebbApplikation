@@ -13,15 +13,16 @@ export default class AddRestaurant extends Component {
     let restaurantName = document.getElementById("firstForm").value;
 
     axios({
-      method: 'POST',
+      method: 'post',
       url: "/api/Restaurants",
       data: {
-        RestaurantName: restaurantName,
-        Authorization: 'Bearer ' + localStorage.getItem('token')
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        RestaurantName: restaurantName
       },
-
-    }).then(res => { console.log(res) });
+      
+    }).then(res => { console.log(res) })
     console.log(localStorage.getItem('token'));
+    
 
 
   }
@@ -35,11 +36,11 @@ export default class AddRestaurant extends Component {
             </div>
             <div>
                 <form id="addForm">
-                    <input id="firstForm"type="text" name="restaurant" placeholder=" Restaurant name:" />
+                    <input id="firstForm" type="text" name="restaurant" placeholder=" Restaurant name:" />
                     <br />
-                    <input id="locationForm"type="text" name="Location" placeholder=" Location:" />
+                    <input id="locationForm" type="text" name="Location" placeholder=" Location:" />
                     <br />
-                    <select id="firstAdd"type="text" name="Category">
+                    <select id="firstAdd" type="text" name="Category">
                         <option value="option">Category</option>
                         <option value="food">African</option>
                         <option value="food">American</option>
@@ -50,11 +51,7 @@ export default class AddRestaurant extends Component {
                         <option value="food">Indian</option>
                     </select>
                     <br />
-                    <textarea id="secondForm" placeholder=" Write your review here..."></textarea>
-                    <br />
-                    <br />
-                    <RatingStars></RatingStars>
-                    <br />
+                    
                 <button className="submit" onClick={this.addRestaurantRequest}>Submit</button>
                 </form>
             </div>

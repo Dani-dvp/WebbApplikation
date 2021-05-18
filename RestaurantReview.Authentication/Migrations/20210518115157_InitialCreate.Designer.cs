@@ -10,8 +10,8 @@ using RestaurantReview.Authentication;
 namespace RestaurantReview.Authentication.Migrations
 {
     [DbContext(typeof(AuthenticationDbContext))]
-    [Migration("20210512113650_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210518115157_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
