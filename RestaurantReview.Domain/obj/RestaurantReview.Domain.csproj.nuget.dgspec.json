@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {}
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+    "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
         "projectName": "RestaurantReview.Domain",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\OneDrive\\Documents\\Programming\\EntityFrameWork\\projekt\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +96,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
