@@ -21,7 +21,6 @@ C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\bin\Debu
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfoInputs.cache
 C:\Users\kevin\Desktop\NyttMedRobin\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfo.cs
