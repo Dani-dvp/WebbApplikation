@@ -21,7 +21,7 @@ namespace RestaurantReview.API.Controllers
         }
 
         [HttpPost]
-        public Image Index(IFormFile file)
+        public ImageResponse Index(IFormFile file)
         {
             //Extract Image File Name.
 

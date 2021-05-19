@@ -23,14 +23,18 @@ namespace RestaurantReview.Application.Features.Images
             _mapper = mapper;
             _imageRepository = imageRepository;
         }
-        public Image CreateImagePath( IFormFile file )
+        public ImageResponse CreateImagePath( IFormFile file )
         {
+
+            //  sparar namnet på den fil du väljer i filename
             string fileName = Path.GetFileName(file.FileName);
 
-
+            // skapar en file path där jag vill att filerna ska gå till
             string filePath = "Images/" + fileName;
 
 
+            //detta måstes göra för att filerna ska komma in i pathen det FileStream gör så vi kan välja en bild och file.create(filePath) skapar eller överskriver
+            // en file path som vi vill använda i detta fall /images + fileName file.CopyTo(fileStream) gör så det kopieras till dit du vill i detta fall fileStream
             using (FileStream fileStream = File.Create(filePath))
             {
                 file.CopyTo(fileStream);
@@ -46,13 +50,16 @@ namespace RestaurantReview.Application.Features.Images
                 ImgPath = filePath,
                 ImageID = new Guid()
             };
+           
+            image = _imageRepository.Add(image);
+            
+         var imageResponse = _mapper.Map<ImageResponse>(image);
 
-
-            image =  _imageRepository.Add(image);
+           
 
            //  var imageResponse = _mapper.Map<ImageResponse>(image);
 
-            return image;
+            return imageResponse;
 
                
 

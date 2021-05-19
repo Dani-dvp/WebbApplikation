@@ -5,6 +5,6 @@ namespace RestaurantReview.Application.Features.Images
 {
     public interface IImageService
     {
-        Image CreateImagePath(  IFormFile file);
+        ImageResponse CreateImagePath(  IFormFile file);
     }
 }
