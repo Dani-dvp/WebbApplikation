@@ -20,6 +20,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
             return findResturantCategory;
         }
+
             public  Task<bool> IsCategoryUnique(string name)
             {
                 var matches =  _myDbContext.Categories.Any(category => category.RestaurantCategory.Equals(name));
@@ -31,3 +32,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
 
     }
+
+
+
+ 

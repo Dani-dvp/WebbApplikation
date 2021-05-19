@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace RestaurantReview.Application.Features.Authentication.Commands.Authenticate
+namespace RestaurantReview.Application.Features.Authentication.Commands.Login
 {
     public interface IAuthenticationService
     {

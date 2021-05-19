@@ -31,6 +31,7 @@ namespace RestaurantReview.Infrastructure.Repositories
             return Restaurant;
         }
 
+
        
 
         public async Task<int> RestaurantReviewCount(string  name)
@@ -57,6 +58,7 @@ namespace RestaurantReview.Infrastructure.Repositories
             var matches = _myDbContext.Restaurants.Any(restaurant => restaurant.RestaurantName.Equals(name));
             return Task.FromResult(matches);
         }
+
 
     }
 

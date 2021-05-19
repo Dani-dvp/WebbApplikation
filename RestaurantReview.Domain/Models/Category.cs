@@ -7,12 +7,16 @@ namespace RestaurantReview.Domain.Models
 {
     public class Category
     {
+        public Category()
+        {
+            Restaurants = new List<Restaurant>();
+        }
+
+
         public Guid CategoryID { get; set; }
 
-
-        public Guid? RestaurantID { get; set; }
         public string RestaurantCategory { get; set; }
 
-        public List<Restaurant> Restaurants { get; set; }
+        public ICollection<Restaurant> Restaurants { get; set; }
     }
 }

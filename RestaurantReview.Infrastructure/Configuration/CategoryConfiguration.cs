@@ -10,14 +10,13 @@ namespace RestaurantReview.Infrastructure.Configuration
         {
 
             modelBuilder
-                .HasKey(configure => configure.CategoryID);
+                .HasKey(category => category.CategoryID);
 
 
 
 
             modelBuilder
                 .HasMany(category => category.Restaurants)
-
                 .WithMany(resturant => resturant.Categories);
 
 

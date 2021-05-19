@@ -26,12 +26,16 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public async Task<CreateRestaurantResponse> CreateRestaurant(CreateRestaurantCommand createRestaurantCommand)
         {
+
             var validator = new CreateRestaurantCommandValidator(_restaurantRepository);
+
+
             var validationResult = await validator.ValidateAsync(createRestaurantCommand);
            
             var createRestaurantResponse = new CreateRestaurantResponse();
 
             if (validationResult.Errors.Count > 0)
+
             {
                 createRestaurantResponse.Success = false;
                 createRestaurantResponse.ValidationErrors = new List<string>();

@@ -16,12 +16,14 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
         //Får inte returnera en vanlig "Model" Måste Returner en ResponsTyp med innehållet man vill visa.
         private readonly IMapper _mapper;
         private readonly IReviewRepository _reviewRepository;
+        private readonly IRestaurantRepository _restaurantRepository;
 
 
-        public CreateReviewHandler(IMapper mapper, IReviewRepository reviewRepository)
+        public CreateReviewHandler(IMapper mapper, IReviewRepository reviewRepository, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _reviewRepository = reviewRepository;
+            _restaurantRepository = restaurantRepository;
 
         }
        
@@ -32,6 +34,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
             var createReviewResponse = new CreateReviewResponse();
             var validator = new CreateReviewCommandValidator();
             var validationResult = await validator.ValidateAsync(createReviewCommand);
+            var restaurant = await _restaurantRepository.GetRestaurantByName(createReviewCommand.RestaurantName);
 
             if (validationResult.Errors.Count > 0)
             {
@@ -48,8 +51,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
             {
                 var review = new Review()
                 {
-                    Title = createReviewCommand.Title,
-                    Summary = createReviewCommand.Summary,
+                    RestaurantID = restaurant.RestaurantID,
                     Rating = createReviewCommand.Rating,
                     ReviewText = createReviewCommand.ReviewText,
                     ReviewID = new Guid()
@@ -58,6 +60,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
                  await _reviewRepository.AddAsync(review);
 
                 createReviewResponse = _mapper.Map<CreateReviewResponse>(review);
+
 
 
             };

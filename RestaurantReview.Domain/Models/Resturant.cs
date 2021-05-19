@@ -16,7 +16,9 @@ namespace RestaurantReview.Domain.Models
         public string MapURL { get; set; }
 
 
+
         public ICollection<Review> Reviews { get; set; }
+
 
 
         public ICollection<Category> Categories { get; set; }
