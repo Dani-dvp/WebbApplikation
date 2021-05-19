@@ -2,8 +2,31 @@ import React, { Component } from 'react'
 import RatingStars from './RatingStars';
 import '../Css/StarRating.css';
 import '../Css/AddRestaurant.css';
+import axios from 'axios';
 
 export default class AddRestaurant extends Component {
+  addRestaurantRequest = event => {
+
+
+    event.preventDefault();
+
+    let restaurantName = document.getElementById("firstForm").value;
+
+    axios({
+      method: 'post',
+      url: "/api/Restaurants",
+      data: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        RestaurantName: restaurantName
+      },
+      
+    }).then(res => { console.log(res) })
+    console.log(localStorage.getItem('token'));
+    
+
+
+  }
+
     render() {
         return (
             <div>
@@ -13,11 +36,11 @@ export default class AddRestaurant extends Component {
             </div>
             <div>
                 <form id="addForm">
-                    <input id="firstForm"type="text" name="restaurant" placeholder=" Restaurant name:" />
+                    <input id="firstForm" type="text" name="restaurant" placeholder=" Restaurant name:" />
                     <br />
-                    <input id="locationForm"type="text" name="Location" placeholder=" Location:" />
+                    <input id="locationForm" type="text" name="Location" placeholder=" Location:" />
                     <br />
-                    <select id="firstAdd"type="text" name="Category">
+                    <select id="firstAdd" type="text" name="Category">
                         <option value="option">Category</option>
                         <option value="food">African</option>
                         <option value="food">American</option>
@@ -28,12 +51,8 @@ export default class AddRestaurant extends Component {
                         <option value="food">Indian</option>
                     </select>
                     <br />
-                    <textarea id="secondForm" placeholder=" Write your review here..."></textarea>
-                    <br />
-                    <br />
-                    <RatingStars></RatingStars>
-                    <br />
-                    <button className="submit">Submit</button>
+                    
+                <button className="submit" onClick={this.addRestaurantRequest}>Submit</button>
                 </form>
             </div>
             </div>

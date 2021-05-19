@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
 
@@ -16,6 +17,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class RestaurantsController : ControllerBase
@@ -46,29 +48,23 @@ namespace RestaurantReview.API.Controllers
             _restaurantAvgRatingService = restaurantAvgRatingService;
             _restaurantReviewsService = restaurantReviewsService;
         }
-
+        [Authorize]
         [HttpPost]
-
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)
         {
 
             return Ok(await _createRestaurantService.CreateRestaurant(createRestaurantCommand));
-
-
         }
 
 
-
-
-
+        [Authorize]
         [HttpDelete]
-
         public async Task<string> DeleteResturantController(DeleteRestaurantCommand deleteResturantCommand)
         {
             return await _deleteResturantService.DeleteRestaurant(deleteResturantCommand);
         }
 
-
+        [Authorize]
         [HttpPut]
         public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
@@ -78,15 +74,14 @@ namespace RestaurantReview.API.Controllers
 
 
         [HttpGet]
-
         public async Task<List<ResturantListQueryResponse>> GetRestaurantList()
         {
             return await _resturantListQueryService.GetRestaurantList();
         }
 
-        [HttpGet("{ResturantID}")]
 
-        public async Task<RestaurantDetalResponse> GetRestaurantByID([FromQuery] RestaurantDetailCommand restaurantDetailCommand)
+        [HttpGet("{ResturantID}")]
+        public async Task<RestaurantDetailResponse> GetRestaurantByID([FromQuery] RestaurantDetailCommand restaurantDetailCommand)
         {
             return await _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
         }

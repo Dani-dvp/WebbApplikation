@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {}
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
         "projectName": "RestaurantReview.API",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.API\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
               }
             }
           }
@@ -111,17 +111,17 @@
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
         "projectName": "RestaurantReview.Application",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Application\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,14 +135,14 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj"
               },
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               },
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj"
               }
             }
           }
@@ -221,17 +221,17 @@
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj": {
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj": {
       "version": "1.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj",
         "projectName": "RestaurantReview.Authentication",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Authentication\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\RestaurantReview.Authentication.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Authentication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -245,8 +245,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               }
             }
           }
@@ -337,17 +337,17 @@
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
         "projectName": "RestaurantReview.Domain",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -437,17 +437,17 @@
         }
       }
     },
-    "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
+    "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
         "projectName": "RestaurantReview.Infrastructure",
-        "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -461,8 +461,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\Robin\\source\\repos\\FörGitpush\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               }
             }
           }

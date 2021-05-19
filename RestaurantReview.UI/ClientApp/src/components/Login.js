@@ -13,19 +13,26 @@ export default class Login extends Component {
     let password = document.getElementById("password").value;
 
     Axios({
-      method: 'POST',
+      method: 'post',
       url: "/api/Authentication/login",
       data: {
         Email: email,
         Password: password,
       },
-      
+
     }).then(res => { localStorage.setItem('token', res.data.token) });
-    console.log(localStorage.getItem('token'));
+    
     
     
   }
   
+  logOutRequest = event => {
+    event.preventDefault();
+    console.log(localStorage.getItem('token'));
+    localStorage.clear();
+    delete Axios.defaults.headers.common['Authorization'];
+    console.log(localStorage.getItem('token'));
+  }
 
   render() {
     return (
@@ -35,14 +42,20 @@ export default class Login extends Component {
           <Link to="/register" className="inactive underlineHover"><h2>Register</h2></Link>
 
           <form >
-            <input type="text" id="email" name="login" placeholder="Email" />
+            <input
+              type="text"
+              id="email"
+              name="login"
+              placeholder="Email" />
             <input
               type="text"
               id="password"
               name="password"
               placeholder="Password"
               />
-            <button className="btn btn-primary" onClick={ this.sendLoginRequest }>Log in</button>
+            <button className="btn btn-primary" onClick={this.sendLoginRequest}>Log in</button>
+            <br />
+            <button className="btn btn-primary" onClick={this.logOutRequest}>Log out</button>
           </form>
 
           <form />

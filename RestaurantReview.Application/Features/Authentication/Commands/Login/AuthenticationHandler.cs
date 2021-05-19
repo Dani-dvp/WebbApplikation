@@ -5,7 +5,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 
-namespace RestaurantReview.Application.Features.Authentication.Commands.Authenticate
+namespace RestaurantReview.Application.Features.Authentication.Commands.Login
 {
     public class AuthenticationHandler : IAuthenticationService
     {

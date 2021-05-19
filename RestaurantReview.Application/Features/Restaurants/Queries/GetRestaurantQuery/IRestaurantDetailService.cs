@@ -4,6 +4,6 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 {
     public interface IRestaurantDetailService
     {
-        Task<RestaurantDetalResponse> GetRestaurantByID(RestaurantDetailCommand getRestaurantCommand);
+        Task<RestaurantDetailResponse> GetRestaurantByID(RestaurantDetailCommand getRestaurantCommand);
     }
 }
