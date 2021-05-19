@@ -12,9 +12,15 @@ export default class Home extends Component {
         <section id="showcase">
           <div>
             <form id="location">
-              <input id="loc1" type="text" name="loc"
+              <input
+                id="loc1"
+                type="text"
+                name="loc"
                 placeholder="Location:" />
-              <input id="loc2" type="text" name="rest"
+              <input
+                id="loc2"
+                type="text"
+                name="rest"
                 placeholder="Restaurant:" />
             </form>
           </div>
