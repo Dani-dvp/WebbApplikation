@@ -26,7 +26,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public async Task<CreateRestaurantResponse> CreateRestaurant(CreateRestaurantCommand createRestaurantCommand)
         {
-            var validator = new CreateRestaurantCommandValidator();
+            var validator = new CreateRestaurantCommandValidator(_restaurantRepository);
             var validationResult = await validator.ValidateAsync(createRestaurantCommand);
            
             var createRestaurantResponse = new CreateRestaurantResponse();
@@ -47,7 +47,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
                     var restaurant = new Restaurant()
                     {
                         RestaurantName = createRestaurantCommand.RestaurantName,
-                        StreetPhoto = createRestaurantCommand.StreetPhoto,
+                        MapURL = createRestaurantCommand.MapURL,
                         RestaurantID = new Guid(),
 
                     };

@@ -52,8 +52,11 @@ namespace RestaurantReview.Infrastructure.Repositories
         }
 
 
-
-
+        public Task<bool> IsRestaurantUnique(string name)
+        {
+            var matches = _myDbContext.Restaurants.Any(restaurant => restaurant.RestaurantName.Equals(name));
+            return Task.FromResult(matches);
+        }
 
     }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Infrastructure.Repositories
@@ -19,5 +20,14 @@ namespace RestaurantReview.Infrastructure.Repositories
 
             return findResturantCategory;
         }
+            public  Task<bool> IsCategoryUnique(string name)
+            {
+                var matches =  _myDbContext.Categories.Any(category => category.RestaurantCategory.Equals(name));
+                return Task.FromResult(matches);
+            }
+
+        }
+
+
+
     }
-}

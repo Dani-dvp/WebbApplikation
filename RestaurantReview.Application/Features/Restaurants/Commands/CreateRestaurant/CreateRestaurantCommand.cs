@@ -5,7 +5,7 @@
 
         public string RestaurantName { get; set; }
         public string Category { get; set; }
-        public string StreetPhoto { get; set; }
+        public string MapURL { get; set; }
 
     }
 }

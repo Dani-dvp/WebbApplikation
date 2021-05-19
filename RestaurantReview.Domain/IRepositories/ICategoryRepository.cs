@@ -6,5 +6,7 @@ namespace RestaurantReview.Domain.IRepositories
     public interface ICategoryRepository : IAsyncRepository<Category>
     {
         Task<Category> GetCategoryByName(string name);
+
+        Task<bool> IsCategoryUnique(string name);
     }
 }
