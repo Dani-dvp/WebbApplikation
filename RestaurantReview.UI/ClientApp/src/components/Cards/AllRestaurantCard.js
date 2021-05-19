@@ -4,12 +4,14 @@ export class AllRestaurantCard extends Component {
 
   render() {
     return (
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-          <p class="card-text">{this.props.header}</p>
+      
+      <div className="card" rows="4">
+        <img src="..." className="card-img-top" alt="..." />
+          <div className="card-body">
+          <p className="card-text">{this.props.title}</p>
           </div>
-      </div>
+        </div>
+        
     );
   }
 }
