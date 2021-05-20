@@ -6,7 +6,7 @@ namespace RestaurantReview.Domain.Models
     {
         public Guid ReviewID { get; set; }
 
-        public Guid UserId { get; set; }
+        public string ApplicationUserId { get; set; }
 
         public string ReviewText { get; set; }
 

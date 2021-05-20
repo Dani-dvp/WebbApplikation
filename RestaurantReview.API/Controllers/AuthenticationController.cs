@@ -35,7 +35,7 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpGet("user")]
-        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync(GetUserByEmailCommand getUserByEmailCommand)
+        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromQuery]GetUserByEmailCommand getUserByEmailCommand)
         {
             return Ok(await _getUserByEmailService.GetUserByEmail(getUserByEmailCommand));
         }

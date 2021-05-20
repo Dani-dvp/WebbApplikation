@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 using RestaurantReview.Domain.AuthenticationModels;
@@ -19,26 +20,32 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
         private readonly ICategoryRepository _categoryRepository;
         private readonly IAddCategoryToRestaurantService _addCategoryToRestaurantService;
         private readonly IAddRestaurantToCategoryService _addRestaurantToCategoryService;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IRegistrationService _registrationService;
 
-        public CreateSeedHandler(IRestaurantRepository restaurantRepository, IReviewRepository reviewRepository, ICategoryRepository categoryRepository, UserManager<ApplicationUser> userManager, IAddCategoryToRestaurantService addCategoryToRestaurantService, IAddRestaurantToCategoryService addRestaurantToCategoryService)
+        public CreateSeedHandler(IRestaurantRepository restaurantRepository, IReviewRepository reviewRepository, ICategoryRepository categoryRepository,  IAddCategoryToRestaurantService addCategoryToRestaurantService, IAddRestaurantToCategoryService addRestaurantToCategoryService, IRegistrationService registrationService)
         {
             _restaurantRepository = restaurantRepository;
             _reviewRepository = reviewRepository;
             _categoryRepository = categoryRepository;
-            _userManager = userManager;
             _addCategoryToRestaurantService = addCategoryToRestaurantService;
             _addRestaurantToCategoryService = addRestaurantToCategoryService;
+            _registrationService = registrationService;
         }
 
         public async Task<string> CreateSeed() 
         {
-            string password = "Password123!";
 
-            var user1 = new ApplicationUser { ApplicationUserId = new Guid(), FirstName = "Robin", LastName = "Lindström", Email = "robin.lindstrom@live.se", EmailConfirmed = true };
-            var user2 = new ApplicationUser { ApplicationUserId = new Guid(), FirstName = "Kevin", LastName = "Dani", Email = "kevin1995dani@gmail.com", EmailConfirmed = true };
-            var user3 = new ApplicationUser { ApplicationUserId = new Guid(), FirstName = "Sebastian", LastName = "Tiger", Email = "sebbe.tiger@gmail.com", EmailConfirmed = true };
-            var user4 = new ApplicationUser { ApplicationUserId = new Guid(), FirstName = "Test", LastName = "Person", Email = "test@example.com", EmailConfirmed = true };
+            var user1 = new RegistrationCommand { UserName="roblindstrom",FirstName = "Robin", LastName = "Lindström", Email = "robin.lindstrom@live.se", Password = "Password123!" };
+            var user2 = new RegistrationCommand {  UserName="kevDani", FirstName = "Kevin", LastName = "Dani", Email = "kevin1995dani@gmail.com", Password = "Password123!" };
+            var user3 = new RegistrationCommand {  UserName="sebastian", FirstName = "Sebastian", LastName = "Tiger", Email = "sebbetiger@gmail.com", Password = "Password123!" };
+            var user4 = new RegistrationCommand {  UserName="testuser", FirstName = "Test", LastName = "Person", Email = "test@example.com", Password = "Password123!" };
+
+            var userResponse1 = await _registrationService.RegisterAsync(user1);
+            var userResponse2 = await _registrationService.RegisterAsync(user2);
+            var userResponse3 = await _registrationService.RegisterAsync(user3);
+            var userResponse4 = await _registrationService.RegisterAsync(user4);
+
+
 
             var category1 = new Category { CategoryID = new Guid(), CategoryName = "SeaFood" };
             var category2 = new Category { CategoryID = new Guid(), CategoryName = "Pasta" };
@@ -63,25 +70,22 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
             var restaurant9 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Bastard Burgers", RestaurantLink = "https://bastardburgers.com/", MapURL = "https://satellites.pro/plan/Sweden_map#57.707492,11.967899,17", Description = "We do stuff our own way and label it Like a Bastard™" };
             var restaurant10 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Bommen Restaurang & Bar", RestaurantLink = "http://www.bommen.nu/", MapURL = "https://satellites.pro/plan/Sweden_map#57.709578,11.964380,17", Description = "The restaurant is perfect for you who are going to visit the Gothenburg Opera and just as cozy for you who want a nice evening on the town." };
 
-            var review1 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, Rating = 5, ReviewText = "Had the most delicious seafood tower and even the non alcoholic sparkling wine was exquisite! Great service and beautiful interior.", CreatedAt = DateTime.Now, Restaurant = restaurant1, UserId = user1.ApplicationUserId };
-            var review2 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, Rating = 4, ReviewText = "Great restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant1, UserId = user2.ApplicationUserId };
-            var review3 = new Review { ReviewID = new Guid(), RestaurantID = restaurant2.RestaurantID, Rating = 3, ReviewText = "Decent restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant2, UserId = user3.ApplicationUserId };
-            var review4 = new Review { ReviewID = new Guid(), RestaurantID = restaurant3.RestaurantID, Rating = 5, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant3, UserId = user2.ApplicationUserId };
-            var review5 = new Review { ReviewID = new Guid(), RestaurantID = restaurant4.RestaurantID, Rating = 5, ReviewText = "The best restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant4, UserId = user3.ApplicationUserId };
-            var review6 = new Review { ReviewID = new Guid(), RestaurantID = restaurant5.RestaurantID, Rating = 2, ReviewText = "Wow restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant5, UserId = user1.ApplicationUserId };
-            var review7 = new Review { ReviewID = new Guid(), RestaurantID = restaurant6.RestaurantID, Rating = 4, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant6, UserId = user3.ApplicationUserId };
-            var review8 = new Review { ReviewID = new Guid(), RestaurantID = restaurant7.RestaurantID, Rating = 3, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant7, UserId = user1.ApplicationUserId };
-            var review9 = new Review { ReviewID = new Guid(), RestaurantID = restaurant8.RestaurantID, Rating = 5, ReviewText = "Omg restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant8, UserId = user2.ApplicationUserId };
-            var review10 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 5, ReviewText = "the most amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, UserId = user3.ApplicationUserId };
-            var review11 = new Review { ReviewID = new Guid(), RestaurantID = restaurant10.RestaurantID, Rating = 1, ReviewText = "Not good restaurant with new owners. Very bad.", CreatedAt = DateTime.Now, Restaurant = restaurant10, UserId = user1.ApplicationUserId };
-            var review12 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 2, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, UserId = user1.ApplicationUserId };
-            var review13 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 5, ReviewText = "The best amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, UserId = user2.ApplicationUserId };
-            var review14 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 3, ReviewText = "Double amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, UserId = user4.ApplicationUserId };
+            var review1 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, Rating = 5, ReviewText = "Had the most delicious seafood tower and even the non alcoholic sparkling wine was exquisite! Great service and beautiful interior.", CreatedAt = DateTime.Now, Restaurant = restaurant1, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review2 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, Rating = 4, ReviewText = "Great restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant1, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review3 = new Review { ReviewID = new Guid(), RestaurantID = restaurant2.RestaurantID, Rating = 3, ReviewText = "Decent restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant2, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review4 = new Review { ReviewID = new Guid(), RestaurantID = restaurant3.RestaurantID, Rating = 5, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant3, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review5 = new Review { ReviewID = new Guid(), RestaurantID = restaurant4.RestaurantID, Rating = 5, ReviewText = "The best restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant4, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review6 = new Review { ReviewID = new Guid(), RestaurantID = restaurant5.RestaurantID, Rating = 2, ReviewText = "Wow restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant5, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review7 = new Review { ReviewID = new Guid(), RestaurantID = restaurant6.RestaurantID, Rating = 4, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant6, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review8 = new Review { ReviewID = new Guid(), RestaurantID = restaurant7.RestaurantID, Rating = 3, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant7, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review9 = new Review { ReviewID = new Guid(), RestaurantID = restaurant8.RestaurantID, Rating = 5, ReviewText = "Omg restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant8, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review10 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 5, ReviewText = "the most amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review11 = new Review { ReviewID = new Guid(), RestaurantID = restaurant10.RestaurantID, Rating = 1, ReviewText = "Not good restaurant with new owners. Very bad.", CreatedAt = DateTime.Now, Restaurant = restaurant10, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review12 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 2, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review13 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 5, ReviewText = "The best amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review14 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, Rating = 3, ReviewText = "Double amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse4.ApplicationUserId };
 
-            await _userManager.CreateAsync(user1, password);
-            await _userManager.CreateAsync(user2, password);
-            await _userManager.CreateAsync(user3, password);
-            await _userManager.CreateAsync(user4, password);
+            
 
             await _categoryRepository.AddAsync(category1);
             await _categoryRepository.AddAsync(category2);

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
+using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using ResturantReview.Application.Features.Reviews.Commands.CreateReview;
@@ -24,9 +26,9 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
             _mapper = mapper;
             _reviewRepository = reviewRepository;
             _restaurantRepository = restaurantRepository;
-
+            
         }
-       
+
         public async Task<CreateReviewResponse> CreateReview(CreateReviewCommand createReviewCommand)
 
         {
@@ -49,12 +51,16 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
 
             if (createReviewResponse.Success)
             {
+                
+
                 var review = new Review()
                 {
                     RestaurantID = restaurant.RestaurantID,
                     Rating = createReviewCommand.Rating,
                     ReviewText = createReviewCommand.ReviewText,
-                    ReviewID = new Guid()
+                    ReviewID = new Guid(),
+                    ApplicationUserId = createReviewCommand.ApplicationUserId
+
                 };
 
                  await _reviewRepository.AddAsync(review);
