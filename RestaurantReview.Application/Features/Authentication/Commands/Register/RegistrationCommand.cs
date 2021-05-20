@@ -6,10 +6,10 @@ namespace RestaurantReview.Application.Features.Authentication.Commands.Register
 {
     public class RegistrationCommand
     {
-        
+
         public string FirstName { get; set; }
 
-        
+
         public string LastName { get; set; }
 
         [Required]

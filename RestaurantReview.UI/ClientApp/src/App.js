@@ -7,11 +7,15 @@ import Categories from './components/Categories';
 import CreateReview from './components/CreateReview';
 import AddRestaurant from './components/AddRestaurant';
 import Register from './components/Register';
-
+import ShowAllRestaurants from './components/ShowAllRestaurants';
+import RestaurantPage from './components/RestaurantPage';
+import axios from 'axios';
 import './custom.css'
 
 export default class App extends Component {
   static displayName = App.name;
+
+  
 
   render() {
     return (
@@ -22,6 +26,8 @@ export default class App extends Component {
         <Route path='/createreview' component={CreateReview} />
         <Route path='/addrestaurant' component={AddRestaurant} />
         <Route path='/register' component={Register} />
+        <Route path='/allrestaurants' component={ShowAllRestaurants} />
+        <Route path='/Restaurantpage/:id' component={RestaurantPage} />
       </Layout>
     );
   }

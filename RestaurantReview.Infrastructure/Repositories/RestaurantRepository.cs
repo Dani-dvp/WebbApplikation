@@ -14,10 +14,7 @@ namespace RestaurantReview.Infrastructure.Repositories
     public class RestaurantRepository : BaseRepository<Restaurant>, IRestaurantRepository
     {
         protected new readonly MyDbContext _myDbContext;
-
         protected readonly IMapper _mapper;
-
-
 
         public RestaurantRepository(MyDbContext myDbContext, IMapper mapper) : base(myDbContext)
         {
@@ -27,9 +24,10 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<Restaurant> GetRestaurantByName(string Name)
         {
-            var Restaurant = await _myDbContext.Restaurants.FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
+            var Restaurant = await _myDbContext.Restaurants.Include(Restaurant => Restaurant.Categories).Include(Restaurant => Restaurant.Reviews).FirstOrDefaultAsync(Restaurant => Restaurant.RestaurantName == Name);
             return Restaurant;
         }
+
 
        
 
@@ -41,9 +39,6 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         }
 
-
-        
-
         public async Task<List<Restaurant>> IncludeReviews(Guid id)
         {
          var resturantReviews = await _myDbContext.Restaurants.Include(restaurant => restaurant.Reviews).Where(rest => rest.RestaurantID == id).ToListAsync();
@@ -53,6 +48,11 @@ namespace RestaurantReview.Infrastructure.Repositories
 
 
 
+        public Task<bool> IsRestaurantUnique(string name)
+        {
+            var matches = _myDbContext.Restaurants.Any(restaurant => restaurant.RestaurantName.Equals(name));
+            return Task.FromResult(matches);
+        }
 
 
     }

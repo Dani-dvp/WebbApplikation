@@ -1,4 +1,4 @@
-﻿namespace RestaurantReview.Application.Features.Authentication.Commands.Authenticate
+﻿namespace RestaurantReview.Application.Features.Authentication.Commands.Login
 {
     public class AuthenticationResponse
     {

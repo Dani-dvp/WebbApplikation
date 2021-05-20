@@ -10,6 +10,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
     {
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;
+
         public UpdateRestaurantHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
             _restaurantRepository = restaurantRepository;
@@ -21,7 +22,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
             var updateResponse = new UpdateRestaurantRespone();
 
 
-            var validator = new UpdateRestaurantValidator();
+            var validator = new UpdateRestaurantValidator(_restaurantRepository);
             var validationResult = await validator.ValidateAsync(updateRestaurantCommand);
             
 
@@ -39,12 +40,11 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
             if (updateResponse.Success)
             {
                 var restaurant = new Restaurant()
-
                 {
+                    
                     RestaurantName = updateRestaurantCommand.RestaurantName,
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
-                    GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto,
-                    StreetPhoto = updateRestaurantCommand.StreetPhoto,
+                    MapURL = updateRestaurantCommand.MapURL,
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);
 

@@ -2,8 +2,8 @@
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Categories.Commands.CreateCategory
 {
@@ -21,9 +21,11 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
 
         public async Task<CreateCategoryResponse> CreateCategory(CreateCategoryCommand createCategoryCommand)
         {
+
             var categoryResponse = new CreateCategoryResponse();
-            var validator = new CreateCategoryCommandValidator();
+            var validator = new CreateCategoryCommandValidator(_categoryRepository);
             var validationResult = await validator.ValidateAsync(createCategoryCommand);
+
 
             if (validationResult.Errors.Count > 0)
             {
@@ -39,7 +41,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
             { 
                 var category = new Category()
                 {
-                    RestaurantCategory = createCategoryCommand.RestaurantCategory,
+                    CategoryName = createCategoryCommand.RestaurantCategory,
                     CategoryID = new Guid(),
 
                 };

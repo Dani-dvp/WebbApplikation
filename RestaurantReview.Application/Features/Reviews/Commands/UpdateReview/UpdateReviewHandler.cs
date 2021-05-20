@@ -29,9 +29,11 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
             var updateReviewResponse = new UpdateReviewResponse();
 
 
+
             var validator = new UpdateReviewCommandValidator();
             var validationResult = await validator.ValidateAsync(updateReviewCommand);
             
+
 
 
             if (validationResult.Errors.Count > 0)
@@ -51,8 +53,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.UpdateRestura
                var review = new Review()
 
                 {
-                    Title = updateReviewCommand.Title,
-                    Summary = updateReviewCommand.Summary,
+                    
                     ReviewText = updateReviewCommand.ReviewText,
                     Rating = updateReviewCommand.Rating,
                 };

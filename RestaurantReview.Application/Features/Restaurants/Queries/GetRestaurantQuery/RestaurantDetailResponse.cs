@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
 {
-    public class RestaurantDetalResponse
+    public class RestaurantDetailResponse
     {
         //Response klass som innehåller det man vill skicka tillbaka
 

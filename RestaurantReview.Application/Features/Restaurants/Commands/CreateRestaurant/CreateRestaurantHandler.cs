@@ -26,12 +26,16 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public async Task<CreateRestaurantResponse> CreateRestaurant(CreateRestaurantCommand createRestaurantCommand)
         {
-            var validator = new CreateRestaurantCommandValidator();
+
+            var validator = new CreateRestaurantCommandValidator(_restaurantRepository);
+
+
             var validationResult = await validator.ValidateAsync(createRestaurantCommand);
            
             var createRestaurantResponse = new CreateRestaurantResponse();
 
             if (validationResult.Errors.Count > 0)
+
             {
                 createRestaurantResponse.Success = false;
                 createRestaurantResponse.ValidationErrors = new List<string>();
@@ -44,12 +48,15 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
                 if (createRestaurantResponse.Success)
                 {
-                    var restaurant = new Restaurant()
-                    {
-                        RestaurantName = createRestaurantCommand.RestaurantName,
-                        StreetPhoto = createRestaurantCommand.StreetPhoto,
-                        RestaurantID = new Guid(),
-
+                var restaurant = new Restaurant()
+                {
+                    RestaurantName = createRestaurantCommand.RestaurantName,
+                    MapURL = createRestaurantCommand.MapURL,
+                    Description = createRestaurantCommand.Description,
+                    RestaurantID = new Guid(),
+                    Categories = new List<Category>(),
+                    Reviews = new List<Review>()
+                    
                     };
 
                     restaurant = await _restaurantRepository.AddAsync(restaurant);

@@ -12,5 +12,7 @@ namespace RestaurantReview.Domain.IRepositories
         Task<int> RestaurantReviewCount(string name);
 
         Task<List<Restaurant>> IncludeReviews(Guid id);
+
+        Task<bool> IsRestaurantUnique(string name);
     }
 }

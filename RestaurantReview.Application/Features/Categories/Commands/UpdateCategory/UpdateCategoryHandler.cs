@@ -43,7 +43,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
                 var category = new Category()
 
                 {
-                    RestaurantCategory = updateCategoryCommand.RestaurantCategory,
+                    CategoryName = updateCategoryCommand.RestaurantCategory,
 
                 };
 

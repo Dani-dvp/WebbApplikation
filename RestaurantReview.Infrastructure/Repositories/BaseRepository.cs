@@ -25,9 +25,6 @@ namespace RestaurantReview.Infrastructure.Repositories
             return await _myDbContext.Set<T>().FindAsync(id);
         }
 
-
-
-
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _myDbContext.Set<T>().ToListAsync();
@@ -43,11 +40,7 @@ namespace RestaurantReview.Infrastructure.Repositories
             return entity;
         }
 
-        /*  public async Task UpdateAsync(T entity)
-          {
-              _myDbContext.Entry(entity).State = _myDbContext.Modified;
-              await _myDbContext.SaveChangesAsync();
-          } */
+
 
         public async Task DeleteAsync(T entity)
         {
