@@ -3607,6 +3607,7 @@
       "path": "system.appcontext/4.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6000,6 +6001,7 @@
       "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7260,19 +7262,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kevin\\.nuget\\packages\\": {}
+    "C:\\Users\\Robin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+      "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
       "projectName": "RestaurantReview.API",
-      "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
-      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.API\\obj\\",
+      "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\RestaurantReview.API.csproj",
+      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7286,8 +7288,8 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
-            "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
-              "projectPath": "C:\\Users\\kevin\\Desktop\\NyttMedRobin\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
+            "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj": {
+              "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Application\\RestaurantReview.Application.csproj"
             }
           }
         }
