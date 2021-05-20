@@ -11,7 +11,10 @@ using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
+
+using RestaurantReview.Application.Features.Images;
 using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
+
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
@@ -55,7 +58,8 @@ namespace RestaurantReview.Application
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
-
+            services.AddScoped<IImageRepository, ImageRepository>();
+           
 
 
             //For IServices to handler
@@ -90,6 +94,9 @@ namespace RestaurantReview.Application
             services.AddScoped<IDeleteReviewService, DeleteReviewHandler>();
             services.AddScoped<IUpdateReviewService, UpdateReviewHandler>();
             services.AddScoped<IReviewListQueryService, ReviewsListQueryHandler>();
+
+            //image
+            services.AddScoped<IImageService, ImageHandler>();
 
             //Authentication to handler
             services.AddScoped<IAuthenticationService, AuthenticationHandler>();
