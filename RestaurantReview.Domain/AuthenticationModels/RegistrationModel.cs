@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace RestaurantReview.Domain.AuthenticationModels
 {
@@ -15,7 +16,7 @@ namespace RestaurantReview.Domain.AuthenticationModels
         public string Email { get; set; }
 
         [Required]
-        public string UserId { get; set; }
+        public string ApplicationUserId { get; set; }
 
         [Required]
         [MinLength(6)]

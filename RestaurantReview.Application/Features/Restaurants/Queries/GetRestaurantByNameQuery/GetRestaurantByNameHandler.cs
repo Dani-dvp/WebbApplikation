@@ -13,14 +13,12 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
     public class GetRestaurantByNameHandler : IGetRestaurantByNameService
     {
         private readonly IRestaurantRepository _restaurantRepository;
-        private readonly ICategoryRepository _categoryRepository;
         private readonly IReviewRepository _reviewRepository;
         private readonly IMapper _mapper;
-        public GetRestaurantByNameHandler(IRestaurantRepository restaurantRepository, IMapper mapper, ICategoryRepository categoryRepository, IReviewRepository reviewRepository)
+        public GetRestaurantByNameHandler(IRestaurantRepository restaurantRepository, IMapper mapper, IReviewRepository reviewRepository)
         {
             _restaurantRepository = restaurantRepository;
             _mapper = mapper;
-            _categoryRepository = categoryRepository;
             _reviewRepository = reviewRepository;
         }
 

@@ -33,7 +33,6 @@ namespace RestaurantReview.Application.Features.Authentication.Commands.Register
                 LastName = request.LastName,
                 UserName = request.UserName,
                 EmailConfirmed = true,
-                ApplicationUserId = new Guid()
                 
             };
 
@@ -45,7 +44,7 @@ namespace RestaurantReview.Application.Features.Authentication.Commands.Register
 
                 if (result.Succeeded)
                 {
-                    var registrationModel = new RegistrationModel() { UserId = user.Id };
+                    var registrationModel = new RegistrationModel() { ApplicationUserId = user.Id };
 
                     var registrationResponse = _mapper.Map<RegistrationResponse>(registrationModel);
 

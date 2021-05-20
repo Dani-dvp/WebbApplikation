@@ -12,11 +12,7 @@ namespace RestaurantReview.Application.Features.Reviews.Commands.CreateReview
     {
         public CreateReviewCommandValidator()
         {
-            RuleFor(p => p.Title)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
-                .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.")
-                .MinimumLength(3).WithMessage("{PropertyName} must contain at least 3 characters.");
+            
             
             RuleFor(p => p.ReviewText)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
