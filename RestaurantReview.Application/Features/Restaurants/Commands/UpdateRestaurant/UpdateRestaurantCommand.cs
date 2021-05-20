@@ -8,7 +8,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
         public string Category { get; set; }
         public string RestaurantLink { get; set; }
 
-        public string GoogleMapsPhoto { get; set; }
+        public string MapURL { get; set; }
 
         public string StreetPhoto { get; set; }
     }

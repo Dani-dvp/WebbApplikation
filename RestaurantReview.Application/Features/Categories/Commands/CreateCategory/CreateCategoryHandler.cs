@@ -23,7 +23,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
         {
 
             var categoryResponse = new CreateCategoryResponse();
-            var validator = new CreateCategoryCommandValidator();
+            var validator = new CreateCategoryCommandValidator(_categoryRepository);
             var validationResult = await validator.ValidateAsync(createCategoryCommand);
 
 

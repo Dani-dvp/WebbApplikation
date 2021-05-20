@@ -21,7 +21,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
             var updateResponse = new UpdateRestaurantRespone();
 
 
-            var validator = new UpdateRestaurantValidator();
+            var validator = new UpdateRestaurantValidator(_restaurantRepository);
             var validationResult = await validator.ValidateAsync(updateRestaurantCommand);
             
 
@@ -43,8 +43,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
                 {
                     RestaurantName = updateRestaurantCommand.RestaurantName,
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
-                    GoogleMapsPhoto = updateRestaurantCommand.GoogleMapsPhoto,
-                    StreetPhoto = updateRestaurantCommand.StreetPhoto,
+                    MapURL = updateRestaurantCommand.MapURL,
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);
 

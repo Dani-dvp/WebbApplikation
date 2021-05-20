@@ -9,6 +9,6 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public string RestaurantName { get; set; }
         public string Category { get; set; }
-
+    
     }
 }
