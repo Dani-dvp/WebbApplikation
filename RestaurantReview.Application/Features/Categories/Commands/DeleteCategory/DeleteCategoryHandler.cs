@@ -20,7 +20,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.DeleteCatego
 
             await _categoryRepository.DeleteAsync(CategoryToBeDeleted);
 
-            return CategoryToBeDeleted.RestaurantCategory;
+            return CategoryToBeDeleted.CategoryName;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace RestaurantReview.Domain.Models
 
         public Guid CategoryID { get; set; }
 
-        public string RestaurantCategory { get; set; }
+        public string CategoryName { get; set; }
 
         public ICollection<Restaurant> Restaurants { get; set; }
     }

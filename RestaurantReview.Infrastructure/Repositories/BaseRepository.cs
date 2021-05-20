@@ -25,9 +25,6 @@ namespace RestaurantReview.Infrastructure.Repositories
             return await _myDbContext.Set<T>().FindAsync(id);
         }
 
-
-
-
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _myDbContext.Set<T>().ToListAsync();

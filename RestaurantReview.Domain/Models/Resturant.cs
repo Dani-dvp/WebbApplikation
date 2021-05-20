@@ -10,8 +10,7 @@ namespace RestaurantReview.Domain.Models
         
         public string RestaurantLink { get; set; }
 
-        public string GoogleMapsPhoto { get; set; }
-   
+        public string Description { get; set; }
 
         public string MapURL { get; set; }
 

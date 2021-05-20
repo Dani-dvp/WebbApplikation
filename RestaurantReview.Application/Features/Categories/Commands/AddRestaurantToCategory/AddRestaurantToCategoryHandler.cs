@@ -19,22 +19,14 @@ namespace RestaurantReview.Application.Features.Categories.Commands.AddRestauran
 
         public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory(AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
-            var restaurantToBeAdded = await _restaurantRepository.GetRestaurantByName(addRestaurantToCategoryCommand.RestaurantName);
+            var category = await _categoryRepository.GetCategoryByName(addRestaurantToCategoryCommand.CategoryName);
 
-            var categoryToBeupdated = await _categoryRepository.GetCategoryByName(addRestaurantToCategoryCommand.CategoryName);
+            category.Restaurants.Add(await _restaurantRepository.GetRestaurantByName(addRestaurantToCategoryCommand.RestaurantName));
 
-            //if(categoryToBeupdated.Restaurants == null)
-            //{
-            //    categoryToBeupdated.Restaurants = new List<Restaurant>();
-            //}
+            await _categoryRepository.UpdateAsync(category);
 
-            categoryToBeupdated.Restaurants.Add(restaurantToBeAdded);
+            return _mapper.Map<AddRestaurantToCategoryResponse>(category);
 
-            await _categoryRepository.UpdateAsync(categoryToBeupdated);
-
-            var categoryResponse = _mapper.Map<AddRestaurantToCategoryResponse>(categoryToBeupdated);
-
-            return categoryResponse;
         }
 
     }

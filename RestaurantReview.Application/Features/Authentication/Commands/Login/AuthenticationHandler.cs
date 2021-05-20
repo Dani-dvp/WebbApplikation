@@ -16,6 +16,7 @@ namespace RestaurantReview.Application.Features.Authentication.Commands.Login
         private readonly IMapper _mapper;
         private readonly IAuthenticationRepository _authenticationRepository;
 
+
         public AuthenticationHandler(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IMapper mapper,

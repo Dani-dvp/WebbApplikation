@@ -11,6 +11,7 @@ using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
+using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
@@ -27,6 +28,7 @@ using RestaurantReview.Application.Features.Reviews.Commands.DeleteReview;
 using RestaurantReview.Application.Features.Reviews.Commands.UpdateReview;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQuery;
 using RestaurantReview.Application.Features.Reviews.Queries.GetReviewsListQuery;
+using RestaurantReview.Application.Features.Seed.Commands.CreateSeed;
 using RestaurantReview.Authentication;
 using RestaurantReview.Authentication.AuthenticationRepositories;
 using RestaurantReview.Domain.IRepositories;
@@ -64,11 +66,12 @@ namespace RestaurantReview.Application
             services.AddScoped<IUpdateRestaurantService, UpdateRestaurantHandler>();
             services.AddScoped<ICategoryListQuery, RestaurantListQueryHandler>();
             services.AddScoped<IRestaurantDetailService, RestaurantDetailQueryHandler>();
-
             services.AddScoped<IRestaurantReviewCountService, RestaurantReviewCountHandler>();
             services.AddScoped<IRestaurantAvgRatingService, RestaurantAvgRatingHandler>();
             services.AddScoped<IRestaurantReviewsService, RestaurantReviewsHandler>();
             services.AddScoped<IGetRestaurantByNameService, GetRestaurantByNameHandler>();
+            services.AddScoped<IAddRestaurantToCategoryService, AddRestaurantToCategoryHandler>();
+            services.AddScoped<IAddCategoryToRestaurantService, AddCategoryToRestaurantHandler>();
 
 
 
@@ -79,6 +82,7 @@ namespace RestaurantReview.Application
             services.AddScoped<IUpdateCategoryService, UpdateCategoryHandler>();
             services.AddScoped<ICategoryDetailQueryService, CategoryDetailQueryHandler>();
             services.AddScoped<ICategoryListQueryService, CategoryListQueryHandler>();
+            services.AddScoped<IAddCategoryToRestaurantService, AddCategoryToRestaurantHandler>();
 
 
             //review 
@@ -90,14 +94,17 @@ namespace RestaurantReview.Application
             //Authentication to handler
             services.AddScoped<IAuthenticationService, AuthenticationHandler>();
             services.AddScoped<IRegistrationService, RegistrationHandler>();
-
-
             services.AddScoped<IGetUserByEmailService, GetUserByEmailHandler>();
+
+            //Seedcontroller
+            services.AddScoped<ICreateSeedService, CreateSeedHandler>();
 
             //Aktiverar automapper i Core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddInfrastructureServices(configuration);
             services.AddAuthenticationServices(configuration);
+
+            
 
             return services;
         }
