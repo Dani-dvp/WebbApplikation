@@ -41,7 +41,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
             { 
                 var category = new Category()
                 {
-                    RestaurantCategory = createCategoryCommand.RestaurantCategory,
+                    CategoryName = createCategoryCommand.RestaurantCategory,
                     CategoryID = new Guid(),
 
                 };

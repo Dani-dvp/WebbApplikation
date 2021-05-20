@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,22 +18,23 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<Category> GetCategoryByName(string name)
         {
-            var findResturantCategory = await _myDbContext.Set<Category>().FirstOrDefaultAsync(category => category.RestaurantCategory == name);
+            var findResturantCategory = await _myDbContext.Set<Category>().Include(restaurant => restaurant.Restaurants).FirstOrDefaultAsync(category => category.CategoryName == name);
 
             return findResturantCategory;
         }
 
-            public  Task<bool> IsCategoryUnique(string name)
-            {
-                var matches =  _myDbContext.Categories.Any(category => category.RestaurantCategory.Equals(name));
-                return Task.FromResult(matches);
-            }
 
+
+        public Task<bool> IsCategoryUnique(string name)
+        {
+            var matches = _myDbContext.Categories.Any(category => category.CategoryName.Equals(name));
+            return Task.FromResult(matches);
         }
 
-
+       
 
     }
+}
 
 
 

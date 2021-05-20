@@ -48,12 +48,15 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
                 if (createRestaurantResponse.Success)
                 {
-                    var restaurant = new Restaurant()
-                    {
-                        RestaurantName = createRestaurantCommand.RestaurantName,
-                        MapURL = createRestaurantCommand.MapURL,
-                        RestaurantID = new Guid(),
-
+                var restaurant = new Restaurant()
+                {
+                    RestaurantName = createRestaurantCommand.RestaurantName,
+                    MapURL = createRestaurantCommand.MapURL,
+                    Description = createRestaurantCommand.Description,
+                    RestaurantID = new Guid(),
+                    Categories = new List<Category>(),
+                    Reviews = new List<Review>()
+                    
                     };
 
                     restaurant = await _restaurantRepository.AddAsync(restaurant);

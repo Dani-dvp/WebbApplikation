@@ -10,6 +10,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
     {
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;
+
         public UpdateRestaurantHandler(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
             _restaurantRepository = restaurantRepository;
@@ -39,8 +40,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
             if (updateResponse.Success)
             {
                 var restaurant = new Restaurant()
-
                 {
+                    
                     RestaurantName = updateRestaurantCommand.RestaurantName,
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
                     MapURL = updateRestaurantCommand.MapURL,

@@ -7,9 +7,7 @@ using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
-
-
-
+using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
@@ -71,6 +69,7 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<RegistrationModel, RegistrationResponse>();
 
             CreateMap<Restaurant, RestaurantReviewCountResponse>();
+            CreateMap<Restaurant, AddCategoryToRestaurantResponse>();
 
 
 

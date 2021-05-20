@@ -28,11 +28,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<List<Review>> GetReviewsByRestaurantId(Guid id)
         {
-
-
-         return await   _myDbContext.Reviews.Where(review => review.RestaurantID == id).ToListAsync();
-
-
+         return await   _myDbContext.Reviews.Include(review => review.Restaurant).ThenInclude(restaurant => restaurant.Categories).Where(review => review.RestaurantID == id).ToListAsync();
         }
     }
 }
