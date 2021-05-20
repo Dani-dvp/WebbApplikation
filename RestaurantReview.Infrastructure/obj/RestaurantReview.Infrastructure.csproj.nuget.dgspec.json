@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {}
+    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
         "projectName": "RestaurantReview.Domain",
-        "projectPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
-        "packagesPath": "C:\\Users\\JonathanKareemIssela\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JonathanKareemIssela\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,21 +100,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
+    "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
         "projectName": "RestaurantReview.Infrastructure",
-        "projectPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\JonathanKareemIssela\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\RestaurantReview.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JonathanKareemIssela\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,8 +128,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
-                "projectPath": "C:\\Users\\JonathanKareemIssela\\Desktop\\WebbApplikationV4\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
+              "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj": {
+                "projectPath": "C:\\Users\\Robin\\source\\repos\\WebbApplikation\\RestaurantReview.Domain\\RestaurantReview.Domain.csproj"
               }
             }
           }
@@ -200,7 +200,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
