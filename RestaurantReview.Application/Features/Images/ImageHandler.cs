@@ -38,6 +38,9 @@ namespace RestaurantReview.Application.Features.Images
             using (FileStream fileStream = File.Create(filePath))
             {
                 file.CopyTo(fileStream);
+
+                
+
             } 
 
             //Save the Image File in Folder.

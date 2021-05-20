@@ -17,5 +17,7 @@ namespace RestaurantReview.Domain.Models
 
         public Restaurant Restaurant { get; set; }
 
+    
+
     }
 }
