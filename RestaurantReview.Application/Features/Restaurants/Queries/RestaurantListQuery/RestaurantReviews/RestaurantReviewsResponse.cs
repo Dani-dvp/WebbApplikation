@@ -10,13 +10,16 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantLi
     public class RestaurantReviewsResponse
     {
         public string RestaurantName { get; set; }
+
+        public ICollection<ReviewDtoResponse> ReviewsDtoResponses;
+        
         public RestaurantReviewsResponse()
         {
             ReviewsDtoResponses = new List<ReviewDtoResponse>();
         }
      
         
-        public ICollection<ReviewDtoResponse> ReviewsDtoResponses;
+     
 
 
 
