@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RestaurantReview.Application.Features.Authentication;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
+using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
 using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
@@ -102,6 +103,7 @@ namespace RestaurantReview.Application
             services.AddScoped<IAuthenticationService, AuthenticationHandler>();
             services.AddScoped<IRegistrationService, RegistrationHandler>();
             services.AddScoped<IGetUserByEmailService, GetUserByEmailHandler>();
+            services.AddScoped<ICheckIfTokenIsValidService, CheckTokenIfValidHandler>();
 
             //Seedcontroller
             services.AddScoped<ICreateSeedService, CreateSeedHandler>();

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
+using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
 using System.Threading.Tasks;
 
@@ -14,11 +15,13 @@ namespace RestaurantReview.API.Controllers
         private readonly IAuthenticationService _authenticationService;
         private readonly IRegistrationService _registrationService;
         private readonly IGetUserByEmailService _getUserByEmailService;
-        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService)
+        private readonly ICheckIfTokenIsValidService _checkIfTokenIsValidService;
+        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService, ICheckIfTokenIsValidService checkIfTokenIsValidService)
         {
             _authenticationService = authenticationService;
             _registrationService = registrationService;
             _getUserByEmailService = getUserByEmailService;
+            _checkIfTokenIsValidService = checkIfTokenIsValidService;
         }
 
         [HttpPost("login")]
@@ -38,6 +41,13 @@ namespace RestaurantReview.API.Controllers
         public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromQuery]GetUserByEmailCommand getUserByEmailCommand)
         {
             return Ok(await _getUserByEmailService.GetUserByEmail(getUserByEmailCommand));
+        }
+
+        
+        [HttpGet("CheckIfTokenIsValid")]
+        public bool CheckIfTokenIsValid([FromQuery] string token)
+        {
+            return _checkIfTokenIsValidService.ValidateCurrentToken(token);
         }
     }
 }
