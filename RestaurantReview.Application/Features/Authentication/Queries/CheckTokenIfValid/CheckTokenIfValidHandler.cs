@@ -1,4 +1,6 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using RestaurantReview.Domain.AuthenticationModels;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,10 +12,16 @@ namespace RestaurantReview.Application.Features.Authentication.Queries.CheckToke
 {
     public class CheckTokenIfValidHandler : ICheckIfTokenIsValidService
 	{
+        private readonly JwtSettings _jwtSettings;
+        public CheckTokenIfValidHandler(IOptions<JwtSettings> jwtSettings)
+        {
+            _jwtSettings = jwtSettings.Value;
+        }
+
         public bool ValidateCurrentToken(string token)
         {
-            var mySecret = "asdv2%!#%4^&%&^%&^hjsdf6gf3%";
-            var mySecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(mySecret));
+            
+            var mySecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
 
             var myIssuer = "RestaurantReviewIdentity";
             var myAudience = "RestaurantReviewIdentityUser";

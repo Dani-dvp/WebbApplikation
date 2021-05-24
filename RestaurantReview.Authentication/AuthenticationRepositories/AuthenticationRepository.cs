@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RestaurantReview.Application.Features.Authentication;
@@ -49,8 +47,8 @@ namespace RestaurantReview.Authentication.AuthenticationRepositories
             .Union(userClaims)
             .Union(roleClaims);
 
-            var mySecret = "asdv2%!#%4^&%&^%&^hjsdf6gf3%";
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(mySecret));
+
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
             var jwtSecurityToken = new JwtSecurityToken(

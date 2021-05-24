@@ -9,11 +9,9 @@ namespace RestaurantReview.Infrastructure.Repositories
     public class ImageRepository : BaseRepository<Image>, IImageRepository
     {
         protected new readonly MyDbContext _myDbContext;
-        protected new readonly IMapper _mapper;
-        public ImageRepository(MyDbContext myDbContext, IMapper mapper) : base(myDbContext)
+        public ImageRepository(MyDbContext myDbContext) : base(myDbContext)
         {
             _myDbContext = myDbContext;
-            _mapper = mapper;
         }
 
         public Image Add(Image image)
