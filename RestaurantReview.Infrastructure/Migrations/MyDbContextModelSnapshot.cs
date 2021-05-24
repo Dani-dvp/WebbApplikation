@@ -55,15 +55,12 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("RestaurantCategory")
+                    b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("RestaurantID")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Image", b =>
@@ -89,16 +86,16 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("GoogleMapsPhoto")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MapURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RestaurantLink")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RestaurantName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetPhoto")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RestaurantID");
@@ -112,6 +109,12 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
@@ -119,12 +122,6 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ReviewText")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ReviewID");

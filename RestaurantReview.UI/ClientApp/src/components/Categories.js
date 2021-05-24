@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import '../Css/Categories.css';
+import axios from 'axios';
+
 
 export default class Categories extends Component {
+    constructor(props) {
+        super(props);
+          this.state = {
+              Categories: []
+          };
+    }
+
+    testFunc(event) {
+        event.preventDefault();
+        const response = axios.get("api/categories");
+       
+        
+        console.log(response);
+   
+    }
+
+    categoryOnClick(){
+      
+    }
+
+    getCategory(){
+        
+    }
+    
+ 
     render() {
         return (
             <div>
@@ -9,11 +36,12 @@ export default class Categories extends Component {
                 <h1 id="cat">Categories</h1>
                
 
-            <div id="Category">
+            <div id="Category" onClick={this.categoryOnClick}>
+          
                 <ul>
                     <li id="tagC">Cuisine</li>
                     <br />
-                    <li className="Cuisine">African</li>
+                    <li className="Cuisine" id="test">African</li>
                     <li className="Cuisine">American</li>
                     <li className="Cuisine">British</li>
                     <li className="Cuisine">Chinese</li>
@@ -34,10 +62,17 @@ export default class Categories extends Component {
                 </ul>
             
             </div>
+           
             <form>
                 <button className="allButton"type="button"><a href="../allrestaurants">View all restaurants</a></button>
+                 <button type="button" onClick={this.testFunc}>Categoreies</button>   
+            
             </form>
             </div>      
             );
+
+        
     }
+
+   
 }
