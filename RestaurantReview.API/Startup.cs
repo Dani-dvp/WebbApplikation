@@ -46,6 +46,10 @@ namespace RestaurantReview.API
             .AddNewtonsoftJson(x => x.SerializerSettings
             .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+            services.AddControllersWithViews(options =>
+            {
+                options.AllowEmptyInputInBodyModelBinding = true;
+            });
 
         }
 

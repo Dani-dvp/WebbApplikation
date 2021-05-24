@@ -25,6 +25,10 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
         public async Task<GetRestaurantByNameResponse> GetRestaurantByName(GetRestaurantByNameCommand getRestaurantByNameCommand)
         {
             var restaurant = await _restaurantRepository.GetRestaurantByName(getRestaurantByNameCommand.RestaurantName);
+            if(restaurant == null)
+            {
+                throw new Exception();
+            }
             var restaurantResponse = _mapper.Map<GetRestaurantByNameResponse>(restaurant);
 
             var listOfReviews = await _reviewRepository.GetReviewsByRestaurantId(restaurant.RestaurantID);
