@@ -16,9 +16,9 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public string RestaurantLink { get; set; }
 
-        public string GoogleMapsPhoto { get; set; }
+        public string Description { get; set; }
 
-        public string StreetPhoto { get; set; }
+        public string MapUrl { get; set; }
 
         public ICollection<ReviewDtoResponse> ReviewsDtoResponse { get; set; }
 
