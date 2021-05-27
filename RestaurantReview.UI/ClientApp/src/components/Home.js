@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Carousel from './Cards/Carousel';
+import CarouselClass from './Cards/CarouselClass';
 import '../Css/Home.css';
 
 export default class Home extends Component {
@@ -9,9 +9,14 @@ export default class Home extends Component {
   
   render () {
     return (
-      <div>
-        <Carousel></Carousel>
-       
+      <div className="mx-auto d-block">
+        <CarouselClass></CarouselClass>
+
+        <div className="mx-auto">
+          <button>All Restaurants</button>
+          <br />
+          <button>Categories</button>
+        </div>
       </div>
     );
   }

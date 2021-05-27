@@ -19,7 +19,7 @@ export default class RestaurantPage extends Component {
       const response = await axios.get("api/Restaurants/name/" + this.props.match.params.id);
 
       this.setState({
-        restaurants: response.data,
+        restaurant: response.data,
         reviews: response.data.reviewsDtoResponse
       });
       console.log(response.data);
@@ -29,12 +29,13 @@ export default class RestaurantPage extends Component {
   render() {
     let content = this.createThisRestaurant();
     let content2 = this.createReviewsList();
+    
     return (
       <div className="Trying">
         {content}
-        <div>
+        
           { content2 }
-          </div>
+          
       </div>
     );
   }
@@ -42,9 +43,9 @@ export default class RestaurantPage extends Component {
 
 
   createThisRestaurant() {
-    let element = <RestaurantPageCard restaurantName={this.state.restaurant.restaurantName} description={ this.state.restaurant.description } ></RestaurantPageCard>;
-
-    return element;
+    let element = <RestaurantPageCard restaurantName={this.state.restaurant.restaurantName} description={this.state.restaurant.description } ></RestaurantPageCard>;
+    
+    return (element);
   }
 
 
