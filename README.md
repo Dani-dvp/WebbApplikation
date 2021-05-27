@@ -29,6 +29,8 @@ How to install:
 How to use:
 Use swagger and seed the database using "Create seed".
 
+Use this account for login: test@example.com and "Password123!"
+
 Then navigate to the website and test it out!
 
 
