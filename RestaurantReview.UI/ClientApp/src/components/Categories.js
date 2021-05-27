@@ -3,40 +3,32 @@ import '../Css/Categories.css';
 import axios from 'axios';
 
 
+
+
 export default class Categories extends Component {
     constructor(props) {
         super(props);
           this.state = {
               Categories: []
+              
           };
     }
 
-    testFunc(event) {
-        event.preventDefault();
-        const response = axios.get("api/categories");
-       
-        
-        console.log(response);
-   
-    }
 
-    categoryOnClick(){
-      
-    }
+tesFunc() {
+    console.log("test");
+}
 
-    getCategory(){
-        
-    }
-    
  
     render() {
+ 
         return (
             <div>
-                
+        
                 <h1 id="cat">Categories</h1>
                
 
-            <div id="Category" onClick={this.categoryOnClick}>
+            <div id="Category" onClick={this.tesFunc}>
           
                 <ul>
                     <li id="tagC">Cuisine</li>
@@ -65,7 +57,9 @@ export default class Categories extends Component {
            
             <form>
                 <button className="allButton"type="button"><a href="../allrestaurants">View all restaurants</a></button>
-                 <button type="button" onClick={this.testFunc}>Categoreies</button>   
+                <button className="allButton"type="button"><a href="../ShowAllCategories/">Show All categories</a></button>
+
+             
             
             </form>
             </div>      
@@ -73,6 +67,6 @@ export default class Categories extends Component {
 
         
     }
-
-   
+ 
+ 
 }

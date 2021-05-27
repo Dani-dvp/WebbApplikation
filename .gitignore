@@ -387,5 +387,9 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 
+*/.vs/RestaurantReview.Domain/v16
+**/.vs/RestaurantReview.Domain/v16
+*/obj/Debug/netcoreapp5.0
+**/obj/Debug/netcoreapp5.0
 **/RestaurantReview.Authentication/Migrations
 **/RestaurantReview.Infrastructure/Migrations

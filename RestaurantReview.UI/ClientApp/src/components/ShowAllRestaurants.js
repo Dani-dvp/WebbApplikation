@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { AllRestaurantCard } from './Cards/AllRestaurantCard';
+import {AllRestaurantCard} from './Cards/AllRestaurantCard';
 import { Link } from 'react-router-dom';
 import '../Css/ShowAllRestaurants.css';
 
@@ -15,29 +15,7 @@ export default class ShowAllRestaurants extends Component {
   }
 
 
-  //getData() {
-    //axios({
-    //  method: 'get',
-    //  url: "/api/Restaurants",
-    //  data: {
-    //    Authorization: 'Bearer ' + localStorage.getItem('token')
-    //  },
-
-    //}).then(res => {
-    //  var restaurants = []
-    //  var data = res.data
-    //  for (let i = 0; i < data.length; i++) {
-    //    restaurants.push(<AllRestaurantCard key={i} header={data[i]}></AllRestaurantCard>);
-    //  }
-  //    this.setState({ loading: false });
-  //    console.log(res.data)
-
-
-  //  })
-  //};
-  //componentDidMount() {
-  //  this.getData();
-  //}
+ 
 
 
   async componentDidMount() {

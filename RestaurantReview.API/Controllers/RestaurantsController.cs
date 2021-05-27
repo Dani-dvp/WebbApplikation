@@ -88,8 +88,8 @@ namespace RestaurantReview.API.Controllers
             return await _restaurantDetailService.GetRestaurantByID(restaurantDetailCommand);
         }
 
-        [HttpGet("name/{ResturantName}")]
-        public async Task<GetRestaurantByNameResponse> GetRestaurantByName([FromBody] GetRestaurantByNameCommand getRestaurantByNameCommand)
+        [HttpGet("name/{RestaurantName}")]
+        public async Task<GetRestaurantByNameResponse> GetRestaurantByName([FromRoute] GetRestaurantByNameCommand getRestaurantByNameCommand)
         {
             return await _getRestaurantByNameService.GetRestaurantByName(getRestaurantByNameCommand);
         }

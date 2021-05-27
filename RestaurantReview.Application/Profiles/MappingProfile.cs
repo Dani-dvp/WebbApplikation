@@ -13,6 +13,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRe
 
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestaurant;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
@@ -72,7 +73,7 @@ namespace RestaurantReview.Application.Profiles
             //From model to ModelResponse
             CreateMap<AuthenticationModel, AuthenticationResponse>();
             CreateMap<RegistrationModel, RegistrationResponse>();
-
+            CreateMap<Restaurant, GetRestaurantByNameResponse>();
             CreateMap<Restaurant, RestaurantReviewCountResponse>();
             CreateMap<Restaurant, AddCategoryToRestaurantResponse>();
 
@@ -84,6 +85,8 @@ namespace RestaurantReview.Application.Profiles
             // from model to dto
             CreateMap<Restaurant, ReviewDtoResponse>();
             CreateMap<Review, ReviewDtoResponse>();
+
+            
 
         }
 
