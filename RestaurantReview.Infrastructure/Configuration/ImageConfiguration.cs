@@ -19,6 +19,10 @@ namespace RestaurantReview.Infrastructure.Configuration
             modelBuilder
                 .HasOne(i => i.Restaurant)
                 .WithMany(r => r.Images);
+
+            modelBuilder
+                .HasOne(i => i.ApplicationUser)
+                .WithMany(u => u.Images);
         }
     }
 }

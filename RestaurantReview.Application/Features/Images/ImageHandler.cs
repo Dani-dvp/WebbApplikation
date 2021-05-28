@@ -32,7 +32,9 @@ namespace RestaurantReview.Application.Features.Images
         }
         public async Task<ImageResponse> CreateImagePath( IFormFile file, string email, string restaurantName)
         {
-            
+            ApplicationUser user = null;
+            Restaurant restaurant = null;
+
             //  sparar namnet på den fil du väljer i filename
             string fileName = Path.GetFileName(file.FileName);
 
@@ -51,10 +53,16 @@ namespace RestaurantReview.Application.Features.Images
             
 
             //Save the Image File in Folder.
-
-                var user = await _userManager.FindByEmailAsync(email);
-            
-                var restaurant = await _restaurantRepository.GetRestaurantByName(restaurantName);
+            if(email != null)
+            {
+                 user = await _userManager.FindByEmailAsync(email);
+            }
+                
+            if(restaurantName != null)
+            {
+                restaurant = await _restaurantRepository.GetRestaurantByName(restaurantName);
+            }
+                
             
 
 
@@ -66,6 +74,14 @@ namespace RestaurantReview.Application.Features.Images
                 Restaurant = restaurant,
                 ApplicationUser = user
             };
+            if(user != null)
+            {
+                image.UserId = user.Id;
+            }
+            if(restaurant != null)
+            {
+                image.RestaurantID = restaurant.RestaurantID;
+            }
            
             image = _imageRepository.Add(image);
             

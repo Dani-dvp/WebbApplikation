@@ -124,6 +124,9 @@ namespace RestaurantReview.Infrastructure.Migrations
                     b.Property<Guid?>("RestaurantID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ImageID");
 
                     b.HasIndex("ApplicationUserId");
@@ -202,7 +205,7 @@ namespace RestaurantReview.Infrastructure.Migrations
             modelBuilder.Entity("RestaurantReview.Domain.Models.Image", b =>
                 {
                     b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", "ApplicationUser")
-                        .WithMany()
+                        .WithMany("Images")
                         .HasForeignKey("ApplicationUserId");
 
                     b.HasOne("RestaurantReview.Domain.Models.Restaurant", "Restaurant")
@@ -223,6 +226,11 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Restaurant");
+                });
+
+            modelBuilder.Entity("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", b =>
+                {
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Restaurant", b =>
