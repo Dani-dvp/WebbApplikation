@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../Css/Categories.css';
 
 export default class Categories extends Component {
@@ -35,7 +36,7 @@ export default class Categories extends Component {
             
             </div>
             <form>
-                <button className="allButton"type="button"><a href="../allrestaurants">View all restaurants</a></button>
+              <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/allrestaurants"}>All Restaurants</Link>
             </form>
             </div>      
             );

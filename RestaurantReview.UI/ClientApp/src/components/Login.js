@@ -1,9 +1,18 @@
 ﻿import React, { Component } from "react";
 import Axios from "axios";
 import { Link } from 'react-router-dom';
+import { Redirect } from "react-router-dom"; 
 import "../Css/Login.css";
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: false,
+    }
+  }
+
+
   sendLoginRequest = event => {
 
     
@@ -22,8 +31,7 @@ export default class Login extends Component {
 
     }).then(res => { localStorage.setItem('token', res.data.token) });
     
-    
-    
+    console.log(localStorage.getItem('token'));
   }
   
   logOutRequest = event => {
@@ -32,6 +40,15 @@ export default class Login extends Component {
     localStorage.clear();
     delete Axios.defaults.headers.common['Authorization'];
     console.log(localStorage.getItem('token'));
+  }
+
+
+
+  checkIfTokenIsValid = event => {
+    event.preventDefault();
+    const response = await axios.get("api/Authentication/token/" + localStorage.getItem('token'))
+    .then(res => { console.log(res)});
+    console.log(response);
   }
 
   render() {
@@ -56,10 +73,10 @@ export default class Login extends Component {
             <button className="btn btn-primary" onClick={this.sendLoginRequest}>Log in</button>
             <br />
             <button className="btn btn-primary" onClick={this.logOutRequest}>Log out</button>
+            <button className="btn btn-primary" onClick={this.checkIfTokenIsValid}>Check</button>
           </form>
 
           <form />
-          <input type="button" value="Sign in with google" />
 
           <div id="ForgotForm">
             <a className="underlineHover" href="#">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CarouselClass from './Cards/CarouselClass';
+import { Link } from 'react-router-dom';
 import '../Css/Home.css';
 
 export default class Home extends Component {
@@ -9,13 +10,12 @@ export default class Home extends Component {
   
   render () {
     return (
-      <div className="mx-auto d-block">
+      <div className="mx-auto d-block mb-4">
         <CarouselClass></CarouselClass>
-
+        <br />
         <div className="mx-auto">
-          <button>All Restaurants</button>
-          <br />
-          <button>Categories</button>
+          <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/allrestaurants"}>All Restaurants</Link>
+          <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/categories"}>Categories</Link>
         </div>
       </div>
     );
