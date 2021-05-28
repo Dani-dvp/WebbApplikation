@@ -34,19 +34,62 @@ namespace RestaurantReview.Infrastructure.Migrations
                     b.ToTable("CategoryRestaurant");
                 });
 
-            modelBuilder.Entity("ImageRestaurant", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", b =>
                 {
-                    b.Property<Guid>("ImagesImageID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid>("RestaurantsRestaurantID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
 
-                    b.HasKey("ImagesImageID", "RestaurantsRestaurantID");
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("RestaurantsRestaurantID");
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("ImageRestaurant");
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApplicationUser");
                 });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Category", b =>
@@ -69,13 +112,23 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("ImgName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImgPath")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("RestaurantID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("ImageID");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("RestaurantID");
 
                     b.ToTable("Images");
                 });
@@ -146,19 +199,19 @@ namespace RestaurantReview.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ImageRestaurant", b =>
+            modelBuilder.Entity("RestaurantReview.Domain.Models.Image", b =>
                 {
-                    b.HasOne("RestaurantReview.Domain.Models.Image", null)
+                    b.HasOne("RestaurantReview.Domain.AuthenticationModels.ApplicationUser", "ApplicationUser")
                         .WithMany()
-                        .HasForeignKey("ImagesImageID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ApplicationUserId");
 
-                    b.HasOne("RestaurantReview.Domain.Models.Restaurant", null)
-                        .WithMany()
-                        .HasForeignKey("RestaurantsRestaurantID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("RestaurantReview.Domain.Models.Restaurant", "Restaurant")
+                        .WithMany("Images")
+                        .HasForeignKey("RestaurantID");
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Review", b =>
@@ -174,6 +227,8 @@ namespace RestaurantReview.Infrastructure.Migrations
 
             modelBuilder.Entity("RestaurantReview.Domain.Models.Restaurant", b =>
                 {
+                    b.Navigation("Images");
+
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
