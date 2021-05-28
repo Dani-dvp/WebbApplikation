@@ -1,18 +1,18 @@
 ﻿using RestaurantReview.Domain.AuthenticationModels;
+using RestaurantReview.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
-namespace RestaurantReview.Domain.Models
+namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery
 {
-    public class Image
+    public class GetImageForRestaurantResponse
     {
         public Guid ImageID { get; set; }
 
-        public string ImgName { get; set;}
+        public string ImgName { get; set; }
 
         public string ImgPath { get; set; }
 #nullable enable
@@ -23,7 +23,5 @@ namespace RestaurantReview.Domain.Models
         public Restaurant? Restaurant { get; set; }
 
         public ApplicationUser? ApplicationUser { get; set; }
-
-
     }
 }

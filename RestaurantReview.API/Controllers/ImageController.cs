@@ -15,18 +15,18 @@ namespace RestaurantReview.API.Controllers
     public class ImageController : Controller
     {
         private readonly IImageService _imageService;
-        public ImageController(IImageService imageService  )
+        public ImageController(IImageService imageService )
         {
             _imageService = imageService;
         }
 
         [HttpPost]
-        public ImageResponse Index(IFormFile file)
+        public async Task<ImageResponse> Index(IFormFile file, string email, string restaurantName)
         {
             //Extract Image File Name.
 
 
-            return _imageService.CreateImagePath( file);
+            return await _imageService.CreateImagePath( file, email, restaurantName);
             
 
         }
