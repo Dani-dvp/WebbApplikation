@@ -9,53 +9,73 @@
 // ***********************************************
 /// <reference types="Cypress"/>
 
-        const username = 'CypressTest'
-        const email = 'cypress@email.com'
-        const password = 'CypressPassword'
-        const restaurant = 'ExampleRestaurant'
-        const title = 'This is a review'
-        const maintext = 'This is the main text'
-        const rating = '5'
-        const editedtext = 'This is a edited text'
+const username = 'testuser'
+const email = 'test@example.com'
+const password = 'Password123!'
+const restaurant = 'Fiskekrogen'
+const title = 'This is a title'
+const maintext = 'This is the main text'
+const rating = '5'
+const editedtext = 'This is a edited text'
 
 
 
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-Cypress.Commands.add('login', (username, password) => {
+Cypress.Commands.add('login', () => {
 
-    cy.visit('http://localhost:4100')
+    cy.visit('/')
 
-    cy.contains('[data-cy=login').click()
+    cy.get('[data-cy=navbarLogin').click()
 
     cy.location('pathname').should('equal', '/login')
 
-    cy.get('[data-cy=username').type(username)
+    cy.get('[data-cy=loginEmail').type(email)
 
-    cy.get('[data-cy=password').type(password)
+    cy.get('[data-cy=loginPassword').type(password)
 
-    cy.contains('[data-cy=submitlogin').click()
+    cy.get('[data-cy=submitLogin').click()
 
-    cy.location('pathname').should('equal', '/index2')
 })
 
-Cypress.Commands.add('logout', () => {
+ Cypress.Commands.add('logout', () => {
 
-    cy.visit('http://localhost:4100')
+     cy.visit('/')
 
-    cy.contains('[data-cy=profile').click()
+     cy.get('[data-cy=navbarLogin').click()
 
-    cy.location('pathname').should('equal', '/loggedin')
+     cy.location('pathname').should('equal', '/login')
 
-    cy.contains('.nav-link', 'Login').should('not.have.class', 'nav-link')
 
-    cy.contains('[data-cy=logout').click()
+     cy.get('[data-cy=logoutOnLoginPage').click()
 
-    cy.location('pathname').should('equal', '/index')
 
-    cy.contains('.nav-link', 'Login').should('have.class', 'nav-link')
+
+ });
+
+ Cypress.Commands.add('register', () => {
+
+    cy.visit('/')
+    cy.get('[data-cy=navbarLogin').click()
+
+    cy.location('pathname').should('equal', '/login')
+
+    cy.get('[data-cy=register').click()
+
+    cy.location('pathname').should('equal', '/register')
+
+    cy.get('[data-cy=registerUsername').type(username)
+    cy.get('[data-cy=registerEmail').type(email)
+    cy.get('[data-cy=registerPassword').type(password)
+    cy.get('[data-cy=registerConfirmPassword').type(password)
+
+    cy.get('[data-cy=submitRegistration').click()
+
+    cy.logout()
 
 });
+
+
 
 
 

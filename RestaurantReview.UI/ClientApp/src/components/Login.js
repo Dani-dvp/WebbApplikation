@@ -56,24 +56,37 @@ export default class Login extends Component {
       <div className="wrapper">
         <div id="LoginForm">
           <h2 className="active"> Login </h2>
-          <Link to="/register" className="inactive underlineHover"><h2>Register</h2></Link>
+          <Link 
+          data-cy="register"
+          to="/register" 
+          className="inactive underlineHover"><h2>Register</h2></Link>
 
           <form >
             <input
+            data-cy="loginEmail"
               type="text"
               id="email"
               name="login"
               placeholder="Email" />
             <input
+            data-cy="loginPassword"
               type="text"
               id="password"
               name="password"
               placeholder="Password"
               />
-            <button className="btn btn-primary" onClick={this.sendLoginRequest}>Log in</button>
+            <button 
+            data-cy="submitLogin"
+            className="btn btn-primary" 
+            onClick={this.sendLoginRequest}>Log in</button>
             <br />
-            <button className="btn btn-primary" onClick={this.logOutRequest}>Log out</button>
-            <button className="btn btn-primary" onClick={this.checkIfTokenIsValid}>Check</button>
+            <button 
+            data-cy="logoutOnLoginPage"
+            className="btn btn-primary" 
+            onClick={this.logOutRequest}>Log out</button>
+            <button 
+            className="btn btn-primary" 
+            onClick={this.checkIfTokenIsValid}>Check</button>
           </form>
 
           <form />

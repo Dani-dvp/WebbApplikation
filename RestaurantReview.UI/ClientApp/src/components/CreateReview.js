@@ -36,9 +36,17 @@ export default class CreateReview extends Component {
             </div>
             <div>
                 <form id="reviewForm">
-                    <input id="firstForm"type="text" name="restaurant" placeholder=" Restaurant name:" />
+                    <input 
+                    data-cy="reviewRestaurantName"
+                    id="firstForm"
+                    type="text" 
+                    name="restaurant" 
+                    placeholder=" Restaurant name:" />
                     <br />
-                    <textarea id="secondForm" placeholder=" Write your review here..."></textarea>
+                    <textarea 
+                    data-cy="reviewText"
+                    id="secondForm" 
+                    placeholder=" Write your review here..."></textarea>
                     <br />
                     <RatingStars></RatingStars>
                     <br />
@@ -49,7 +57,10 @@ export default class CreateReview extends Component {
             <div>
                 <p id="reviewText">Is your restaurant not here?</p>
                 <form >
-                    <button><Link className="Active" to="/addrestaurant">Add A Restaurant!</Link></button>
+                    <button><Link 
+                    data-cy="addRestaurant"
+                    className="Active" 
+                    to="/addrestaurant">Add A Restaurant!</Link></button>
                 </form>
             </div>
             </div>
