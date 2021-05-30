@@ -1,10 +1,13 @@
 ﻿
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Web;
 
 
@@ -18,13 +21,19 @@ namespace RestaurantReview.Application.Features.Images
 
         private readonly IMapper _mapper;
         private readonly IImageRepository _imageRepository;
-        public ImageHandler(IMapper mapper, IImageRepository imageRepository)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IRestaurantRepository _restaurantRepository;
+        public ImageHandler(IMapper mapper, IImageRepository imageRepository, UserManager<ApplicationUser> userManager, IRestaurantRepository restaurantRepository)
         {
             _mapper = mapper;
             _imageRepository = imageRepository;
+            _userManager = userManager;
+            _restaurantRepository = restaurantRepository;
         }
-        public ImageResponse CreateImagePath( IFormFile file )
+        public async Task<ImageResponse> CreateImagePath( IFormFile file, string email, string restaurantName)
         {
+            ApplicationUser user = null;
+            Restaurant restaurant = null;
 
             //  sparar namnet på den fil du väljer i filename
             string fileName = Path.GetFileName(file.FileName);
@@ -39,20 +48,40 @@ namespace RestaurantReview.Application.Features.Images
             {
                 file.CopyTo(fileStream);
 
-                
+            }
 
-            } 
+            
 
             //Save the Image File in Folder.
-          
+            if(email != null)
+            {
+                 user = await _userManager.FindByEmailAsync(email);
+            }
+                
+            if(restaurantName != null)
+            {
+                restaurant = await _restaurantRepository.GetRestaurantByName(restaurantName);
+            }
+                
+            
 
 
             var image = new Image()
             {
                 ImgName = fileName,
                 ImgPath = filePath,
-                ImageID = new Guid()
+                ImageID = new Guid(),
+                Restaurant = restaurant,
+                ApplicationUser = user
             };
+            if(user != null)
+            {
+                image.UserId = user.Id;
+            }
+            if(restaurant != null)
+            {
+                image.RestaurantID = restaurant.RestaurantID;
+            }
            
             image = _imageRepository.Add(image);
             
@@ -63,8 +92,6 @@ namespace RestaurantReview.Application.Features.Images
            //  var imageResponse = _mapper.Map<ImageResponse>(image);
 
             return imageResponse;
-
-               
 
         }
 

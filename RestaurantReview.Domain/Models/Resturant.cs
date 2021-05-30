@@ -18,8 +18,6 @@ namespace RestaurantReview.Domain.Models
 
         public ICollection<Review> Reviews { get; set; }
 
-
-
         public ICollection<Category> Categories { get; set; }
 
         public ICollection<Image> Images { get; set; }

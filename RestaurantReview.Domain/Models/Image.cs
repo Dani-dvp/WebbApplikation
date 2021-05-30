@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantReview.Domain.AuthenticationModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,15 @@ namespace RestaurantReview.Domain.Models
         public string ImgName { get; set;}
 
         public string ImgPath { get; set; }
+#nullable enable
+        public string? UserId { get; set; }
 
-        public List<Restaurant> Restaurants { get; set; }
+        public Guid? RestaurantID { get; set; }
 
-   
+        public Restaurant? Restaurant { get; set; }
+
+        public ApplicationUser? ApplicationUser { get; set; }
+
+
     }
 }
