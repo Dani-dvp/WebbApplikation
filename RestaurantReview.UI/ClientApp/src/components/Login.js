@@ -44,9 +44,9 @@ export default class Login extends Component {
 
 
 
-  checkIfTokenIsValid = event => {
+  async checkIfTokenIsValid(event) {
     event.preventDefault();
-    const response = await axios.get("api/Authentication/token/" + localStorage.getItem('token'))
+    const response = await Axios.get("api/Authentication/token/" + localStorage.getItem('token'))
     .then(res => { console.log(res)});
     console.log(response);
   }
