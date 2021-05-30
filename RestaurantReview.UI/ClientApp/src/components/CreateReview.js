@@ -50,7 +50,10 @@ export default class CreateReview extends Component {
                     <br />
                     <RatingStars></RatingStars>
                     <br />
-                <button className="submit" onClick={this.AddReviewRequest}>Submit</button>
+                <button 
+                data-cy="submitReview"
+                className="submit" 
+                onClick={this.AddReviewRequest}>Submit</button>
                 </form>
             </div>
 

@@ -27,12 +27,11 @@ describe('Test all major features', () => {
 
              cy.get('[data-cy=addRestaurant').click()
 
-             cy.get('[data-cy=addrestaurant').click()
-             cy.get('[data-cy=restaurantname').type(restaurant)
+             cy.get('[data-cy=restaurantName').type(restaurant)
 
-             cy.get('[data-cy=description').type(maintext)
+             cy.get('[data-cy=restaurantDescription').type(maintext)
 
-             cy.get('[data-cy=submitrestaurant').click()
+             cy.get('[data-cy=submitRestaurant').click()
 
     
          });
