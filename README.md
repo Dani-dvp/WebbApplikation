@@ -22,15 +22,15 @@ How to install:
 
 1. Set startup to RestaurantRewiew.Api
 
-2. Write following commands in powershell:
+2. Write following commands in Packet Manager:
 
-  2.1 set default project in powershell to RestaurantReview.Authentication
+  2.1 Set default project in powershell to RestaurantReview.Authentication
   
   2.2 add-migration NameOfMigration -context AuthenticationDbContext
   
   2.3 update-database -context AuthenticationDbContext
   
-  2.4 change default project to RestaurantReview.Infrastructure
+  2.4 Change default project to RestaurantReview.Infrastructure
   
   2.5 add-migration NameOfMigration -context MyDbContext
   
