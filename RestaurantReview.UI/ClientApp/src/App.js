@@ -11,6 +11,8 @@ import ShowAllRestaurants from './components/ShowAllRestaurants';
 import RestaurantPage from './components/RestaurantPage';
 import axios from 'axios';
 import './custom.css'
+import ShowAllCategories from './components/ShowAllCategories';
+import ShowRestaurantsInCategory from './components/ShowRestaurantsInCategory';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -28,6 +30,8 @@ export default class App extends Component {
         <Route path='/register' component={Register} />
         <Route path='/allrestaurants' component={ShowAllRestaurants} />
         <Route path='/Restaurantpage/:id' component={RestaurantPage} />
+        <Route path='/ShowAllCategories/' component={ShowAllCategories} />
+        <Route path='/ShowRestaurantsInCategory/' component={ShowRestaurantsInCategory} />
       </Layout>
     );
   }

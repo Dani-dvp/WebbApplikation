@@ -1,7 +1,11 @@
 ﻿import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { AllRestaurantCard } from './Cards/AllRestaurantCard';
+
+import {AllRestaurantCard} from './Cards/AllRestaurantCard';
+import { Link } from 'react-router-dom';
+
+
 import '../Css/ShowAllRestaurants.css';
 import { Container, Row, Col } from 'reactstrap';
 

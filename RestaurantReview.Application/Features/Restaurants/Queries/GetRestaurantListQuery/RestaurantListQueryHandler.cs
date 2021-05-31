@@ -19,9 +19,9 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public async Task<List<ResturantListQueryResponse>> GetRestaurantList()
         {
-            var listOfRestaurant = await _restaurantRepository.ListAllAsync();
+            var ListOfRestaurantsAndCategory = await _restaurantRepository.IncludeCategories();
 
-            var listOfRestaurantResponse = _mapper.Map<List<ResturantListQueryResponse>>(listOfRestaurant);
+            var listOfRestaurantResponse = _mapper.Map<List<ResturantListQueryResponse>>(ListOfRestaurantsAndCategory);
 
             return listOfRestaurantResponse;
         }

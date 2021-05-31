@@ -54,6 +54,13 @@ namespace RestaurantReview.Infrastructure.Repositories
             return Task.FromResult(matches);
         }
 
+        public async Task<List<Restaurant>> IncludeCategories()
+        {
+            var resturantAndCategories = await _myDbContext.Restaurants.Include(restaurant => restaurant.Categories).ToListAsync();
+
+            return resturantAndCategories;
+        }
+
 
     }
 
