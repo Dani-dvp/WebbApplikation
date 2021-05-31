@@ -11,6 +11,7 @@ import ShowAllRestaurants from './components/ShowAllRestaurants';
 import RestaurantPage from './components/RestaurantPage';
 import axios from 'axios';
 import './custom.css'
+import ProfilePage from './components/ProfilePage';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -28,6 +29,7 @@ export default class App extends Component {
         <Route path='/register' component={Register} />
         <Route path='/allrestaurants' component={ShowAllRestaurants} />
         <Route path='/Restaurantpage/:id' component={RestaurantPage} />
+        <Route path='/Profile' component={ProfilePage} />
       </Layout>
     );
   }
