@@ -1,18 +1,7 @@
 ﻿import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import axios from 'axios';
-<<<<<<< HEAD:RestaurantReview.UI/ClientApp/src/components/RestaurantPages/ShowAllRestaurants.js
-import { AllRestaurantCard } from './AllRestaurantCard';
+import {AllRestaurantCard} from './AllRestaurantCard';
 import './Css/ShowAllRestaurants.css';
-=======
-
-import {AllRestaurantCard} from './Cards/AllRestaurantCard';
-import { Link } from 'react-router-dom';
-
-
-import '../Css/ShowAllRestaurants.css';
->>>>>>> 9a4a1a5a0fc81c56b47fc8d65f22c46ed8c193aa:RestaurantReview.UI/ClientApp/src/components/ShowAllRestaurants.js
-import { Container, Row, Col } from 'reactstrap';
 
 
 export default class ShowAllRestaurants extends Component {

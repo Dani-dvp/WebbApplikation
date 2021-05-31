@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../Css/ShowAllRestaurants.css';
-import {RestaurantsInCategoryCard} from './Cards/RestaurantsInCategoryCard';
+import '../RestaurantPages/Css/ShowAllRestaurants.css';
+import {RestaurantsInCategoryCard} from './RestaurantsInCategoryCard';
 import ReactDOM from 'react-dom';  
 
 

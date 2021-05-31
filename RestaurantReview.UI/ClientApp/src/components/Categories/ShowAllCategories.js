@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import {AllCategoriesCard} from './Cards/AllCategoriesCard';
+import {AllCategoriesCard} from './AllCategoriesCard';
 import { Link } from 'react-router-dom';
-import '../Css/ShowAllRestaurants.css';
+import '../RestaurantPages/Css/ShowAllRestaurants.css';
 
 
 
