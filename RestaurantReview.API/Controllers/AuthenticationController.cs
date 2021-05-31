@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
@@ -44,8 +45,8 @@ namespace RestaurantReview.API.Controllers
         }
 
         
-        [HttpGet("CheckIfTokenIsValid")]
-        public bool CheckIfTokenIsValid([FromQuery] string token)
+        [HttpGet("token/{token}")]
+        public bool CheckIfTokenIsValid([FromRoute] string token)
         {
             return _checkIfTokenIsValidService.ValidateCurrentToken(token);
         }

@@ -36,11 +36,24 @@ export default class AddRestaurant extends Component {
             </div>
             <div>
                 <form id="addForm">
-                    <input id="firstForm" type="text" name="restaurant" placeholder=" Restaurant name:" />
+                    <input 
+                    data-cy="restaurantName"
+                    id="firstForm" 
+                    type="text" 
+                    name="restaurant" 
+                    placeholder=" Restaurant name:" />
                     <br />
-                    <input id="locationForm" type="text" name="Location" placeholder=" Location:" />
+                    <input 
+                    id="locationForm" 
+                    type="text" 
+                    name="Location" 
+                    placeholder=" Location:" />
                     <br />
-                    <select id="firstAdd" type="text" name="Category">
+                    <select 
+                    data-cy="restaurantDescription"
+                    id="firstAdd" 
+                    type="text" 
+                    name="Category">
                         <option value="option">Category</option>
                         <option value="food">African</option>
                         <option value="food">American</option>
@@ -52,7 +65,10 @@ export default class AddRestaurant extends Component {
                     </select>
                     <br />
                     
-                <button className="submit" onClick={this.addRestaurantRequest}>Submit</button>
+                <button 
+                data-cy="submitRestaurant"
+                className="submit" 
+                onClick={this.addRestaurantRequest}>Submit</button>
                 </form>
             </div>
             </div>

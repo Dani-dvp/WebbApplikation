@@ -35,7 +35,7 @@ namespace RestaurantReview.API
                         builder.WithOrigins(
                             "https://localhost:44301",
                             "https://localhost:44364")
-                        .WithMethods("PUT", "DELETE", "GET", "POST").AllowAnyHeader();
+                        .WithMethods("PUT", "DELETE", "GET", "POST", "OPTIONS").AllowAnyHeader();
                     });
             });
 
