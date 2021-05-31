@@ -22,6 +22,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public ICollection<ReviewDtoResponse> ReviewsDtoResponse { get; set; }
 
+        public ICollection <Category> Categories { get; set; }
+
 
     }
 }

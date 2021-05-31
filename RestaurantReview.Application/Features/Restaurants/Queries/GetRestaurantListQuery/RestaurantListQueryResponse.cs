@@ -6,6 +6,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
     public class ResturantListQueryResponse
     {
         public string RestaurantName { get; set; }
-        public List<Category> Category { get; set; }
+        public ICollection<Category> Categories { get; set; }
+        public ICollection<Restaurant> Restaurants { get; set; }
+
     }
 }
