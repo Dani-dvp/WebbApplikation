@@ -9,10 +9,6 @@ import { Redirect } from 'react-router-dom';
 
 
 
-
-
-
-
 export default class Categories extends Component {
     constructor(props) {
         super(props);
