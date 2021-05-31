@@ -91,3 +91,4 @@ C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
