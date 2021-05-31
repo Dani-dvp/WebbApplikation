@@ -7,6 +7,8 @@ The idea of the website is a place where you can review restaurants and see othe
 
 Prereq:
 Node.js
+React bootstrat - npm install react-bootstrap bootstrap@4.6.0
+Cypress - npm install cypress --save-dev
 
 For Cors problems in developer mode install:
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
