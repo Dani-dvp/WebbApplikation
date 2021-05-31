@@ -75,7 +75,40 @@ describe('Test all major features', () => {
     })
 
     
+    describe('Navbar', () => { 
+       
+        it('review navbar', () => {
+        cy.visit('/')
 
+        cy.get('[data-cy=navbarReview').click()
+
+        cy.location('pathname').should('equal', '/createreview')
+        });
+
+        it('login navbar', () => {
+            cy.visit('/')
+    
+            cy.get('[data-cy=navbarLogin').click()
+        
+            cy.location('pathname').should('equal', '/login')
+        });
+    
+        it('category navbar', () => {
+            cy.visit('/')
+    
+            cy.get('[data-cy=navbarCategories').click()
+        
+            cy.location('pathname').should('equal', '/categories')
+        });
+
+        it('home navbar', () => {
+            cy.visit('/login')
+    
+            cy.get('[data-cy=navbarHome').click()
+        
+            cy.location('pathname').should('equal', '/')
+        });
+    });
 
 
 
