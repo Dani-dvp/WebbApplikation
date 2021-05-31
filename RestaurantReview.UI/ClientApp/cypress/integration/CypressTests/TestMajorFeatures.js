@@ -32,29 +32,27 @@ describe('Test all major features', () => {
              cy.get('[data-cy=restaurantDescription').type(maintext)
 
              cy.get('[data-cy=submitRestaurant').click()
-
-    
          });
 
 
-        it('Create a review', () => {
+        //  it('Create a review', () => {
 
-            cy.visit('/')
+        //     cy.visit('/')
 
-            cy.get('[data-cy=navbarReview').click()
+        //      cy.get('[data-cy=navbarReview').click()
 
-            cy.location('pathname').should('equal', '/createreview')
+        //      cy.location('pathname').should('equal', '/createreview')
 
-            cy.get('[data-cy=reviewRestaurantName').type(restaurant)
+        //      cy.get('[data-cy=reviewRestaurantName').type(restaurant)
 
-            cy.get('[data-cy=reviewText').type(maintext)
+        //      cy.get('[data-cy=reviewText').type(maintext)
 
-            //cy.get('[data-cy=fivestar').click()
+        //      //cy.get('[data-cy=fivestar').click()
 
-            cy.get('[data-cy=submitReview').click()
+        //      cy.get('[data-cy=submitReview').click()
 
     
-        });
+        //  });
 
         // it('Edit a review', () => {
 

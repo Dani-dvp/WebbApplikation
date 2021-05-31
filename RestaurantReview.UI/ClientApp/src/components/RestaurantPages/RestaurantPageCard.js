@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './CardsCss/RestaurantPageCard.css';
+import './Css/RestaurantPageCard.css';
 
 export default class RestaurantPageCard extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../Css/Categories.css';
+import './Css/Categories.css';
 
 export default class Categories extends Component {
     render() {

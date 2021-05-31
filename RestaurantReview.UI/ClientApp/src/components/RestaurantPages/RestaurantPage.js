@@ -1,8 +1,8 @@
 ﻿import React, { Component } from "react";
 import axios from "axios";
-import RestaurantPageCard from "./Cards/RestaurantPageCard";
-import { ReviewCard } from "./Cards/ReviewCard";
-import "../Css/RestaurantPage.css";
+import RestaurantPageCard from "./RestaurantPageCard";
+import { ReviewCard } from "../Reviews/ReviewCard";
+import "./Css/RestaurantPage.css";
 
 export default class RestaurantPage extends Component {
   constructor(props) {

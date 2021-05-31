@@ -44,11 +44,11 @@ namespace RestaurantReview.API.Controllers
             return Ok(await _getUserByEmailService.GetUserByEmail(getUserByEmailCommand));
         }
 
-        
-        [HttpGet("token/{token}")]
-        public bool CheckIfTokenIsValid([FromRoute] string token)
+        [Authorize]
+        [HttpGet("token")]
+        public bool CheckIfTokenIsValid()
         {
-            return _checkIfTokenIsValidService.ValidateCurrentToken(token);
+            return true;
         }
     }
 }

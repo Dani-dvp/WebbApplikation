@@ -2,7 +2,7 @@
 import Axios from "axios";
 import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"; 
-import "../Css/Login.css";
+import "./Css/Login.css";
 
 export default class Login extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ export default class Login extends Component {
 
   async checkIfTokenIsValid(event) {
     event.preventDefault();
-    const response = await Axios.get("api/Authentication/token/" + localStorage.getItem('token'))
+    const response = await Axios.get("api/Authentication/token/")
     .then(res => { console.log(res)});
     console.log(response);
   }
