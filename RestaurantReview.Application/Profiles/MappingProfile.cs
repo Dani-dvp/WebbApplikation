@@ -46,11 +46,7 @@ namespace RestaurantReview.Application.Profiles
 
             // From model to UpdateModelResponse
             CreateMap<Restaurant, UpdateRestaurantRespone>();
-
             CreateMap<Category, UpdateCategoryResponse>();
-
-
-
             CreateMap<Review, UpdateReviewResponse>();
             CreateMap<Category, AddRestaurantToCategoryResponse>();
 
@@ -80,6 +76,8 @@ namespace RestaurantReview.Application.Profiles
 
 
             CreateMap<ApplicationUser, GetUserByEmailResponse>();
+            CreateMap<Image, GetUserImageResponse>();
+            CreateMap<Image, GetImageForRestaurantResponse>();
 
 
             // from model to dto

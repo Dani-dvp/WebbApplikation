@@ -1,10 +1,20 @@
-﻿.TooHigh {
-    padding-top: 250px;
+﻿
+.Restaurants a {
+    text-decoration: none;
+    color: black;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    grid-column-end: span 12;
+}
+.Restaurants {
+    flex: 1;
+    float: left;
+}
+.container {
+    max-width: 1800px;
+    display: flex;
+    flex: 2;
+    flex-direction: row;
 }
 
-.TooHigh AllRestaurantCard {
-    display:grid;
-    grid-column-end:span 8;
-    font-size: 38px;
-    color:blue;
-}

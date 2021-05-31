@@ -1,9 +1,14 @@
 ﻿import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+
 import {AllRestaurantCard} from './Cards/AllRestaurantCard';
 import { Link } from 'react-router-dom';
+
+
 import '../Css/ShowAllRestaurants.css';
+import { Container, Row, Col } from 'reactstrap';
+
 
 export default class ShowAllRestaurants extends Component {
   constructor(props) {
@@ -31,7 +36,7 @@ export default class ShowAllRestaurants extends Component {
   render() {
     let content = this.state.loading ? <p>Loading...</p> : this.createRestaurnatElements()
     return (
-    <div>{ content }</div>
+      <div className="Restaurants col-xl-12">{content}</div>
     );
 
   }

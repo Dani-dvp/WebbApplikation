@@ -35,7 +35,6 @@ h2 {
 .wrapper { /*Vart saker skall placeras*/
     display: flex;
     align-items: center;
-    margin-top: 25%;
     flex-direction: column;
     justify-content: center;
     width: 100%;

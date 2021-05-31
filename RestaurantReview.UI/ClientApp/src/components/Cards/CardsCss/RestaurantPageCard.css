@@ -1,0 +1,15 @@
+﻿.restPic{
+    max-width:300px;
+}
+
+.container {
+       max-width: none;
+}
+
+.resCont{
+    max-width:1140px;
+}
+
+RestaurantPageCard container{
+    max-width: 1140px;
+}

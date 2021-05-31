@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../Css/Categories.css';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
@@ -100,9 +101,12 @@ export default class Categories extends Component {
 
                 </form>
             </div>
+
         );
 
 
+
+          
     }
 
 

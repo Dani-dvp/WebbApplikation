@@ -12,6 +12,5 @@ namespace RestaurantReview.Application.Features.Images
 
         public string ImgName { get; set; }
 
-        public string ImgPath { get; set; }
     }
 }

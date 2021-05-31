@@ -52,22 +52,48 @@ export default class Register extends Component {
          
         <form action="/action_page.php" method="post">
             
-            <input type="text" name="userName" id="userName" placeholder="Username" required />
+            <input 
+            data-cy="registerUsername"
+            type="text" 
+            name="userName" 
+            id="userName" 
+            placeholder="Username" 
+            required />
             
-            <input type="email" name="email" id="email" placeholder="Email" required />
+            <input 
+            data-cy="registerEmail"
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="Email" 
+            required />
 
            
-            <input type="password" name="password" id="password" placeholder="Password" required />
+            <input 
+            data-cy="registerPassword"
+            type="password" 
+            name="password" 
+            id="password" 
+            placeholder="Password" 
+            required />
 
             
-            {/*<input type="password" name="passwordConfirm_input" id="passwordConfirm_input" placeholder="Confirm Password" required />*/}
+            <input 
+            data-cy="registerConfirmPassword"
+            type="password" 
+            name="passwordConfirm_input" 
+            id="passwordConfirm_input" 
+            placeholder="Confirm Password" required />
 
 
 
             <div>
               <p>By clicking on register you agree on our <a href="#">terms and conditions</a>.</p>
             </div>
-            <button className="btn btn-primary" onClick={this.sendRegisterRequest}>Log in</button>
+            <button 
+            data-cy="submitRegistration"
+            className="btn btn-primary" 
+            onClick={this.sendRegisterRequest}>Log in</button>
 
         </form>
       </div>
