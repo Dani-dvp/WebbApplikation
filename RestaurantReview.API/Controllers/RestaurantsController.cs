@@ -50,6 +50,7 @@ namespace RestaurantReview.API.Controllers
             _restaurantReviewsService = restaurantReviewsService;
             _getRestaurantByNameService = getRestaurantByNameService;
         }
+
         [Authorize]
         [HttpPost]
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)

@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
-import Harold from './CardsCss/Harold.jpg';
+import Harold from '../Harold.jpg';
 import Carousel from 'react-bootstrap/Carousel';
-import './CardsCss/CarouselClass.css';
+import './Css/CarouselClass.css';
 
 export default class CarouselClass extends Component {
 

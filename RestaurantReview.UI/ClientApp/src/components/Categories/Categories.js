@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD:RestaurantReview.UI/ClientApp/src/components/Categories/Categories.js
+import './Css/Categories.css';
+=======
 import '../Css/Categories.css';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
@@ -10,6 +13,7 @@ import { Redirect } from 'react-router-dom';
 
 
 
+>>>>>>> 9a4a1a5a0fc81c56b47fc8d65f22c46ed8c193aa:RestaurantReview.UI/ClientApp/src/components/Categories.js
 
 export default class Categories extends Component {
     constructor(props) {

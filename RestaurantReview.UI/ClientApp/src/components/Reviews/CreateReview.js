@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import RatingStars from './RatingStars';
 import axios from 'axios';
-import '../Css/StarRating.css';
-import '../Css/CreateReview.css';
+import '../RestaurantPages/Css/StarRating.css';
+import './Css/CreateReview.css';
 
 export default class CreateReview extends Component {
   AddReviewRequest = event => {

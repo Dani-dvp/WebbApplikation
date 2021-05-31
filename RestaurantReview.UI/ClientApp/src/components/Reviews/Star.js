@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Css/StarRating.css';
+import '../RestaurantPages/Css/StarRating.css';
 
 const Star = (props) => {
 
