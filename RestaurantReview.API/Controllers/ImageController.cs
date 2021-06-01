@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Images;
@@ -20,6 +21,7 @@ namespace RestaurantReview.API.Controllers
             _imageService = imageService;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<ImageResponse> Index(IFormFile file, string email, string restaurantName)
         {

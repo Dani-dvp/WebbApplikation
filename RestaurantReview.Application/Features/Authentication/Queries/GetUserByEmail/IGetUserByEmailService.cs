@@ -4,6 +4,6 @@ namespace RestaurantReview.Application.Features.Authentication.Queries.GetUserBy
 {
     public interface IGetUserByEmailService
     {
-        Task<GetUserByEmailResponse> GetUserByEmail(GetUserByEmailCommand getUserCommand);
+        Task<GetUserByEmailResponse> GetUserByEmail(string email);
     }
 }

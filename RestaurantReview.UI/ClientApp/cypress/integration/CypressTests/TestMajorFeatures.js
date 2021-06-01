@@ -118,7 +118,7 @@ describe('Test all major features', () => {
         it('Restaurant-btn  ', () => {
           cy.visit('/')
           cy.get('[data-cy = homeRestaurantsBtn]').click()
-          cy.location('pathname').should('equal', '/allrestaurants')
+          cy.location('pathname').should('equal', '/restaurants')
 
 
         });

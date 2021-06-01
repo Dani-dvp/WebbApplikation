@@ -30,5 +30,10 @@ namespace RestaurantReview.Infrastructure.Repositories
         {
          return await   _myDbContext.Reviews.Include(review => review.Restaurant).ThenInclude(restaurant => restaurant.Categories).Where(review => review.RestaurantID == id).ToListAsync();
         }
+
+        public async Task<List<Review>> GetReviewsByUserId(string UserId)
+        {
+            return await _myDbContext.Reviews.Where(review => review.ApplicationUserId == UserId).ToListAsync();
+        }
     }
 }

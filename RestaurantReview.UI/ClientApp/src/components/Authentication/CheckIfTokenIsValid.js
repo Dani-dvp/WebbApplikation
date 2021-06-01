@@ -3,11 +3,20 @@ import Axios from "axios";
 
 let loggedInStatus = "";
 
-export  function CheckIfTokenIsValid() {
-  
+export async function CheckIfTokenIsValid(props) {
 
-   Axios.get("api/Authentication/token/").then(response => { loggedInStatus = response.data })
-  console.log(loggedInStatus)
+
+  await Axios.get("api/Authentication/token/").then(response => {
+    if (response.data = true)
+    {
+      loggedInStatus = response.data
+    }
+    else
+    {
+      loggedInStatus = false;
+    }
+  })
+
   return loggedInStatus;
 
 

@@ -27,14 +27,14 @@ export default class RestaurantPage extends Component {
   
 
   render() {
-    let content = this.createThisRestaurant();
-    let content2 = this.createReviewsList();
+    let thisRestaurant = this.createThisRestaurant();
+    let ListOfReviews = this.createReviewsList();
     
     return (
       <div className="Trying">
-        {content}
+        {thisRestaurant}
         
-          { content2 }
+        { ListOfReviews }
           
       </div>
     );
@@ -58,4 +58,5 @@ export default class RestaurantPage extends Component {
     }
     return (elements);
   }
+  
 }

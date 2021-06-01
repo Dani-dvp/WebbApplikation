@@ -5,6 +5,7 @@ using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
+using RestaurantReview.Application.Features.Authentication.Queries.GetUserByUsername;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
@@ -16,13 +17,15 @@ namespace RestaurantReview.API.Controllers
         private readonly IAuthenticationService _authenticationService;
         private readonly IRegistrationService _registrationService;
         private readonly IGetUserByEmailService _getUserByEmailService;
-        private readonly ICheckIfTokenIsValidService _checkIfTokenIsValidService;
-        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService, ICheckIfTokenIsValidService checkIfTokenIsValidService)
+        private readonly IGetUserByUsernameService _getUserByUsernameService;
+
+
+        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService, IGetUserByUsernameService getUserByUsernameService)
         {
             _authenticationService = authenticationService;
             _registrationService = registrationService;
             _getUserByEmailService = getUserByEmailService;
-            _checkIfTokenIsValidService = checkIfTokenIsValidService;
+            _getUserByUsernameService = getUserByUsernameService;
         }
 
         [HttpPost("login")]
@@ -38,10 +41,17 @@ namespace RestaurantReview.API.Controllers
         }
 
         [Authorize]
-        [HttpGet("user")]
-        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromQuery]GetUserByEmailCommand getUserByEmailCommand)
+        [HttpGet("user/email/{email}")]
+        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromRoute]string email)
         {
-            return Ok(await _getUserByEmailService.GetUserByEmail(getUserByEmailCommand));
+            return Ok(await _getUserByEmailService.GetUserByEmail(email));
+        }
+
+        [Authorize]
+        [HttpGet("user/{username}")]
+        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByUsernameAsync([FromRoute] string username)
+        {
+            return Ok(await _getUserByUsernameService.GetUserByUsername(username));
         }
 
         [Authorize]

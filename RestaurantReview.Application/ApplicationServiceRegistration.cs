@@ -6,6 +6,7 @@ using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
+using RestaurantReview.Application.Features.Authentication.Queries.GetUserByUsername;
 using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
@@ -104,6 +105,7 @@ namespace RestaurantReview.Application
             services.AddScoped<IRegistrationService, RegistrationHandler>();
             services.AddScoped<IGetUserByEmailService, GetUserByEmailHandler>();
             services.AddScoped<ICheckIfTokenIsValidService, CheckTokenIfValidHandler>();
+            services.AddScoped<IGetUserByUsernameService, GetUserByUsernameHandler>();
 
             //Seedcontroller
             services.AddScoped<ICreateSeedService, CreateSeedHandler>();

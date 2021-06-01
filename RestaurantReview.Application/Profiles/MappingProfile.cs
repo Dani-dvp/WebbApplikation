@@ -2,6 +2,7 @@
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
+using RestaurantReview.Application.Features.Authentication.Queries.GetUserByUsername;
 using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
@@ -63,6 +64,7 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Restaurant, ResturantListQueryResponse>();
             CreateMap<Category, CategoryListQueryResponse>();
             CreateMap<Restaurant, RestaurantReviewsResponse>();
+            CreateMap<Review, GetUserByUsernameReview>();
 
 
 
@@ -76,6 +78,7 @@ namespace RestaurantReview.Application.Profiles
 
 
             CreateMap<ApplicationUser, GetUserByEmailResponse>();
+            CreateMap<ApplicationUser, GetUserByUsernameResponse>();
             CreateMap<Image, GetUserImageResponse>();
             CreateMap<Image, GetImageForRestaurantResponse>();
 
@@ -83,6 +86,7 @@ namespace RestaurantReview.Application.Profiles
             // from model to dto
             CreateMap<Restaurant, ReviewDtoResponse>();
             CreateMap<Review, ReviewDtoResponse>();
+
 
             
 

@@ -11,6 +11,8 @@ namespace RestaurantReview.Domain.IRepositories
 
         Task<List<Review>> GetReviewsByRestaurantId(Guid id);
 
+        Task<List<Review>> GetReviewsByUserId(string UserId);
+
        // Task<bool> IsEventNameAndDateUnique(string name);
     }
 }

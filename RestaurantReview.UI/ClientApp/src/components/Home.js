@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import CarouselClass from './Cards/CarouselClass';
 import { Link } from 'react-router-dom';
 import '../Css/Home.css';
+import FileUpload from './FileUpload/FileUpload';
 
 export default class Home extends Component {
   static displayName = Home.name;
-
-
+  constructor(props) {
+    super(props)
+  }
+  
   
   render () {
     return (
@@ -14,8 +17,10 @@ export default class Home extends Component {
         <CarouselClass></CarouselClass>
         <br />
         <div className="mx-auto">
-          <Link data-cy = "homeRestaurantsBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/allrestaurants"}>All Restaurants</Link>
-          <Link data-cy = "homeCategoriesBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/categories"}>Categories</Link>
+          <Link data-cy = "homeRestaurantsBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/restaurants"}>All Restaurants</Link>
+          <Link data-cy="homeCategoriesBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/categories"}>Categories</Link>
+
+          
         </div>
       </div>
     );

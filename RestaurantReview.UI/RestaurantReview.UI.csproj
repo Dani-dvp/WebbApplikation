@@ -38,7 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\components\Profile\Css\" />
     <Folder Include="ClientApp\src\components\ReactHooks\Css\" />
     <Folder Include="ClientApp\src\Images\" />
   </ItemGroup>

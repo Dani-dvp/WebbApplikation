@@ -90,7 +90,7 @@ export default class Categories extends Component {
                     </div>
 
                     <form>
-                        <button className="allButton" type="button"><a href="../allrestaurants">View all restaurants</a></button>
+                        <button className="allButton" type="button"><a href="../restaurants">View all restaurants</a></button>
                         <button className="allButton" type="button"><a href="../ShowAllCategories/">Show All categories</a></button>
 
 

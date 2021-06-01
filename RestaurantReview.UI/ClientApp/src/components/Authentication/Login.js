@@ -5,24 +5,26 @@ import { Redirect } from "react-router-dom";
 import "./Css/Login.css";
 import { CheckIfTokenIsValid } from './CheckIfTokenIsValid';
 
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: false,
+      loggedIn: this.props.loggedIn
     }
+
+    this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
+    this.handleFailedAuth = this.handleFailedAuth.bind(this);
   }
 
 
-  sendLoginRequest = event => {
-
-    
+   sendLoginRequest = event => {
     event.preventDefault();
 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    Axios({
+     Axios({
       method: 'post',
       url: "/api/Authentication/login",
       data: {
@@ -30,81 +32,110 @@ export default class Login extends Component {
         Password: password,
       },
 
-    }).then(res => { localStorage.setItem('token', res.data.token) });
+    }).then(res => {
+      if (res.status === 200) {
+        this.handleSuccessfulAuth(res)
+        
+      }
+      else
+      {
+        this.handleFailedAuth()
+      }
+    })
     
-    console.log(localStorage.getItem('token'));
-  }
-  
-  logOutRequest = event => {
-    event.preventDefault();
-    console.log(localStorage.getItem('token'));
-    localStorage.clear();
-    delete Axios.defaults.headers.common['Authorization'];
-    console.log(localStorage.getItem('token'));
   }
 
+  handleSuccessfulAuth(data) {
+    this.props.handleLogin(data);
+    this.props.history.push("/profile");
+    localStorage.setItem('token', data.data.token)
+    Axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token')
+
+  }
+
+  handleFailedAuth() {
+    localStorage.clear();
+    delete Axios.defaults.headers.common['Authorization'];
+
+    this.props.handleFailedLogin()
+
+  }
 
 
   
 
   render() {
+    let isLoggedIn = this.props.loggedIn;
+
     return (
-      <div className="wrapper">
-        <div id="LoginForm">
-          <h2 className="active"> Login </h2>
-          <Link 
-          data-cy="register"
-          to="/register" 
-          className="inactive underlineHover"><h2>Register</h2></Link>
+        <div className="wrapper">
+          <div id="LoginForm">
+            <h2 className="active"> Login </h2>
+            <Link
+              data-cy="register"
+              to="/register"
+              className="inactive underlineHover"><h2>Register</h2></Link>
 
-          <form >
-            <input
-            data-cy="loginEmail"
-              type="text"
-              id="email"
-              name="login"
-              placeholder="Email" />
-            <input
-            data-cy="loginPassword"
-              type="text"
-              id="password"
-              name="password"
-              placeholder="Password"
+            <form >
+              <input
+                data-cy="loginEmail"
+                type="text"
+                id="email"
+                name="login"
+                placeholder="Email" />
+              <input
+                data-cy="loginPassword"
+                type="text"
+                id="password"
+                name="password"
+                placeholder="Password"
               />
-            <button 
-            data-cy="submitLogin"
-            className="btn btn-primary" 
-            onClick={this.sendLoginRequest}>Log in</button>
-            <br />
-            <button 
-            data-cy="checkOnLoginPage"
-            className="btn btn-primary" 
-            onClick={this.logOutRequest}>Log out</button>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => {
-                this.setState({
-                  loggedIn: CheckIfTokenIsValid()
-                });
-              }}>Check</button>
+              <button
+                type="button"
+                data-cy="submitLogin"
+                className="btn btn-primary"
+                onClick={this.sendLoginRequest}>Log in</button>
+              <br />
 
-            
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={console.log(this.state.loggedIn)}>print</button>
-          </form>
+              <button
+                type="button"
+                data-cy="checkOnLoginPage"
+                className="btn btn-primary"
+                onClick={() => {
+                  this.setState({
+                    loggedIn: this.handleFailedAuth()
+                  });
+                }}>Logout</button>
 
-          <form />
+              
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => {
+                  this.setState({
+                    loggedIn: CheckIfTokenIsValid(this.props)
+                  });
+                }}>Check</button>
 
-          <div id="ForgotForm">
-            <a className="underlineHover" href="#">
-              Forgot Password?
+
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={console.log(this.props.loggedIn)}>print</button>
+            </form>
+
+            <form />
+
+            <div id="ForgotForm">
+              <a className="underlineHover" href="#">
+                Forgot Password?
             </a>
+            </div>
           </div>
         </div>
-      </div>
+
     );
   }
+
+
 }

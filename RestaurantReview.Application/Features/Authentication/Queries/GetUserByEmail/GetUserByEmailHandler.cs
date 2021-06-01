@@ -18,9 +18,9 @@ namespace RestaurantReview.Application.Features.Authentication.Queries.GetUserBy
             _imageRepository = imageRepository;
         }
 
-        public async Task<GetUserByEmailResponse> GetUserByEmail(GetUserByEmailCommand getUserCommand)
+        public async Task<GetUserByEmailResponse> GetUserByEmail(string email)
         {
-            var user = await _userManager.FindByEmailAsync(getUserCommand.Email);
+            var user = await _userManager.FindByEmailAsync(email);
             var image = await _imageRepository.GetImageByUserId(user.Id);
 
             var userResponse = _mapper.Map<GetUserByEmailResponse>(user);
