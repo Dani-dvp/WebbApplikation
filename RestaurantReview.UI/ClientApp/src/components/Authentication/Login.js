@@ -2,7 +2,8 @@
 import Axios from "axios";
 import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"; 
-import "../Css/Login.css";
+import "./Css/Login.css";
+import { CheckIfTokenIsValid } from './CheckIfTokenIsValid';
 
 export default class Login extends Component {
   constructor(props) {
@@ -44,12 +45,7 @@ export default class Login extends Component {
 
 
 
-  async checkIfTokenIsValid(event) {
-    event.preventDefault();
-    const response = await Axios.get("api/Authentication/token/" + localStorage.getItem('token'))
-    .then(res => { console.log(res)});
-    console.log(response);
-  }
+  
 
   render() {
     return (
@@ -81,12 +77,23 @@ export default class Login extends Component {
             onClick={this.sendLoginRequest}>Log in</button>
             <br />
             <button 
-            data-cy="logoutOnLoginPage"
+            data-cy="checkOnLoginPage"
             className="btn btn-primary" 
             onClick={this.logOutRequest}>Log out</button>
-            <button 
-            className="btn btn-primary" 
-            onClick={this.checkIfTokenIsValid}>Check</button>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => {
+                this.setState({
+                  loggedIn: CheckIfTokenIsValid()
+                });
+              }}>Check</button>
+
+            
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={console.log(this.state.loggedIn)}>print</button>
           </form>
 
           <form />

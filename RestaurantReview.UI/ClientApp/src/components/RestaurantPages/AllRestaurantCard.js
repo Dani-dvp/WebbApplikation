@@ -1,7 +1,7 @@
 ﻿import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import './CardsCss/AllRestaurantCards.css';
-import Harold from './CardsCss/Harold.jpg';
+import './Css/AllRestaurantCards.css';
+import Harold from '../Harold.jpg';
 
 export class AllRestaurantCard extends Component {
  

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Star from './Star';
-import '../Css/StarRating.css';
+import '../RestaurantPages/Css/StarRating.css';
 
 const RatingStars = () => {
     const [gradeIndex, setGradeIndex] = useState();

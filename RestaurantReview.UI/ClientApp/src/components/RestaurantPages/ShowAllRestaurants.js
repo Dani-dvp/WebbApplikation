@@ -1,9 +1,7 @@
 ﻿import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { AllRestaurantCard } from './Cards/AllRestaurantCard';
-import '../Css/ShowAllRestaurants.css';
-import { Container, Row, Col } from 'reactstrap';
+import {AllRestaurantCard} from './AllRestaurantCard';
+import './Css/ShowAllRestaurants.css';
 
 
 export default class ShowAllRestaurants extends Component {

@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Login from './components/Login';
-import Categories from './components/Categories';
-import CreateReview from './components/CreateReview';
-import AddRestaurant from './components/AddRestaurant';
-import Register from './components/Register';
-import ShowAllRestaurants from './components/ShowAllRestaurants';
-import RestaurantPage from './components/RestaurantPage';
+import Login from './components/Authentication/Login';
+import Categories from './components/Categories/Categories';
+import CreateReview from './components/Reviews/CreateReview';
+import AddRestaurant from './components/RestaurantPages/AddRestaurant';
+import Register from './components/Authentication/Register';
+import ShowAllRestaurants from './components/RestaurantPages/ShowAllRestaurants';
+import RestaurantPage from './components/RestaurantPages/RestaurantPage';
 import axios from 'axios';
 import './custom.css'
 import ProfilePage from './components/ProfilePage';
+import ShowAllCategories from './components/Categories/ShowAllCategories';
+import ShowRestaurantsInCategory from './components/Categories/ShowRestaurantsInCategory';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -30,6 +32,8 @@ export default class App extends Component {
         <Route path='/allrestaurants' component={ShowAllRestaurants} />
         <Route path='/Restaurantpage/:id' component={RestaurantPage} />
         <Route path='/Profile' component={ProfilePage} />
+        <Route path='/ShowAllCategories/' component={ShowAllCategories} />
+        <Route path='/ShowRestaurantsInCategory/' component={ShowRestaurantsInCategory} />
       </Layout>
     );
   }

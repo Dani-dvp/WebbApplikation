@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import RatingStars from './RatingStars';
-import '../Css/StarRating.css';
-import '../Css/AddRestaurant.css';
+import './Css/StarRating.css';
+import './Css/AddRestaurant.css';
 import axios from 'axios';
 
 export default class AddRestaurant extends Component {

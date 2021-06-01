@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
-import Harold from './CardsCss/Harold.jpg';
+import Harold from '../Harold.jpg';
 import Carousel from 'react-bootstrap/Carousel';
-import './CardsCss/CarouselClass.css';
+import './Css/CarouselClass.css';
 
 export default class CarouselClass extends Component {
 
@@ -11,6 +11,7 @@ export default class CarouselClass extends Component {
       <Carousel className="carouselHome d-inline-block d-block">
         <Carousel.Item>
           <img
+           data-cy ="carouselHomeImage1"
             className="d-block "
             src={Harold}
             alt="First slide"
@@ -22,7 +23,8 @@ export default class CarouselClass extends Component {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block "
+           data-cy ="carouselHomeImage2"
+            className="d-block  "
             src={ Harold }
             alt="Second slide"
           />
@@ -34,6 +36,7 @@ export default class CarouselClass extends Component {
         </Carousel.Item>
         <Carousel.Item>
           <img
+           data-cy ="carouselHomeImage3"
             className="d-block "
             src={Harold}
             alt="Third slide"
