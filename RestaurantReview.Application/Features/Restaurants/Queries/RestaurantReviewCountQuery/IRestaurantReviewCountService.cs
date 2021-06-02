@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery
 {
-   public interface IRestaurantReviewCountService
+    public interface IRestaurantReviewCountService
     {
         Task<int> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand);
-    
+
     }
 }

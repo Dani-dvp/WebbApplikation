@@ -29,19 +29,26 @@ namespace RestaurantReview.Infrastructure.Repositories
         }
 
 
-       
 
-        public async Task<int> RestaurantReviewCount(string  name)
+
+        public async Task<int> RestaurantReviewCount(string name)
         {
             var countReview = await _myDbContext.Restaurants.CountAsync(restaurant => restaurant.RestaurantName == name);
-           
+
             return countReview;
 
         }
 
         public async Task<List<Restaurant>> IncludeReviews(Guid id)
         {
-         var resturantReviews = await _myDbContext.Restaurants.Include(restaurant => restaurant.Reviews).Where(rest => rest.RestaurantID == id).ToListAsync();
+            var resturantReviews = await _myDbContext.Restaurants.Include(restaurant => restaurant.Reviews).Where(rest => rest.RestaurantID == id).ToListAsync();
+
+            return resturantReviews;
+        }
+
+        public async Task<List<Restaurant>> IncludeEverything()
+        {
+            var resturantReviews = await _myDbContext.Restaurants.Include(restaurant => restaurant.Reviews).Include(restaurant => restaurant.Categories).Include(restaurant => restaurant.Images).ToListAsync();
 
             return resturantReviews;
         }

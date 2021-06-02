@@ -3,7 +3,6 @@
 
 using Microsoft.AspNetCore.Identity;
 using RestaurantReview.Domain.Models;
-using System;
 using System.Collections.Generic;
 
 namespace RestaurantReview.Domain.AuthenticationModels
@@ -14,7 +13,7 @@ namespace RestaurantReview.Domain.AuthenticationModels
         {
             Images = new List<Image>();
         }
-        
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 

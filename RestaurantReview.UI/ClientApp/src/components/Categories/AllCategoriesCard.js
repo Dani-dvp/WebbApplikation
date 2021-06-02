@@ -6,13 +6,10 @@ export class AllCategoriesCard extends Component {
   render() {
     return (
       
-      <div className="card" rows="4">
-        <img src="..." className="card-img-top" alt="..." />
-        <div className="card-body">
-          <Link tag={Link} className="card-text" to={"/CategoryPage/" + this.props.categoryName}  >{this.props.title}</Link>
-            
+      <div>
+        <Link tag={Link} type="button" className="ListOfCategories" key={this.props.categoryName} tag={Link} link to={"/Categories/name/" + this.props.categoryName} > {this.props.categoryName}</Link>
           </div>
-        </div>
+        
         
     );
   }

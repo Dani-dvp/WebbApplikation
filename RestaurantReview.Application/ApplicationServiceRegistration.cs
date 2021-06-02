@@ -11,6 +11,7 @@ using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToC
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
+using RestaurantReview.Application.Features.Categories.Queries.GetCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 
@@ -25,7 +26,6 @@ using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantLis
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
-using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 
 using RestaurantReview.Application.Features.Reviews.Commands.CreateReview;
@@ -61,7 +61,7 @@ namespace RestaurantReview.Application
 
             services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
             services.AddScoped<IImageRepository, ImageRepository>();
-           
+
 
 
             //For IServices to handler
@@ -70,14 +70,13 @@ namespace RestaurantReview.Application
 
             services.AddScoped<IDeleteRestaurantService, DeleteRestaurantHandler>();
             services.AddScoped<IUpdateRestaurantService, UpdateRestaurantHandler>();
-            services.AddScoped<ICategoryListQuery, RestaurantListQueryHandler>();
             services.AddScoped<IRestaurantDetailService, RestaurantDetailQueryHandler>();
             services.AddScoped<IRestaurantReviewCountService, RestaurantReviewCountHandler>();
             services.AddScoped<IRestaurantAvgRatingService, RestaurantAvgRatingHandler>();
-            services.AddScoped<IRestaurantReviewsService, RestaurantReviewsHandler>();
             services.AddScoped<IGetRestaurantByNameService, GetRestaurantByNameHandler>();
             services.AddScoped<IAddRestaurantToCategoryService, AddRestaurantToCategoryHandler>();
             services.AddScoped<IAddCategoryToRestaurantService, AddCategoryToRestaurantHandler>();
+            services.AddScoped<IGetRestaurantListService, GetRestaurantListHandler>();
 
 
 
@@ -89,6 +88,7 @@ namespace RestaurantReview.Application
             services.AddScoped<ICategoryDetailQueryService, CategoryDetailQueryHandler>();
             services.AddScoped<ICategoryListQueryService, CategoryListQueryHandler>();
             services.AddScoped<IAddCategoryToRestaurantService, AddCategoryToRestaurantHandler>();
+            services.AddScoped<IGetCategoryByNameService, GetCategoryByNameHandler>();
 
 
             //review 
@@ -115,7 +115,7 @@ namespace RestaurantReview.Application
             services.AddInfrastructureServices(configuration);
             services.AddAuthenticationServices(configuration);
 
-            
+
 
             return services;
         }

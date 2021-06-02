@@ -4,7 +4,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvg
 {
     public class RestaurantAvgRatingCommand
     {
-    
+
         public Guid RestaurantID { get; set; }
     }
 }

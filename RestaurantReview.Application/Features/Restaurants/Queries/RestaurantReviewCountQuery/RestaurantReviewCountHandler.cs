@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery
@@ -17,14 +16,14 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.RestaurantRe
             _mapper = mapper;
         }
 
-        public async Task <int> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand)
+        public async Task<int> RestaurantReviewsCount(RestaurantReviewCountCommand restaurantReviewCommand)
         {
             var getResturant = await _restaurantRepository.GetRestaurantByName(restaurantReviewCommand.RestaurantName);
 
 
             var countReviewsInRestaurant = await _restaurantRepository.RestaurantReviewCount(getResturant.RestaurantName);
 
-         
+
 
             return countReviewsInRestaurant;
         }

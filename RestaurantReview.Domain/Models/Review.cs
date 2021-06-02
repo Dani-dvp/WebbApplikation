@@ -16,9 +16,11 @@ namespace RestaurantReview.Domain.Models
 
         public Guid RestaurantID { get; set; }
 
+        public string RestaurantName { get; set; }
+
         public Restaurant Restaurant { get; set; }
 
-    
+
 
     }
 }

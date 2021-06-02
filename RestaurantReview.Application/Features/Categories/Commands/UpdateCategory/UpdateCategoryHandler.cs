@@ -25,7 +25,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
 
             var validator = new UpdateCategoryCommandValidator();
             var validationResult = await validator.ValidateAsync(updateCategoryCommand);
-            
+
 
             if (validationResult.Errors.Count > 0)
             {
@@ -51,7 +51,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
 
                 await _categoryRepository.UpdateAsync(category);
 
-                 categoryResponse = _mapper.Map<UpdateCategoryResponse>(category);
+                categoryResponse = _mapper.Map<UpdateCategoryResponse>(category);
             }
             return categoryResponse;
 

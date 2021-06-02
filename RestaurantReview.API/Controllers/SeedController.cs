@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Seed.Commands.CreateSeed;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers

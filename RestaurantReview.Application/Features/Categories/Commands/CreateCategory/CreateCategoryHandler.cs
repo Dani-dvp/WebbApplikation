@@ -38,19 +38,19 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
             }
 
             if (categoryResponse.Success)
-            { 
+            {
                 var category = new Category()
                 {
                     CategoryName = createCategoryCommand.RestaurantCategory,
                     CategoryID = new Guid(),
 
                 };
-                  
-                 await _categoryRepository.AddAsync(category);
+
+                await _categoryRepository.AddAsync(category);
                 categoryResponse = _mapper.Map<CreateCategoryResponse>(category);
 
             }
-            
+
             return categoryResponse;
 
         }

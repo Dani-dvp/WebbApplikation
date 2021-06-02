@@ -1,11 +1,8 @@
-﻿using ResturantReview.Application.Features.Resturants.Commands.CreateReview;
-using System;
-
-namespace ResturantReview.Application.Features.Reviews.Commands.CreateReview
+﻿namespace ResturantReview.Application.Features.Reviews.Commands.CreateReview
 {
-    public class CreateReviewCommand 
+    public class CreateReviewCommand
     {
-        
+
         public string ApplicationUserId { get; set; }
         public string RestaurantName { get; set; }
         public string ReviewText { get; set; }

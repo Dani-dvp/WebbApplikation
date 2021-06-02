@@ -13,6 +13,8 @@ namespace RestaurantReview.Application.Features.Reviews.Queries.GetReviewListQue
 
         public int Rating { get; set; }
 
+        public string RestaurantName { get; set; }
+
         public Guid RestaurantID { get; set; }
 
 

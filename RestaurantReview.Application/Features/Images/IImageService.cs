@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using RestaurantReview.Domain.Models;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Images

@@ -20,6 +20,8 @@ namespace RestaurantReview.Application.Features.Categories.Queries.GetCategoryLi
         public async Task<List<CategoryListQueryResponse>> GetCategoryList()
         {
             var listAllCategories = await _categoryRepository.ListAllAsync();
+
+
             var categoryResponse = _mapper.Map<List<CategoryListQueryResponse>>(listAllCategories);
 
             return categoryResponse;

@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using FluentValidation;
+using RestaurantReview.Domain.IRepositories;
 using System.Threading;
 using System.Threading.Tasks;
-using FluentValidation;
-using RestaurantReview.Domain.IRepositories;
-using RestaurantReview.Infrastructure.Repositories;
 
 namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant
 {
     public class CreateRestaurantCommandValidator : AbstractValidator<CreateRestaurantCommand>
 
-       
+
     {
         private readonly IRestaurantRepository _restaurantRepository;
 
@@ -32,8 +27,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
                 //.Must(URLvalidation.Contains).WithMessage("The URL is wrong!")
                 .Matches(URLvalidation).WithMessage("The URL is wrong!")
                 .MinimumLength(18).WithMessage("The URL is wrong!");
-               
-               
+
+
 
             RuleFor(e => e)
                 .MustAsync(IsRestaurantUnique)
