@@ -49,6 +49,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
             {
                 var restaurant = new Restaurant()
                 {
+                    RestaurantLink = createRestaurantCommand.RestaurantLink,
+                    TempImage = createRestaurantCommand.TempImage,
                     RestaurantName = createRestaurantCommand.RestaurantName,
                     MapURL = createRestaurantCommand.MapURL,
                     Description = createRestaurantCommand.Description,

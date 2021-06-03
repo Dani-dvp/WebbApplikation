@@ -41,10 +41,12 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
             {
                 var restaurant = new Restaurant()
                 {
-
-                    RestaurantName = updateRestaurantCommand.RestaurantName,
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
+                    TempImage = updateRestaurantCommand.TempImage,
+                    RestaurantName = updateRestaurantCommand.RestaurantName,
                     MapURL = updateRestaurantCommand.MapURL,
+                    Description = updateRestaurantCommand.Description,
+                    
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);
 

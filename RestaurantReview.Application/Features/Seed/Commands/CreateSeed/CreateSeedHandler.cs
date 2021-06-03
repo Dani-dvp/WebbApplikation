@@ -42,68 +42,68 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
 
 
 
-            var category1 = new Category { CategoryID = new Guid(), CategoryName = "SeaFood" };
-            var category2 = new Category { CategoryID = new Guid(), CategoryName = "Pasta" };
-            var category3 = new Category { CategoryID = new Guid(), CategoryName = "American" };
-            var category4 = new Category { CategoryID = new Guid(), CategoryName = "Burgers" };
-            var category5 = new Category { CategoryID = new Guid(), CategoryName = "Pizza" };
-            var category6 = new Category { CategoryID = new Guid(), CategoryName = "ThaiFood" };
-            var category7 = new Category { CategoryID = new Guid(), CategoryName = "Kebab" };
-            var category8 = new Category { CategoryID = new Guid(), CategoryName = "Mexican" };
-            var category9 = new Category { CategoryID = new Guid(), CategoryName = "Sushi" };
-            var category10 = new Category { CategoryID = new Guid(), CategoryName = "StreetFood" };
-            var category11 = new Category { CategoryID = new Guid(), CategoryName = "Vegetarian" };
+            var SeaFood = new Category { CategoryID = new Guid(), CategoryName = "SeaFood" };
+            var Pasta = new Category { CategoryID = new Guid(), CategoryName = "Pasta" };
+            var American = new Category { CategoryID = new Guid(), CategoryName = "American" };
+            var Burgers = new Category { CategoryID = new Guid(), CategoryName = "Burgers" };
+            var Pizza = new Category { CategoryID = new Guid(), CategoryName = "Pizza" };
+            var ThaiFood = new Category { CategoryID = new Guid(), CategoryName = "ThaiFood" };
+            var Kebab = new Category { CategoryID = new Guid(), CategoryName = "Kebab" };
+            var Mexican = new Category { CategoryID = new Guid(), CategoryName = "Mexican" };
+            var Sushi = new Category { CategoryID = new Guid(), CategoryName = "Sushi" };
+            var StreetFood = new Category { CategoryID = new Guid(), CategoryName = "StreetFood" };
+            var Vegetarian = new Category { CategoryID = new Guid(), CategoryName = "Vegetarian" };
 
-            var restaurant1 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Sjömagasinet", RestaurantLink = "https://www.sjomagasinet.se/mat-och-vin/", MapURL = "https://satellites.pro/plan/Sweden_map#57.691608,11.909287,16", Description = "Sjömagasinet is beautifully located at Gothenburg's harbor entrance and has a past since 1775 as the East India Company's warehouse. The magazine has since been used by both customs officials and pilots. But Sjömagasinet has become best known for the fantastic cuisine signed by several well-known restaurateurs." };
-            var restaurant2 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Restaurang Piga", RestaurantLink = "https://www.thefork.se/restaurang/piga-eriksberg-r443071", MapURL = "https://satellites.pro/plan/Sweden_map#57.699876,11.909459,16", Description = "Together with a knowledgeable dining team that professionally and easily guides you through the visit, our chefs work who uncompromisingly put the same care and love in each plate regardless of allergies or preferences." };
-            var restaurant3 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Fiskekrogen", RestaurantLink = "http://www.fiskekrogen.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.705529,11.961343,16", Description = "Welcome to Fiskekrogen – in the hearth of Gothenburg!" };
-            var restaurant4 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "The Barn", RestaurantLink = "https://thebarn.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.704375,11.962748,15", Description = "AMERICAN FOOD CULTURE IN A LOCALLY PRODUCED SWEDISH WAY" };
-            var restaurant5 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Restaurant Santé", RestaurantLink = "http://santerestaurang.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.709262,11.969390,18", Description = "With us you will find tasty and conscious food with inspiration from the Mediterranean to eat here or bring.Charcoal grilled, meze and fresh accessories with elements of organic, locally grown and seasonal ingredients, Santé offers food that is suitable for both lunch and dinner as well as drinks for all tastes." };
-            var restaurant6 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Sushi Eriksberg", RestaurantLink = "http://www.sushieriksberg.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.698822,11.912291,16", Description = "We always serve fresh sushi. Enjoy the nice view of Älvsborgsbron and the harbour." };
-            var restaurant7 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "KFC Göteborg", RestaurantLink = "https://kfc.nu/hitta-oss/kfc-goteborg/", MapURL = "https://satellites.pro/plan/Sweden_map#57.705150,11.971257,16", Description = "Handbreaded and cooked on site in the restaurant - it is neither the easiest nor the fastest way to cook chicken, but for us at KFC, the most important thing is good quality." };
-            var restaurant8 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "City Kebab", RestaurantLink = "", MapURL = "https://satellites.pro/plan/Sweden_map#57.707478,11.970785,16", Description = "Kebab in central Gothenburg" };
-            var restaurant9 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Bastard Burgers", RestaurantLink = "https://bastardburgers.com/", MapURL = "https://satellites.pro/plan/Sweden_map#57.707492,11.967899,17", Description = "We do stuff our own way and label it Like a Bastard™" };
-            var restaurant10 = new Restaurant { RestaurantID = new Guid(), RestaurantName = "Bommen Restaurang & Bar", RestaurantLink = "http://www.bommen.nu/", MapURL = "https://satellites.pro/plan/Sweden_map#57.709578,11.964380,17", Description = "The restaurant is perfect for you who are going to visit the Gothenburg Opera and just as cozy for you who want a nice evening on the town." };
+            var Sjömagasinet = new Restaurant { TempImage = "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sj%C3%B6magasinet%2C_framsidan.jpg", RestaurantID = new Guid(), RestaurantName = "Sjömagasinet", RestaurantLink = "https://www.sjomagasinet.se/mat-och-vin/", MapURL = "https://satellites.pro/plan/Sweden_map#57.691608,11.909287,16", Description = "Sjömagasinet is beautifully located at Gothenburg's harbor entrance and has a past since 1775 as the East India Company's warehouse. The magazine has since been used by both customs officials and pilots. But Sjömagasinet has become best known for the fantastic cuisine signed by several well-known restaurateurs." };
+            var RestaurantPiga = new Restaurant { TempImage = "https://lh5.googleusercontent.com/p/AF1QipP7212Kwr2sbcL1yMEmrrGaMcTgEAXgHRotMwAh=w408-h306-k-no", RestaurantID = new Guid(), RestaurantName = "Restaurang Piga", RestaurantLink = "https://www.thefork.se/restaurang/piga-eriksberg-r443071", MapURL = "https://satellites.pro/plan/Sweden_map#57.699876,11.909459,16", Description = "Together with a knowledgeable dining team that professionally and easily guides you through the visit, our chefs work who uncompromisingly put the same care and love in each plate regardless of allergies or preferences." };
+            var Fiskekrogen = new Restaurant { TempImage = "https://pbs.twimg.com/media/CjT2pJYWEAAtGzA?format=jpg&name=small", RestaurantID = new Guid(), RestaurantName = "Fiskekrogen", RestaurantLink = "http://www.fiskekrogen.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.705529,11.961343,16", Description = "Welcome to Fiskekrogen – in the hearth of Gothenburg!" };
+            var TheBarn = new Restaurant { TempImage = "https://static.thatsup.co/content/img/article/17/feb/the-barn-skaffar-barn-och-%C3%B6ppnar-ny-bar.jpg", RestaurantID = new Guid(), RestaurantName = "The Barn", RestaurantLink = "https://thebarn.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.704375,11.962748,15", Description = "AMERICAN FOOD CULTURE IN A LOCALLY PRODUCED SWEDISH WAY" };
+            var RestaurangSante = new Restaurant { TempImage = "https://media-cdn.tripadvisor.com/media/photo-s/11/03/71/35/sante-bar-kitchen.jpg", RestaurantID = new Guid(), RestaurantName = "Restaurant Santé", RestaurantLink = "http://santerestaurang.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.709262,11.969390,18", Description = "With us you will find tasty and conscious food with inspiration from the Mediterranean to eat here or bring.Charcoal grilled, meze and fresh accessories with elements of organic, locally grown and seasonal ingredients, Santé offers food that is suitable for both lunch and dinner as well as drinks for all tastes." };
+            var SushiEriksberg = new Restaurant { TempImage = "https://static.thatsup.co/content/img/article/16/jan/guiden-till-g%C3%B6teborgs-b%C3%A4sta-sushirestauranger.jpg", RestaurantID = new Guid(), RestaurantName = "Sushi Eriksberg", RestaurantLink = "http://www.sushieriksberg.se/", MapURL = "https://satellites.pro/plan/Sweden_map#57.698822,11.912291,16", Description = "We always serve fresh sushi. Enjoy the nice view of Älvsborgsbron and the harbour." };
+            var KFCGöteborg = new Restaurant { TempImage = "https://www.fastighetsvarlden.se/wp-content/uploads/2019/01/kfc.jpg", RestaurantID = new Guid(), RestaurantName = "KFC Göteborg", RestaurantLink = "https://kfc.nu/hitta-oss/kfc-goteborg/", MapURL = "https://satellites.pro/plan/Sweden_map#57.705150,11.971257,16", Description = "Handbreaded and cooked on site in the restaurant - it is neither the easiest nor the fastest way to cook chicken, but for us at KFC, the most important thing is good quality." };
+            var CityKebab = new Restaurant { TempImage = "https://eatie.imgix.net/ZiCT9jh7bnpJNeHPw/city-kebab-kok-bar-nordstaden-t3ChxGmWivEHe9ut3.jpg?type=picture&fit=crop&crop=edges&w=800", RestaurantID = new Guid(), RestaurantName = "City Kebab", RestaurantLink = "", MapURL = "https://satellites.pro/plan/Sweden_map#57.707478,11.970785,16", Description = "Kebab in central Gothenburg" };
+            var BastardBurgers = new Restaurant { TempImage = "https://images.ohmyhosting.se/nJWJAv1B1qLNXvlCIXAU8ZNM9ak=/804x1078/smart/filters:quality(85)/https%3A%2F%2Fbastardburgers.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2021%2F02%2Fbeyond_london-min.jpg", RestaurantID = new Guid(), RestaurantName = "Bastard Burgers", RestaurantLink = "https://bastardburgers.com/", MapURL = "https://satellites.pro/plan/Sweden_map#57.707492,11.967899,17", Description = "We do stuff our own way and label it Like a Bastard™" };
+            var BommenRestaurang = new Restaurant { TempImage = "https://lh3.googleusercontent.com/proxy/PRPTJWTMWIxyTecULttw29oUPrROO5Qum5GLNLDeQCBD5ymobXR7a_4k-znxNUxJh4sG6H3HIPhEljFWEtf5lqP0F-LWI3p0P2Q7z6VH0kW081Hw4RWOrQamM6P2Nw", RestaurantID = new Guid(), RestaurantName = "Bommen Restaurang & Bar", RestaurantLink = "http://www.bommen.nu/", MapURL = "https://satellites.pro/plan/Sweden_map#57.709578,11.964380,17", Description = "The restaurant is perfect for you who are going to visit the Gothenburg Opera and just as cozy for you who want a nice evening on the town." };
 
-            var review1 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, RestaurantName = restaurant1.RestaurantName, Rating = 5, ReviewText = "Had the most delicious seafood tower and even the non alcoholic sparkling wine was exquisite! Great service and beautiful interior.", CreatedAt = DateTime.Now, Restaurant = restaurant1, ApplicationUserId = userResponse1.ApplicationUserId };
-            var review2 = new Review { ReviewID = new Guid(), RestaurantID = restaurant1.RestaurantID, RestaurantName = restaurant1.RestaurantName, Rating = 4, ReviewText = "Great restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant1, ApplicationUserId = userResponse2.ApplicationUserId };
-            var review3 = new Review { ReviewID = new Guid(), RestaurantID = restaurant2.RestaurantID, RestaurantName = restaurant2.RestaurantName, Rating = 3, ReviewText = "Decent restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant2, ApplicationUserId = userResponse3.ApplicationUserId };
-            var review4 = new Review { ReviewID = new Guid(), RestaurantID = restaurant3.RestaurantID, RestaurantName = restaurant3.RestaurantName, Rating = 5, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant3, ApplicationUserId = userResponse2.ApplicationUserId };
-            var review5 = new Review { ReviewID = new Guid(), RestaurantID = restaurant4.RestaurantID, RestaurantName = restaurant4.RestaurantName, Rating = 5, ReviewText = "The best restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant4, ApplicationUserId = userResponse3.ApplicationUserId };
-            var review6 = new Review { ReviewID = new Guid(), RestaurantID = restaurant5.RestaurantID, RestaurantName = restaurant5.RestaurantName, Rating = 2, ReviewText = "Wow restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant5, ApplicationUserId = userResponse1.ApplicationUserId };
-            var review7 = new Review { ReviewID = new Guid(), RestaurantID = restaurant6.RestaurantID, RestaurantName = restaurant6.RestaurantName, Rating = 4, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant6, ApplicationUserId = userResponse3.ApplicationUserId };
-            var review8 = new Review { ReviewID = new Guid(), RestaurantID = restaurant7.RestaurantID, RestaurantName = restaurant7.RestaurantName, Rating = 3, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant7, ApplicationUserId = userResponse1.ApplicationUserId };
-            var review9 = new Review { ReviewID = new Guid(), RestaurantID = restaurant8.RestaurantID, RestaurantName = restaurant8.RestaurantName, Rating = 5, ReviewText = "Omg restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant8, ApplicationUserId = userResponse2.ApplicationUserId };
-            var review10 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, RestaurantName = restaurant9.RestaurantName, Rating = 5, ReviewText = "the most amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse3.ApplicationUserId };
-            var review11 = new Review { ReviewID = new Guid(), RestaurantID = restaurant10.RestaurantID, RestaurantName = restaurant10.RestaurantName, Rating = 1, ReviewText = "Not good restaurant with new owners. Very bad.", CreatedAt = DateTime.Now, Restaurant = restaurant10, ApplicationUserId = userResponse1.ApplicationUserId };
-            var review12 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, RestaurantName = restaurant9.RestaurantName, Rating = 2, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse1.ApplicationUserId };
-            var review13 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, RestaurantName = restaurant9.RestaurantName, Rating = 5, ReviewText = "The best amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse2.ApplicationUserId };
-            var review14 = new Review { ReviewID = new Guid(), RestaurantID = restaurant9.RestaurantID, RestaurantName = restaurant9.RestaurantName, Rating = 3, ReviewText = "Double amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = restaurant9, ApplicationUserId = userResponse4.ApplicationUserId };
+            var review1 = new Review { ReviewID = new Guid(), RestaurantID = Sjömagasinet.RestaurantID, RestaurantName = Sjömagasinet.RestaurantName, Rating = 5, ReviewText = "Had the most delicious seafood tower and even the non alcoholic sparkling wine was exquisite! Great service and beautiful interior.", CreatedAt = DateTime.Now, Restaurant = Sjömagasinet, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review2 = new Review { ReviewID = new Guid(), RestaurantID = Sjömagasinet.RestaurantID, RestaurantName = Sjömagasinet.RestaurantName, Rating = 4, ReviewText = "Great restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = Sjömagasinet, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review3 = new Review { ReviewID = new Guid(), RestaurantID = RestaurantPiga.RestaurantID, RestaurantName = RestaurantPiga.RestaurantName, Rating = 3, ReviewText = "Decent restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = RestaurantPiga, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review4 = new Review { ReviewID = new Guid(), RestaurantID = Fiskekrogen.RestaurantID, RestaurantName = Fiskekrogen.RestaurantName, Rating = 5, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = Fiskekrogen, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review5 = new Review { ReviewID = new Guid(), RestaurantID = TheBarn.RestaurantID, RestaurantName = TheBarn.RestaurantName, Rating = 5, ReviewText = "The best restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = TheBarn, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review6 = new Review { ReviewID = new Guid(), RestaurantID = RestaurangSante.RestaurantID, RestaurantName = RestaurangSante.RestaurantName, Rating = 2, ReviewText = "Wow restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = RestaurangSante, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review7 = new Review { ReviewID = new Guid(), RestaurantID = SushiEriksberg.RestaurantID, RestaurantName = SushiEriksberg.RestaurantName, Rating = 4, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = SushiEriksberg, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review8 = new Review { ReviewID = new Guid(), RestaurantID = KFCGöteborg.RestaurantID, RestaurantName = KFCGöteborg.RestaurantName, Rating = 3, ReviewText = "Amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = KFCGöteborg, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review9 = new Review { ReviewID = new Guid(), RestaurantID = CityKebab.RestaurantID, RestaurantName = CityKebab.RestaurantName, Rating = 5, ReviewText = "Omg restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = CityKebab, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review10 = new Review { ReviewID = new Guid(), RestaurantID = BastardBurgers.RestaurantID, RestaurantName = BastardBurgers.RestaurantName, Rating = 5, ReviewText = "the most amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = BastardBurgers, ApplicationUserId = userResponse3.ApplicationUserId };
+            var review11 = new Review { ReviewID = new Guid(), RestaurantID = BommenRestaurang.RestaurantID, RestaurantName = BommenRestaurang.RestaurantName, Rating = 1, ReviewText = "Not good restaurant with new owners. Very bad.", CreatedAt = DateTime.Now, Restaurant = BommenRestaurang, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review12 = new Review { ReviewID = new Guid(), RestaurantID = BastardBurgers.RestaurantID, RestaurantName = BastardBurgers.RestaurantName, Rating = 2, ReviewText = "Such amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = BastardBurgers, ApplicationUserId = userResponse1.ApplicationUserId };
+            var review13 = new Review { ReviewID = new Guid(), RestaurantID = BastardBurgers.RestaurantID, RestaurantName = BastardBurgers.RestaurantName, Rating = 5, ReviewText = "The best amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = BastardBurgers, ApplicationUserId = userResponse2.ApplicationUserId };
+            var review14 = new Review { ReviewID = new Guid(), RestaurantID = BastardBurgers.RestaurantID, RestaurantName = BastardBurgers.RestaurantName, Rating = 3, ReviewText = "Double amazing restaurant with new owners. Still going strong.", CreatedAt = DateTime.Now, Restaurant = BastardBurgers, ApplicationUserId = userResponse4.ApplicationUserId };
 
 
 
-            await _categoryRepository.AddAsync(category1);
-            await _categoryRepository.AddAsync(category2);
-            await _categoryRepository.AddAsync(category3);
-            await _categoryRepository.AddAsync(category4);
-            await _categoryRepository.AddAsync(category5);
-            await _categoryRepository.AddAsync(category6);
-            await _categoryRepository.AddAsync(category7);
-            await _categoryRepository.AddAsync(category8);
-            await _categoryRepository.AddAsync(category9);
-            await _categoryRepository.AddAsync(category10);
-            await _categoryRepository.AddAsync(category11);
+            await _categoryRepository.AddAsync(SeaFood);
+            await _categoryRepository.AddAsync(Pasta);
+            await _categoryRepository.AddAsync(American);
+            await _categoryRepository.AddAsync(Burgers);
+            await _categoryRepository.AddAsync(Pizza);
+            await _categoryRepository.AddAsync(ThaiFood);
+            await _categoryRepository.AddAsync(Kebab);
+            await _categoryRepository.AddAsync(Mexican);
+            await _categoryRepository.AddAsync(Sushi);
+            await _categoryRepository.AddAsync(StreetFood);
+            await _categoryRepository.AddAsync(Vegetarian);
 
-            await _restaurantRepository.AddAsync(restaurant1);
-            await _restaurantRepository.AddAsync(restaurant2);
-            await _restaurantRepository.AddAsync(restaurant3);
-            await _restaurantRepository.AddAsync(restaurant4);
-            await _restaurantRepository.AddAsync(restaurant5);
-            await _restaurantRepository.AddAsync(restaurant6);
-            await _restaurantRepository.AddAsync(restaurant7);
-            await _restaurantRepository.AddAsync(restaurant8);
-            await _restaurantRepository.AddAsync(restaurant9);
-            await _restaurantRepository.AddAsync(restaurant10);
+            await _restaurantRepository.AddAsync(Sjömagasinet);
+            await _restaurantRepository.AddAsync(RestaurantPiga);
+            await _restaurantRepository.AddAsync(Fiskekrogen);
+            await _restaurantRepository.AddAsync(TheBarn);
+            await _restaurantRepository.AddAsync(RestaurangSante);
+            await _restaurantRepository.AddAsync(SushiEriksberg);
+            await _restaurantRepository.AddAsync(KFCGöteborg);
+            await _restaurantRepository.AddAsync(CityKebab);
+            await _restaurantRepository.AddAsync(BastardBurgers);
+            await _restaurantRepository.AddAsync(BommenRestaurang);
 
             await _reviewRepository.AddAsync(review1);
             await _reviewRepository.AddAsync(review2);
@@ -120,14 +120,22 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
             await _reviewRepository.AddAsync(review13);
             await _reviewRepository.AddAsync(review14);
 
-            var addSeafoodToSjömagasinet = new AddCategoryToRestaurantCommand { CategoryName = category1.CategoryName, RestaurantName = restaurant1.RestaurantName };
-            var addAmericanToBastardBurger = new AddCategoryToRestaurantCommand { CategoryName = category3.CategoryName, RestaurantName = restaurant9.RestaurantName };
-            var addKebabToCityKebab = new AddCategoryToRestaurantCommand { CategoryName = category7.CategoryName, RestaurantName = restaurant8.RestaurantName };
-            var addBurgersToBastardBurger = new AddCategoryToRestaurantCommand { CategoryName = category4.CategoryName, RestaurantName = restaurant9.RestaurantName };
-            var addPastaToPiga = new AddCategoryToRestaurantCommand { CategoryName = category2.CategoryName, RestaurantName = restaurant2.RestaurantName };
-            var addSushiToSushiEriksberg = new AddCategoryToRestaurantCommand { CategoryName = category9.CategoryName, RestaurantName = restaurant6.RestaurantName };
-            var addStreetfoodToKFC = new AddCategoryToRestaurantCommand { CategoryName = category10.CategoryName, RestaurantName = restaurant7.RestaurantName };
-            var addVegoToBommen = new AddCategoryToRestaurantCommand { CategoryName = category11.CategoryName, RestaurantName = restaurant10.RestaurantName };
+            var addSeafoodToSjömagasinet = new AddCategoryToRestaurantCommand { CategoryName = SeaFood.CategoryName, RestaurantName = Sjömagasinet.RestaurantName };
+            var addAmericanToBastardBurger = new AddCategoryToRestaurantCommand { CategoryName = American.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addKebabToCityKebab = new AddCategoryToRestaurantCommand { CategoryName = Kebab.CategoryName, RestaurantName = CityKebab.RestaurantName };
+            var addBurgersToBastardBurger = new AddCategoryToRestaurantCommand { CategoryName = Burgers.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addPastaToPiga = new AddCategoryToRestaurantCommand { CategoryName = Pasta.CategoryName, RestaurantName = RestaurantPiga.RestaurantName };
+            var addSushiToSushiEriksberg = new AddCategoryToRestaurantCommand { CategoryName = Sushi.CategoryName, RestaurantName = SushiEriksberg.RestaurantName };
+            var addStreetfoodToKFC = new AddCategoryToRestaurantCommand { CategoryName = StreetFood.CategoryName, RestaurantName = KFCGöteborg.RestaurantName };
+            var addVegoToBommen = new AddCategoryToRestaurantCommand { CategoryName = Vegetarian.CategoryName, RestaurantName = BommenRestaurang.RestaurantName };
+            var addStreetfoodToBastardBurger = new AddCategoryToRestaurantCommand { CategoryName = StreetFood.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addStreetfoodToTheBarn = new AddCategoryToRestaurantCommand { CategoryName = StreetFood.CategoryName, RestaurantName = TheBarn.RestaurantName };
+            var addAmericanToTheBarn = new AddCategoryToRestaurantCommand { CategoryName = American.CategoryName, RestaurantName = TheBarn.RestaurantName };
+            var addAmericanToKFC = new AddCategoryToRestaurantCommand { CategoryName = American.CategoryName, RestaurantName = KFCGöteborg.RestaurantName };
+            var addPizzaToCityKebab = new AddCategoryToRestaurantCommand { CategoryName = Pizza.CategoryName, RestaurantName = CityKebab.RestaurantName };
+            var addSeaFoodToEriksbergsSushi = new AddCategoryToRestaurantCommand { CategoryName = SeaFood.CategoryName, RestaurantName = SushiEriksberg.RestaurantName };
+            var addVegetarianToPiga = new AddCategoryToRestaurantCommand { CategoryName = Vegetarian.CategoryName, RestaurantName = RestaurantPiga.RestaurantName };
+            var addThaifoodtoBoomen = new AddCategoryToRestaurantCommand { CategoryName = ThaiFood.CategoryName, RestaurantName = BommenRestaurang.RestaurantName };
 
             await _addCategoryToRestaurantService.AddCategoryToRestaurant(addSeafoodToSjömagasinet);
             await _addCategoryToRestaurantService.AddCategoryToRestaurant(addAmericanToBastardBurger);
@@ -137,15 +145,32 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
             await _addCategoryToRestaurantService.AddCategoryToRestaurant(addSushiToSushiEriksberg);
             await _addCategoryToRestaurantService.AddCategoryToRestaurant(addStreetfoodToKFC);
             await _addCategoryToRestaurantService.AddCategoryToRestaurant(addVegoToBommen);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addStreetfoodToBastardBurger);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addStreetfoodToTheBarn);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addAmericanToTheBarn);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addAmericanToKFC);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addPizzaToCityKebab);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addVegetarianToPiga);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addSeaFoodToEriksbergsSushi);
+            await _addCategoryToRestaurantService.AddCategoryToRestaurant(addThaifoodtoBoomen);
 
-            var addSeafoodToSjömagasinet2 = new AddRestaurantToCategoryCommand { CategoryName = category1.CategoryName, RestaurantName = restaurant1.RestaurantName };
-            var addAmericanToBastardBurger2 = new AddRestaurantToCategoryCommand { CategoryName = category3.CategoryName, RestaurantName = restaurant9.RestaurantName };
-            var addKebabToCityKebab2 = new AddRestaurantToCategoryCommand { CategoryName = category7.CategoryName, RestaurantName = restaurant8.RestaurantName };
-            var addBurgersToBastardBurger2 = new AddRestaurantToCategoryCommand { CategoryName = category4.CategoryName, RestaurantName = restaurant9.RestaurantName };
-            var addPastaToPiga2 = new AddRestaurantToCategoryCommand { CategoryName = category2.CategoryName, RestaurantName = restaurant2.RestaurantName };
-            var addSushiToSushiEriksberg2 = new AddRestaurantToCategoryCommand { CategoryName = category9.CategoryName, RestaurantName = restaurant6.RestaurantName };
-            var addStreetfoodToKFC2 = new AddRestaurantToCategoryCommand { CategoryName = category10.CategoryName, RestaurantName = restaurant7.RestaurantName };
-            var addVegoToBommen2 = new AddRestaurantToCategoryCommand { CategoryName = category11.CategoryName, RestaurantName = restaurant10.RestaurantName };
+            var addSeafoodToSjömagasinet2 = new AddRestaurantToCategoryCommand { CategoryName = SeaFood.CategoryName, RestaurantName = Sjömagasinet.RestaurantName };
+            var addAmericanToBastardBurger2 = new AddRestaurantToCategoryCommand { CategoryName = American.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addKebabToCityKebab2 = new AddRestaurantToCategoryCommand { CategoryName = Kebab.CategoryName, RestaurantName = CityKebab.RestaurantName };
+            var addBurgersToBastardBurger2 = new AddRestaurantToCategoryCommand { CategoryName = Burgers.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addPastaToPiga2 = new AddRestaurantToCategoryCommand { CategoryName = Pasta.CategoryName, RestaurantName = RestaurantPiga.RestaurantName };
+            var addSushiToSushiEriksberg2 = new AddRestaurantToCategoryCommand { CategoryName = Sushi.CategoryName, RestaurantName = SushiEriksberg.RestaurantName };
+            var addStreetfoodToKFC2 = new AddRestaurantToCategoryCommand { CategoryName = StreetFood.CategoryName, RestaurantName = KFCGöteborg.RestaurantName };
+            var addVegoToBommen2 = new AddRestaurantToCategoryCommand { CategoryName = Vegetarian.CategoryName, RestaurantName = BommenRestaurang.RestaurantName };
+            var addStreetfoodToBastardBurger2 = new AddRestaurantToCategoryCommand { CategoryName = StreetFood.CategoryName, RestaurantName = BastardBurgers.RestaurantName };
+            var addStreetfoodToThebarn2 = new AddRestaurantToCategoryCommand { CategoryName = StreetFood.CategoryName, RestaurantName = TheBarn.RestaurantName };
+            var addAmericanToTheBarn2 = new AddRestaurantToCategoryCommand { CategoryName = American.CategoryName, RestaurantName = TheBarn.RestaurantName };
+            var addAmericanToKFC2 = new AddRestaurantToCategoryCommand { CategoryName = American.CategoryName, RestaurantName = KFCGöteborg.RestaurantName };
+            var addPizzaToCityKebab2 = new AddRestaurantToCategoryCommand { CategoryName = Pizza.CategoryName, RestaurantName = CityKebab.RestaurantName };
+            var addSeaFoodToEriksbergsSushi2 = new AddRestaurantToCategoryCommand { CategoryName = SeaFood.CategoryName, RestaurantName = SushiEriksberg.RestaurantName };
+            var addVegetarianToPiga2 = new AddRestaurantToCategoryCommand { CategoryName = Vegetarian.CategoryName, RestaurantName = RestaurantPiga.RestaurantName };
+            var addThaifoodtoBoomen2 = new AddRestaurantToCategoryCommand { CategoryName = ThaiFood.CategoryName, RestaurantName = BommenRestaurang.RestaurantName };
+
 
             await _addRestaurantToCategoryService.AddRestaurantToCategory(addSeafoodToSjömagasinet2);
             await _addRestaurantToCategoryService.AddRestaurantToCategory(addAmericanToBastardBurger2);
@@ -155,6 +180,14 @@ namespace RestaurantReview.Application.Features.Seed.Commands.CreateSeed
             await _addRestaurantToCategoryService.AddRestaurantToCategory(addSushiToSushiEriksberg2);
             await _addRestaurantToCategoryService.AddRestaurantToCategory(addStreetfoodToKFC2);
             await _addRestaurantToCategoryService.AddRestaurantToCategory(addVegoToBommen2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addStreetfoodToBastardBurger2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addStreetfoodToThebarn2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addAmericanToTheBarn2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addAmericanToKFC2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addPizzaToCityKebab2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addSeaFoodToEriksbergsSushi2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addVegetarianToPiga2);
+            await _addRestaurantToCategoryService.AddRestaurantToCategory(addThaifoodtoBoomen2);
 
 
 

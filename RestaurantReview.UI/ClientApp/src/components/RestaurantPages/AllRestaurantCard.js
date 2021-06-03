@@ -10,9 +10,9 @@ export class AllRestaurantCard extends Component {
 
       <div className="restCont">
         <div className="card">
-        <img src={ Harold } className="card-img-top" alt="..." />
+          <img src={this.props.TempImage} className="card-img-top" alt="..." />
         <div className="card-body">
-          <Link tag={Link} className="card-text" to={"/RestaurantPage/" + this.props.restaurantName}  >{this.props.title}</Link>
+            <Link tag={Link} className="card-text" to={"/RestaurantPage/" + this.props.restaurantName}  >{this.props.title}</Link>
             </div>
           </div>
         </div>

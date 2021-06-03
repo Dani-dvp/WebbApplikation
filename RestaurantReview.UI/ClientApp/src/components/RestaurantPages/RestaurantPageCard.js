@@ -14,7 +14,7 @@ export default class RestaurantPageCard extends Component {
 									<div className="user-profile">
 										<div className="user-avatar">
 											
-											<img className="restPic" src="https://eriksberggoteborg.se/wp-content/uploads/2021/04/Piga-bild-1024x774.jpg" alt="Maxwell Admin" />
+											<img className="restPic" src={ this.props.TempImage } alt="Image not found." />
 						</div>
 										<a type="variant" href={this.props.website} target="_blank">{this.props.restaurantName}</a>
 										<h6 className="user-email"></h6>

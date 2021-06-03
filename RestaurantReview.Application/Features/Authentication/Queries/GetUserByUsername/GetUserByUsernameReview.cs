@@ -14,6 +14,8 @@ namespace RestaurantReview.Application.Features.Authentication.Queries.GetUserBy
 
         public DateTime CreatedAt { get; set; }
 
+        public string RestaurantName { get; set; }
+
         public Guid RestaurantID { get; set; }
     }
 }

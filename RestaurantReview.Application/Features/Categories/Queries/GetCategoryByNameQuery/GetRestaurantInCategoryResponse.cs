@@ -12,5 +12,7 @@ namespace RestaurantReview.Application.Features.Categories.Queries.GetCategoryBy
         public string Description { get; set; }
 
         public string MapURL { get; set; }
+
+        public string TempImage { get; set; }
     }
 }

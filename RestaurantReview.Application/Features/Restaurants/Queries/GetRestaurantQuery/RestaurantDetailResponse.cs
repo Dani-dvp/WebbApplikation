@@ -15,6 +15,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public string StreetPhoto { get; set; }
 
+        public string TempImage { get; set; }
+
         public ICollection<ReviewDtoResponse> ReviewsDtoResponse { get; set; }
     }
 }
