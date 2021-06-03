@@ -20,8 +20,8 @@ export default class RestaurantPageCard extends Component {
 										<h6 className="user-email"></h6>
 										</div>
 									<div className="about">
-										<h5 className="mb-2 text-primary">About</h5>
-										<h3>{this.props.description}</h3>
+										<h5 className="mb-2 text-secondary">About</h5>
+										<h3 className="text-secondary">{this.props.description}</h3>
 									</div>
 									</div>
 								</div>

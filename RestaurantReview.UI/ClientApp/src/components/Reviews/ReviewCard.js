@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import './Css/ReviewCard.css';
 
 export class ReviewCard extends Component {
 

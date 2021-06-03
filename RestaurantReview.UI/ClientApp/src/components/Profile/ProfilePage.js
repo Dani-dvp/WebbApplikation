@@ -82,16 +82,10 @@ export default class ProfilePage extends Component {
             </form>
             
                 <div className="profile-header">
-                </div>
-                <div className="profile-body">
-                    <div className="profile-posts">
-                        <h5>Reviews</h5>
-                        <div className="reviewposts">
+                        
                            {ListOfReviews}
-                            
-                        </div>
-                    </div>
-                </div>
+                            <br />
+          </div>
             </div>
         );
     }

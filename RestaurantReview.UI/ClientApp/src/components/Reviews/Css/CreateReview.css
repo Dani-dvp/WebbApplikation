@@ -51,6 +51,21 @@
     text-align: center;
 }
 
+.card {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.surroundingDiv {
+    margin-left:32%;
+    margin-right:32%;
+}
+
+.stars {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 
 
 

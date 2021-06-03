@@ -108,29 +108,10 @@ export default class Login extends Component {
                 }}>Logout</button>
 
               
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={() => {
-                  this.setState({
-                    loggedIn: CheckIfTokenIsValid(this.props)
-                  });
-                }}>Check</button>
-
-
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={console.log(this.props.loggedIn)}>print</button>
             </form>
 
             <form />
 
-            <div id="ForgotForm">
-              <a className="underlineHover" href="#">
-                Forgot Password?
-            </a>
-            </div>
           </div>
         </div>
 

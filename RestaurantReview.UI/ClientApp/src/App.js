@@ -101,7 +101,7 @@ this.state = {
           )}
            />
         <Route
-          path='/Categories/name/:id'
+          path='/Categorypage/name/:id'
           render={props => (
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}

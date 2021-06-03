@@ -36,14 +36,7 @@ export default class NavMenu extends Component {
                   data-cy="navbarCategories"
                   tag={Link} 
                   className="text-dark" 
-                  to="/categories">Categories</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink 
-                  data-cy="navbarReview"
-                  tag={Link} 
-                  className="text-dark" 
-                  to="/createreview">Create A Review</NavLink>
+                  to="/profile">Profile</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink 
