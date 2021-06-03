@@ -7,7 +7,7 @@ export class AllCategoriesCard extends Component {
     return (
       
       <div>
-        <Link tag={Link} type="button" className="ListOfCategories" key={this.props.categoryName} tag={Link} link to={"/Categories/name/" + this.props.categoryName} > {this.props.categoryName}</Link>
+        <Link tag={Link} type="button" className="ListOfCategories" to={"/Categories/name/" + this.props.categoryName} > {this.props.categoryName}</Link>
           </div>
         
         
