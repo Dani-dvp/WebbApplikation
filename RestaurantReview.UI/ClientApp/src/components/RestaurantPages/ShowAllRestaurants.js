@@ -2,6 +2,7 @@
 import axios from 'axios';
 import {AllRestaurantCard} from './AllRestaurantCard';
 import './Css/ShowAllRestaurants.css';
+import { Link } from 'react-router-dom';
 
 
 export default class ShowAllRestaurants extends Component {
@@ -30,7 +31,18 @@ export default class ShowAllRestaurants extends Component {
   render() {
     let content = this.state.loading ? <p>Loading...</p> : this.createRestaurnatElements()
     return (
-      <div className="Restaurants col-xl-12">{content}</div>
+      <div>
+        <div className="Restaurants col-xl-12">{content}</div>
+        <h3>Cant find what you are looking for?</h3>
+        <div>
+          <form >
+            <Link
+              data-cy="addRestaurant"
+              className=" btn btn-info btn-lg"
+              to="/addrestaurant">Add A Restaurant!</Link>
+          </form>
+        </div>
+        </div>
     );
 
   }
