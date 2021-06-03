@@ -7,6 +7,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestauran
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetThreeRandomRestaurants;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
@@ -27,13 +28,13 @@ namespace RestaurantReview.API.Controllers
         private readonly IRestaurantReviewCountService _restaurantReviewCountService;
         private readonly IRestaurantAvgRatingService _restaurantAvgRatingService;
         private readonly IGetRestaurantListService _getRestaurantListService;
-
+        private readonly IGetThreeRandomRestaurantsService _getThreeRandomRestaurantsService;
         private readonly IGetRestaurantByNameService _getRestaurantByNameService;
 
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
             , IUpdateRestaurantService updateResturantService, IRestaurantDetailService restaurantDetailService, IRestaurantReviewCountService restaurantReviewCountService
-            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService)
+            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService, IGetThreeRandomRestaurantsService getThreeRandomRestaurantsService)
         {
             _createRestaurantService = createRestaurantService;
             _deleteResturantService = deleteResturantService;
@@ -43,6 +44,7 @@ namespace RestaurantReview.API.Controllers
             _restaurantAvgRatingService = restaurantAvgRatingService;
             _getRestaurantByNameService = getRestaurantByNameService;
             _getRestaurantListService = getRestaurantListService;
+            _getThreeRandomRestaurantsService = getThreeRandomRestaurantsService;
         }
 
         [Authorize]
@@ -103,6 +105,11 @@ namespace RestaurantReview.API.Controllers
             return await _restaurantAvgRatingService.RestaurantAvgRating(restaurantAvgRatingCommand);
         }
 
+        [HttpGet("Random")]
+        public async Task<List<GetThreeRandomRestaurantsResponse>> GetThreeRandomRestaurants()
+        {
+            return await _getThreeRandomRestaurantsService.GetThreeRandomResturants();
+        }
 
 
 

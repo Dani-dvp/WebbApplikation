@@ -73,7 +73,7 @@ export default class Login extends Component {
               to="/register"
               className="inactive underlineHover"><h2>Register</h2></Link>
 
-            <form >
+            <form>
               <input
                 data-cy="loginEmail"
                 type="text"
@@ -106,7 +106,7 @@ export default class Login extends Component {
 
             </form>
 
-            <form />
+            
 
           </div>
         </div>

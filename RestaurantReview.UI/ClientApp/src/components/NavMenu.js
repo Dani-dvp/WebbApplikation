@@ -22,7 +22,6 @@ export default class NavMenu extends Component {
   }
 
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
     return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 fixed-top bg-white" light>
