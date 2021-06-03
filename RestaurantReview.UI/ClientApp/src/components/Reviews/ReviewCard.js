@@ -1,5 +1,7 @@
 ﻿import React, { Component } from 'react';
+import './Css/ReviewCard.css';
 import { Link } from 'react-router-dom';
+
 
 export class ReviewCard extends Component {
 

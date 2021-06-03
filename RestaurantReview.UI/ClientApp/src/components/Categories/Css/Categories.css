@@ -1,55 +1,9 @@
-#tagC{
+.ListOfCategories{
+    margin-top:5%;
     font-size:48px;
-    list-style-type: none;
-    text-align:right!important;
-    -webkit-text-stroke: 1.5px black;
 }
 
-#tagV{
-    font-size:48px;
-    list-style-type: none;
-    text-align:left!important;
-    -webkit-text-stroke: 1.5px black;
-}
-#Category {
-    display: grid;
-    grid-template-columns: 50% 2%;
-}
-#Category ul{
-    padding-right:15px;
-}
-.Cuisine{
-    list-style-type: none;
-    font-size:36px;
-    -webkit-text-stroke: 1.2px black;
-    text-align:right!important;
-}
-.Variants{
-    list-style-type: none;
-    
-    font-size:36px;
-    -webkit-text-stroke: 1.2px black;
-    text-align:left!important;
-}
-#cat {
-    margin:0;
-    padding-top:150px;
-    font-size:112px;
-    color:honeydew;
-    -webkit-text-stroke: 3px black;
+.ListOfCategories a {
+      text-decoration: none;  
 }
 
-.allButton{
-    width:250px;
-    height:70px;
-    background-color: rgb(28, 151, 223);
-    color:black;
-    font-size:24px;
-    -webkit-text-stroke: 0.5px black;
-    margin-bottom:200px;
-}
-.allButton a{
-    text-decoration: none;
-    color: black;
-    align-items:center;
-}

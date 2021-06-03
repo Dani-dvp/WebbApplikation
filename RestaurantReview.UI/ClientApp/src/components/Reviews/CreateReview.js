@@ -40,7 +40,7 @@ export default class CreateReview extends Component {
 
     render() {
         return (
-            <div>
+            <div className="surroundingDiv">
             <div>
                 <br />
                 <h1 className="Header">Share your own experience</h1>
@@ -59,16 +59,15 @@ export default class CreateReview extends Component {
                     id="secondForm" 
                     placeholder=" Write your review here..."></textarea>
                     <br />
-                    <RatingStars></RatingStars>
+                    <RatingStars className="stars"></RatingStars>
                     <br />
                 <button 
                 data-cy="submitReview"
-                className="submit" 
+                  className="homeButton btn btn-info btn-lg" 
                 onClick={this.AddReviewRequest}>Submit</button>
                 </form>
             </div>
 
-            
             </div>
         );
     }

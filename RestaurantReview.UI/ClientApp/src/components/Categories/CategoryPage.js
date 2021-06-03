@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { AllCategoriesCard } from './AllCategoriesCard';
 import '../RestaurantPages/Css/ShowAllRestaurants.css';
 import { AllRestaurantCard } from '../RestaurantPages/AllRestaurantCard';
 
@@ -28,7 +29,8 @@ export default class CategoryPage extends Component {
         category: response.data,
         restaurants: response.data.restaurantResponses
       });
-      console.log(response.data.restaurantResponses)
+      console.log(response.data.restaurantResponses);
+      console.log(response.data);
       
       }
 

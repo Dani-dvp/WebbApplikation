@@ -2,6 +2,7 @@
 import axios from "axios";
 import RestaurantPageCard from "./RestaurantPageCard";
 import { ReviewCard } from "../Reviews/ReviewCard";
+import { Link } from 'react-router-dom';
 import "./Css/RestaurantPage.css";
 
 export default class RestaurantPage extends Component {
@@ -33,9 +34,14 @@ export default class RestaurantPage extends Component {
     return (
       <div className="Trying">
         {thisRestaurant}
+        <br />
+        <div>
+          <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/createreview"}>Add a review here!</Link>
+        </div>
+        <br />
+        { ListOfReviews}
+        <br />
         
-        { ListOfReviews }
-          
       </div>
     );
   }

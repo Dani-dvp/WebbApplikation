@@ -4,6 +4,7 @@ import axios from 'axios';
 import {AllCategoriesCard} from './AllCategoriesCard';
 import { Link } from 'react-router-dom';
 import '../RestaurantPages/Css/ShowAllRestaurants.css';
+import "./Css/Categories.css";
 
 
 
@@ -33,7 +34,7 @@ export default class Categories extends Component {
     CreateCategoriesElements(){
         let elements = [];
         for (let category of this.state.categories) {
-          elements.push(<ul key={category.categoryName}><AllCategoriesCard className="ListOfCategories" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
+          elements.push(<ul className="ListOfCategories mx-auto" key={category.categoryName}><AllCategoriesCard className="ListOfCategories mx-auto" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
         }
         return (elements);
     
@@ -42,8 +43,11 @@ export default class Categories extends Component {
  
     render() {
         let content =  this.CreateCategoriesElements();
-        return (
-            <div> {content} </div>      
+      return (
+
+        <div
+          className="mx-auto d-block"> <br /> {content}
+        </div>      
             );
 
         
