@@ -13,5 +13,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
         public string Description { get; set; }
 
         public string MapURL { get; set; }
+
+        public string TempImage { get; set; }
     }
 }

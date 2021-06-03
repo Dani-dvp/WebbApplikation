@@ -50,7 +50,7 @@ export default class ShowAllRestaurants extends Component {
   createRestaurnatElements() {
     let elements = [];
     for (let restaurant of this.state.restaurants) {
-      elements.push(<AllRestaurantCard key={restaurant.restaurantName} title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}></AllRestaurantCard>);
+      elements.push(<AllRestaurantCard TempImage={restaurant.tempImage} key={restaurant.restaurantName} title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}></AllRestaurantCard>);
     }
     return (elements);
   }
