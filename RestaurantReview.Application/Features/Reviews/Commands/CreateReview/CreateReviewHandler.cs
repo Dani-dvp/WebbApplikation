@@ -53,6 +53,8 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
 
                 var review = new Review()
                 {
+                    Restaurant = restaurant,
+                    CreatedAt = DateTime.Now,
                     RestaurantID = restaurant.RestaurantID,
                     RestaurantName = restaurant.RestaurantName,
                     Rating = createReviewCommand.Rating,
