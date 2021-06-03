@@ -23,7 +23,7 @@ export default class ProfilePage extends Component {
       ReviewList: response.data.getUserByUsernameReviews
     })
 
-    console.log(this.state.userData.getUserImageResponse)
+    console.log(this.state.userData)
   }
 
   createReviewsList() {

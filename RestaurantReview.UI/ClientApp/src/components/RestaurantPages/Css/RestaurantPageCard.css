@@ -8,8 +8,15 @@
 
 .resCont{
     max-width:1140px;
+    color:black;
 }
 
 RestaurantPageCard container{
     max-width: 1140px;
 }
+
+.reviewCard{
+    height:150px;
+    color:black;
+}
+

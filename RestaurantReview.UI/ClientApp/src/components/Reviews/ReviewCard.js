@@ -4,11 +4,11 @@ export class ReviewCard extends Component {
 
   render() {
     return (
-      <div className="card">
-          <blockquote className="blockquote mb-0">
+      <div className="card reviewCard" >
+          <div className="lead">
             <h2> {this.props.reviewText} </h2>
-            <footer className="blockquote-footer"> {this.props.Rating} / 5</footer>
-          </blockquote>
+            <footer className="display-4"> {this.props.Rating} / 5</footer>
+          </div>
       </div>
       );
   }
