@@ -177,6 +177,9 @@ namespace RestaurantReview.Infrastructure.Migrations
                     b.Property<Guid>("RestaurantID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("RestaurantName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ReviewText")
                         .HasColumnType("nvarchar(max)");
 

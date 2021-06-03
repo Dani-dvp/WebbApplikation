@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
-using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using System;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 
 namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant
@@ -31,7 +30,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
 
             var validationResult = await validator.ValidateAsync(createRestaurantCommand);
-           
+
             var createRestaurantResponse = new CreateRestaurantResponse();
 
             if (validationResult.Errors.Count > 0)
@@ -46,8 +45,8 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
             }
 
-                if (createRestaurantResponse.Success)
-                {
+            if (createRestaurantResponse.Success)
+            {
                 var restaurant = new Restaurant()
                 {
                     RestaurantName = createRestaurantCommand.RestaurantName,
@@ -56,19 +55,19 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
                     RestaurantID = new Guid(),
                     Categories = new List<Category>(),
                     Reviews = new List<Review>()
-                    
-                    };
 
-                    restaurant = await _restaurantRepository.AddAsync(restaurant);
+                };
+
+                restaurant = await _restaurantRepository.AddAsync(restaurant);
 
 
-                    createRestaurantResponse = _mapper.Map<CreateRestaurantResponse>(restaurant);
+                createRestaurantResponse = _mapper.Map<CreateRestaurantResponse>(restaurant);
 
-                }
+            }
 
-                return createRestaurantResponse;
+            return createRestaurantResponse;
 
-            
+
 
 
         }

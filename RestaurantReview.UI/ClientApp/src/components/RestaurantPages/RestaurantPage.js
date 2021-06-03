@@ -43,7 +43,12 @@ export default class RestaurantPage extends Component {
 
 
   createThisRestaurant() {
+<<<<<<< HEAD
     let element = <RestaurantPageCard restaurantName={this.state.restaurant.restaurantName} description={this.state.restaurant.description} website={ this.state.restaurant.restaurantLink } ></RestaurantPageCard>;
+=======
+
+    let element = <RestaurantPageCard restaurantName={this.state.restaurant.restaurantName} description={this.state.restaurant.description } ></RestaurantPageCard>;
+>>>>>>> a00a67adbe9d5cee935f281c509ac850e6c7e3fc
     
     return (element);
   }

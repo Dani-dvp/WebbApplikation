@@ -1,10 +1,5 @@
 ﻿using RestaurantReview.Domain.AuthenticationModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 
 namespace RestaurantReview.Domain.Models
 {
@@ -12,7 +7,7 @@ namespace RestaurantReview.Domain.Models
     {
         public Guid ImageID { get; set; }
 
-        public string ImgName { get; set;}
+        public string ImgName { get; set; }
 
         public string ImgPath { get; set; }
 #nullable enable

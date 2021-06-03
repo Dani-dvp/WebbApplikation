@@ -4,6 +4,7 @@ using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToC
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.DeleteCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
+using RestaurantReview.Application.Features.Categories.Queries.GetCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace RestaurantReview.API.Controllers
         private readonly ICategoryListQueryService _categoryListQueryService;
         private readonly ICategoryDetailQueryService _categoryDetailQueryService;
         private readonly IAddRestaurantToCategoryService _addRestaurantToCategoryService;
+        private readonly IGetCategoryByNameService _getCategoryByNameService;
 
 
 
@@ -30,7 +32,7 @@ namespace RestaurantReview.API.Controllers
             (ICreateCategoryService createCategoryService, IDeleteCategoryService deleteCategoryService
             , IUpdateCategoryService updateCategoryService, ICategoryListQueryService categoryListQueryService
             , ICategoryDetailQueryService categoryDetailQueryService
-            , IAddRestaurantToCategoryService addRestaurantToCategoryService)
+            , IAddRestaurantToCategoryService addRestaurantToCategoryService, IGetCategoryByNameService getCategoryByNameService)
 
 
         {
@@ -40,6 +42,7 @@ namespace RestaurantReview.API.Controllers
             _categoryListQueryService = categoryListQueryService;
             _categoryDetailQueryService = categoryDetailQueryService;
             _addRestaurantToCategoryService = addRestaurantToCategoryService;
+            _getCategoryByNameService = getCategoryByNameService;
         }
 
 
@@ -85,6 +88,13 @@ namespace RestaurantReview.API.Controllers
         public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory(AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
             return await _addRestaurantToCategoryService.AddRestaurantToCategory(addRestaurantToCategoryCommand);
+        }
+
+
+        [HttpGet("name/{categoryname}")]
+        public async Task<GetCategoryByNameResponse> GetCategoryByName([FromRoute] string categoryname)
+        {
+            return await _getCategoryByNameService.GetCategoryByName(categoryname);
         }
 
 

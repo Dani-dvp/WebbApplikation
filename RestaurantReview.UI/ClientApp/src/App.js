@@ -3,18 +3,16 @@ import { Route } from 'react-router';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Login from './components/Authentication/Login';
-import Categories from './components/Categories/Categories';
 import CreateReview from './components/Reviews/CreateReview';
 import AddRestaurant from './components/RestaurantPages/AddRestaurant';
 import Register from './components/Authentication/Register';
 import ShowAllRestaurants from './components/RestaurantPages/ShowAllRestaurants';
 import RestaurantPage from './components/RestaurantPages/RestaurantPage';
-import axios from 'axios';
 import './custom.css'
 import ProfilePage from './components/Profile/ProfilePage';
-import ShowAllCategories from './components/Categories/ShowAllCategories';
-import ShowRestaurantsInCategory from './components/Categories/ShowRestaurantsInCategory';
-import FileUpload from './components/FileUpload/FileUpload';
+import Categories from './components/Categories/Categories';
+import CategoryPage from './components/Categories/CategoryPage';
+
 
 export default class App extends Component {
   static displayName = App.name;
@@ -59,22 +57,17 @@ this.state = {
             <Login {...props} handleLogin={this.handleLogin} handleFailedLogin={this.handleFailedLogin} loggedIn={this.state.loggedIn} />
           )}
           />
-        <Route
-          path='/categories'
-          render={props => (
-            <Categories {...props} loggedIn={this.state.loggedIn} />
-          )}
-           />
+           
         <Route
           path='/createreview'
           render={props => (
-            <CreateReview {...props} loggedIn={this.state.loggedIn} />
+            <CreateReview {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
           path='/addrestaurant'
           render={props => (
-            <AddRestaurant {...props} loggedIn={this.state.loggedIn} />
+            <AddRestaurant {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
@@ -102,15 +95,15 @@ this.state = {
           )}
            />
         <Route
-          path='/ShowAllCategories/'
+          path='/Categories/'
           render={props => (
-            <ShowAllCategories {...props} loggedIn={this.state.loggedIn} />
+            <Categories {...props} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
-          path='/ShowRestaurantsInCategory/'
+          path='/Categories/name/:id'
           render={props => (
-            <ShowRestaurantsInCategory {...props} loggedIn={this.state.loggedIn} />
+            <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}
         />
         {/*<Route*/}

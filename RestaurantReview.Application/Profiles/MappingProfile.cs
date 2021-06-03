@@ -6,6 +6,7 @@ using RestaurantReview.Application.Features.Authentication.Queries.GetUserByUser
 using RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory;
 using RestaurantReview.Application.Features.Categories.Commands.CreateCategory;
 using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
+using RestaurantReview.Application.Features.Categories.Queries.GetCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 
@@ -17,7 +18,6 @@ using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestauran
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
-using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
 using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
@@ -61,9 +61,7 @@ namespace RestaurantReview.Application.Profiles
 
             // from model to modelListResponse
 
-            CreateMap<Restaurant, ResturantListQueryResponse>();
             CreateMap<Category, CategoryListQueryResponse>();
-            CreateMap<Restaurant, RestaurantReviewsResponse>();
             CreateMap<Review, GetUserByUsernameReview>();
 
 
@@ -74,7 +72,10 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Restaurant, GetRestaurantByNameResponse>();
             CreateMap<Restaurant, RestaurantReviewCountResponse>();
             CreateMap<Restaurant, AddCategoryToRestaurantResponse>();
-
+            CreateMap<Category, GetCategoryByNameResponse>();
+            CreateMap<Restaurant, GetRestaurantInCategoryResponse>();
+            CreateMap<Restaurant, GetRestaurantListResponse>();
+            
 
 
             CreateMap<ApplicationUser, GetUserByEmailResponse>();
@@ -86,9 +87,11 @@ namespace RestaurantReview.Application.Profiles
             // from model to dto
             CreateMap<Restaurant, ReviewDtoResponse>();
             CreateMap<Review, ReviewDtoResponse>();
+            CreateMap<Category, CategoryDtoResponse>();
+            CreateMap<Image, ImageDtoResponse>();
 
 
-            
+
 
         }
 

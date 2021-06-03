@@ -6,8 +6,19 @@ import '../RestaurantPages/Css/StarRating.css';
 import './Css/CreateReview.css';
 
 export default class CreateReview extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: this.props.user,
+      
+    }
+  }
+
+
+
   AddReviewRequest = event => {
     event.preventDefault();
+    console.log(this.state.user.data.id)
 
     let restaurantName = document.getElementById("firstForm").value;
     let reviewText = document.getElementById("secondForm").value;
@@ -18,7 +29,7 @@ export default class CreateReview extends Component {
       data: {
         RestaurantName: restaurantName,
         ReviewText: reviewText,
-        Authorization: 'Bearer ' + localStorage.getItem('token')
+        ApplicationUserId: this.state.user.data.id,
       },
 
     }).then(res => { console.log(res) });

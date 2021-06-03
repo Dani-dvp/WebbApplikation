@@ -1,4 +1,4 @@
-﻿using RestaurantReview.Domain.Models;
+﻿using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using System.Collections.Generic;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery
@@ -15,6 +15,6 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public string StreetPhoto { get; set; }
 
-        public List<Review> Reviews { get; set; }
+        public ICollection<ReviewDtoResponse> ReviewsDtoResponse { get; set; }
     }
 }
