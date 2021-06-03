@@ -3,7 +3,6 @@ import Axios from "axios";
 import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"; 
 import "./Css/Login.css";
-import { CheckIfTokenIsValid } from './CheckIfTokenIsValid';
 
 
 export default class Login extends Component {
@@ -47,7 +46,7 @@ export default class Login extends Component {
 
   handleSuccessfulAuth(data) {
     this.props.handleLogin(data);
-    this.props.history.push("/profile");
+    this.props.history.push("/");
     localStorage.setItem('token', data.data.token)
     Axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token')
 
@@ -65,8 +64,6 @@ export default class Login extends Component {
   
 
   render() {
-    let isLoggedIn = this.props.loggedIn;
-
     return (
         <div className="wrapper">
           <div id="LoginForm">
@@ -107,7 +104,6 @@ export default class Login extends Component {
                   });
                 }}>Logout</button>
 
-              
             </form>
 
             <form />

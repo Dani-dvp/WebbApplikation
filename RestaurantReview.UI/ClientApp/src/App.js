@@ -19,7 +19,7 @@ export default class App extends Component {
   constructor() {
     super();
 this.state = {
-  loggedIn: "This is some loggedinstuff",
+  loggedIn: "",
   user: {}
     }
     this.handleLogin = this.handleLogin.bind(this);
@@ -106,11 +106,6 @@ this.state = {
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}
         />
-        {/*<Route*/}
-        {/*  render={props => (*/}
-        {/*    <FileUpload {...props} user={this.state.user} loggedIn={this.state.loggedIn} />*/}
-        {/*  )}*/}
-        {/*/>*/}
       </Layout>
     );
   }
