@@ -23,13 +23,13 @@ export default class ProfilePage extends Component {
       ReviewList: response.data.getUserByUsernameReviews
     })
 
-    console.log(this.state.userData)
+    console.log(this.state.ReviewList)
   }
 
   createReviewsList() {
     let elements = [];
     for (let review of this.state.ReviewList) {
-      elements.push(<ReviewCard key={review.reviewID} Rating={review.rating} reviewText={review.reviewText}></ReviewCard>);
+      elements.push(<ReviewCard key={review.reviewID} Rating={review.rating} restaurantName={review.restaurantName} reviewText={review.reviewText}></ReviewCard>);
     }
     return (elements);
   }

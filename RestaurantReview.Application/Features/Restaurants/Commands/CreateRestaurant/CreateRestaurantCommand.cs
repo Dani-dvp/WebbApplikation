@@ -14,5 +14,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
 
         public string MapURL { get; set; }
 
+        public string TempImage { get; set; }
+
     }
 }

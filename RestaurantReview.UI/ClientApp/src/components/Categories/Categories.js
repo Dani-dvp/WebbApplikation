@@ -33,7 +33,7 @@ export default class Categories extends Component {
     CreateCategoriesElements(){
         let elements = [];
         for (let category of this.state.categories) {
-          elements.push(<ul><AllCategoriesCard className="ListOfCategories" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
+          elements.push(<ul key={category.categoryName}><AllCategoriesCard className="ListOfCategories" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
         }
         return (elements);
     

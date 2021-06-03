@@ -68,15 +68,7 @@ export default class CreateReview extends Component {
                 </form>
             </div>
 
-            <div>
-                <p id="reviewText">Is your restaurant not here?</p>
-                <form >
-                    <button><Link 
-                    data-cy="addRestaurant"
-                    className="Active" 
-                    to="/addrestaurant">Add A Restaurant!</Link></button>
-                </form>
-            </div>
+            
             </div>
         );
     }
