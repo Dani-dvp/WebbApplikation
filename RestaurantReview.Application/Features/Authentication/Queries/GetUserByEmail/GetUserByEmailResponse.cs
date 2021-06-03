@@ -1,6 +1,4 @@
-﻿using RestaurantReview.Domain.Models;
-
-namespace RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail
+﻿namespace RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail
 {
     public class GetUserByEmailResponse
     {

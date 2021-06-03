@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery
 {
-    public interface ICategoryListQuery
+    public interface IGetRestaurantListService
     {
-        Task<List<ResturantListQueryResponse>> GetRestaurantList();
+        Task<List<GetRestaurantListResponse>> GetRestaurantList();
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Images;
-using RestaurantReview.Domain.Models;
+using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
 {
@@ -16,7 +11,7 @@ namespace RestaurantReview.API.Controllers
     public class ImageController : Controller
     {
         private readonly IImageService _imageService;
-        public ImageController(IImageService imageService )
+        public ImageController(IImageService imageService)
         {
             _imageService = imageService;
         }
@@ -28,10 +23,10 @@ namespace RestaurantReview.API.Controllers
             //Extract Image File Name.
 
 
-            return await _imageService.CreateImagePath( file, email, restaurantName);
-            
+            return await _imageService.CreateImagePath(file, email, restaurantName);
+
 
         }
 
-        }
     }
+}

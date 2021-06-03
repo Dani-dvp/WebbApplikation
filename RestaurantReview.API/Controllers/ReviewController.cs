@@ -27,7 +27,7 @@ namespace RestaurantReview.API.Controllers
         private readonly IUpdateReviewService _updateReviewService;
         private readonly IReviewListQueryService _reviewListQueryService;
 
-       
+
 
         public ReviewController(
             ICreateReviewService createReviewService,
@@ -40,7 +40,7 @@ namespace RestaurantReview.API.Controllers
             _deleteReviewService = deleteReviewService;
             _reviewListQueryService = reviewListQueryService;
             _updateReviewService = updateReviewService;
-           
+
         }
 
 
@@ -84,7 +84,7 @@ namespace RestaurantReview.API.Controllers
         }
 
 
-    
+
 
 
     }

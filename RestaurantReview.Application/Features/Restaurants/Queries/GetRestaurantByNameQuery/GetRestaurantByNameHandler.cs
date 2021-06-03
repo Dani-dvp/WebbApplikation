@@ -1,11 +1,7 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
-using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
 using RestaurantReview.Domain.IRepositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery
@@ -27,7 +23,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
         public async Task<GetRestaurantByNameResponse> GetRestaurantByName(GetRestaurantByNameCommand getRestaurantByNameCommand)
         {
             var restaurant = await _restaurantRepository.GetRestaurantByName(getRestaurantByNameCommand.RestaurantName);
-            if(restaurant == null)
+            if (restaurant == null)
             {
                 throw new Exception();
             }

@@ -1,10 +1,6 @@
-﻿using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantListQuery.RestaurantReviews;
-using RestaurantReview.Domain.Models;
+﻿using RestaurantReview.Domain.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery
 {
@@ -24,7 +20,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Queries.GetRestauran
 
         public ICollection<ReviewDtoResponse> ReviewsDtoResponse { get; set; }
 
-        public ICollection <Category> Categories { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
 
     }

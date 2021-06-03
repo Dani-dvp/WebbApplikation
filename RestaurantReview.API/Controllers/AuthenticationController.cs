@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
-using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByUsername;
 using System.Threading.Tasks;
@@ -42,7 +40,7 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpGet("user/email/{email}")]
-        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromRoute]string email)
+        public async Task<ActionResult<GetUserByEmailResponse>> GetUserByEmailAsync([FromRoute] string email)
         {
             return Ok(await _getUserByEmailService.GetUserByEmail(email));
         }

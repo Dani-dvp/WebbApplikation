@@ -1,19 +1,14 @@
 ﻿using FluentValidation;
 using ResturantReview.Application.Features.Reviews.Commands.CreateReview;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Reviews.Commands.CreateReview
 {
-   public class CreateReviewCommandValidator : AbstractValidator<CreateReviewCommand>
+    public class CreateReviewCommandValidator : AbstractValidator<CreateReviewCommand>
     {
         public CreateReviewCommandValidator()
         {
-            
-            
+
+
             RuleFor(p => p.ReviewText)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()

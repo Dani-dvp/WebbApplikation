@@ -8,7 +8,6 @@ using RestaurantReview.Domain.Models;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using System.Web;
 
 
 
@@ -30,7 +29,7 @@ namespace RestaurantReview.Application.Features.Images
             _userManager = userManager;
             _restaurantRepository = restaurantRepository;
         }
-        public async Task<ImageResponse> CreateImagePath( IFormFile file, string email, string restaurantName)
+        public async Task<ImageResponse> CreateImagePath(IFormFile file, string email, string restaurantName)
         {
             ApplicationUser user = null;
             Restaurant restaurant = null;
@@ -50,20 +49,20 @@ namespace RestaurantReview.Application.Features.Images
 
             }
 
-            
+
 
             //Save the Image File in Folder.
-            if(email != null)
+            if (email != null)
             {
-                 user = await _userManager.FindByEmailAsync(email);
+                user = await _userManager.FindByEmailAsync(email);
             }
-                
-            if(restaurantName != null)
+
+            if (restaurantName != null)
             {
                 restaurant = await _restaurantRepository.GetRestaurantByName(restaurantName);
             }
-                
-            
+
+
 
 
             var image = new Image()
@@ -74,22 +73,22 @@ namespace RestaurantReview.Application.Features.Images
                 Restaurant = restaurant,
                 ApplicationUser = user
             };
-            if(user != null)
+            if (user != null)
             {
                 image.UserId = user.Id;
             }
-            if(restaurant != null)
+            if (restaurant != null)
             {
                 image.RestaurantID = restaurant.RestaurantID;
             }
-           
+
             image = _imageRepository.Add(image);
-            
-         var imageResponse = _mapper.Map<ImageResponse>(image);
 
-           
+            var imageResponse = _mapper.Map<ImageResponse>(image);
 
-           //  var imageResponse = _mapper.Map<ImageResponse>(image);
+
+
+            //  var imageResponse = _mapper.Map<ImageResponse>(image);
 
             return imageResponse;
 

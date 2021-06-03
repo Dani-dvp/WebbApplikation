@@ -1,9 +1,5 @@
 ﻿using FluentValidation;
 using RestaurantReview.Domain.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,11 +7,11 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
 {
     public class UpdateRestaurantValidator : AbstractValidator<UpdateRestaurantCommand>
     {
-       
-                private readonly IRestaurantRepository _restaurantRepository;
+
+        private readonly IRestaurantRepository _restaurantRepository;
 
         public UpdateRestaurantValidator(IRestaurantRepository restaurantRepository)
-         {
+        {
             _restaurantRepository = restaurantRepository;
 
             RuleFor(p => p.RestaurantName)

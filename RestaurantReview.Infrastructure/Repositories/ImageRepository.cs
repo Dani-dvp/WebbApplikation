@@ -1,12 +1,8 @@
-﻿
-using AutoMapper;
+﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
-using System.Threading.Tasks;
-using System.Linq;
 using System;
-using Microsoft.EntityFrameworkCore;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace RestaurantReview.Infrastructure.Repositories
 {
@@ -20,8 +16,8 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public Image Add(Image image)
         {
-             _myDbContext.Images.Add(image);
-             _myDbContext.SaveChangesAsync();
+            _myDbContext.Images.Add(image);
+            _myDbContext.SaveChangesAsync();
 
             return image;
         }

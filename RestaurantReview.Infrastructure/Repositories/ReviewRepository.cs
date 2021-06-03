@@ -17,7 +17,7 @@ namespace RestaurantReview.Infrastructure.Repositories
             _myDbContext = myDbContext;
         }
 
-        public Task<double> RestaurantAvgRating(Guid  id)
+        public Task<double> RestaurantAvgRating(Guid id)
         {
             var avgReview = _myDbContext.Reviews.Where(review => review.RestaurantID == id).AverageAsync(review => review.Rating); //AverageAsync(review => review.Rating)
 
@@ -28,7 +28,7 @@ namespace RestaurantReview.Infrastructure.Repositories
 
         public async Task<List<Review>> GetReviewsByRestaurantId(Guid id)
         {
-         return await   _myDbContext.Reviews.Include(review => review.Restaurant).ThenInclude(restaurant => restaurant.Categories).Where(review => review.RestaurantID == id).ToListAsync();
+            return await _myDbContext.Reviews.Include(review => review.Restaurant).ThenInclude(restaurant => restaurant.Categories).Where(review => review.RestaurantID == id).ToListAsync();
         }
 
         public async Task<List<Review>> GetReviewsByUserId(string UserId)

@@ -33,7 +33,7 @@ namespace RestaurantReview.Application.Features.Authentication.Commands.Register
                 LastName = request.LastName,
                 UserName = request.UserName,
                 EmailConfirmed = true,
-                
+
             };
 
             var existingEmail = await _userManager.FindByEmailAsync(request.Email);
