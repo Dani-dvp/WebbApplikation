@@ -20,10 +20,10 @@ namespace RestaurantReview.API.Controllers
         [HttpPost]
         public async Task<ImageResponse> Index(IFormFile file, string email, string restaurantName)
         {
-            //Extract Image File Name.
-
+            
 
             return await _imageService.CreateImagePath(file, email, restaurantName);
+
 
 
         }

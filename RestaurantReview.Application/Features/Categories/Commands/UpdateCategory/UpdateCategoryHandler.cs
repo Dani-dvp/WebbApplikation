@@ -27,6 +27,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
             var validationResult = await validator.ValidateAsync(updateCategoryCommand);
 
 
+
             if (validationResult.Errors.Count > 0)
             {
                 categoryResponse.Success = false;

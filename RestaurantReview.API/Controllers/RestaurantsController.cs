@@ -55,7 +55,16 @@ namespace RestaurantReview.API.Controllers
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)
         {
 
-            return Ok(await _createRestaurantService.CreateRestaurant(createRestaurantCommand));
+           var response = await _createRestaurantService.CreateRestaurant(createRestaurantCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
@@ -68,10 +77,18 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
+        public async Task<ActionResult<UpdateRestaurantRespone>> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
             // funkar men om jag vill uppdatera resturang namn ska vi kunna göra det? tänk om man skriver fel resturang namn ska man behöva deleta den?
-            return await _updateResturantService.UpdateRestaurant(updateRestaurantCommand);
+            var response = await _updateResturantService.UpdateRestaurant(updateRestaurantCommand);
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
@@ -116,9 +133,18 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPost("addCategory")]
-        public async Task<AddCategoryToRestaurantResponse> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand )
+        public async Task<ActionResult<AddCategoryToRestaurantResponse>> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand )
         {
-            return await _addCategoryToRestaurantService.AddCategoryToRestaurant(addCategoryToRestaurantCommand);
+            var response = await _addCategoryToRestaurantService.AddCategoryToRestaurant(addCategoryToRestaurantCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 

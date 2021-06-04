@@ -28,7 +28,8 @@ export default class CarouselClass extends Component {
       <Carousel className="carouselHome d-inline-block d-block">
         <Carousel.Item>
           <a href={"/RestaurantPage/" + this.state.restaurants[0].restaurantName}>
-        <img 
+            <img 
+              
           data-cy="carouselHomeImage1"
           className="d-block "
           src={this.state.restaurants[0].tempImage}
@@ -41,7 +42,8 @@ export default class CarouselClass extends Component {
       </Carousel.Item>
         <Carousel.Item>
           <a href={"/RestaurantPage/" + this.state.restaurants[1].restaurantName}>
-        <img
+            <img
+              
           data-cy="carouselHomeImage2"
           className="d-block  "
             src={this.state.restaurants[1].tempImage}
@@ -54,7 +56,8 @@ export default class CarouselClass extends Component {
       </Carousel.Item>
         <Carousel.Item>
           <a href={"/RestaurantPage/" + this.state.restaurants[2].restaurantName}>
-        <img 
+            <img
+              
           data-cy="carouselHomeImage3"
           className="d-block "
             src={this.state.restaurants[2].tempImage}

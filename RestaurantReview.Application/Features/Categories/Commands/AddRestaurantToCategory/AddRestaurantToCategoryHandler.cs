@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.Application.Features.Categories.Commands.AddRestaurantToCategory
@@ -19,13 +20,34 @@ namespace RestaurantReview.Application.Features.Categories.Commands.AddRestauran
 
         public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory(AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
-            var category = await _categoryRepository.GetCategoryByName(addRestaurantToCategoryCommand.CategoryName);
+            var addRestaurantToCategoryResponse = new AddRestaurantToCategoryResponse();
+            var validator = new AddRestaurantToCategoryValidator();
+            var validationResult = await validator.ValidateAsync(addRestaurantToCategoryCommand);
 
-            category.Restaurants.Add(await _restaurantRepository.GetRestaurantByName(addRestaurantToCategoryCommand.RestaurantName));
 
-            await _categoryRepository.UpdateAsync(category);
+            if (validationResult.Errors.Count > 0)
+            {
+                addRestaurantToCategoryResponse.Success = false;
+                addRestaurantToCategoryResponse.ValidationErrors = new List<string>();
+                foreach (var error in validationResult.Errors)
+                {
+                    addRestaurantToCategoryResponse.ValidationErrors.Add(error.ErrorMessage);
+                }
+            }
 
-            return _mapper.Map<AddRestaurantToCategoryResponse>(category);
+            if (addRestaurantToCategoryResponse.Success)
+            {
+                var category = await _categoryRepository.GetCategoryByName(addRestaurantToCategoryCommand.CategoryName);
+
+                category.Restaurants.Add(await _restaurantRepository.GetRestaurantByName(addRestaurantToCategoryCommand.RestaurantName));
+
+                await _categoryRepository.UpdateAsync(category);
+                addRestaurantToCategoryResponse = _mapper.Map<AddRestaurantToCategoryResponse>(category);
+
+            }
+
+
+            return addRestaurantToCategoryResponse;
 
         }
 

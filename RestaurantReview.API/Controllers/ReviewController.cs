@@ -48,7 +48,17 @@ namespace RestaurantReview.API.Controllers
         [HttpPost]
         public async Task<ActionResult<CreateReviewResponse>> CreateReview([FromBody] CreateReviewCommand createReviewCommand)
         {
-            return Ok(await _createReviewService.CreateReview(createReviewCommand));
+
+            var response = await _createReviewService.CreateReview(createReviewCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
@@ -67,6 +77,7 @@ namespace RestaurantReview.API.Controllers
 
         {
             return Ok(await _reviewListQueryService.GetReviewList());
+
         }
 
 
@@ -75,7 +86,16 @@ namespace RestaurantReview.API.Controllers
         public async Task<ActionResult<UpdateReviewResponse>> UpdateReview([FromBody] UpdateReviewCommand updateReviewCommand)
 
         {
-            return Ok(await _updateReviewService.UpdateReview(updateReviewCommand));
+            var response = await _updateReviewService.UpdateReview(updateReviewCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
