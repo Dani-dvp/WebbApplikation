@@ -11,7 +11,9 @@ export default class NavMenu extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      user: this.props.user,
+
     };
   }
 
@@ -22,6 +24,7 @@ export default class NavMenu extends Component {
   }
 
   render() {
+    console.log(this.state.user)
     return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 fixed-top bg-white" light>
@@ -32,10 +35,10 @@ export default class NavMenu extends Component {
               <ul className="navbar-nav flex-grow navbar-right">
                 <NavItem>
                   <NavLink 
-                  data-cy="navbarCategories"
-                  tag={Link} 
-                  className="text-dark" 
-                  to="/profile">Profile</NavLink>
+                    data-cy="navbarCategories"
+                    tag={Link}
+                    className="text-dark"
+                    to={"/profile/" + this.state.user}>Profile</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink 

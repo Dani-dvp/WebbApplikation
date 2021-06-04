@@ -11,6 +11,7 @@ using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQu
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
 
 using RestaurantReview.Application.Features.Images;
+using RestaurantReview.Application.Features.Images.NewFolder;
 using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
@@ -91,6 +92,7 @@ namespace RestaurantReview.Application.Profiles
             CreateMap<Review, ReviewDtoResponse>();
             CreateMap<Category, CategoryDtoResponse>();
             CreateMap<Image, ImageDtoResponse>();
+            CreateMap<Image, GetImageResponse>();
 
 
 

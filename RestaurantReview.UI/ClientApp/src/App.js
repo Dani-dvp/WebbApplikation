@@ -12,6 +12,7 @@ import './custom.css'
 import ProfilePage from './components/Profile/ProfilePage';
 import Categories from './components/Categories/Categories';
 import CategoryPage from './components/Categories/CategoryPage';
+import NavMenu from './components/NavMenu';
 
 
 export default class App extends Component {
@@ -19,8 +20,8 @@ export default class App extends Component {
   constructor() {
     super();
 this.state = {
-  loggedIn: "",
-  user: {}
+  loggedIn: null,
+  user: null
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleFailedLogin = this.handleFailedLogin.bind(this);
@@ -89,7 +90,7 @@ this.state = {
           )}
            />
         <Route
-          path='/Profile'
+          path='/Profile/:id'
           render={props => (
             <ProfilePage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
@@ -104,6 +105,12 @@ this.state = {
           path='/Categorypage/name/:id'
           render={props => (
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
+          )}
+        />
+        <Route
+          path='/navbar/'
+          render={props => (
+            <NavMenu {...props} user={ this.state.user } loggedIn={this.state.loggedIn} />
           )}
         />
       </Layout>

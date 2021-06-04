@@ -64,52 +64,66 @@ export default class Login extends Component {
   
 
   render() {
+    const isLoggedIn = this.state.loggedIn;
+    let button;
+    if (isLoggedIn) {
+      button = <button onClick={this.handleFailedAuth} >Logout</button>;
+    } else {
+      button = <button onClick={this.sendLoginRequest} >Login</button>;
+    }
+     
+    
     return (
-        <div className="wrapper">
-          <div id="LoginForm">
-            <h2 className="active"> Login </h2>
-            <Link
-              data-cy="register"
-              to="/register"
-              className="inactive underlineHover"><h2>Register</h2></Link>
+      <div className="wrapper">
+        <div id="LoginForm">
+          <h2 className="active"> Login </h2>
+          <Link
+            data-cy="register"
+            to="/register"
+            className="inactive underlineHover"><h2>Register</h2></Link>
 
-            <form>
-              <input
-                data-cy="loginEmail"
-                type="text"
-                id="email"
-                name="login"
-                placeholder="Email" />
-              <input
-                data-cy="loginPassword"
-                type="text"
-                id="password"
-                name="password"
-                placeholder="Password"
-              />
-              <button
-                type="button"
-                data-cy="submitLogin"
-                className="btn btn-primary"
-                onClick={this.sendLoginRequest}>Log in</button>
-              <br />
+          <form>
+            <input
+              data-cy="loginEmail"
+              type="text"
+              id="email"
+              name="login"
+              placeholder="Email" />
 
-              <button
-                type="button"
-                data-cy="checkOnLoginPage"
-                className="btn btn-primary"
-                onClick={() => {
-                  this.setState({
-                    loggedIn: this.handleFailedAuth()
-                  });
-                }}>Logout</button>
+            <input
+              data-cy="loginPassword"
+              type="text"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
 
-            </form>
+            <button
+              type="button"
+              data-cy="submitLogin"
+              className="btn btn-primary"
+              onClick={this.sendLoginRequest}>Log in</button>
+            <br />
 
-            
 
-          </div>
+
+
+            <button
+              type="button"
+              data-cy="checkOnLoginPage"
+              className="btn btn-primary"
+              onClick={() => {
+                this.setState({
+                  loggedIn: this.handleFailedAuth()
+                });
+              }}>Logout</button>
+
+          </form>
+
+
+
         </div>
+      </div>
 
     );
   }

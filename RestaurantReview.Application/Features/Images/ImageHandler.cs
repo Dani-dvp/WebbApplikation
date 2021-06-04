@@ -67,12 +67,15 @@ namespace RestaurantReview.Application.Features.Images
 
             var image = new Image()
             {
+                UserId = user.Id,
                 ImgName = fileName,
                 ImgPath = filePath,
                 ImageID = new Guid(),
                 Restaurant = restaurant,
                 ApplicationUser = user
+                
             };
+
             if (user != null)
             {
                 image.UserId = user.Id;
