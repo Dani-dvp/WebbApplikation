@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
 
@@ -30,11 +31,12 @@ namespace RestaurantReview.API.Controllers
         private readonly IGetRestaurantListService _getRestaurantListService;
         private readonly IGetThreeRandomRestaurantsService _getThreeRandomRestaurantsService;
         private readonly IGetRestaurantByNameService _getRestaurantByNameService;
+        private readonly IAddCategoryToRestaurantService _addCategoryToRestaurantService;
 
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
             , IUpdateRestaurantService updateResturantService, IRestaurantDetailService restaurantDetailService, IRestaurantReviewCountService restaurantReviewCountService
-            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService, IGetThreeRandomRestaurantsService getThreeRandomRestaurantsService)
+            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService, IGetThreeRandomRestaurantsService getThreeRandomRestaurantsService, IAddCategoryToRestaurantService addCategoryToRestaurantService)
         {
             _createRestaurantService = createRestaurantService;
             _deleteResturantService = deleteResturantService;
@@ -45,6 +47,7 @@ namespace RestaurantReview.API.Controllers
             _getRestaurantByNameService = getRestaurantByNameService;
             _getRestaurantListService = getRestaurantListService;
             _getThreeRandomRestaurantsService = getThreeRandomRestaurantsService;
+            _addCategoryToRestaurantService = addCategoryToRestaurantService;
         }
 
         [Authorize]
@@ -111,7 +114,12 @@ namespace RestaurantReview.API.Controllers
             return await _getThreeRandomRestaurantsService.GetThreeRandomResturants();
         }
 
-
+        [Authorize]
+        [HttpPost("addCategory")]
+        public async Task<AddCategoryToRestaurantResponse> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand )
+        {
+            return await _addCategoryToRestaurantService.AddCategoryToRestaurant(addCategoryToRestaurantCommand);
+        }
 
 
     }

@@ -9,10 +9,13 @@ export default class AddRestaurant extends Component {
     this.state = {
       categories: [],
       loading: true,
-      selectedCategory: ""
+      selectedCategory: "Category",
+      chosenCategory: "Category",
     };
+    this.addRestaurantRequest = this.addRestaurantRequest.bind(this);
     this.CreateDropdownMenu = this.CreateDropdownMenu.bind(this);
-    this.onChange = this.onChange.bind(this);
+    this.setCategoryChange = this.setCategoryChange.bind(this);
+    
   }
 
   componentDidMount() {
@@ -33,11 +36,13 @@ export default class AddRestaurant extends Component {
     }
     return (elements);
   }
-  onChange(selectedCategory) {
-    console.log(selectedCategory)
-    this.setState({ selectedCategory: selectedCategory });
+  setCategoryChange(event) {
+    let category = event.target.value;
+    this.setState({
+      selectedCategory: category
+    });
+    
   }
-
   render() {
 
     let DropdownOptions = this.state.loading ? <p>Loading...</p> : this.CreateDropdownMenu()
@@ -50,66 +55,98 @@ export default class AddRestaurant extends Component {
             <div>
                 <form id="addForm">
                     <input 
-                    data-cy="restaurantName"
+                    data-cy="addRestaurantName"
                   id="restaurantName" 
                     type="text"
                     placeholder=" Restaurant name:" />
                 <br />
                 <input
-                  data-cy="imageUrl"
+                  data-cy="addImageUrl"
                   id="imageUrl"
                   type="text"
                   placeholder="ImageUrl:" />
                 <br />
                 <input
-                  data-cy="restaurantlink"
+                  data-cy="addRestaurantlink"
                   id="restaurantlink"
                   type="text"
                   name="restaurant"
                   placeholder=":Restaurant Websitelink" />
                 <br />
                    <div>
-                  <select 
-                    id="firstAdd" 
+                  <select
+                    ref="selectOption"
+                    onChange={(e) => this.setCategoryChange(e)}
+                    data-cy="addCategory"
+                    id="category" 
                     type="text" 
-                    name="Category"
-                    value={this.state.selectedCategory}
-                    onChange={this.onChange}
-                  >
-                    
+                    name="Category">
                         <option value="option">Category</option>
                          {DropdownOptions}
                   </select>
+                  <textarea
+                    data-cy="addDescription"
+                    id="restaurantDescription"
+                    placeholder=" Write the restaurant description here..."></textarea>
                   </div>
-                    
-                    
-                <button 
-                  data-cy="submitRestaurant"
-                  className="submit"
-                  onClick={console.log(this.state.selectedCategory)}>Submit</button>
+                <button
+                  type="button"
+                  data-cy="submitAddRestaurant"
+                  className="btn btn-primary"
+                  onClick={ () => this.addRestaurantRequest() }>Add Restaurant</button>
                 </form>
             </div>
             </div>
         )
   }
 
-  addRestaurantRequest = event => {
-
-    event.preventDefault();
+   addRestaurantRequest() {
 
     let restaurantName = document.getElementById("restaurantName").value;
     let imageUrl = document.getElementById("imageUrl").value;
     let restaurantlink = document.getElementById("restaurantlink").value;
+    let description = document.getElementById("restaurantDescription").value;
+
+     
+
     Axios({
       method: 'post',
       url: "/api/Restaurants",
       data: {
         RestaurantLink: restaurantlink,
         TempImage: imageUrl,
-        RestaurantName:"" ,
-        Description:"" ,
-        RestaurantName: restaurantName
+        RestaurantName: restaurantName ,
+        Description: description ,
+        RestaurantName: restaurantName,
+        
       },
-    }).then(res => { console.log(res) })
+    }).then(res => {
+      if (res.status === 200) {
+        Axios({
+          method: 'post',
+          url: "/api/Restaurants/addCategory",
+          data: {
+            CategoryName: this.state.selectedCategory,
+            RestaurantName: restaurantName,
+
+          },
+
+        });
+        Axios({
+          method: 'post',
+          url: "/api/categories/addRestaurant",
+          data: {
+            CategoryName: this.state.selectedCategory,
+            RestaurantName: restaurantName,
+
+          },
+
+        })
+
+      }
+   
+    })
+      
+        
   }
 }

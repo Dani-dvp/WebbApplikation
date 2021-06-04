@@ -20,7 +20,6 @@ export default class CarouselClass extends Component {
       restaurants: response.data,
       loading: false
     });
-    console.log(this.state.restaurants[0].tempImage);
 
   }
 

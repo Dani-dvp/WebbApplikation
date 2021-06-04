@@ -84,8 +84,8 @@ namespace RestaurantReview.API.Controllers
         }
 
         [Authorize]
-        [HttpPut("restaurant")]
-        public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory(AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
+        [HttpPost("addRestaurant")]
+        public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory([FromBody]AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
             return await _addRestaurantToCategoryService.AddRestaurantToCategory(addRestaurantToCategoryCommand);
         }
