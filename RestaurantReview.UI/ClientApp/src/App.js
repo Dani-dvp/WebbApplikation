@@ -59,7 +59,7 @@ this.state = {
           />
            
         <Route
-          path='/createreview'
+          path='/createreview/:id'
           render={props => (
             <CreateReview {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}

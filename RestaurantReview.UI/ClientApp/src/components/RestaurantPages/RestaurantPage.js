@@ -23,7 +23,7 @@ export default class RestaurantPage extends Component {
         restaurant: response.data,
         reviews: response.data.reviewsDtoResponse
       });
-      console.log(response.data);
+      console.log(this.state.restaurant.restaurantName);
     }
   
 
@@ -36,7 +36,7 @@ export default class RestaurantPage extends Component {
         {thisRestaurant}
         <br />
         <div>
-          <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/createreview"}>Add a review here!</Link>
+          <Link tag={Link} className="homeButton btn btn-info btn-lg" to={"/createreview/" + this.state.restaurant.restaurantName}>Add a review here!</Link>
         </div>
         <br />
         { ListOfReviews}
