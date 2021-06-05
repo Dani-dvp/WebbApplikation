@@ -13,6 +13,7 @@ import ProfilePage from './components/Profile/ProfilePage';
 import Categories from './components/Categories/Categories';
 import CategoryPage from './components/Categories/CategoryPage';
 import NavMenu from './components/NavMenu';
+import AddCategory from './components/Categories/AddCategory';
 
 
 export default class App extends Component {
@@ -106,6 +107,12 @@ this.state = {
           render={props => (
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}
+          />
+        <Route
+          path='/AddCategory'
+          render={props => (
+          <AddCategory {...props} loggedIn={this.state.loggedIn} />
+        )}
         />
         
       </Layout>

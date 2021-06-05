@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import Star from './Star';
 import RatingStars from './RatingStars';
 import axios from 'axios';
 import '../RestaurantPages/Css/StarRating.css';
@@ -54,7 +55,7 @@ export default class CreateReview extends Component {
                     id="secondForm" 
                     placeholder=" Write your review here..."></textarea>
                     <br />
-                    <RatingStars className="stars"></RatingStars>
+                <RatingStars className="stars" onClick={() => this.setState({ rating: this.state.rating + 1 })}></RatingStars>
                     <br />
                 <button 
                 data-cy="submitReview"

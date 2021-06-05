@@ -14,7 +14,7 @@ export default class Home extends Component {
   render () {
     return (
       <div className="mx-auto d-block mb-4">
-        <CarouselClass></CarouselClass>
+        <CarouselClass type="button"></CarouselClass>
         <br />
         <div className="mx-auto">
           <Link data-cy = "homeRestaurantsBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/restaurants"}>All Restaurants</Link>
