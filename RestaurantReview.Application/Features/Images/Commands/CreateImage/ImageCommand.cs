@@ -1,4 +1,4 @@
-﻿namespace RestaurantReview.Application.Features.Images
+﻿namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
 {
     public class ImageCommand
     {

@@ -46,7 +46,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
                     RestaurantName = updateRestaurantCommand.RestaurantName,
                     MapURL = updateRestaurantCommand.MapURL,
                     Description = updateRestaurantCommand.Description,
-                    
+
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);
 

@@ -1,6 +1,8 @@
-﻿namespace RestaurantReview.Application.Features.Categories.Commands.DeleteCategory
+﻿using RestaurantReview.Application.ValidationResponse;
+
+namespace RestaurantReview.Application.Features.Categories.Commands.DeleteCategory
 {
-    public class DeleteCategoryResponse
+    public class DeleteCategoryResponse : BaseResponse
     {
         public string RestaurantCategory { get; set; }
     }

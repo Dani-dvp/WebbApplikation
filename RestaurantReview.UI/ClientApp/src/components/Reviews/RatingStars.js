@@ -4,7 +4,7 @@ import '../RestaurantPages/Css/StarRating.css';
 
 const RatingStars = () => {
     const [gradeIndex, setGradeIndex] = useState();
-    const GRADES = ['1/5', '2/5', '3/5', '4/5', '5/5'];
+    const GRADES = [1, 2, 3, 4, 5];
     const activeStar = {
         fill: 'yellow'
     };

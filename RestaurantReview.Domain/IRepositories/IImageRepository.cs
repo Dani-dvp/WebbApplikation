@@ -11,5 +11,7 @@ namespace RestaurantReview.Domain.IRepositories
         Task<Image> GetImageByUserId(string userId);
 
         Task<Image> GetImageByRestaurantId(Guid userId);
+
+        Task<Image> GetImageByEmail(string userEmail);
     }
 }

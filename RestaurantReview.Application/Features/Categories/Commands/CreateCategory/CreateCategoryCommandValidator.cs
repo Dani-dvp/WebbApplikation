@@ -13,7 +13,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
         {
             _categoryRepository = categoryRepository;
 
-            RuleFor(p => p.RestaurantCategory)
+            RuleFor(p => p.CategoryName)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.")
@@ -28,7 +28,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
         }
         private async Task<bool> IsCategoryUnique(CreateCategoryCommand e, CancellationToken token)
         {
-            return !(await _categoryRepository.IsCategoryUnique(e.RestaurantCategory));
+            return !(await _categoryRepository.IsCategoryUnique(e.CategoryName));
         }
     }
 }

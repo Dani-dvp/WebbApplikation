@@ -87,9 +87,7 @@ export default class Register extends Component {
 
 
 
-            <div>
-              <p>By clicking on register you agree on our <a href="#">terms and conditions</a>.</p>
-            </div>
+            
             <button 
             data-cy="submitRegistration"
             className="btn btn-primary" 

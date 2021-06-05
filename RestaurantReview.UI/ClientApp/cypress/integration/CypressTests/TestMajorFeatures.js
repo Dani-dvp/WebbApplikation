@@ -134,7 +134,7 @@ describe('Test all major features', () => {
 
 
           
-        it.only('carouselHomeImage  ', () => {
+        it('carouselHomeImage  ', () => {
             cy.visit('/')
             cy.get('[data-cy =carouselHomeImage1').should('have.class', 'd-block')
             cy.get('[data-cy =carouselHomeImage2').should('have.class', 'd-block') 

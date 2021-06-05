@@ -47,6 +47,7 @@ export default class Categories extends Component {
 
         <div
           className="mx-auto d-block"> <br /> {content}
+          <Link className="homeButton mx-auto d-block btn btn-info btn-lg" to="/AddCategory">Add a Category</Link>
         </div>      
             );
 

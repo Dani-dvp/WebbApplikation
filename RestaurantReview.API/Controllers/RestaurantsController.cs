@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
 using RestaurantReview.Application.Features.Restaurants.Commands.DeleteRestaurant;
 
@@ -7,6 +8,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestauran
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetThreeRandomRestaurants;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
@@ -27,13 +29,14 @@ namespace RestaurantReview.API.Controllers
         private readonly IRestaurantReviewCountService _restaurantReviewCountService;
         private readonly IRestaurantAvgRatingService _restaurantAvgRatingService;
         private readonly IGetRestaurantListService _getRestaurantListService;
-
+        private readonly IGetThreeRandomRestaurantsService _getThreeRandomRestaurantsService;
         private readonly IGetRestaurantByNameService _getRestaurantByNameService;
+        private readonly IAddCategoryToRestaurantService _addCategoryToRestaurantService;
 
         public RestaurantsController
             (ICreateRestaurantService createRestaurantService, IDeleteRestaurantService deleteResturantService
             , IUpdateRestaurantService updateResturantService, IRestaurantDetailService restaurantDetailService, IRestaurantReviewCountService restaurantReviewCountService
-            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService)
+            , IRestaurantAvgRatingService restaurantAvgRatingService, IGetRestaurantByNameService getRestaurantByNameService, IGetRestaurantListService getRestaurantListService, IGetThreeRandomRestaurantsService getThreeRandomRestaurantsService, IAddCategoryToRestaurantService addCategoryToRestaurantService)
         {
             _createRestaurantService = createRestaurantService;
             _deleteResturantService = deleteResturantService;
@@ -43,6 +46,8 @@ namespace RestaurantReview.API.Controllers
             _restaurantAvgRatingService = restaurantAvgRatingService;
             _getRestaurantByNameService = getRestaurantByNameService;
             _getRestaurantListService = getRestaurantListService;
+            _getThreeRandomRestaurantsService = getThreeRandomRestaurantsService;
+            _addCategoryToRestaurantService = addCategoryToRestaurantService;
         }
 
         [Authorize]
@@ -50,7 +55,16 @@ namespace RestaurantReview.API.Controllers
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)
         {
 
-            return Ok(await _createRestaurantService.CreateRestaurant(createRestaurantCommand));
+            var response = await _createRestaurantService.CreateRestaurant(createRestaurantCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
@@ -63,10 +77,18 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<UpdateRestaurantRespone> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
+        public async Task<ActionResult<UpdateRestaurantRespone>> UpdateRestaurant(UpdateRestaurantCommand updateRestaurantCommand)
         {
             // funkar men om jag vill uppdatera resturang namn ska vi kunna göra det? tänk om man skriver fel resturang namn ska man behöva deleta den?
-            return await _updateResturantService.UpdateRestaurant(updateRestaurantCommand);
+            var response = await _updateResturantService.UpdateRestaurant(updateRestaurantCommand);
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
         }
 
 
@@ -103,8 +125,27 @@ namespace RestaurantReview.API.Controllers
             return await _restaurantAvgRatingService.RestaurantAvgRating(restaurantAvgRatingCommand);
         }
 
+        [HttpGet("Random")]
+        public async Task<List<GetThreeRandomRestaurantsResponse>> GetThreeRandomRestaurants()
+        {
+            return await _getThreeRandomRestaurantsService.GetThreeRandomResturants();
+        }
 
+        [Authorize]
+        [HttpPost("addCategory")]
+        public async Task<ActionResult<AddCategoryToRestaurantResponse>> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand)
+        {
+            var response = await _addCategoryToRestaurantService.AddCategoryToRestaurant(addCategoryToRestaurantCommand);
 
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
+        }
 
 
     }

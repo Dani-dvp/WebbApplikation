@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import Star from './Star';
 import RatingStars from './RatingStars';
 import axios from 'axios';
 import '../RestaurantPages/Css/StarRating.css';
@@ -10,6 +11,7 @@ export default class CreateReview extends Component {
     super(props)
     this.state = {
       user: this.props.user,
+      rating: 0,
       
     }
   }
@@ -18,17 +20,16 @@ export default class CreateReview extends Component {
 
   AddReviewRequest = event => {
     event.preventDefault();
-    console.log(this.state.user.data.id)
-
-    let restaurantName = document.getElementById("firstForm").value;
+    
     let reviewText = document.getElementById("secondForm").value;
 
     axios({
-      method: 'POST',
+      method: 'post',
       url: "/api/review",
       data: {
-        RestaurantName: restaurantName,
+        restaurantName: this.props.match.params.id,
         ReviewText: reviewText,
+        Rating: this.state.rating,
         ApplicationUserId: this.state.user.data.id,
       },
 
@@ -47,19 +48,14 @@ export default class CreateReview extends Component {
             </div>
             <div>
                 <form id="reviewForm">
-                    <input 
-                    data-cy="reviewRestaurantName"
-                    id="firstForm"
-                    type="text" 
-                    name="restaurant" 
-                    placeholder=" Restaurant name:" />
+                <h3>{this.props.match.params.id}</h3>
                     <br />
                     <textarea 
                     data-cy="reviewText"
                     id="secondForm" 
                     placeholder=" Write your review here..."></textarea>
                     <br />
-                    <RatingStars className="stars"></RatingStars>
+                <RatingStars className="stars" onClick={() => this.setState({ rating: this.state.rating + 1 })}></RatingStars>
                     <br />
                 <button 
                 data-cy="submitReview"

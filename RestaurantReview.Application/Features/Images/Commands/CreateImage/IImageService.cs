@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace RestaurantReview.Application.Features.Images
+namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
 {
     public interface IImageService
     {

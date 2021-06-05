@@ -14,8 +14,8 @@ using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
-
-using RestaurantReview.Application.Features.Images;
+using RestaurantReview.Application.Features.Images.Commands.CreateImage;
+using RestaurantReview.Application.Features.Images.Queries.GetImage;
 using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;
@@ -24,6 +24,7 @@ using RestaurantReview.Application.Features.Restaurants.Commands.UpdateRestauran
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantByNameQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantListQuery;
 using RestaurantReview.Application.Features.Restaurants.Queries.GetRestaurantQuery;
+using RestaurantReview.Application.Features.Restaurants.Queries.GetThreeRandomRestaurants;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestauranAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantAvgRating;
 using RestaurantReview.Application.Features.Restaurants.Queries.RestaurantReviewCountQuery;
@@ -77,6 +78,7 @@ namespace RestaurantReview.Application
             services.AddScoped<IAddRestaurantToCategoryService, AddRestaurantToCategoryHandler>();
             services.AddScoped<IAddCategoryToRestaurantService, AddCategoryToRestaurantHandler>();
             services.AddScoped<IGetRestaurantListService, GetRestaurantListHandler>();
+            services.AddScoped<IGetThreeRandomRestaurantsService, GetThreeRandomRestaurantsHandler>();
 
 
 
@@ -115,7 +117,7 @@ namespace RestaurantReview.Application
             services.AddInfrastructureServices(configuration);
             services.AddAuthenticationServices(configuration);
 
-
+            services.AddScoped<IGetImageService, GetImageHandler>();
 
             return services;
         }

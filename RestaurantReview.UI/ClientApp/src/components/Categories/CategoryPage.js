@@ -39,7 +39,7 @@ export default class CategoryPage extends Component {
     let elements = [];;
   
     for (let restaurant of this.state.restaurants) {
-       elements.push(<AllRestaurantCard key={restaurant.restaurantName} title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}> </AllRestaurantCard>);
+      elements.push(<AllRestaurantCard key={restaurant.restaurantName} TempImage={ restaurant.tempImage } title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}> </AllRestaurantCard>);
     }
      
     return (elements);

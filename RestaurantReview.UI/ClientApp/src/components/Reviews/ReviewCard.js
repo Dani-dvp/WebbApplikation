@@ -11,6 +11,7 @@ export class ReviewCard extends Component {
           <div className="lead">
           <h2> {this.props.reviewText} </h2>
           <Link tag={Link} className="display-4" link to={"/RestaurantPage/" + this.props.restaurantName}> {this.props.restaurantName}</Link>
+          <Link tag={Link} className="display-4" link to={"/profile/" + this.props.userName}> {this.props.userName}</Link>
           <footer className="display-4"> - {this.props.Rating} / 5</footer>
           </div>
       </div>

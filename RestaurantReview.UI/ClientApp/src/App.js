@@ -12,6 +12,8 @@ import './custom.css'
 import ProfilePage from './components/Profile/ProfilePage';
 import Categories from './components/Categories/Categories';
 import CategoryPage from './components/Categories/CategoryPage';
+import NavMenu from './components/NavMenu';
+import AddCategory from './components/Categories/AddCategory';
 
 
 export default class App extends Component {
@@ -19,8 +21,8 @@ export default class App extends Component {
   constructor() {
     super();
 this.state = {
-  loggedIn: "This is some loggedinstuff",
-  user: {}
+  loggedIn: null,
+  user: null
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleFailedLogin = this.handleFailedLogin.bind(this);
@@ -59,7 +61,7 @@ this.state = {
           />
            
         <Route
-          path='/createreview'
+          path='/createreview/:id'
           render={props => (
             <CreateReview {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
@@ -89,7 +91,7 @@ this.state = {
           )}
            />
         <Route
-          path='/Profile'
+          path='/Profile/'
           render={props => (
             <ProfilePage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
@@ -105,12 +107,14 @@ this.state = {
           render={props => (
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}
+          />
+        <Route
+          path='/AddCategory'
+          render={props => (
+          <AddCategory {...props} loggedIn={this.state.loggedIn} />
+        )}
         />
-        {/*<Route*/}
-        {/*  render={props => (*/}
-        {/*    <FileUpload {...props} user={this.state.user} loggedIn={this.state.loggedIn} />*/}
-        {/*  )}*/}
-        {/*/>*/}
+        
       </Layout>
     );
   }

@@ -50,8 +50,13 @@ namespace RestaurantReview.API.Controllers
         [HttpPost]
         public async Task<ActionResult<CreateCategoryResponse>> CreateCategory(CreateCategoryCommand createCategoryCommand)
         {
-            return Ok(await _createCategoryService.CreateCategory(createCategoryCommand));
+            var response = await _createCategoryService.CreateCategory(createCategoryCommand);
+            if (response.Success == false)
+            {
+                return BadRequest();
+            }
 
+            return Ok(response);
 
         }
 
@@ -64,9 +69,19 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<UpdateCategoryResponse> UpdateCategory(UpdateCategoryCommand updateCategoryCommand)
+        public async Task<ActionResult<UpdateCategoryResponse>> UpdateCategory(UpdateCategoryCommand updateCategoryCommand)
         {
-            return await _updateCategoryService.UpdateCategory(updateCategoryCommand);
+            var response = await _updateCategoryService.UpdateCategory(updateCategoryCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
+
         }
 
 
@@ -84,10 +99,20 @@ namespace RestaurantReview.API.Controllers
         }
 
         [Authorize]
-        [HttpPut("restaurant")]
-        public async Task<AddRestaurantToCategoryResponse> AddRestaurantToCategory(AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
+        [HttpPost("addRestaurant")]
+        public async Task<ActionResult<AddRestaurantToCategoryResponse>> AddRestaurantToCategory([FromBody] AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
-            return await _addRestaurantToCategoryService.AddRestaurantToCategory(addRestaurantToCategoryCommand);
+            var response = await _addRestaurantToCategoryService.AddRestaurantToCategory(addRestaurantToCategoryCommand);
+
+            if (response.Success == false)
+            {
+                return BadRequest(response);
+            }
+            else
+            {
+                return Ok(response);
+            }
+
         }
 
 
