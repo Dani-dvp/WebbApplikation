@@ -11,16 +11,15 @@ export default class ProfilePage extends Component {
       user: this.props.user,
       userData: "",
       ReviewList: [],
-      
       image: "Not Found",
       userEmail: this.props.user.data.email
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.getImageData = this.getImageData.bind(this);
   }
   async componentDidMount() {
     const response = await Axios.get("api/Authentication/user/" + this.props.user.data.userName);
+
     await Axios.get("api/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
 
       const b64Data = btoa(
@@ -33,7 +32,7 @@ export default class ProfilePage extends Component {
       );
       const userAvatarData = {
         key: 'userAvatar',
-        value: `data:image/jpeg;base64,${b64Data}`
+        value: `data:image/png;base64,${b64Data}`
 
       };
       console.log(userAvatarData.value)
@@ -74,27 +73,8 @@ export default class ProfilePage extends Component {
         params: { email: this.state.user.data.email },
       });
   }
-  async getImageData() {
-     await Axios.get("api/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
+  
 
-    const b64Data = btoa(
-      new Uint8Array(data.data).reduce(
-        (dataArray, byte) => {
-          return dataArray + String.fromCharCode(byte);
-        },
-
-      )
-    );
-    const userAvatarData = {
-      key: 'userAvatar',
-      value: `data:image/jpeg;base64,${b64Data}`
-
-    };
-       console.log(userAvatarData.value)
-    return userAvatarData.value; // here we return the base64 image data to our component
-
-  });
-}
 
 
 
@@ -122,7 +102,7 @@ export default class ProfilePage extends Component {
                             backgroundImage: `url('https://bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-7.jpg')` }}>
                   <span className="glyphicon glyphicon-camera"></span>
 
-                  <img src={`data:image/jpeg;base64,${this.state.image}`} />
+                  <img ng-src={this.state.image} />
                   <span></span>
                   
                         </div>
