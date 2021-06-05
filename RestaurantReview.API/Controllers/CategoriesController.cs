@@ -81,7 +81,7 @@ namespace RestaurantReview.API.Controllers
             {
                 return Ok(response);
             }
-            
+
         }
 
 
@@ -100,7 +100,7 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPost("addRestaurant")]
-        public async Task<ActionResult<AddRestaurantToCategoryResponse>> AddRestaurantToCategory([FromBody]AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
+        public async Task<ActionResult<AddRestaurantToCategoryResponse>> AddRestaurantToCategory([FromBody] AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {
             var response = await _addRestaurantToCategoryService.AddRestaurantToCategory(addRestaurantToCategoryCommand);
 

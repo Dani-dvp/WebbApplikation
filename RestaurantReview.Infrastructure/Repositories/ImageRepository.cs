@@ -33,6 +33,12 @@ namespace RestaurantReview.Infrastructure.Repositories
         {
             return await _myDbContext.Images.FirstOrDefaultAsync(i => i.RestaurantID == userId);
 
+        }
+
+        public async Task<Image> GetImageByEmail(string userEmail)
+        {
+            return await _myDbContext.Images.FirstOrDefaultAsync(i => i.ApplicationUser.Email == userEmail);
+
 
         }
 

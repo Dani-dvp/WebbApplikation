@@ -10,20 +10,45 @@ export default class ProfilePage extends Component {
       selectedFile: '',
       user: this.props.user,
       userData: "",
-      ReviewList: []
+      ReviewList: [],
+      
+      image: "Not Found",
+      userEmail: this.props.user.data.email
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.getImageData = this.getImageData.bind(this);
   }
   async componentDidMount() {
     const response = await Axios.get("api/Authentication/user/" + this.props.user.data.userName);
+    await Axios.get("api/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
 
+      const b64Data = btoa(
+        new Uint8Array(data.data).reduce(
+          (dataArray, byte) => {
+            return dataArray + String.fromCharCode(byte);
+          },
+
+        )
+      );
+      const userAvatarData = {
+        key: 'userAvatar',
+        value: `data:image/jpeg;base64,${b64Data}`
+
+      };
+      console.log(userAvatarData.value)
+      this.setState({
+        image: userAvatarData.value
+
+      }) // here we return the base64 image data to our component
+
+    });
     this.setState({
       userData: response.data,
-      ReviewList: response.data.getUserByUsernameReviews
+      ReviewList: response.data.getUserByUsernameReviews,
+      
     })
-
-    console.log(this.state.ReviewList)
+    console.log(this.state.image)
   }
 
   createReviewsList() {
@@ -43,19 +68,40 @@ export default class ProfilePage extends Component {
   submit() {
     const data = new FormData()
     data.append('file', this.state.selectedFile)
-    console.warn(this.state.selectedFile);
-    console.log(this.state.user.data)
-
-
-    
+     
       Axios.post("api/image", data,
       {
         params: { email: this.state.user.data.email },
       });
-
   }
+  async getImageData() {
+     await Axios.get("api/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
+
+    const b64Data = btoa(
+      new Uint8Array(data.data).reduce(
+        (dataArray, byte) => {
+          return dataArray + String.fromCharCode(byte);
+        },
+
+      )
+    );
+    const userAvatarData = {
+      key: 'userAvatar',
+      value: `data:image/jpeg;base64,${b64Data}`
+
+    };
+       console.log(userAvatarData.value)
+    return userAvatarData.value; // here we return the base64 image data to our component
+
+  });
+}
+
+
+
 
   render() {
+
+
     let ListOfReviews = this.createReviewsList();
         return (
             <div>
@@ -75,8 +121,10 @@ export default class ProfilePage extends Component {
                     style={{
                             backgroundImage: `url('https://bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-7.jpg')` }}>
                   <span className="glyphicon glyphicon-camera"></span>
+
+                  <img src={`data:image/jpeg;base64,${this.state.image}`} />
                   <span></span>
-                  <img src={`/uploads/${this.state.userData.getUserImageResponse}`}/>
+                  
                         </div>
                     </label>
             </form>
@@ -88,5 +136,8 @@ export default class ProfilePage extends Component {
           </div>
             </div>
         );
-    }
+  }
+
+  
+
 }

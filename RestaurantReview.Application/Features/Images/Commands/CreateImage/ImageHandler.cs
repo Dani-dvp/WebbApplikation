@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 
 
-namespace RestaurantReview.Application.Features.Images
+namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
 {
 
     public class ImageHandler : IImageService
@@ -73,7 +73,7 @@ namespace RestaurantReview.Application.Features.Images
                 ImageID = new Guid(),
                 Restaurant = restaurant,
                 ApplicationUser = user
-                
+
             };
 
             if (user != null)

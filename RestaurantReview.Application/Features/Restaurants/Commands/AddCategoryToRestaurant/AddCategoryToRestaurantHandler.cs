@@ -50,7 +50,7 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.AddCategory
             return addCategoryToRestaurantResponse;
 
 
-            
+
 
         }
     }

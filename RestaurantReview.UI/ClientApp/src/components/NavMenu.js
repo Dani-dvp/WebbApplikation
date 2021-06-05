@@ -38,7 +38,7 @@ export default class NavMenu extends Component {
                     data-cy="navbarCategories"
                     tag={Link}
                     className="text-dark"
-                    to={"/profile/" + this.state.user}>Profile</NavLink>
+                    to="/profile/">Profile</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink 

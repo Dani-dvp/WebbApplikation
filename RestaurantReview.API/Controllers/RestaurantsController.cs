@@ -55,7 +55,7 @@ namespace RestaurantReview.API.Controllers
         public async Task<ActionResult<CreateRestaurantResponse>> CreateRestaurantController([FromBody] CreateRestaurantCommand createRestaurantCommand)
         {
 
-           var response = await _createRestaurantService.CreateRestaurant(createRestaurantCommand);
+            var response = await _createRestaurantService.CreateRestaurant(createRestaurantCommand);
 
             if (response.Success == false)
             {
@@ -133,7 +133,7 @@ namespace RestaurantReview.API.Controllers
 
         [Authorize]
         [HttpPost("addCategory")]
-        public async Task<ActionResult<AddCategoryToRestaurantResponse>> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand )
+        public async Task<ActionResult<AddCategoryToRestaurantResponse>> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand)
         {
             var response = await _addCategoryToRestaurantService.AddCategoryToRestaurant(addCategoryToRestaurantCommand);
 

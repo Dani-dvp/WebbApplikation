@@ -1,9 +1,9 @@
 ﻿
 using System;
 
-namespace RestaurantReview.Application.Features.Images 
+namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
 {
-    public class ImageResponse 
+    public class ImageResponse
     {
         public Guid ImageID { get; set; }
 

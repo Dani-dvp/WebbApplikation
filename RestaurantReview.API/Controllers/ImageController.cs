@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RestaurantReview.Application.Features.Images;
-using RestaurantReview.Application.Features.Images.NewFolder;
-using RestaurantReview.Domain.Models;
-using System.IO;
+using RestaurantReview.Application.Features.Images.Commands.CreateImage;
+using RestaurantReview.Application.Features.Images.Queries.GetImage;
 using System.Threading.Tasks;
 
 namespace RestaurantReview.API.Controllers
@@ -25,24 +23,17 @@ namespace RestaurantReview.API.Controllers
         [HttpPost]
         public async Task<ImageResponse> Index(IFormFile file, string email, string restaurantName)
         {
-            
+
 
             return await _imageService.CreateImagePath(file, email, restaurantName);
 
 
 
         }
-
-        //[HttpGet]
-        //public async Task<File> GetImageByUserid(string userId)
-        //{
-        //    return await _getImageService.GetImageByName(userId);
-        //}
-
-        [HttpGet]
-        public async Task<IActionResult> Get(string userid)
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetImageByEmail([FromRoute]string email)
         {
-            Image image = await _getImageService.GetImageByName(userid);
+            var image = await _getImageService.GetImageByName(email);
             var imageresponse = System.IO.File.OpenRead(image.ImgPath);
             return File(imageresponse, "image/jpeg");
         }

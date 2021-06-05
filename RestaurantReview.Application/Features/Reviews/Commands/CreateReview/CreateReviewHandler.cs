@@ -45,7 +45,7 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
                 {
                     createReviewResponse.ValidationErrors.Add(error.ErrorMessage);
                 }
-                
+
             }
 
             if (createReviewResponse.Success)

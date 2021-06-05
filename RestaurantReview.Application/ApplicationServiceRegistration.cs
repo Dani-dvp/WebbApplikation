@@ -14,9 +14,8 @@ using RestaurantReview.Application.Features.Categories.Commands.UpdateCategory;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryByNameQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryListQuery;
 using RestaurantReview.Application.Features.Categories.Queries.GetCategoryQuery;
-
-using RestaurantReview.Application.Features.Images;
-using RestaurantReview.Application.Features.Images.NewFolder;
+using RestaurantReview.Application.Features.Images.Commands.CreateImage;
+using RestaurantReview.Application.Features.Images.Queries.GetImage;
 using RestaurantReview.Application.Features.Restaurants.Commands.AddCategoryToRestaurant;
 
 using RestaurantReview.Application.Features.Restaurants.Commands.CreateRestaurant;

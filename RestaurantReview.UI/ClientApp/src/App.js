@@ -90,7 +90,7 @@ this.state = {
           )}
            />
         <Route
-          path='/Profile/:id'
+          path='/Profile/'
           render={props => (
             <ProfilePage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
@@ -107,12 +107,7 @@ this.state = {
             <CategoryPage {...props} loggedIn={this.state.loggedIn} />
           )}
         />
-        <Route
-          path='/navbar/'
-          render={props => (
-            <NavMenu {...props} user={ this.state.user } loggedIn={this.state.loggedIn} />
-          )}
-        />
+        
       </Layout>
     );
   }
