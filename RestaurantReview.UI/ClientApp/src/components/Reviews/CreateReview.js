@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import Star from './Star';
-import RatingStars from './RatingStars';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
+import StarRatingComponent from 'react-star-rating-component';
 import '../RestaurantPages/Css/StarRating.css';
 import './Css/CreateReview.css';
 
@@ -11,12 +11,14 @@ export default class CreateReview extends Component {
     super(props)
     this.state = {
       user: this.props.user,
-      rating: 0,
+      rating: 1,
       
     }
   }
 
-
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({ rating: nextValue });
+  }
 
   AddReviewRequest = event => {
     event.preventDefault();
@@ -40,6 +42,7 @@ export default class CreateReview extends Component {
 
 
     render() {
+      const { rating } = this.state;
         return (
             <div className="surroundingDiv">
             <div>
@@ -55,7 +58,13 @@ export default class CreateReview extends Component {
                     id="secondForm" 
                     placeholder=" Write your review here..."></textarea>
                     <br />
-                <RatingStars className="stars" onClick={() => this.setState({ rating: this.state.rating + 1 })}></RatingStars>
+                <h2>Rating: {rating}</h2>
+                <StarRatingComponent
+                  name="rate1"
+                  starCount={5}
+                  value={rating}
+                  onStarClick={this.onStarClick.bind(this)}
+                />
                     <br />
                 <button 
                 data-cy="submitReview"

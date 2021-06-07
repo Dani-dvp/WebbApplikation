@@ -84,18 +84,19 @@ export default class ProfilePage extends Component {
 
     let ListOfReviews = this.createReviewsList();
         return (
-            <div>
-                <div className="profile">
+          <div>
+            {/*<input type="file" className="form-control" name="upload_file" onChange={this.handleInputChange} />*/}
+            {/*<button type="button" className="btn btn-dark" onClick={() => this.submit()}>Save</button>*/}
+            {/*Jag tog bort möjligheten att byta ut profilbild för tillfället*/}
+            <div className="profile">
                     <a id="change-pic-button" href="" aria-label="Change Profile Picture"  />
                     <div className="username">
-                <p>{this.state.userData.userName}</p>
+                <h1>{this.state.userData.userName}</h1>
                     </div>
                 </div>
 
                 <form>
                     <label>
-                <input type="file" className="form-control" name="upload_file" onChange={this.handleInputChange} />
-                <button type="button" className="btn btn-dark" onClick={() => this.submit()}>Save</button>
                 <div
                   className="profile-pic"
                     style={{
@@ -104,7 +105,6 @@ export default class ProfilePage extends Component {
 
                   <img ng-src={this.state.image} />
                   <span></span>
-                  
                         </div>
                     </label>
             </form>
@@ -113,7 +113,8 @@ export default class ProfilePage extends Component {
                         
                            {ListOfReviews}
                             <br />
-          </div>
+            </div>
+            
             </div>
         );
   }

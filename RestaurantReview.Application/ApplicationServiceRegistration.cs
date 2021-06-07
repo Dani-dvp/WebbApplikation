@@ -115,7 +115,6 @@ namespace RestaurantReview.Application
             //Aktiverar automapper i Core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddInfrastructureServices(configuration);
-            services.AddAuthenticationServices(configuration);
 
             services.AddScoped<IGetImageService, GetImageHandler>();
 
