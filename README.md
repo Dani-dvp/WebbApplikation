@@ -23,7 +23,6 @@ For Cors problems in developer mode install:
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
 
 
-
 Top right turn it on.
 
 How to install:
@@ -32,17 +31,11 @@ How to install:
 
 2. Write following commands in Packet Manager:
 
-  2.1 Set default project in powershell to RestaurantReview.Authentication
+  2.1 Set default project in powershell to RestaurantReview.Infrastructure
   
-  2.2 add-migration NameOfMigration -context AuthenticationDbContext
+  2.2 add-migration NameOfMigration 
   
-  2.3 update-database -context AuthenticationDbContext
-  
-  2.4 Change default project to RestaurantReview.Infrastructure
-  
-  2.5 add-migration NameOfMigration -context MyDbContext
-  
-  2.6 update-database -context MyDbContext
+  2.3 update-database
   
 3. Set multiple startups to RestaurantReview.Api and RestaurantReview.UI
 
