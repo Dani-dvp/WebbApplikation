@@ -1,7 +1,8 @@
 ﻿.carouselHome img {
-    width: 1080px;
+    max-width: 1080px;
     height: 820px;
     margin: auto;
     padding-top:100px;
+    width: 50vw;
 }
 
