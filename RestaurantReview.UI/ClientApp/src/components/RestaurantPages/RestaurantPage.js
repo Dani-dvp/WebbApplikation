@@ -23,7 +23,7 @@ export default class RestaurantPage extends Component {
         restaurant: response.data,
         reviews: response.data.reviewsDtoResponse
       });
-      console.log(this.state.restaurant.restaurantName);
+      console.log(this.state.reviews);
     }
   
 
@@ -61,7 +61,7 @@ export default class RestaurantPage extends Component {
   createReviewsList() {
     let elements = [];
     for (let review of this.state.reviews) {
-      elements.push(<ReviewCard key={review.reviewID} Rating={review.rating} reviewText={review.reviewText}></ReviewCard>);
+      elements.push(<ReviewCard userName={review.userName } key={review.reviewID} Rating={review.rating} reviewText={review.reviewText}></ReviewCard>);
     }
     return (elements);
   }

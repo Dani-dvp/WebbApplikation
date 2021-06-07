@@ -8,6 +8,8 @@ namespace RestaurantReview.Domain.Models
 
         public string ApplicationUserId { get; set; }
 
+        public string UserName { get; set; }
+
         public string ReviewText { get; set; }
 
         public int Rating { get; set; }

@@ -34,15 +34,16 @@ namespace RestaurantReview.API.Controllers
         public async Task<IActionResult> GetImageByEmail([FromRoute]string email)
         {
             var image = await _getImageService.GetImageByName(email);
-            try
+            if (image != null)
             {
                 var imageresponse = System.IO.File.OpenRead(image.ImgPath);
                 return File(imageresponse, "image/jpeg");
             }
-            catch
+            else
             {
-                throw;
+                return BadRequest();
             }
+           
         }
 
     }
