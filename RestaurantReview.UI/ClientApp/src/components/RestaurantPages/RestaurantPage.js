@@ -17,7 +17,7 @@ export default class RestaurantPage extends Component {
   
     
     async componentDidMount() {
-      const response = await axios.get("api/Restaurants/name/" + this.props.match.params.id);
+      const response = await axios.get("api/v1/Restaurants/name/" + this.props.match.params.id);
 
       this.setState({
         restaurant: response.data,

@@ -25,7 +25,7 @@ export default class Login extends Component {
 
      Axios({
       method: 'post',
-      url: "/api/Authentication/login",
+       url: "/api/v1/Authentication/login",
       data: {
         Email: email,
         Password: password,

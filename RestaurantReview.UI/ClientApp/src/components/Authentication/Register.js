@@ -16,7 +16,7 @@ export default class Register extends Component {
 
     axios({
       method: 'POST',
-      url: "/api/Authentication/register",
+      url: "/api/v1/Authentication/register",
       data: {
         Email: email,
         Password: password,

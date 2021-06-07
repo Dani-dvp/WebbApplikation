@@ -27,7 +27,7 @@ export default class CreateReview extends Component {
 
     axios({
       method: 'post',
-      url: "/api/review",
+      url: "/api/v1/review",
       data: {
         restaurantName: this.props.match.params.id,
         ReviewText: reviewText,

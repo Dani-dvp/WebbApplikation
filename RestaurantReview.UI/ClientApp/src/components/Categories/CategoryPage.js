@@ -23,7 +23,7 @@ export default class CategoryPage extends Component {
          
     
     async componentDidMount() {
-      const response = await axios.get("api/categories/name/" + this.props.match.params.id)
+      const response = await axios.get("api/v1/categories/name/" + this.props.match.params.id)
 
       this.setState({
         category: response.data,

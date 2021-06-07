@@ -18,9 +18,9 @@ export default class ProfilePage extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   async componentDidMount() {
-    const response = await Axios.get("api/Authentication/user/" + this.props.user.data.userName);
+    const response = await Axios.get("api/v1/Authentication/user/" + this.props.user.data.userName);
 
-    await Axios.get("api/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
+    await Axios.get("api/v1/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
 
       const b64Data = btoa(
         new Uint8Array(data.data).reduce(
@@ -68,7 +68,7 @@ export default class ProfilePage extends Component {
     const data = new FormData()
     data.append('file', this.state.selectedFile)
      
-      Axios.post("api/image", data,
+    Axios.post("api/v1/image", data,
       {
         params: { email: this.state.user.data.email },
       });

@@ -28,7 +28,7 @@ class FileUpload extends React.Component {
     console.log(this.state.user.data)
     
 
-    axios.post("api/image", data, {
+    axios.post("api/v1/image", data, {
        // receive two parameter endpoint url ,form data 
     })
       
