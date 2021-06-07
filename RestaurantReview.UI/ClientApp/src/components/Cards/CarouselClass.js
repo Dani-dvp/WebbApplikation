@@ -25,13 +25,13 @@ export default class CarouselClass extends Component {
 
   createCarousel() {
     return (
-      <Carousel className="carouselHome d-inline-block d-block">
+      <Carousel className="carouselHome d-inline-block d-block shadow-lg ">
         <Carousel.Item>
           <a type="button" href={"/RestaurantPage/" + this.state.restaurants[0].restaurantName}>
             <img 
               
           data-cy="carouselHomeImage1"
-          className="d-block "
+              className="d-block"
           src={this.state.restaurants[0].tempImage}
           alt="First slide"
             />
@@ -43,9 +43,8 @@ export default class CarouselClass extends Component {
         <Carousel.Item>
           <a type="button" href={"/RestaurantPage/" + this.state.restaurants[1].restaurantName}>
             <img
-              
           data-cy="carouselHomeImage2"
-          className="d-block  "
+              className="d-block "
             src={this.state.restaurants[1].tempImage}
           alt="Second slide"
         />
@@ -57,9 +56,8 @@ export default class CarouselClass extends Component {
         <Carousel.Item>
           <a type="button" href={"/RestaurantPage/" + this.state.restaurants[2].restaurantName}>
             <img
-              
           data-cy="carouselHomeImage3"
-          className="d-block "
+              className="d-block "
             src={this.state.restaurants[2].tempImage}
           alt="Third slide"
             />

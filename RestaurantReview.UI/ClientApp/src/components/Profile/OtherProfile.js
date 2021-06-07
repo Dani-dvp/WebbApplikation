@@ -12,7 +12,6 @@ export default class ProfilePage extends Component {
       userData: "",
       ReviewList: [],
       image: "Not Found",
-      
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);

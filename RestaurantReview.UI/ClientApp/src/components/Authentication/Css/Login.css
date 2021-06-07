@@ -1,6 +1,7 @@
 ﻿body {
     background-image: url('https://static.vecteezy.com/system/resources/previews/001/959/920/large_2x/blurred-busy-restaurant-background-free-photo.JPG');
     background-repeat: no-repeat;
+    background-color: #f9e7d9;
     height: cover;
     margin-bottom: 30px;
     text-align: center;
@@ -10,6 +11,11 @@
     background-position: center;
 }
 
+
+.btn-danger {
+    
+  
+}
 body {
     font-family: "Poppins", sans-serif;
 }

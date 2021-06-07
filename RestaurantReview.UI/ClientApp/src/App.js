@@ -21,7 +21,7 @@ export default class App extends Component {
   constructor() {
     super();
 this.state = {
-  loggedIn: null,
+  loggedIn: false,
   user: null
     }
     this.handleLogin = this.handleLogin.bind(this);
@@ -33,6 +33,8 @@ this.state = {
       loggedIn: true,
       user: data
     })
+
+
   };
   handleFailedLogin() {
     this.setState({
@@ -45,12 +47,14 @@ this.state = {
 
   render() {
     return (
-      <Layout>
+      
+      <Layout >
+        
         <Route
           exact
           path={'/'}
           render={props => (
-            <Home {...props} loggedIn={this.state.loggedIn} />
+            <Home {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
             )}
            />
         <Route

@@ -28,7 +28,7 @@ export default class ShowAllRestaurants extends Component {
     let content = this.state.loading ? <p>Loading...</p> : this.createRestaurnatElements()
     return (
       <div>
-        <div className="Restaurants col-xl-12">{content}</div>
+        <div className="Restaurants col mx-auto d-grid">{content}</div>
         <h3>Cant find what you are looking for?</h3>
         <div>
           <form >
@@ -46,7 +46,8 @@ export default class ShowAllRestaurants extends Component {
   createRestaurnatElements() {
     let elements = [];
     for (let restaurant of this.state.restaurants) {
-      elements.push(<AllRestaurantCard TempImage={restaurant.tempImage} key={restaurant.restaurantName} title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}></AllRestaurantCard>);
+      elements.push(
+        <AllRestaurantCard TempImage={restaurant.tempImage} key={restaurant.restaurantName} title={restaurant.restaurantName} restaurantName={restaurant.restaurantName}></AllRestaurantCard>);
     }
     return (elements);
   }

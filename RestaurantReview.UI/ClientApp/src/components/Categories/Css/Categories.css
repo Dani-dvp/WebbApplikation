@@ -1,9 +1,16 @@
-.ListOfCategories{
-    margin-top:5%;
-    font-size:48px;
+.ListOfCategories {
+    font-size: 28px;
+    font-weight: 800;
+    width: 20%;
+    color: #f9e7d9;
+    text-shadow: 4px 4px #0a0704;
+    margin-left: 32%;
+    margin-right: 32%;
+    text-align: center;
 }
 
 .ListOfCategories a {
       text-decoration: none;  
 }
+
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import NavMenu from './NavMenu';
+import NavMenu from './Navigation/NavMenu';
 import '../Css/Layout.css';
 
 export default class Layout extends Component {
@@ -9,10 +9,10 @@ export default class Layout extends Component {
   render () {
     return (
       <div>
-        <NavMenu />
-        <Container>
+        <NavMenu/>
+        
           {this.props.children}
-        </Container>
+        
       </div>
     );
   }

@@ -90,7 +90,7 @@ export default class Register extends Component {
             
             <button 
             data-cy="submitRegistration"
-            className="btn btn-primary" 
+              className="btn btn-lg btn-danger mb-3 mt-3" style={{ background: "#a73003", color: "#f9e7d9" }}
             onClick={this.sendRegisterRequest}>Register</button>
 
         </form>

@@ -97,11 +97,11 @@ export default class Login extends Component {
               name="password"
               placeholder="Password"
             />
-
+            <div className=" mb-3 mt-3  text-center ">
             <button
               type="button"
               data-cy="submitLogin"
-              className="btn btn-primary"
+                className="homeButton btn  btn-lg btn-danger mx-auto" style={{ background: "#a73003", color: "#f9e7d9" }}
               onClick={this.sendLoginRequest}>Log in</button>
             <br />
 
@@ -111,13 +111,13 @@ export default class Login extends Component {
             <button
               type="button"
               data-cy="checkOnLoginPage"
-              className="btn btn-primary"
+                className="homeButton btn  btn-lg btn-light mx-auto mt-3" 
               onClick={() => {
                 this.setState({
                   loggedIn: this.handleFailedAuth()
                 });
               }}>Logout</button>
-
+              </div>
           </form>
 
 
