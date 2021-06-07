@@ -19,7 +19,7 @@ export default class AddRestaurant extends Component {
   }
 
   componentDidMount() {
-    Axios.get('api/categories')
+    Axios.get('api/v1/categories')
       .then(res => {
         this.setState({
           categories: res.data,
@@ -111,7 +111,7 @@ export default class AddRestaurant extends Component {
 
     Axios({
       method: 'post',
-      url: "/api/Restaurants",
+      url: "/api/v1/Restaurants",
       data: {
         RestaurantLink: restaurantlink,
         TempImage: imageUrl,
@@ -124,7 +124,7 @@ export default class AddRestaurant extends Component {
       if (res.status === 200) {
         Axios({
           method: 'post',
-          url: "/api/Restaurants/addCategory",
+          url: "/api/v1/Restaurants/addCategory",
           data: {
             CategoryName: this.state.selectedCategory,
             RestaurantName: restaurantName,
@@ -134,7 +134,7 @@ export default class AddRestaurant extends Component {
         });
         Axios({
           method: 'post',
-          url: "/api/categories/addRestaurant",
+          url: "/api/v1/categories/addRestaurant",
           data: {
             CategoryName: this.state.selectedCategory,
             RestaurantName: restaurantName,

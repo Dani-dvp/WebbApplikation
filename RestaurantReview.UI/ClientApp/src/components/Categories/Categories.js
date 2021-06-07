@@ -20,7 +20,7 @@ export default class Categories extends Component {
 
   
        
-        const response = await axios.get("api/categories");
+      const response = await axios.get("api/v1/categories");
         this.setState({
             categories: response.data,
       

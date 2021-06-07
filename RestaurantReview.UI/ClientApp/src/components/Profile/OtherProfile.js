@@ -8,46 +8,55 @@ export default class ProfilePage extends Component {
     super(props)
     this.state = {
       selectedFile: '',
-      user: this.props.user,
+      otherUser: "",
       userData: "",
       ReviewList: [],
       image: "Not Found",
-      userEmail: this.props.user.data.email
+      
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   async componentDidMount() {
-    const response = await Axios.get("api/v1/Authentication/user/" + this.props.user.data.userName);
-
-    await Axios.get("api/v1/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
-
-      const b64Data = btoa(
-        new Uint8Array(data.data).reduce(
-          (dataArray, byte) => {
-            return dataArray + String.fromCharCode(byte);
-          },
-
-        )
-      );
-      const userAvatarData = {
-        key: 'userAvatar',
-        value: `data:image/png;base64,${b64Data}`
-
-      };
-      console.log(userAvatarData.value)
+    const response = await Axios.get("api/v1/Authentication/user/" + this.props.match.params.id).then(response => {
+      console.log(response)
       this.setState({
-        image: userAvatarData.value
+        userData: response.data,
+        ReviewList: response.data.getUserByUsernameReviews,
 
-      }) // here we return the base64 image data to our component
-
-    });
-    this.setState({
-      userData: response.data,
-      ReviewList: response.data.getUserByUsernameReviews,
-      
+      })
     })
-    console.log(this.state.image)
+      
+    Axios.get("api/v1/image/" + this.state.userData.email, { responseType: 'arraybuffer' })
+          .then(data => {
+
+        const b64Data = btoa(
+          new Uint8Array(data.data).reduce(
+            (dataArray, byte) => {
+              return dataArray + String.fromCharCode(byte);
+            },
+
+          )
+        );
+        const userAvatarData = {
+          key: 'userAvatar',
+          value: `data:image/png;base64,${b64Data}`
+
+        };
+        console.log(userAvatarData.value)
+        this.setState({
+          image: userAvatarData.value
+
+        }) // here we return the base64 image data to our component
+
+      });
+   
+
+
+
+    
+   
+    console.log(response)
   }
 
   createReviewsList() {

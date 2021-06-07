@@ -15,7 +15,7 @@ export default class CarouselClass extends Component {
 
   async componentDidMount() {
 
-    const response = await Axios.get("api/restaurants/random");
+    const response = await Axios.get("api/v1/restaurants/random");
     this.setState({
       restaurants: response.data,
       loading: false

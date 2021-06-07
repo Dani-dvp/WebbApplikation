@@ -12,7 +12,7 @@ export default class AddCategory extends Component {
     let categoryName = document.getElementById("categoryName").value;
     Axios({
       method: 'post',
-      url: "/api/categories",
+      url: "/api/v1/categories",
       data: {
         CategoryName: categoryName
 

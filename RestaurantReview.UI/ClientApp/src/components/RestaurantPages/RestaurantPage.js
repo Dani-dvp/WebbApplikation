@@ -17,13 +17,13 @@ export default class RestaurantPage extends Component {
   
     
     async componentDidMount() {
-      const response = await axios.get("api/Restaurants/name/" + this.props.match.params.id);
+      const response = await axios.get("api/v1/Restaurants/name/" + this.props.match.params.id);
 
       this.setState({
         restaurant: response.data,
         reviews: response.data.reviewsDtoResponse
       });
-      console.log(this.state.restaurant.restaurantName);
+      console.log(this.state.reviews);
     }
   
 
@@ -61,7 +61,7 @@ export default class RestaurantPage extends Component {
   createReviewsList() {
     let elements = [];
     for (let review of this.state.reviews) {
-      elements.push(<ReviewCard key={review.reviewID} Rating={review.rating} reviewText={review.reviewText}></ReviewCard>);
+      elements.push(<ReviewCard userName={review.userName } key={review.reviewID} Rating={review.rating} reviewText={review.reviewText}></ReviewCard>);
     }
     return (elements);
   }

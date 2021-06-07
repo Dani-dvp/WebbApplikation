@@ -12,7 +12,7 @@ import './custom.css'
 import ProfilePage from './components/Profile/ProfilePage';
 import Categories from './components/Categories/Categories';
 import CategoryPage from './components/Categories/CategoryPage';
-import NavMenu from './components/NavMenu';
+import OtherProfile from './components/Profile/OtherProfile';
 import AddCategory from './components/Categories/AddCategory';
 
 
@@ -75,19 +75,19 @@ this.state = {
         <Route
           path='/register'
           render={props => (
-            <Register {...props} loggedIn={this.state.loggedIn} />
+            <Register {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
           path='/restaurants'
           render={props => (
-            <ShowAllRestaurants {...props} loggedIn={this.state.loggedIn} />
+            <ShowAllRestaurants {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
           path='/Restaurantpage/:id'
           render={props => (
-            <RestaurantPage {...props} loggedIn={this.state.loggedIn} />
+            <RestaurantPage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
@@ -99,20 +99,26 @@ this.state = {
         <Route
           path='/Categories/'
           render={props => (
-            <Categories {...props} loggedIn={this.state.loggedIn} />
+            <Categories {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
            />
         <Route
           path='/Categorypage/name/:id'
           render={props => (
-            <CategoryPage {...props} loggedIn={this.state.loggedIn} />
+            <CategoryPage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
           />
         <Route
           path='/AddCategory'
           render={props => (
-          <AddCategory {...props} loggedIn={this.state.loggedIn} />
+            <AddCategory {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
         )}
+        />
+        <Route
+          path='/otherprofile/:id'
+          render={props => (
+            <OtherProfile {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
+          )}
         />
         
       </Layout>

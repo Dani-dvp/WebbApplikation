@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 
 export async function getImageData(email) {
-  await Axios.get("api/image/" + email, { responseType: 'arraybuffer' }).then((data) => {
+  await Axios.get("api/v1/image/" + email, { responseType: 'arraybuffer' }).then((data) => {
     
     const b64Data = btoa(
       new Uint8Array(data.data).reduce(

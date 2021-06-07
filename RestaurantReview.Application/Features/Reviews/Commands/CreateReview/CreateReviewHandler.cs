@@ -61,7 +61,8 @@ namespace ResturantReview.Application.Features.Resturants.Commands.CreateReview
                     Rating = createReviewCommand.Rating,
                     ReviewText = createReviewCommand.ReviewText,
                     ReviewID = new Guid(),
-                    ApplicationUserId = createReviewCommand.ApplicationUserId
+                    ApplicationUserId = createReviewCommand.ApplicationUserId,
+                    UserName = createReviewCommand.UserName
 
                 };
 

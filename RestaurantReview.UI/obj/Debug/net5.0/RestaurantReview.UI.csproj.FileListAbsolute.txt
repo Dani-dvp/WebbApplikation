@@ -138,3 +138,4 @@ C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantRe
 C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
 C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
+C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache

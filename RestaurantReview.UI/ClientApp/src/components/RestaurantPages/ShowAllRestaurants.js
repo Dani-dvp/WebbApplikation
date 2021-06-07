@@ -15,7 +15,7 @@ export default class ShowAllRestaurants extends Component {
   }
 
   async componentDidMount() {
-    const response = await axios.get("api/Restaurants");
+    const response = await axios.get("api/v1/Restaurants");
 
     this.setState({
       restaurants: response.data,
