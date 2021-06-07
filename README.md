@@ -11,12 +11,16 @@ Node.js
 React bootstrat - npm install react-bootstrap bootstrap@4.6.0
 Cypress - npm install cypress --save-dev
 
+React star rating - npm install react-star-rating-component --save-dev
+
 React bootstrat - npm install react-bootstrap bootstrap@4.6.0
 
 Cypress - npm install cypress --save-dev
 
 For Cors problems in developer mode install:
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
+
+
 
 Top right turn it on.
 
