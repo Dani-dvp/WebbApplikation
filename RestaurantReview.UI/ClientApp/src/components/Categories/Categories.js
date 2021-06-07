@@ -34,7 +34,7 @@ export default class Categories extends Component {
     CreateCategoriesElements(){
         let elements = [];
         for (let category of this.state.categories) {
-          elements.push(<ul className="ListOfCategories mx-auto" key={category.categoryName}><AllCategoriesCard className="ListOfCategories mx-auto" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
+          elements.push(<ul className="ListOfCategories" key={category.categoryName}><AllCategoriesCard className="ListOfCategories" categoryName={category.categoryName} > {category.categoryName}  </AllCategoriesCard> </ul>);
         }
         return (elements);
     
@@ -47,7 +47,8 @@ export default class Categories extends Component {
 
         <div
           className="mx-auto d-block"> <br /> {content}
-          <Link className="homeButton mx-auto d-block btn btn-info btn-lg" to="/AddCategory">Add a Category</Link>
+          <h5 style={{ color: "#f9e7d9" }}>Cant find your Category?</h5>
+          <Link className="homeButton mx-auto btn btn-danger " style={{ background: "#a73003", color: "#f9e7d9" }} to="/AddCategory">Add a Category</Link>
         </div>      
             );
 

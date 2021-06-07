@@ -17,7 +17,6 @@ namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
 
     public class ImageHandler : IImageService
     {
-
         private readonly IMapper _mapper;
         private readonly IImageRepository _imageRepository;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -88,10 +87,6 @@ namespace RestaurantReview.Application.Features.Images.Commands.CreateImage
             image = _imageRepository.Add(image);
 
             var imageResponse = _mapper.Map<ImageResponse>(image);
-
-
-
-            //  var imageResponse = _mapper.Map<ImageResponse>(image);
 
             return imageResponse;
 

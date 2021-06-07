@@ -17,8 +17,8 @@ export default class Home extends Component {
         <CarouselClass type="button" className="homeCarousel"></CarouselClass>
         <br />
         <div className="mx-auto">
-          <Link data-cy = "homeRestaurantsBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/restaurants"}>All Restaurants</Link>
-          <Link data-cy="homeCategoriesBtn" tag={Link} className="homeButton btn btn-info btn-lg" to={"/categories"}>Categories</Link>
+          <Link data-cy="homeRestaurantsBtn" tag={Link} className="homeButton btn  btn-lg btn-danger" style={{background: "#a73003", color: "#f9e7d9"}}to={"/restaurants"}>All Restaurants</Link>
+          <Link data-cy="homeCategoriesBtn" tag={Link} className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9"}} to={"/categories"}>Categories</Link>
 
           
         </div>

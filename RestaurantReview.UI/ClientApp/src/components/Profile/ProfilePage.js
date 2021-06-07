@@ -8,18 +8,21 @@ export default class ProfilePage extends Component {
     super(props)
     this.state = {
       selectedFile: '',
-      user: this.props.user,
-      userData: "",
       ReviewList: [],
       image: "Not Found",
-      userEmail: this.props.user.data.email
+      userData: [],
+      user: this.props.user
     }
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   async componentDidMount() {
-    const response = await Axios.get("api/v1/Authentication/user/" + this.props.user.data.userName);
+    const response = await Axios.get("api/v1/Authentication/user/" + this.state.user.data.userName);
+    this.setState({
+      userData: response.data,
+      ReviewList: response.data.getUserByUsernameReviews,
 
+    })
+    console.log(this.state.ReviewList)
     await Axios.get("api/v1/image/" + this.state.user.data.email, { responseType: 'arraybuffer' }).then((data) => {
 
       const b64Data = btoa(
@@ -42,12 +45,8 @@ export default class ProfilePage extends Component {
       }) // here we return the base64 image data to our component
 
     });
-    this.setState({
-      userData: response.data,
-      ReviewList: response.data.getUserByUsernameReviews,
-      
-    })
-    console.log(this.state.image)
+    
+    
   }
 
   createReviewsList() {
@@ -67,58 +66,55 @@ export default class ProfilePage extends Component {
   submit() {
     const data = new FormData()
     data.append('file', this.state.selectedFile)
-     
+
     Axios.post("api/v1/image", data,
       {
-        params: { email: this.state.user.data.email },
+        params: { email: this.props.user.data.email },
       });
   }
-  
-
-
-
 
 
   render() {
-
-
     let ListOfReviews = this.createReviewsList();
-        return (
-          <div>
-            {/*<input type="file" className="form-control" name="upload_file" onChange={this.handleInputChange} />*/}
-            {/*<button type="button" className="btn btn-dark" onClick={() => this.submit()}>Save</button>*/}
-            {/*Jag tog bort möjligheten att byta ut profilbild för tillfället*/}
-            <div className="profile">
-                    <a id="change-pic-button" href="" aria-label="Change Profile Picture"  />
-                    <div className="username">
-                <h1>{this.state.userData.userName}</h1>
-                    </div>
-                </div>
+    return (
+      <div>
 
-                <form>
-                    <label>
-                <div
-                  className="profile-pic"
-                    style={{
-                            backgroundImage: `url('https://bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-7.jpg')` }}>
-                  <span className="glyphicon glyphicon-camera"></span>
+        {/*Jag tog bort möjligheten att byta ut profilbild för tillfället*/}
+        <div className="profile">
+          
+          <a id="change-pic-button" href="" aria-label="Change Profile Picture" />
+          <div className="username">
+           
+            <input type="file" className="form-control" name="upload_file" onChange={this.handleInputChange} />
+              <button type="button" className="btn btn-dark" onClick={() => this.submit()}>Save</button>
+              
+            <h1>{this.props.user.data.userName}</h1>
+          </div>
+        </div>
 
-                  <img ng-src={this.state.image} />
-                  <span></span>
-                        </div>
-                    </label>
-            </form>
-            
-                <div className="profile-header">
-                        
-                           {ListOfReviews}
-                            <br />
+        <form>
+          <label>
+            <div
+              className="profile-pic"
+              style={{
+                backgroundImage: `url('https://bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-7.jpg')`
+              }}>
+              <span className="glyphicon glyphicon-camera"></span>
+
+              <img ng-src={this.state.image} />
+              <span></span>
             </div>
-            
-            </div>
-        );
+          </label>
+        </form>
+
+        <div className="profile-header">
+          {ListOfReviews}
+        </div>
+
+      </div>
+    );
   }
 
-  
+
 
 }

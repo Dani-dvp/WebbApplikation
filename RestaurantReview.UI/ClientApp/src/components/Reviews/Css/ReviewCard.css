@@ -1,8 +1,8 @@
 ﻿.reviewCard {
   margin-top: 0px;
   margin-bottom: 0px;
-  border-bottom: hidden;
-  border-top: hidden;
-  background-color: rgb(189, 140, 107);
+  color: #f9e7d9;
+  background-color: #a73003;
   text-decoration: none;
+
 }
