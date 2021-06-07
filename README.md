@@ -7,8 +7,10 @@ The idea of the website is a place where you can review restaurants and see othe
 
 Prereq:
 
-Node.js
+Node.js 
+
 React bootstrat - npm install react-bootstrap bootstrap@4.6.0
+
 Cypress - npm install cypress --save-dev
 
 React star rating - npm install react-star-rating-component --save-dev
