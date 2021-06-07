@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using RestaurantReview.Domain.AuthenticationModels;
 using RestaurantReview.Domain.Models;
 
 namespace RestaurantReview.Infrastructure
 {
-    public class MyDbContext : DbContext
+    public class MyDbContext : IdentityDbContext<ApplicationUser>
     {
 
         public MyDbContext(DbContextOptions<MyDbContext> options)
@@ -11,13 +13,10 @@ namespace RestaurantReview.Infrastructure
         {
         }
 
-
-
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Category> Categories { get; set; }
-
 
 
 

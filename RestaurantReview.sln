@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReview.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReview.API", "RestaurantReview.API\RestaurantReview.API.csproj", "{C1DB983F-5E59-42CA-9933-AB0B2040418A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReview.Authentication", "RestaurantReview.Authentication\RestaurantReview.Authentication.csproj", "{699ECD00-0508-487E-83C2-D5AB04FE8B05}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReview.UI", "RestaurantReview.UI\RestaurantReview.UI.csproj", "{D0631278-F911-4D9A-9B23-EA2BA645175C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReview.Application", "RestaurantReview.Application\RestaurantReview.Application.csproj", "{8EED55B8-8CD5-45F7-8C4D-8A4BF2F1A7E0}"
@@ -39,14 +37,6 @@ Global
 		{C1DB983F-5E59-42CA-9933-AB0B2040418A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1DB983F-5E59-42CA-9933-AB0B2040418A}.Release|x86.ActiveCfg = Release|x86
 		{C1DB983F-5E59-42CA-9933-AB0B2040418A}.Release|x86.Build.0 = Release|x86
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Debug|x86.ActiveCfg = Debug|x86
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Debug|x86.Build.0 = Debug|x86
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Release|x86.ActiveCfg = Release|x86
-		{699ECD00-0508-487E-83C2-D5AB04FE8B05}.Release|x86.Build.0 = Release|x86
 		{D0631278-F911-4D9A-9B23-EA2BA645175C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0631278-F911-4D9A-9B23-EA2BA645175C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0631278-F911-4D9A-9B23-EA2BA645175C}.Debug|x86.ActiveCfg = Debug|x86
