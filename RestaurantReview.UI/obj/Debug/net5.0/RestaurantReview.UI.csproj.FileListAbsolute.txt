@@ -130,3 +130,39 @@ C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantRe
 C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
 C:\Users\kevin\Desktop\WebbApp - CodeCleaning 06-05\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
 C:\Users\Robin\source\repos\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\appsettings.json
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.exe
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.deps.json
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.runtimeconfig.json
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.runtimeconfig.dev.json
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\ref\RestaurantReview.UI.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\RestaurantReview.UI.pdb
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.AssemblyInfo.cs
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\staticwebassets\RestaurantReview.UI.StaticWebAssets.Manifest.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\staticwebassets\RestaurantReview.UI.StaticWebAssets.xml
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\scopedcss\bundle\RestaurantReview.UI.styles.css
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.RazorTargetAssemblyInfo.cache
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.csproj.CopyComplete
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\ref\RestaurantReview.UI.dll
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.pdb
+C:\Users\kevin\Desktop\Webbapplikation KRSVK\WebbApplikation\RestaurantReview.UI\obj\Debug\net5.0\RestaurantReview.UI.genruntimeconfig.cache
