@@ -1,16 +1,16 @@
 .ListOfCategories {
     font-size: 28px;
     font-weight: 800;
-    width: 20%;
+    justify-self:center;
     color: #f9e7d9;
     text-shadow: 4px 4px #0a0704;
-    margin-left: 32%;
-    margin-right: 32%;
     text-align: center;
+    padding:0;
 }
 
 .ListOfCategories a {
-      text-decoration: none;  
+      text-decoration: none;
+      
 }
 
 .addForm {
@@ -23,5 +23,9 @@
     text-align: center;
     border: 1px solid #fff;
     border-color: #ccc;
+}
+
+.btn{
+    max-width:250px;
 }
 

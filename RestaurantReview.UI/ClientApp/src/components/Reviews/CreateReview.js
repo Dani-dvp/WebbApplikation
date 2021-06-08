@@ -23,7 +23,7 @@ export default class CreateReview extends Component {
   AddReviewRequest = event => {
     event.preventDefault();
     
-    let reviewText = document.getElementById("secondForm").value;
+    let reviewText = document.getElementById("reviewText").value;
 
     axios({
       method: 'post',
@@ -54,7 +54,7 @@ export default class CreateReview extends Component {
                 <h3>{this.props.match.params.id}</h3>
                     <br />
                 <textarea 
-                  className="reviewText"
+                  id="reviewText"
                     data-cy="reviewText"
                     placeholder=" Write your review here..."></textarea>
                     <br />
@@ -71,7 +71,7 @@ export default class CreateReview extends Component {
                     <br />
                 <button 
                 data-cy="submitReview"
-                  className="homeButton btn btn-info btn-lg" 
+                  className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }} 
                 onClick={this.AddReviewRequest}>Submit</button>
                 </form>
             </div>
