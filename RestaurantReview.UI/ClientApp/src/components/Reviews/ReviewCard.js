@@ -10,8 +10,8 @@ export class ReviewCard extends Component {
       <div className="card reviewCard" style={{ color: "#f9e7d9" }} >
         <div className="" style={{color: "#f9e7d9"}}>
           <h2> {this.props.reviewText} </h2>
-          <Link tag={Link} className="display-8" to={"/RestaurantPage/" + this.props.restaurantName} style={{ color: "#f9e7d9" }}> {this.props.restaurantName}</Link>
-          <Link tag={Link} className="display-8" to={"/otherprofile/" + this.props.userName} style={{ color: "#f9e7d9" }}> {this.props.userName}</Link>
+          <Link tag={Link} className="display-7" to={"/RestaurantPage/" + this.props.restaurantName} style={{ color: "#f9e7d9" }}> {this.props.restaurantName}</Link>
+          <Link tag={Link} className="display-7" to={"/otherprofile/" + this.props.userName} style={{ color: "#f9e7d9" }}> {this.props.userName}</Link>
           <footer className="display-5" style={{ color: "#f9e7d9" }}> - {this.props.Rating} / 5</footer>
           </div>
       </div>
