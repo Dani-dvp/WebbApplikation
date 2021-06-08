@@ -12,7 +12,6 @@ export default class CreateReview extends Component {
     this.state = {
       user: this.props.user,
       rating: 1,
-      
     }
   }
 
@@ -24,7 +23,7 @@ export default class CreateReview extends Component {
     event.preventDefault();
     
     let reviewText = document.getElementById("secondForm").value;
-
+    console.log(this.props.user)
     axios({
       method: 'post',
       url: "/api/v1/review",
@@ -60,6 +59,7 @@ export default class CreateReview extends Component {
                     <br />
                 <h2>Rating: {rating}</h2>
                 <StarRatingComponent
+                  data-cy="ratingStars"
                   name="rate1"
                   starCount={5}
                   value={rating}

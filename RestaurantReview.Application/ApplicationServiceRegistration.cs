@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantReview.Application.Features.Authentication;
+using RestaurantReview.Application.Features.Authentication.Commands.DeleteUserByUserName;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.CheckTokenIfValid;
@@ -101,6 +102,7 @@ namespace RestaurantReview.Application
 
             //image
             services.AddScoped<IImageService, ImageHandler>();
+            services.AddScoped<IGetImageService, GetImageHandler>();
 
             //Authentication to handler
             services.AddScoped<IAuthenticationService, AuthenticationHandler>();
@@ -108,15 +110,17 @@ namespace RestaurantReview.Application
             services.AddScoped<IGetUserByEmailService, GetUserByEmailHandler>();
             services.AddScoped<ICheckIfTokenIsValidService, CheckTokenIfValidHandler>();
             services.AddScoped<IGetUserByUsernameService, GetUserByUsernameHandler>();
+            services.AddScoped<IDeleteUserByUsernameService, DeleteUserByUsernameHandler>();
 
             //Seedcontroller
             services.AddScoped<ICreateSeedService, CreateSeedHandler>();
+            
 
             //Aktiverar automapper i Core
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddInfrastructureServices(configuration);
 
-            services.AddScoped<IGetImageService, GetImageHandler>();
+            
 
             return services;
         }

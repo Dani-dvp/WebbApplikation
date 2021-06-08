@@ -18,7 +18,7 @@ namespace RestaurantReview.Application.Features.Reviews.Commands.CreateReview
             RuleFor(p => p.Rating)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
-                .ExclusiveBetween(1, 5).WithMessage("{PropertyName} must be between 1-5.");
+                .ExclusiveBetween(0, 6).WithMessage("{PropertyName} must be between 1-5.");
         }
     }
 }

@@ -21,14 +21,6 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.CreateResta
                     .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.")
                     .MinimumLength(3).WithMessage("{PropertyName} must contain at least 3 characters.");
 
-            string URLvalidation = "satellites.pro/plan";
-
-            RuleFor(p => p.MapURL)
-                //.Must(URLvalidation.Contains).WithMessage("The URL is wrong!")
-                .Matches(URLvalidation).WithMessage("The URL is wrong!")
-                .MinimumLength(18).WithMessage("The URL is wrong!");
-
-
 
             RuleFor(e => e)
                 .MustAsync(IsRestaurantUnique)

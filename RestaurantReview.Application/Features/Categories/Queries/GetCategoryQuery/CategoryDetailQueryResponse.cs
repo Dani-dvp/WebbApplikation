@@ -2,6 +2,6 @@
 {
     public class CategoryDetailQueryResponse
     {
-        public string RestaurantCategory { get; set; }
+        public string CategoryName { get; set; }
     }
 }

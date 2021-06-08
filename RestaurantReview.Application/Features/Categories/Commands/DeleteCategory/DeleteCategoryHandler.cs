@@ -16,7 +16,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.DeleteCatego
         public async Task<string> DeleteCategory(DeleteCategoryCommand deleteCategoryCommand)
         {
 
-            var CategoryToBeDeleted = await _categoryRepository.GetCategoryByName(deleteCategoryCommand.RestaurantCategory);
+            var CategoryToBeDeleted = await _categoryRepository.GetCategoryByName(deleteCategoryCommand.CategoryName);
 
             await _categoryRepository.DeleteAsync(CategoryToBeDeleted);
 

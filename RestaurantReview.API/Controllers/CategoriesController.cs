@@ -98,7 +98,7 @@ namespace RestaurantReview.API.Controllers
             return await _categoryDetailQueryService.GetCategoryByID(categoryDetailQueryCommand);
         }
 
-        [Authorize]
+        
         [HttpPost("addRestaurant")]
         public async Task<ActionResult<AddRestaurantToCategoryResponse>> AddRestaurantToCategory([FromBody] AddRestaurantToCategoryCommand addRestaurantToCategoryCommand)
         {

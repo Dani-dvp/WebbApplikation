@@ -45,8 +45,9 @@ export default class AddCategory extends Component {
             
             
             <button
+              
               type="button"
-              data-cy="submitAddRestaurant"
+              data-cy="submitAddCategory"
               className="btn btn-primary"
               onClick={() => this.addCategoryRequest()}>Add Category</button>
           </form>

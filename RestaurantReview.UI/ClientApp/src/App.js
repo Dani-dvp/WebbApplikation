@@ -14,7 +14,7 @@ import Categories from './components/Categories/Categories';
 import CategoryPage from './components/Categories/CategoryPage';
 import OtherProfile from './components/Profile/OtherProfile';
 import AddCategory from './components/Categories/AddCategory';
-
+import AdminPage from './components/Profile/AdminPage';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -99,7 +99,14 @@ this.state = {
           render={props => (
             <ProfilePage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
           )}
-           />
+        />
+        <Route
+          exact
+          path={'/adminpage'}
+          render={props => (
+            <AdminPage {...props} user={this.state.user} loggedIn={this.state.loggedIn} />
+          )}
+        />
         <Route
           path='/Categories/'
           render={props => (

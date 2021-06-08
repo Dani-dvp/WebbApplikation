@@ -131,7 +131,7 @@ namespace RestaurantReview.API.Controllers
             return await _getThreeRandomRestaurantsService.GetThreeRandomResturants();
         }
 
-        [Authorize]
+        
         [HttpPost("addCategory")]
         public async Task<ActionResult<AddCategoryToRestaurantResponse>> AddCategoryToRestaurant([FromBody] AddCategoryToRestaurantCommand addCategoryToRestaurantCommand)
         {

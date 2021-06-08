@@ -4,6 +4,6 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
 {
     public class UpdateCategoryResponse : BaseResponse
     {
-        public string RestaurantCategory { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -8,7 +8,7 @@ export class AllCategoriesCard extends Component {
     return (
       
       <div className="categoriesList mt-5 mb-5 mx-auto" >
-        <Link tag={Link} type="button" className="ListOfCategories link-secondary" to={"/Categorypage/name/" + this.props.categoryName} > {this.props.categoryName}</Link>
+        <Link tag={Link} data-cy={ this.props.categoryName } type="button" className="ListOfCategories link-secondary" to={"/Categorypage/name/" + this.props.categoryName} > {this.props.categoryName}</Link>
           </div>
         
         

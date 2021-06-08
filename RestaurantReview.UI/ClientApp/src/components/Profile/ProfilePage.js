@@ -2,6 +2,7 @@
 import "./Css/ProfilePage.css";
 import Axios from 'axios';
 import { ReviewCard } from '../Reviews/ReviewCard';
+import { Link } from 'react-router-dom';
 
 export default class ProfilePage extends Component {
   constructor(props) {
@@ -111,6 +112,12 @@ export default class ProfilePage extends Component {
           {ListOfReviews}
         </div>
 
+        <Link
+          data-cy="AdminButton"
+          tag={Link}
+          className="homeButton btn  btn-lg btn-danger mx-auto"
+          style={{ background: "#a73003", color: "#f9e7d9" }}
+          to={"/adminpage"}>Admin Page</Link>
       </div>
     );
   }

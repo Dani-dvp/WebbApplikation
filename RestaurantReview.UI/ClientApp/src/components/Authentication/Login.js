@@ -110,7 +110,7 @@ export default class Login extends Component {
 
             <button
               type="button"
-              data-cy="checkOnLoginPage"
+              data-cy="logoutOnLoginPage"
                 className="homeButton btn  btn-lg btn-light mx-auto mt-3" 
               onClick={() => {
                 this.setState({

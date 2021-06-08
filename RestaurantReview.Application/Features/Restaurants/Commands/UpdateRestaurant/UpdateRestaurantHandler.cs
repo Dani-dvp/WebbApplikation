@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using RestaurantReview.Domain.IRepositories;
 using RestaurantReview.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -39,13 +40,19 @@ namespace RestaurantReview.Application.Features.Restaurants.Commands.UpdateResta
 
             if (updateResponse.Success)
             {
+                var oldRestaurant = await _restaurantRepository.GetRestaurantByName(updateRestaurantCommand.RestaurantName);
+
                 var restaurant = new Restaurant()
                 {
+                    RestaurantID = new Guid(),
                     RestaurantLink = updateRestaurantCommand.RestaurantLink,
                     TempImage = updateRestaurantCommand.TempImage,
                     RestaurantName = updateRestaurantCommand.RestaurantName,
-                    MapURL = updateRestaurantCommand.MapURL,
                     Description = updateRestaurantCommand.Description,
+                    Categories = oldRestaurant.Categories,
+                    Reviews = oldRestaurant.Reviews,
+                    MapURL = oldRestaurant.MapURL,
+
 
                 };
                 await _restaurantRepository.UpdateAsync(restaurant);

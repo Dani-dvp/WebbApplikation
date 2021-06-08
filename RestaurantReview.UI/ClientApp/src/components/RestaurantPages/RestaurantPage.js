@@ -36,7 +36,7 @@ export default class RestaurantPage extends Component {
         {thisRestaurant}
         <br />
         <div>
-          <Link tag={Link} className="homeButton btn btn-danger mx-auto" style={{ background: "#a73003", color: "#f9e7d9" }}  to={"/createreview/" + this.state.restaurant.restaurantName}>Add a review here!</Link>
+          <Link tag={Link} data-cy="addReviewButton" className="homeButton btn btn-danger mx-auto" style={{ background: "#a73003", color: "#f9e7d9" }}  to={"/createreview/" + this.state.restaurant.restaurantName}>Add a review here!</Link>
         </div>
         <br />
         { ListOfReviews}
