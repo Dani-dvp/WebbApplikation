@@ -23,7 +23,7 @@ export default class CreateReview extends Component {
   AddReviewRequest = event => {
     event.preventDefault();
     
-    let reviewText = document.getElementById("secondForm").value;
+    let reviewText = document.getElementById("reviewText").value;
 
     axios({
       method: 'post',
@@ -44,31 +44,34 @@ export default class CreateReview extends Component {
     render() {
       const { rating } = this.state;
         return (
-            <div className="surroundingDiv">
+            <div className="surroundingDiv ">
             <div>
                 <br />
                 <h1 className="Header">Share your own experience</h1>
             </div>
             <div>
-                <form id="reviewForm">
+                <form className="addForm mx-auto d-block">
                 <h3>{this.props.match.params.id}</h3>
                     <br />
-                    <textarea 
+                <textarea 
+                  id="reviewText"
                     data-cy="reviewText"
-                    id="secondForm" 
                     placeholder=" Write your review here..."></textarea>
                     <br />
-                <h2>Rating: {rating}</h2>
+                <h2 className="text-dark">Rating: {rating}</h2>
+                <div>
                 <StarRatingComponent
+                    className="display-4"
                   name="rate1"
                   starCount={5}
                   value={rating}
                   onStarClick={this.onStarClick.bind(this)}
-                />
+                  />
+                  </div>
                     <br />
                 <button 
                 data-cy="submitReview"
-                  className="homeButton btn btn-info btn-lg" 
+                  className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }} 
                 onClick={this.AddReviewRequest}>Submit</button>
                 </form>
             </div>

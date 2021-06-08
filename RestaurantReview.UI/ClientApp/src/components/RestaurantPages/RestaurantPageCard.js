@@ -22,7 +22,9 @@ export default class RestaurantPageCard extends Component {
 									<div className="about">
 										<h5 className="mb-2 " style={{ color: "#f9e7d9" }}>About</h5>
 										<h3 className="" style={{ color: "#f9e7d9"}}>{this.props.description}</h3>
+
 									</div>
+
 									</div>
 								</div>
 							</div>
