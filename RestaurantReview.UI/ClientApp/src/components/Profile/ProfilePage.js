@@ -86,13 +86,17 @@ export default class ProfilePage extends Component {
           <a id="change-pic-button" href="" aria-label="Change Profile Picture" />
           <div className="username">
            
-            <input type="file" className="form-control" name="upload_file" onChange={this.handleInputChange} />
-              <button type="button" className="btn btn-dark" onClick={() => this.submit()}>Save</button>
+            
               
             <h1>{this.props.user.data.userName}</h1>
           </div>
         </div>
-
+        <div>
+          <br />
+          <input type="file" className="form-control bg-dark text-white" name="upload_file" onChange={this.handleInputChange} />
+          
+        </div>
+        <button type="button" className="form-btn btn btn-dark" onClick={() => this.submit()}>Save</button>
         <form>
           <label>
             <div

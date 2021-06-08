@@ -33,10 +33,11 @@ export default class RestaurantPage extends Component {
     
     return (
       <div className="Trying">
-        {thisRestaurant}
-        <br />
         <div>
-          <Link tag={Link} data-cy="addReviewButton" className="homeButton btn btn-danger mx-auto" style={{ background: "#a73003", color: "#f9e7d9" }}  to={"/createreview/" + this.state.restaurant.restaurantName}>Add a review here!</Link>
+
+        {thisRestaurant}
+          <Link tag={Link} data-cy="addReviewButton" className="btn btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }} to={"/createreview/" + this.state.restaurant.restaurantName}>Add your own review here!</Link>
+        
         </div>
         <br />
         { ListOfReviews}

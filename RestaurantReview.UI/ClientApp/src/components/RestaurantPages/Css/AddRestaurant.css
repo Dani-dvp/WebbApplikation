@@ -49,3 +49,14 @@
     text-align: center;
 }
 
+.addForm{
+    max-width: 5vw;
+}
+
+#restaurantDescription{
+    font-size:20px;
+}
+
+#category{
+    font-size:20px;
+}

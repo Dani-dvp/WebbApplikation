@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import Axios from 'axios';
+import './Css/Categories.css';
 
 export default class AddCategory extends Component {
   constructor(props) {
@@ -35,20 +36,22 @@ export default class AddCategory extends Component {
           <h1 className="Header">Add a Category</h1>
         </div>
         <div>
-          <form id="addForm">
+          <br />
+          <br />
+          <form className="addForm mx-auto d-block">
             <input
               data-cy="addCategoryName"
               id="categoryName"
               type="text"
               placeholder=" Category Name:" />
             <br />
-            
+            <br />
             
             <button
               
               type="button"
               data-cy="submitAddCategory"
-              className="btn btn-primary"
+              className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }}
               onClick={() => this.addCategoryRequest()}>Add Category</button>
           </form>
         </div>

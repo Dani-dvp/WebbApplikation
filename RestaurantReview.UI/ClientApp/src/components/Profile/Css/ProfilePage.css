@@ -59,10 +59,7 @@ a {
 
 .profile-header {
     margin-top: 0;
-    background: #fff;
     width: 800px;
-    box-shadow: 0px 3px 5px;
-    border-radius: 10px;
     margin-left: 500px;
 }
 
@@ -77,10 +74,18 @@ a {
 
 .reviewposts {
     width: 98%;
-    background: lightgray;
     height: auto;
     margin-top: 20px;
     box-shadow: 0px 0px 0px;
     border-radius: 3px;
     margin-left: 9px;
+}
+
+.form-control{
+    width:300px;
+    margin-left:30%;
+}
+
+.form-btn{
+    margin-right:30%;
 }

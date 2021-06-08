@@ -53,7 +53,7 @@ export default class AddRestaurant extends Component {
                 <h1 className="Header">Add a restaurant</h1>
             </div>
             <div>
-                <form id="addForm">
+                <form className="addForm mx-auto d-block bg-white">
                     <input 
                     data-cy="addRestaurantName"
                   id="restaurantName" 
@@ -73,28 +73,37 @@ export default class AddRestaurant extends Component {
                   name="restaurant"
                   placeholder=":Restaurant Websitelink" />
                 <br />
-                   <div>
+                <div>
+                  <br />
                   <select
                     ref="selectOption"
                     onChange={(e) => this.setCategoryChange(e)}
                     data-cy="addCategory"
                     id="category" 
                     type="text" 
-                    name="Category">
+                    name="Category"
+                    className="btn btn-secondary">
                         <option value="option">Category</option>
                          {DropdownOptions}
                   </select>
+                </div>
+                <br />
+                <div>
                   <textarea
                     data-cy="addDescription"
                     id="restaurantDescription"
                     placeholder=" Write the restaurant description here..."></textarea>
-                  </div>
+                </div>
+                  <br />
                 <button
                   type="button"
                   data-cy="submitAddRestaurant"
-                  className="btn btn-primary"
-                  onClick={ () => this.addRestaurantRequest() }>Add Restaurant</button>
-                </form>
+                  className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }}
+                  onClick={() => this.addRestaurantRequest()}>Add Restaurant</button>
+                <br />
+                <div> </div>
+              </form>
+              
             </div>
             </div>
         )
