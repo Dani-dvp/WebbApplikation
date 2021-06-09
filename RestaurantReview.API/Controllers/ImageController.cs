@@ -24,10 +24,7 @@ namespace RestaurantReview.API.Controllers
         public async Task<ImageResponse> Index(IFormFile file, string email, string restaurantName)
         {
 
-
             return await _imageService.CreateImagePath(file, email, restaurantName);
-
-
 
         }
         [HttpGet("{email}")]

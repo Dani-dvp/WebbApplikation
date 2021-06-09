@@ -32,7 +32,6 @@
         "nan": "^2.14.1",
         "react-star-rating-component": "^1.4.1",
         "typescript": "^3.7.5"
-        "react-star-rating-component": "^1.4.1"
     },
     "eslintConfig": {
         "extends": "react-app"

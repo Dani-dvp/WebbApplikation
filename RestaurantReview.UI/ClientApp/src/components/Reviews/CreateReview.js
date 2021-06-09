@@ -10,9 +10,7 @@ export default class CreateReview extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: this.props.user,
       rating: 1,
-      
     }
   }
 
@@ -22,7 +20,7 @@ export default class CreateReview extends Component {
 
   AddReviewRequest = event => {
     event.preventDefault();
-    
+ 
     let reviewText = document.getElementById("reviewText").value;
 
     axios({
@@ -32,7 +30,7 @@ export default class CreateReview extends Component {
         restaurantName: this.props.match.params.id,
         ReviewText: reviewText,
         Rating: this.state.rating,
-        ApplicationUserId: this.state.user.data.id,
+        ApplicationUserId: this.props.user.data.id,
       },
 
     }).then(res => { console.log(res) });
@@ -61,6 +59,7 @@ export default class CreateReview extends Component {
                 <h2 className="text-dark">Rating: {rating}</h2>
                 <div>
                 <StarRatingComponent
+                  data-cy="ratingStars"
                     className="display-4"
                   name="rate1"
                   starCount={5}

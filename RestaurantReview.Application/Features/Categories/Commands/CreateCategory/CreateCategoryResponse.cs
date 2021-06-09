@@ -4,7 +4,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.CreateCatego
 {
     public class CreateCategoryResponse : BaseResponse
     {
-        public string RestaurantCategory { get; set; }
+        public string CategoryName { get; set; }
 
     }
 }

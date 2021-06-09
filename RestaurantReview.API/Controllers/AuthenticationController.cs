@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RestaurantReview.Application.Features.Authentication.Commands.DeleteUserByUserName;
 using RestaurantReview.Application.Features.Authentication.Commands.Login;
 using RestaurantReview.Application.Features.Authentication.Commands.Register;
 using RestaurantReview.Application.Features.Authentication.Queries.GetUserByEmail;
@@ -16,14 +17,16 @@ namespace RestaurantReview.API.Controllers
         private readonly IRegistrationService _registrationService;
         private readonly IGetUserByEmailService _getUserByEmailService;
         private readonly IGetUserByUsernameService _getUserByUsernameService;
+        private readonly IDeleteUserByUsernameService _deleteUserByUsernameService;
 
 
-        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService, IGetUserByUsernameService getUserByUsernameService)
+        public AuthenticationController(IAuthenticationService authenticationService, IRegistrationService registrationService, IGetUserByEmailService getUserByEmailService, IGetUserByUsernameService getUserByUsernameService, IDeleteUserByUsernameService deleteUserByUsernameService)
         {
             _authenticationService = authenticationService;
             _registrationService = registrationService;
             _getUserByEmailService = getUserByEmailService;
             _getUserByUsernameService = getUserByUsernameService;
+            _deleteUserByUsernameService = deleteUserByUsernameService;
         }
 
         [HttpPost("login")]
@@ -57,6 +60,22 @@ namespace RestaurantReview.API.Controllers
         public bool CheckIfTokenIsValid()
         {
             return true;
+        }
+
+        
+        [HttpDelete("user")]
+        public async Task<ActionResult> DeleteUserByUsername([FromBody]DeleteUserByUsernameCommand deleteUserByUsernameCommand)
+        {
+            var IsUserDeleted = await _deleteUserByUsernameService.DeleteUserByUsername(deleteUserByUsernameCommand);
+
+            if(IsUserDeleted == false)
+            {
+                return NotFound("User Not Found");
+            }
+            else
+            {
+                return Ok($"{deleteUserByUsernameCommand.Username} was deleted");
+            }
         }
     }
 }

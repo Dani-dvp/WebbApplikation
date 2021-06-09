@@ -4,6 +4,6 @@ namespace RestaurantReview.Application.Features.Categories.Commands.DeleteCatego
 {
     public class DeleteCategoryResponse : BaseResponse
     {
-        public string RestaurantCategory { get; set; }
+        public string CategoryName { get; set; }
     }
 }

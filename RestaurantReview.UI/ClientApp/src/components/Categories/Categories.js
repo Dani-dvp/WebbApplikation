@@ -48,7 +48,8 @@ export default class Categories extends Component {
         <div
           className="mx-auto d-grid"> <br /> {content}
           <h5 style={{ color: "#f9e7d9" }}>Cant find your Category?</h5>
-          <Link className="mx-auto d-block btn btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }} to="/AddCategory">Add a Category</Link>
+          <Link data-cy="addCategoryButton"className="homeButton mx-auto btn btn-danger " style={{ background: "#a73003", color: "#f9e7d9" }} to="/AddCategory">Add a Category</Link>
+
         </div>      
             );
 

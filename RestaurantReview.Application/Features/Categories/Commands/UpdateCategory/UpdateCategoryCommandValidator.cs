@@ -6,7 +6,7 @@ namespace RestaurantReview.Application.Features.Categories.Commands.UpdateCatego
     {
         public UpdateCategoryCommandValidator()
         {
-            RuleFor(p => p.RestaurantCategory)
+            RuleFor(p => p.CategoryName)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.")

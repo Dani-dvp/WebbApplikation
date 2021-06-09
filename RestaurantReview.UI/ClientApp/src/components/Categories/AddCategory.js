@@ -48,8 +48,9 @@ export default class AddCategory extends Component {
             <br />
             
             <button
+              
               type="button"
-              data-cy="submitAddRestaurant"
+              data-cy="submitAddCategory"
               className="homeButton btn  btn-lg btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }}
               onClick={() => this.addCategoryRequest()}>Add Category</button>
           </form>
