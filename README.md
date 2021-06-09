@@ -9,15 +9,9 @@ Prereq:
 
 Node.js 
 
-React bootstrat - npm install react-bootstrap bootstrap@4.6.0
+Run the command inside ClientApp folder to install dependencies:
 
-Cypress - npm install cypress --save-dev
-
-React star rating - npm install react-star-rating-component --save-dev
-
-React bootstrat - npm install react-bootstrap bootstrap@4.6.0
-
-Cypress - npm install cypress --save-dev
+npm install 
 
 For Cors problems in developer mode install:
 https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc/related?hl=en-US
@@ -47,5 +41,20 @@ Use swagger and seed the database using "Create seed".
 Use this account for login: test@example.com and "Password123!"
 
 Then navigate to the website and test it out!
+
+Cypress:
+
+Open with Powershell by navigating to ClientApp folder and run the following command:
+
+npm run cypress:open
+
+Run the tests in the following order:
+
+1. CreateTestAccounts
+2. TestCreateFunctions
+3. Test EditFunctions
+4. TestOtherFunctions
+5. TestDeleteFunctions
+
 
 
