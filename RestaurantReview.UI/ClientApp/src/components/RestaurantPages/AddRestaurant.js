@@ -32,7 +32,7 @@ export default class AddRestaurant extends Component {
   CreateDropdownMenu() {
     let elements = [];
     for (let category of this.state.categories) {
-      elements.push(<option key={category.categoryName} value={category.categoryName}>{category.categoryName}</option>)
+      elements.push(<option data-cy={category.categoryName} key={category.categoryName} value={category.categoryName}>{category.categoryName}</option>)
     }
     return (elements);
   }
@@ -83,7 +83,7 @@ export default class AddRestaurant extends Component {
                     type="text" 
                     name="Category"
                     className="btn btn-secondary">
-                        <option value="option">Category</option>
+                        <option data-cy="categoryDropdown"value="option">Category</option>
                          {DropdownOptions}
                   </select>
                 </div>

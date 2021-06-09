@@ -110,6 +110,24 @@ export default class AdminPage extends Component {
     })
   }
 
+  addReview() {
+    let addRestauranttoReviewName = document.getElementById("addRestauranttoReviewName").value;
+    let userWithReview = document.getElementById("userWithReview").value;
+    let addReviewtext = document.getElementById("addReviewtext").value;
+    let addReviewRating = document.getElementById("addReviewRating").value;
+
+    Axios({
+      method: 'post',
+      url: "/api/v1/review",
+      data: {
+        Restaurantname: addRestauranttoReviewName,
+        Username: userWithReview,
+        ReviewText: addReviewtext,
+        Rating: addReviewRating
+      },
+    })
+  }
+
   render() {
 
 
@@ -181,6 +199,41 @@ export default class AdminPage extends Component {
             data-cy="deleteReviewButton"
             className="btn btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }}
             onClick={() => this.deleteReview()}>Delete Review</button>
+        </form>
+
+        <h5>Add Review</h5>
+        <form id="updateReviewForm">
+
+          <input
+            data-cy="addRestauranttoReviewName"
+            id="addRestauranttoReviewName"
+            type="text"
+            placeholder="Insert restaurant with review to be updated:" />
+
+          <input
+            data-cy="userWithReview"
+            id="userWithReview"
+            type="text"
+            placeholder="User with review:" />
+
+          <input
+            data-cy="addReviewtext"
+            id="addReviewtext"
+            type="text"
+            placeholder="Add Review text:" />
+
+          <input
+            data-cy="addReviewRating"
+            id="addReviewRating"
+            type="text"
+            placeholder="Add Review Rating:" />
+
+          <br />
+          <button
+            type="button"
+            data-cy="addReviewButton"
+            className="btn btn-danger" style={{ background: "#a73003", color: "#f9e7d9" }}
+            onClick={() => this.addReview()}>Add Review</button>
         </form>
 
         <h5>Update Review</h5>

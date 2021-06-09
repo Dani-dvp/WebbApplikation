@@ -1,7 +1,7 @@
 ﻿/// <reference types="Cypress"/>
 
 const imageUrl = 'https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb'
-const CategoryName = 'testCategory'
+const CategoryName = 'TestCategory'
 const username = 'CypressUser'
 const email = 'test@cypressexample.com'
 const password = 'Password123!'
@@ -38,6 +38,9 @@ describe('Create functions', () => {
 
     cy.get('[data-cy=addDescription').type(maintext)
 
+    cy.get('[data-cy=addCategory').select('American')
+
+
     cy.get('[data-cy=submitAddRestaurant').click()
   });
 
@@ -48,26 +51,20 @@ describe('Create functions', () => {
 
   it('Create a review', () => {
 
-    cy.visit('/')
+    cy.visit('/AdminPage')
 
-    cy.get('[data-cy=homeRestaurantsBtn').click()
 
-    cy.location('pathname').should('equal', '/restaurants')
+    cy.location('pathname').should('equal', '/AdminPage')
 
-    cy.get('[data-cy=TestRestaurant').click()
+    cy.get('[data-cy=addRestauranttoReviewName').type(restaurant)
+
+    cy.get('[data-cy=userWithReview').type(username)
+
+    cy.get('[data-cy=addReviewtext').type(maintext)
+
+    cy.get('[data-cy=addReviewRating').type(5)
 
     cy.get('[data-cy=addReviewButton').click()
-
-    cy.location('pathname').should('equal', '/createreview/TestRestaurant')
-
-    cy.get('[data-cy=reviewText').type(maintext)
-
-   
-
-
-    cy.get('[data-cy=submitReview').click()
-
-
 
 
   });

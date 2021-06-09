@@ -1,7 +1,7 @@
 ﻿/// <reference types="Cypress"/>
 
 const imageUrl = 'https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb'
-const CategoryName = 'testCategory'
+const CategoryName = 'TestCategory'
 const username = 'CypressUser'
 const email = 'test@cypressexample.com'
 const password = 'Password123!'
